@@ -6,13 +6,16 @@
 // Global values
 // --------------------------------------------------
 
+// Fonts
+// -------------------------
+
 
 // Grays
 // -------------------------
 @black:                 #000;
 @grayDarker:            #222;
 @grayDark:              #333;
-@gray:                  #555;
+@gray:                  #a6a6a6;
 @grayLight:             #999;
 @grayLighter:           #eee;
 @white:                 #fff;
@@ -20,8 +23,8 @@
 
 // Accent colors
 // -------------------------
-@blue:                  #049cdb;
-@blueDark:              #0064cd;
+@blue:                  #55616f;
+@blueDark:              #071222;
 @green:                 #46a546;
 @red:                   #9d261d;
 @yellow:                #ffc40d;
@@ -32,25 +35,25 @@
 
 // Scaffolding
 // -------------------------
-@bodyBackground:        @white;
-@textColor:             @grayDark;
+@bodyBackground:        @blueDark;
+@textColor:             @white;
 
 
 // Links
 // -------------------------
-@linkColor:             #08c;
+@linkColor:             #a6a6a6;
 @linkColorHover:        darken(@linkColor, 15%);
 
 
 // Typography
 // -------------------------
-@sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
-@serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+@sansFontFamily:        'Circe-Light',sans-serif;
+@serifFontFamily:       'ArvoRegular', serif;
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
-@baseFontSize:          14px;
+@baseFontSize:          16px;
 @baseFontFamily:        @sansFontFamily;
-@baseLineHeight:        20px;
+@baseLineHeight:        26px;
 @altFontFamily:         @serifFontFamily;
 
 @headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
@@ -151,6 +154,7 @@
 
 // Sprite icons path
 // -------------------------
+@sprite:				  "../img/sprite.png";
 @iconSpritePath:          "../img/glyphicons-halflings.png";
 @iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png";
 
@@ -277,8 +281,8 @@
 @gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
 
 // 1200px min
-@gridColumnWidth1200:     70px;
-@gridGutterWidth1200:     30px;
+@gridColumnWidth1200:     65px;
+@gridGutterWidth1200:     20px;
 @gridRowWidth1200:        (@gridColumns * @gridColumnWidth1200) + (@gridGutterWidth1200 * (@gridColumns - 1));
 
 // 768px-979px

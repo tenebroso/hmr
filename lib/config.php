@@ -4,7 +4,7 @@
  */
 add_theme_support('root-relative-urls');    // Enable relative URLs
 add_theme_support('rewrites');              // Enable URL rewrites
-add_theme_support('bootstrap-top-navbar');  // Enable Bootstrap's top navbar
+//add_theme_support('bootstrap-top-navbar');  // Enable Bootstrap's top navbar
 add_theme_support('bootstrap-gallery');     // Enable Bootstrap's thumbnails component on [gallery]
 add_theme_support('nice-search');           // Enable /?s= to /search/ redirect
 add_theme_support('jquery-cdn');            // Enable to load jQuery from the Google CDN
@@ -21,7 +21,7 @@ define('POST_EXCERPT_LENGTH', 40);
 function roots_main_class() {
   if (roots_display_sidebar()) {
     // Classes on pages with the sidebar
-    $class = 'span8';
+    $class = 'span9';
   } else {
     // Classes on full width pages
     $class = 'span12';
@@ -34,7 +34,7 @@ function roots_main_class() {
  * .sidebar classes
  */
 function roots_sidebar_class() {
-  return 'span4';
+  return 'span3';
 }
 
 /**
@@ -63,7 +63,7 @@ function roots_display_sidebar() {
      * Any of these page templates that return true won't show the sidebar
      */
     array(
-      'template-custom.php'
+      'template-home.php'
     )
   );
 
@@ -77,4 +77,4 @@ function roots_display_sidebar() {
  * Example: If the content area is 640px wide, set $content_width = 620; so images and videos will not overflow.
  * Default: 940px is the default Bootstrap container width.
  */
-if (!isset($content_width)) { $content_width = 940; }
+if (!isset($content_width)) { $content_width = 745; }
