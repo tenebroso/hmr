@@ -26,12 +26,7 @@
 // The actual thumbnail (can be `a` or `div`)
 .thumbnail {
   display: block;
-  padding: 4px;
   line-height: @baseLineHeight;
-  border: 1px solid #ddd;
-  .border-radius(@baseBorderRadius);
-  .box-shadow(0 1px 3px rgba(0,0,0,.055));
-  .transition(all .2s ease-in-out);
 }
 // Add a hover/focus state for linked versions only
 a.thumbnail:hover,
@@ -50,4 +45,8 @@ a.thumbnail:focus {
 .thumbnail .caption {
   padding: 9px;
   color: @gray;
+  font-size: 12px;
+  font-style: italic;
+  padding: 9px 0;
+  border-bottom: 1px solid @blueDark;
 }
