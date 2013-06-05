@@ -1741,6 +1741,18 @@ a.badge:focus {
   position: fixed;
 }
 
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
 /*!
  * Bootstrap Responsive v2.3.1
  *
@@ -2979,6 +2991,18 @@ a.badge:focus {
   position: fixed;
 }
 
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
 @font-face {
   font-family: 'Circe-Light';
   src: url('webfonts/2710AA_0_0.eot');
@@ -3051,6 +3075,13 @@ a.badge:focus {
    Base
    ========================================================================== */
 
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  *behavior: url(boxsizing.htc);
+}
+
 body {
   font-family: 'ArvoRegular', serif;
 }
@@ -3062,6 +3093,24 @@ h4,
 h5,
 h6 {
   font-family: 'Circe-Light', sans-serif;
+}
+
+strong {
+  font-family: 'ArvoBold';
+  font-weight: normal;
+}
+
+strong em {
+  font-family: 'ArvoBoldItalic';
+}
+
+em {
+  font-family: 'ArvoItalic';
+  font-style: normal;
+}
+
+em strong {
+  font-family: 'ArvoBoldItalic';
 }
 
 /* =============================================================================
@@ -3084,6 +3133,32 @@ h6 {
 /* ==========================================================================
    Content
    ========================================================================== */
+
+.content .caps {
+  text-transform: uppercase;
+}
+
+.content .meta {
+  margin: 0;
+  color: #a6a6a6;
+}
+
+.content .meta.match-height {
+  line-height: 38px;
+}
+
+.content p {
+  margin: .75em 0;
+}
+
+.content hr {
+  border: none;
+  border-top: 1px solid #293240;
+}
+
+.content em {
+  color: #a6a6a6;
+}
 
 /* ==========================================================================
    Primary Content
@@ -3145,18 +3220,20 @@ h6 {
 
 .aligncenter {
   display: block;
-  margin: 0 auto;
+  margin: 1.625em auto;
 }
 
 .alignleft {
   float: left;
+  margin: 0 1.625em 1.625em 0;
 }
 
 .alignright {
   float: right;
+  margin: 0 0 1.625em 1.625em;
 }
 
-figure.alignnone {
+.alignnone {
   margin-right: 0;
   margin-left: 0;
 }

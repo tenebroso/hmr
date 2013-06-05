@@ -12,6 +12,13 @@
    Base
    ========================================================================== */
 
+* { 
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
+	*behavior: url(boxsizing.htc); 
+}
+
 body { 
 	font-family:@serifFontFamily;
 }
@@ -20,6 +27,21 @@ h1,h2,h3,h4,h5,h6 {
 	font-family:@sansFontFamily;
 }
 
+strong {
+	font-weight:normal;
+	font-family: 'ArvoBold';
+	em {
+		font-family: 'ArvoBoldItalic';
+	}
+}
+
+em {
+	font-family: 'ArvoItalic';
+	font-style:normal;
+	strong {
+		font-family: 'ArvoBoldItalic';
+	}
+}
 
 
 /* =============================================================================
@@ -42,7 +64,31 @@ h1,h2,h3,h4,h5,h6 {
    Content
    ========================================================================== */
 
-.content { }
+.content {
+	.caps {
+		text-transform:uppercase;
+	}
+	.meta {
+		color:@gray;
+		margin:0;
+		&.match-height {
+			line-height:38px;
+		}
+	}
+	p {
+		margin:.75em 0;
+	}
+	hr {
+		border:none;
+		border-top:1px solid @blue;
+	}
+	strong {
+
+	}
+	em {
+		color:@gray;
+	}
+}
 
 
 
@@ -112,10 +158,10 @@ h1,h2,h3,h4,h5,h6 {
    See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
    ========================================================================== */
 
-.aligncenter { display: block; margin: 0 auto; }
-.alignleft { float: left; }
-.alignright { float: right; }
-figure.alignnone { margin-left: 0; margin-right: 0; }
+.aligncenter { display: block; margin: 1.625em auto; }
+.alignleft { float: left; margin:0 1.625em 1.625em 0; }
+.alignright { float: right; margin:0 0 1.625em 1.625em; }
+.alignnone { margin-left: 0; margin-right: 0; }
 
 
 
