@@ -3117,6 +3117,10 @@ em strong {
    Header
    ========================================================================== */
 
+.banner {
+  border-bottom: 2px solid #293240;
+}
+
 .banner .brand {
   display: block;
   width: 147px;
@@ -3147,6 +3151,10 @@ em strong {
   line-height: 38px;
 }
 
+.content .thumbnail {
+  max-width: 100%;
+}
+
 .content p {
   margin: .75em 0;
 }
@@ -3163,6 +3171,10 @@ em strong {
 /* ==========================================================================
    Primary Content
    ========================================================================== */
+
+.wrap.container {
+  margin: 50px auto 0;
+}
 
 /* ==========================================================================
    Sidebar
@@ -3182,6 +3194,35 @@ em strong {
   padding: 0;
   margin: 0;
   list-style-type: none;
+}
+
+.sidebar #s {
+  width: 100%;
+  padding: 10px 14px;
+  font-family: 'Circe-Regular';
+  font-size: 15px;
+  color: #ffffff;
+  background: #293240;
+  border: none;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
+}
+
+.sidebar .widget {
+  padding: 0 0 25px 0;
+  margin: 0 0 25px 0;
+  border-bottom: 1px solid #293240;
+}
+
+.sidebar .widget.widget-last {
+  padding: 0;
+  margin: 0;
+  border-bottom: none;
+}
+
+.sidebar .widget h3 {
+  margin: 0;
 }
 
 /* ==========================================================================
