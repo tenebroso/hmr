@@ -9,7 +9,6 @@ module.exports = function(grunt) {
       all: [
         'Gruntfile.js',
         'assets/js/*.js',
-        'assets/js/**/*.js',
         'assets/js/plugins/*.js',
         '!assets/js/scripts.min.js'
       ]
@@ -46,6 +45,7 @@ module.exports = function(grunt) {
             'assets/js/plugins/bootstrap/bootstrap-tab.js',
             'assets/js/plugins/bootstrap/bootstrap-typehead.js',
             'assets/js/plugins/*.js',
+            'assets/js/views/**/*.js',
             'assets/js/_*.js'
           ]
         }
@@ -59,7 +59,7 @@ module.exports = function(grunt) {
         ],
         tasks: ['recess', 'version'],
         options: {
-			livereload: true,
+			livereload: false,
 		}
       },
       js: {
