@@ -1,8 +1,8 @@
 //HMR.Home = "xxx";
+ 
+ var HMR = HMR || {};
 
 ;(function() {
-
-  var HMR = HMR || {};
 
   HMR.homepageImageViewer = function() {
 
