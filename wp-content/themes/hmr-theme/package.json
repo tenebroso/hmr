@@ -1,0 +1,16 @@
+{
+  "name": "hmr-site",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">= 0.10.9"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-clean": "~0.4.1",
+    "grunt-contrib-jshint": "~0.5.4",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-watch": "~0.4.3",
+    "grunt-recess": "~0.3.3"
+  }
+}

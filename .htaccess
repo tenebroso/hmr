@@ -1,0 +1,16 @@
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /hmr/
+RewriteRule ^index\.php$ - [L]
+RewriteRule ^assets/css/(.*) /hmr/wp-content/themes/hmr-theme/assets/css/$1 [QSA,L]
+RewriteRule ^assets/js/(.*) /hmr/wp-content/themes/hmr-theme/assets/js/$1 [QSA,L]
+RewriteRule ^assets/img/(.*) /hmr/wp-content/themes/hmr-theme/assets/img/$1 [QSA,L]
+RewriteRule ^plugins/(.*) /hmr/wp-content/plugins/$1 [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /hmr/index.php [L]
+</IfModule>
+
+# END WordPress

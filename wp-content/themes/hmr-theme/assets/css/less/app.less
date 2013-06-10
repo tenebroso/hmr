@@ -1,0 +1,273 @@
+/*!
+ * Roots 6.4.0
+ */
+
+@import "bootstrap/variables.less";
+@import "bootstrap/mixins.less";
+@import "bootstrap/responsive-utilities.less";
+@import "bootstrap/utilities.less";
+@import "bootstrap/fonts.less";
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+* { 
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
+	*behavior: url(boxsizing.htc); 
+}
+
+html { 
+	background:@blueDark;
+}
+
+body { 
+	font-family:@serifFontFamily;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family:@sansFontFamily;
+}
+
+strong {
+	font-weight:normal;
+	font-family: 'ArvoBold';
+	em {
+		font-family: 'ArvoBoldItalic';
+	}
+}
+
+em {
+	font-family: 'ArvoItalic';
+	font-style:normal;
+	strong {
+		font-family: 'ArvoBoldItalic';
+	}
+}
+
+.js {
+	body {
+		display:none;
+	}
+}
+
+/* =============================================================================
+   Home Specifics
+   ========================================================================== */
+
+.home {
+	.banner {
+		.brand {
+			background-position:-138px top;
+		}
+		background:url(../img/gradient.png) repeat-x left bottom;
+		border:none;
+	}
+	.content-info {
+		display:none;
+	}
+}
+
+
+/* =============================================================================
+   Header
+   ========================================================================== */
+
+.banner { 
+	.brand {
+		.size(81px,139px);
+		display:block;
+		background:url(@sprite) no-repeat left top;
+		.hide-text();
+		margin:15px auto;
+	}
+	border-bottom:2px solid @blue;
+}
+
+
+
+
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+.content {
+	.caps {
+		text-transform:uppercase;
+	}
+	.meta {
+		color:@gray;
+		margin:0;
+		&.match-height {
+			line-height:38px;
+		}
+	}
+	.thumbnail {
+		max-width:100%;
+	}
+	p {
+		margin:.75em 0;
+	}
+	hr {
+		border:none;
+		border-top:1px solid @blue;
+	}
+	strong {
+
+	}
+	em {
+		color:@gray;
+	}
+}
+
+
+
+/* ==========================================================================
+   Primary Content
+   ========================================================================== */
+
+.wrap {
+	&.container {
+		margin:50px auto 0;
+	}
+	.clear {
+		clear:left;
+		margin-left:0;
+	}
+}
+
+
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+.sidebar { 
+	h3 {
+		color:@gray;
+		text-transform:uppercase;
+		font-size:16px;
+	}
+	ul {
+		list-style-type:none;
+		margin:0;
+		padding:0;
+	}
+	#s {
+		background:@blue;
+		border:none;
+		color:@white;
+		font-size:15px;
+		font-family: 'Circe-Regular';
+		padding:10px 14px;
+		.border-radius(2px);
+		width:100%;
+	}
+	.widget {
+		border-bottom:1px solid @blue;
+		margin:0 0 25px 0;
+		padding:0 0 25px 0;
+		&.widget-last {
+			border-bottom:none;
+			margin:0;
+			padding:0;
+		}
+		h3 {
+			margin:0;
+		}
+	}
+	font-size:14px;
+}
+
+
+
+/* ==========================================================================
+   Posts
+   ========================================================================== */
+
+.hentry {
+	header { 
+		.entry-title {
+			font-size:35px;
+			margin:0;
+			line-height:1.1;
+			a {
+				color:@white;
+			}
+			}
+		}
+	.byline {
+		color:@blueLight;
+		margin:.5em 0 2em 0;
+	}
+	margin: 0 0 4em 0;
+	padding: 0 0 2em 0;
+	border-bottom:1px solid @blue;
+}
+
+/* ==========================================================================
+   Single Team Posts
+   ========================================================================== */
+
+.single-team {
+	.hentry {
+		border:none;
+	}
+}
+
+/* ==========================================================================
+   Team Archive
+   ========================================================================== */
+
+.post-type-archive {
+	.feature {
+		margin:0 0 100px 0;
+	}
+	.span2 {
+		margin-bottom:25px;
+	}
+	a {
+		img {
+			 -webkit-transition: opacity .25s ease-in-out;
+			  -moz-transition: opacity .25s ease-in-out;
+			  -o-transition: opacity .25s ease-in-out;
+			  transition: opacity .25s ease-in-out;
+			&:hover {
+				.opacity(80);
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.content-info { 
+	background:@blue;
+}
+
+
+
+/* ==========================================================================
+   WordPress Generated Classes
+   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+   ========================================================================== */
+
+.aligncenter { display: block; margin: 1.625em auto; }
+.alignleft { float: left; margin:0 1.625em 1.625em 0; }
+.alignright { float: right; margin:0 0 1.625em 1.625em; }
+.alignnone { margin-left: 0; margin-right: 0; }
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+}
