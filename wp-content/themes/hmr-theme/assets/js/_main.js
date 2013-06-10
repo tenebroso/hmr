@@ -1,7 +1,10 @@
 // Modified http://paulirish.com/2009/markup-based-unobtrusive-comprehensive-dom-ready-execution/
 // Only fires on body class (working off strictly WordPress body_class)
+// 
 
-var ExampleSite = {
+var HMR = window.HMR || {};
+
+HMR.Site = {
   // All pages
   common: {
     init: function() {
@@ -15,6 +18,7 @@ var ExampleSite = {
         $("body").fadeOut(500, redirectPage);      
       });
          
+      
       function redirectPage() {
         window.location = linkLocation;
       }
@@ -47,7 +51,7 @@ var ExampleSite = {
 
 var UTIL = {
   fire: function(func, funcname, args) {
-    var namespace = ExampleSite;
+    var namespace = HMR.Site;
     funcname = (funcname === undefined) ? 'init' : funcname;
     if (func !== '' && namespace[func] && typeof namespace[func][funcname] === 'function') {
       namespace[func][funcname](args);
