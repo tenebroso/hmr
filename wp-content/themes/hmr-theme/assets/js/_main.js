@@ -7,7 +7,7 @@ var ExampleSite = {
     init: function() {
       $('#s').clearField();
  
-      $("body").show();;
+      $("body").show();
  
       $("a").click(function(event){
         event.preventDefault();
