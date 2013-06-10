@@ -18,7 +18,7 @@ HMR.Site = {
         $("body").fadeOut(500, redirectPage);      
       });
          
-      
+
       function redirectPage() {
         window.location = linkLocation;
       }
@@ -28,11 +28,7 @@ HMR.Site = {
   // Home page
   home: {
     init: function() {
-      $.backstretch("http://tenebroso.s3.amazonaws.com/CORPORATE-8.jpg");
-      $('html').css('background','none');
-      $('a').click(function() { 
-        $('html').css('background','#071222');
-      });
+      HMR.homepageImageViewer();
     }
   },
   // About page
