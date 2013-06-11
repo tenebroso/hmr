@@ -34,7 +34,7 @@
 .input-block-level {
   display: block;
   width: 100%;
-  min-height: 36px;
+  min-height: 42px;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -224,8 +224,8 @@ textarea {
 body {
   margin: 0;
   font-family: 'Circe-Light', sans-serif;
-  font-size: 16px;
-  line-height: 26px;
+  font-size: 18px;
+  line-height: 32px;
   color: #ffffff;
   background-color: #071222;
 }
@@ -408,7 +408,7 @@ a:focus {
   display: block;
   float: left;
   width: 100%;
-  min-height: 36px;
+  min-height: 42px;
   margin-left: 2.127659574468085%;
   *margin-left: 2.074468085106383%;
   -webkit-box-sizing: border-box;
@@ -678,7 +678,7 @@ a:focus {
   float: right;
   font-size: 20px;
   font-weight: bold;
-  line-height: 26px;
+  line-height: 32px;
   color: #000000;
   text-shadow: 0 1px 0 #ffffff;
   opacity: 0.2;
@@ -703,7 +703,7 @@ button.close {
 }
 
 .nav {
-  margin-bottom: 26px;
+  margin-bottom: 32px;
   margin-left: 0;
   text-align: center;
   list-style: none;
@@ -1133,13 +1133,13 @@ button.close {
 
 .thumbnails > li {
   float: left;
-  margin-bottom: 26px;
+  margin-bottom: 32px;
   margin-left: 20px;
 }
 
 .thumbnail {
   display: block;
-  line-height: 26px;
+  line-height: 32px;
 }
 
 a.thumbnail:hover,
@@ -1207,7 +1207,7 @@ a.thumbnail:focus {
 .badge {
   display: inline-block;
   padding: 2px 4px;
-  font-size: 13.536px;
+  font-size: 15.228px;
   font-weight: bold;
   line-height: 14px;
   color: #ffffff;
@@ -1352,8 +1352,8 @@ a.badge:focus {
 }
 
 .progress {
-  height: 26px;
-  margin-bottom: 26px;
+  height: 32px;
+  margin-bottom: 32px;
   overflow: hidden;
   background-color: #f7f7f7;
   background-image: -moz-linear-gradient(top, #f5f5f5, #f9f9f9);
@@ -1515,7 +1515,7 @@ a.badge:focus {
 }
 
 .accordion {
-  margin-bottom: 26px;
+  margin-bottom: 32px;
 }
 
 .accordion-group {
@@ -1546,7 +1546,7 @@ a.badge:focus {
 
 .carousel {
   position: relative;
-  margin-bottom: 26px;
+  margin-bottom: 32px;
   line-height: 1;
 }
 
@@ -1680,7 +1680,7 @@ a.badge:focus {
 
 .carousel-caption h4,
 .carousel-caption p {
-  line-height: 26px;
+  line-height: 32px;
   color: #ffffff;
 }
 
@@ -1697,7 +1697,7 @@ a.badge:focus {
   margin-bottom: 30px;
   font-size: 18px;
   font-weight: 200;
-  line-height: 39px;
+  line-height: 48px;
   color: inherit;
   background-color: #eeeeee;
   -webkit-border-radius: 6px;
@@ -1714,7 +1714,7 @@ a.badge:focus {
 }
 
 .hero-unit li {
-  line-height: 39px;
+  line-height: 48px;
 }
 
 .pull-right {
@@ -1789,7 +1789,7 @@ a.badge:focus {
 .input-block-level {
   display: block;
   width: 100%;
-  min-height: 36px;
+  min-height: 42px;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -1977,7 +1977,7 @@ a.badge:focus {
     display: block;
     float: left;
     width: 100%;
-    min-height: 36px;
+    min-height: 42px;
     margin-left: 2%;
     *margin-left: 1.946808510638298%;
     -webkit-box-sizing: border-box;
@@ -2327,7 +2327,7 @@ a.badge:focus {
     display: block;
     float: left;
     width: 100%;
-    min-height: 36px;
+    min-height: 42px;
     margin-left: 2.7624309392265194%;
     *margin-left: 2.709239449864817%;
     -webkit-box-sizing: border-box;
@@ -2621,7 +2621,7 @@ a.badge:focus {
   .uneditable-input {
     display: block;
     width: 100%;
-    min-height: 36px;
+    min-height: 42px;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
@@ -2658,7 +2658,7 @@ a.badge:focus {
   }
   .page-header h1 small {
     display: block;
-    line-height: 26px;
+    line-height: 32px;
   }
   input[type="checkbox"],
   input[type="radio"] {
@@ -2713,10 +2713,10 @@ a.badge:focus {
     position: static;
   }
   .navbar-fixed-top {
-    margin-bottom: 26px;
+    margin-bottom: 32px;
   }
   .navbar-fixed-bottom {
-    margin-top: 26px;
+    margin-top: 32px;
   }
   .navbar-fixed-top .navbar-inner,
   .navbar-fixed-bottom .navbar-inner {
@@ -2736,7 +2736,7 @@ a.badge:focus {
   }
   .nav-collapse .nav {
     float: none;
-    margin: 0 0 13px;
+    margin: 0 0 16px;
   }
   .nav-collapse .nav > li {
     float: none;
@@ -2825,8 +2825,8 @@ a.badge:focus {
   .nav-collapse .navbar-form,
   .nav-collapse .navbar-search {
     float: none;
-    padding: 13px 15px;
-    margin: 13px 0;
+    padding: 16px 15px;
+    margin: 16px 0;
     border-top: 1px solid #f2f2f2;
     border-bottom: 1px solid #f2f2f2;
     -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -2893,7 +2893,7 @@ a.badge:focus {
 .input-block-level {
   display: block;
   width: 100%;
-  min-height: 36px;
+  min-height: 42px;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -3105,6 +3105,7 @@ h4,
 h5,
 h6 {
   font-family: 'Circe-Light', sans-serif;
+  font-weight: normal;
 }
 
 strong {
@@ -3214,6 +3215,16 @@ em strong {
   clear: left;
 }
 
+.page-header h1 {
+  margin: .75em 0 1em 0;
+  font-family: 'Circe-Regular';
+  font-size: 30px;
+  font-weight: normal;
+  color: #a6a6a6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 /* ==========================================================================
    Sidebar
    ========================================================================== */
@@ -3270,6 +3281,8 @@ em strong {
 .hentry {
   padding: 0 0 2em 0;
   margin: 0 0 4em 0;
+  font-size: 16px;
+  line-height: 26px;
   border-bottom: 1px solid #293240;
 }
 
@@ -3394,6 +3407,7 @@ em strong {
    ========================================================================== */
 
 .content-info {
+  margin: 80px 0 0;
   background: #293240;
 }
 
