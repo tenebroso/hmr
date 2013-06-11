@@ -1,5 +1,5 @@
 
-<img class="feature" alt="Team Photo" title="Team Photo" src="<?php the_field('team_landing_page_photo','options');?>">
+<?php get_template_part('templates/content', 'team-hero'); ?>
 
 <div class="row-fluid">
 

@@ -47,6 +47,10 @@ em {
 	}
 }
 
+.caps {
+	text-transform:uppercase;
+}
+
 .js {
 	body {
 		display:none;
@@ -117,9 +121,6 @@ em {
 	}
 	strong {
 
-	}
-	em {
-		color:@gray;
 	}
 }
 
@@ -223,22 +224,80 @@ em {
    ========================================================================== */
 
 .post-type-archive {
-	.feature {
-		margin:0 0 100px 0;
+	.attachment-post-thumbnail {
+		border:1px solid @gray;
+		&:hover {
+			border:1px solid white;
+		}
 	}
 	.span2 {
 		margin-bottom:25px;
 	}
 	a {
-		img {
-			 -webkit-transition: opacity .25s ease-in-out;
-			  -moz-transition: opacity .25s ease-in-out;
-			  -o-transition: opacity .25s ease-in-out;
-			  transition: opacity .25s ease-in-out;
-			&:hover {
-				.opacity(80);
+		display:block;
+		&:hover {
+			color:white;
+			text-decoration:none;
+		}
+	}
+	.large {
+		font-size:18px;
+		line-height:1;
+		em {
+			font-size:13px;
+			&.arvo {
+				font-family: 'ArvoItalic';
 			}
 		}
+	}
+}
+
+.team-photo {
+	img {
+		position:absolute;
+		left:0;
+		top:0;
+	}
+	position:relative;
+	width:100%;
+	min-height:475px;
+	margin:0 0 100px 0;
+	.hover {
+		cursor:pointer;
+		position:absolute;
+	}
+	.mertz {
+		position:absolute;
+		right: 55px;
+		bottom: 265px;
+		width: 70px;
+		height: 70px;
+	}
+}
+
+.tooltipsy {
+	background:url(../img/white-85.png) repeat;
+	text-align:center;
+	padding:10px 15px;
+	color:@blueDark;
+	h4 {
+		font-size:16px;
+		font-family: 'Circe-Bold';
+		margin:0 0 5px 0;
+		line-height:1;
+		&:before {
+			content: "";
+			display: block;
+			width: 23px;
+			height: 13px;
+			background:url(../img/sprite.png) no-repeat -287px -2px;
+			margin:0 auto;
+		}
+	}
+	p {
+		margin:0;
+		line-height:1;
+		font-size:13px;
 	}
 }
 

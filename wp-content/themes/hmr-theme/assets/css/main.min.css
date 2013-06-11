@@ -3071,6 +3071,14 @@ a.badge:focus {
   src: url('webfonts/Arvo-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'), url('webfonts/Arvo-BoldItalic-webfont.woff') format('woff'), url('webfonts/Arvo-BoldItalic-webfont.ttf') format('truetype'), url('webfonts/Arvo-BoldItalic-webfont.svg#ArvoBoldItalic') format('svg');
 }
 
+.circe {
+  font-family: 'Circe-Regular';
+}
+
+.arvo {
+  font-family: 'ArvoRegular';
+}
+
 /* ==========================================================================
    Base
    ========================================================================== */
@@ -3115,6 +3123,10 @@ em {
 
 em strong {
   font-family: 'ArvoBoldItalic';
+}
+
+.caps {
+  text-transform: uppercase;
 }
 
 .js body {
@@ -3187,10 +3199,6 @@ em strong {
 .content hr {
   border: none;
   border-top: 1px solid #293240;
-}
-
-.content em {
-  color: #a6a6a6;
 }
 
 /* ==========================================================================
@@ -3292,24 +3300,93 @@ em strong {
    Team Archive
    ========================================================================== */
 
-.post-type-archive .feature {
-  margin: 0 0 100px 0;
+.post-type-archive .attachment-post-thumbnail {
+  border: 1px solid #a6a6a6;
+}
+
+.post-type-archive .attachment-post-thumbnail:hover {
+  border: 1px solid white;
 }
 
 .post-type-archive .span2 {
   margin-bottom: 25px;
 }
 
-.post-type-archive a img {
-  -webkit-transition: opacity 0.25s ease-in-out;
-     -moz-transition: opacity 0.25s ease-in-out;
-       -o-transition: opacity 0.25s ease-in-out;
-          transition: opacity 0.25s ease-in-out;
+.post-type-archive a {
+  display: block;
 }
 
-.post-type-archive a img:hover {
-  opacity: 0.8;
-  filter: alpha(opacity=80);
+.post-type-archive a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.post-type-archive .large {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.post-type-archive .large em {
+  font-size: 13px;
+}
+
+.post-type-archive .large em.arvo {
+  font-family: 'ArvoItalic';
+}
+
+.team-photo {
+  position: relative;
+  width: 100%;
+  min-height: 475px;
+  margin: 0 0 100px 0;
+}
+
+.team-photo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.team-photo .hover {
+  position: absolute;
+  cursor: pointer;
+}
+
+.team-photo .mertz {
+  position: absolute;
+  right: 55px;
+  bottom: 265px;
+  width: 70px;
+  height: 70px;
+}
+
+.tooltipsy {
+  padding: 10px 15px;
+  color: #071222;
+  text-align: center;
+  background: url(../img/white-85.png) repeat;
+}
+
+.tooltipsy h4 {
+  margin: 0 0 5px 0;
+  font-family: 'Circe-Bold';
+  font-size: 16px;
+  line-height: 1;
+}
+
+.tooltipsy h4:before {
+  display: block;
+  width: 23px;
+  height: 13px;
+  margin: 0 auto;
+  background: url(../img/sprite.png) no-repeat -287px -2px;
+  content: "";
+}
+
+.tooltipsy p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1;
 }
 
 /* ==========================================================================
