@@ -2,10 +2,6 @@
 // Navs
 // --------------------------------------------------
 
-
-// BASE CLASS
-// ----------
-
 .nav {
   margin-left: 0;
   margin-bottom: @baseLineHeight;
@@ -30,23 +26,6 @@
   color:@linkColor;
 }
 
-// Prevent IE8 from misplacing imgs
-// See https://github.com/h5bp/html5-boilerplate/issues/984#issuecomment-3985989
-.nav > li > a > img {
-  max-width: none;
-}
-
-// Redeclare pull classes because of specifity
-.nav > .pull-right {
-  float: right;
-}
-
-
-
-// TABS AND PILLS
-// -------------
-
-// Common styles
 .nav-tabs,
 .nav-pills {
   .clearfix();
@@ -54,4 +33,46 @@
 .nav-tabs > li,
 .nav-pills > li {
   display:inline-block;
+}
+
+.sub-nav {
+  border-bottom:2px solid #202a39;
+  position:relative;
+  z-index:1;
+  .menu {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+    li {
+      display:inline-block;
+      padding:0 0 10px 0;
+      a {
+        font-size:15px;
+        color:@blueLight;
+        font-family: 'Circe-Regular';
+        text-transform:uppercase;
+        display:inline-block;
+        padding:10px 15px 40px 15px;
+        position:relative;
+        z-index:3;
+        margin:0 0 -40px 0;
+        &:hover {
+          color:white;
+          text-decoration:none;
+        }
+      }
+      &.active {
+        a {
+          color:white;
+          background:url(../img/sprite.png) no-repeat -149px -161px;
+        }
+        &.menu-our-team {
+          a {
+            background:url(../img/sprite.png) no-repeat -158px -161px;
+          }
+        }
+      }
+    }
+  }
 }

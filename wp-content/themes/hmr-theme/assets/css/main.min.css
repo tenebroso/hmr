@@ -727,14 +727,6 @@ button.close {
   text-decoration: none;
 }
 
-.nav > li > a > img {
-  max-width: none;
-}
-
-.nav > .pull-right {
-  float: right;
-}
-
 .nav-tabs,
 .nav-pills {
   *zoom: 1;
@@ -757,6 +749,50 @@ button.close {
 .nav-tabs > li,
 .nav-pills > li {
   display: inline-block;
+}
+
+.sub-nav {
+  position: relative;
+  z-index: 1;
+  border-bottom: 2px solid #202a39;
+}
+
+.sub-nav .menu {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  list-style-type: none;
+}
+
+.sub-nav .menu li {
+  display: inline-block;
+  padding: 0 0 10px 0;
+}
+
+.sub-nav .menu li a {
+  position: relative;
+  z-index: 3;
+  display: inline-block;
+  padding: 10px 15px 40px 15px;
+  margin: 0 0 -40px 0;
+  font-family: 'Circe-Regular';
+  font-size: 15px;
+  color: #55616f;
+  text-transform: uppercase;
+}
+
+.sub-nav .menu li a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.sub-nav .menu li.active a {
+  color: white;
+  background: url(../img/sprite.png) no-repeat -149px -161px;
+}
+
+.sub-nav .menu li.active.menu-our-team a {
+  background: url(../img/sprite.png) no-repeat -158px -161px;
 }
 
 .modal-backdrop {

@@ -10,3 +10,5 @@
     </nav>
   </div>
 </header>
+
+<?php if(is_page(array('27','29'))) { get_template_part('templates/header', 'sub-nav'); } ?>
