@@ -3398,15 +3398,19 @@ em strong {
 
 .team-photo .hover {
   position: absolute;
+  width: 70px;
+  height: 70px;
   cursor: pointer;
 }
 
 .team-photo .mertz {
-  position: absolute;
   right: 55px;
   bottom: 265px;
-  width: 70px;
-  height: 70px;
+}
+
+.team-photo .heff {
+  top: 208px;
+  left: 380px;
 }
 
 .tooltipsy {

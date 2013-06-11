@@ -11,7 +11,7 @@ HMR.Site = {
       $('#s').clearField();
  
       $("body").show();
- 
+
       $("a").click(function(event){
         event.preventDefault();
         linkLocation = this.href;
