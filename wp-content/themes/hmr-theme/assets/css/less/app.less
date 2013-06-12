@@ -239,29 +239,31 @@ em {
    ========================================================================== */
 
 .post-type-archive {
-	.attachment-post-thumbnail {
+	.content {
+		.attachment-post-thumbnail {
 		border:1px solid @gray;
 		&:hover {
 			border:1px solid white;
 		}
-	}
-	.span2 {
-		margin-bottom:25px;
-	}
-	a {
-		display:block;
-		&:hover {
-			color:white;
-			text-decoration:none;
 		}
-	}
-	.large {
-		font-size:18px;
-		line-height:1;
-		em {
-			font-size:13px;
-			&.arvo {
-				font-family: 'ArvoItalic';
+		.span2 {
+			margin-bottom:25px;
+		}
+		a {
+			display:block;
+			&:hover {
+				color:white;
+				text-decoration:none;
+			}
+		}
+		.large {
+			font-size:18px;
+			line-height:1;
+			em {
+				font-size:13px;
+				&.arvo {
+					font-family: 'ArvoItalic';
+				}
 			}
 		}
 	}
@@ -334,6 +336,39 @@ em {
 .content-info { 
 	background:@blue;
 	margin:80px 0 0;
+	font-family: 'Circe-Regular';
+	padding:20px 0;
+	p { 
+		font-size:13px;
+		line-height:1.6;
+		margin:0;
+	}
+	h4 {
+		font-size:17px;
+		color:@blueLighter;
+		text-transform:uppercase;
+		font-family: 'Circe-Regular';
+		letter-spacing:.2em;
+		margin:0;
+	}
+	a {
+		color:white;
+		&:hover {
+			color:@blueLighter;
+			text-decoration:none;
+		}
+	}
+	.span6 {
+		padding-left:25px;
+		margin-left:0;
+		&.text-right {
+			padding-right:25px;
+			padding-left:0;
+		}
+		&.border-right {
+			border-right:1px solid #a4adb5;
+		}
+	}
 }
 
 

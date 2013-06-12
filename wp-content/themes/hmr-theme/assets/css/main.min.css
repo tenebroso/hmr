@@ -3349,37 +3349,37 @@ em strong {
    Team Archive
    ========================================================================== */
 
-.post-type-archive .attachment-post-thumbnail {
+.post-type-archive .content .attachment-post-thumbnail {
   border: 1px solid #a6a6a6;
 }
 
-.post-type-archive .attachment-post-thumbnail:hover {
+.post-type-archive .content .attachment-post-thumbnail:hover {
   border: 1px solid white;
 }
 
-.post-type-archive .span2 {
+.post-type-archive .content .span2 {
   margin-bottom: 25px;
 }
 
-.post-type-archive a {
+.post-type-archive .content a {
   display: block;
 }
 
-.post-type-archive a:hover {
+.post-type-archive .content a:hover {
   color: white;
   text-decoration: none;
 }
 
-.post-type-archive .large {
+.post-type-archive .content .large {
   font-size: 18px;
   line-height: 1;
 }
 
-.post-type-archive .large em {
+.post-type-archive .content .large em {
   font-size: 13px;
 }
 
-.post-type-archive .large em.arvo {
+.post-type-archive .content .large em.arvo {
   font-family: 'ArvoItalic';
 }
 
@@ -3457,8 +3457,48 @@ em strong {
    ========================================================================== */
 
 .content-info {
+  padding: 20px 0;
   margin: 80px 0 0;
+  font-family: 'Circe-Regular';
   background: #293240;
+}
+
+.content-info p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.content-info h4 {
+  margin: 0;
+  font-family: 'Circe-Regular';
+  font-size: 17px;
+  letter-spacing: .2em;
+  color: #a4adb5;
+  text-transform: uppercase;
+}
+
+.content-info a {
+  color: white;
+}
+
+.content-info a:hover {
+  color: #a4adb5;
+  text-decoration: none;
+}
+
+.content-info .span6 {
+  padding-left: 25px;
+  margin-left: 0;
+}
+
+.content-info .span6.text-right {
+  padding-right: 25px;
+  padding-left: 0;
+}
+
+.content-info .span6.border-right {
+  border-right: 1px solid #a4adb5;
 }
 
 /* ==========================================================================
