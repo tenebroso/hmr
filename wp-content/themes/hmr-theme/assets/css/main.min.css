@@ -3187,6 +3187,33 @@ em strong {
   display: none;
 }
 
+.home .container {
+  position: relative;
+}
+
+.home .img {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-backface-visibility: hidden;
+}
+
+.home .img.forward {
+  width: 246px;
+  height: 36px;
+  background: url(../img/forward.png) no-repeat left top;
+}
+
+.home .img.thinkers {
+  width: 246px;
+  height: 36px;
+  background: url(../img/thinkers.png) no-repeat left top;
+}
+
 /* =============================================================================
    Header
    ========================================================================== */

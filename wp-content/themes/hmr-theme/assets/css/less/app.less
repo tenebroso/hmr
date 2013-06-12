@@ -73,6 +73,24 @@ em {
 	.content-info {
 		display:none;
 	}
+	.container {
+		position:relative;
+	}
+	.img {
+		.hide-text();
+		.opacity(0);
+		-webkit-backface-visibility: hidden;
+		&.forward {
+			background:url(../img/forward.png) no-repeat left top;
+			width:246px;
+			height:36px;
+		}
+		&.thinkers {
+			background:url(../img/thinkers.png) no-repeat left top;
+			width:246px;
+			height:36px;
+		}
+	}
 }
 
 

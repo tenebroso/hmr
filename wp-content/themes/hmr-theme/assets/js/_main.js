@@ -29,6 +29,7 @@ HMR.Site = {
   home: {
     init: function() {
       HMR.homepageImageViewer();
+      HMR.homepageBodyFade();
     }
   },
   // About page
