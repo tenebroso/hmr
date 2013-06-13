@@ -7,16 +7,16 @@
   HMR.homepageImageViewer = function() {
 
     $.backstretch([
-      "http://tenebroso.s3.amazonaws.com/CORPORATE-8.jpg", 
-      "http://tenebroso.s3.amazonaws.com/ART-AND-GRAPHIC-16.jpg", 
-      "http://tenebroso.s3.amazonaws.com/FABRIC-5.jpg",
-      "http://tenebroso.s3.amazonaws.com/FABRIC-11.jpg",
-      "http://tenebroso.s3.amazonaws.com/INNOVATION-13.jpg",
-      "http://tenebroso.s3.amazonaws.com/SOCIAL-5.jpg",
-      "http://tenebroso.s3.amazonaws.com/SOCIAL-16.jpg",
-      "http://tenebroso.s3.amazonaws.com/WEDDINGS-2.jpg",
-      "http://tenebroso.s3.amazonaws.com/WEDDINGS-22.jpg"
-    ], {duration: 4000, fade: 1250});
+      "/assets/CORPORATE-8.jpg", 
+      "/assets/ART-AND-GRAPHIC-16.jpg", 
+      "/assets/FABRIC-5.jpg",
+      "/assets/FABRIC-11.jpg",
+      "/assets/INNOVATION-13.jpg",
+      "/assets/SOCIAL-5.jpg",
+      "/assets/SOCIAL-16.jpg",
+      "/assets/WEDDINGS-2.jpg",
+      "/assets/WEDDINGS-22.jpg"
+    ], {duration: 5000, fade: 1250});
 
     $('.forward').transition({ delay:750, opacity: 100, marginLeft: '100px'}, 500, 'ease');
     $('.thinkers').transition({ delay:1000, opacity: 100, marginLeft: '150px'}, 750, 'easeOutCirc');
@@ -24,10 +24,10 @@
     $('.thinkers').transition({ delay:3950, opacity: 0, marginLeft: '350px'}, 500, 'easeOutCirc');
 
 
-    $('.forward2').transition({ delay:5050, opacity: 100, marginRight: '100px'}, 500, 'ease');
-    $('.thinkers2').transition({ delay:5250, opacity: 100, marginRight: '150px'}, 750, 'easeOutCirc');
-    $('.forward2').transition({ delay:7650, opacity: 0, marginLeft: '-50px'}, 500, 'ease');
-    $('.thinkers2').transition({ delay:7650, opacity: 0, marginLeft: '-80px'}, 500, 'easeOutCirc');
+    $('.forward2').transition({ delay:7500, opacity: 100, marginRight: '100px'}, 500, 'ease');
+    $('.thinkers2').transition({ delay:7500, opacity: 100, marginRight: '150px'}, 750, 'easeOutCirc');
+    $('.forward2').transition({ delay:3250, opacity: 0, marginLeft: '-50px'}, 500, 'ease');
+    $('.thinkers2').transition({ delay:3250, opacity: 0, marginLeft: '-80px'}, 500, 'easeOutCirc');
 
   };
 

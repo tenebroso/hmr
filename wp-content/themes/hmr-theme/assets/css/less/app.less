@@ -27,6 +27,10 @@ body {
 	font-family:@serifFontFamily;
 }
 
+html, body {
+	height:100%;
+}
+
 h1,h2,h3,h4,h5,h6 {
 	font-family:@sansFontFamily;
 	font-weight:normal;
@@ -75,6 +79,7 @@ em {
 	}
 	.container {
 		position:relative;
+		height:80%;
 	}
 	.img {
 		.hide-text();
@@ -84,6 +89,8 @@ em {
 			background:url(../img/forward.png) no-repeat left top;
 			width:246px;
 			height:36px;
+			left:calc(100% - 50px);
+			bottom: calc(100% - 20px);
 		}
 		&.thinkers {
 			background:url(../img/thinkers.png) no-repeat left top;

@@ -3134,6 +3134,11 @@ body {
   font-family: 'ArvoRegular', serif;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 h1,
 h2,
 h3,
@@ -3189,6 +3194,7 @@ em strong {
 
 .home .container {
   position: relative;
+  height: 80%;
 }
 
 .home .img {
@@ -3203,6 +3209,8 @@ em strong {
 }
 
 .home .img.forward {
+  bottom: calc(80%);
+  left: calc(50%);
   width: 246px;
   height: 36px;
   background: url(../img/forward.png) no-repeat left top;
