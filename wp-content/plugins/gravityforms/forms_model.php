@@ -671,8 +671,18 @@ class GFFormsModel {
         $meta = self::get_form_meta($form_id);
         $meta["title"] = $title;
         $meta["id"] = $new_id;
+
+        $notifications = $meta["notifications"];
+        $confirmations = $meta["confirmations"];
+        unset($meta["notifications"]);
+        unset($meta["confirmations"]);
         self::update_form_meta($new_id, $meta);
 
+        //copying notification meta
+        self::update_form_meta($new_id, $notifications, "notifications");
+
+        //copying confirmation meta
+        self::update_form_meta($new_id, $confirmations, "confirmations");
         return $new_id;
     }
 
@@ -716,6 +726,8 @@ class GFFormsModel {
             $result = $wpdb->query( $wpdb->prepare("UPDATE $meta_table_name SET $meta_name=%s WHERE form_id=%d", $form_meta, $form_id) );
         else
             $result = $wpdb->query( $wpdb->prepare("INSERT INTO $meta_table_name(form_id, $meta_name) VALUES(%d, %s)", $form_id, $form_meta ) );
+
+        self::$_current_forms[$form_id] = null;
 
         return $result;
     }
@@ -1064,10 +1076,12 @@ class GFFormsModel {
                 if(isset($calculation_field["inputs"]) && is_array($calculation_field["inputs"])){
                     foreach($calculation_field["inputs"] as $input) {
                         self::save_input($form, $calculation_field, $lead, $current_fields, $input["id"]);
+                        self::refresh_lead_field_value($lead["id"], $input["id"]);
                     }
                 }
                 else{
                     self::save_input($form, $calculation_field, $lead, $current_fields, $calculation_field["id"]);
+                    self::refresh_lead_field_value($lead["id"], $calculation_field["id"]);
                 }
 
             }
@@ -1298,15 +1312,14 @@ class GFFormsModel {
     }
 
     public static function is_value_match($field_value, $target_value, $operation="is", $source_field=null){
-        if($source_field && $source_field["type"] == "post_category"){
+
+        $is_match = false;
+
+        if($source_field && $source_field["type"] == "post_category")
             $field_value = GFCommon::prepare_post_category_value($field_value, $source_field, "conditional_logic");
-        }
 
         if (!empty($field_value) && !is_array($field_value) && $source_field["type"] == "multiselect")
-        {
-			//convert the comma-delimited string into an array
-			$field_value = explode(",", $field_value);
-        }
+			$field_value = explode(",", $field_value); // convert the comma-delimited string into an array
 
         if(is_array($field_value)){
             $field_value = array_values($field_value); //returning array values, ignoring keys if array is associative
@@ -1316,14 +1329,14 @@ class GFFormsModel {
                     $match_count++;
                 }
             }
-            //If operation is Is Not, none of the values in the array can match the target value.
-            return $operation == "isnot" ? $match_count == count($field_value) : $match_count > 0;
+            // if operation is Is Not, none of the values in the array can match the target value.
+            $is_match = $operation == "isnot" ? $match_count == count($field_value) : $match_count > 0;
         }
         else if(self::matches_operation(GFCommon::get_selection_value($field_value), $target_value, $operation)){
-            return true;
+            $is_match = true;
         }
 
-        return false;
+        return apply_filters( 'gform_is_value_match', $is_match, $field_value, $target_value, $operation, $source_field );
     }
 
     private static function try_convert_float($text){
@@ -1971,8 +1984,9 @@ class GFFormsModel {
         if(empty($uploaded_filename))
             return false;
 
+        $form_unique_id = self::get_form_unique_id($form_id);
         $pathinfo = pathinfo($uploaded_filename);
-        return array("uploaded_filename" => $uploaded_filename, "temp_filename" => "{$form_id}_{$input_name}.{$pathinfo["extension"]}");
+        return array("uploaded_filename" => $uploaded_filename, "temp_filename" => "{$form_unique_id}_{$input_name}.{$pathinfo["extension"]}");
 
     }
 
@@ -2049,12 +2063,14 @@ class GFFormsModel {
             $post_data["post_title"] = self::get_default_post_title();
         }
 
-        //inserting post
-        if (GFCommon::is_bp_active()){
-        	//disable buddy press action so save_post is not called because the post data is not yet complete at this point
-        	remove_action("save_post", "bp_blogs_record_post");
-		}
-        $post_id = wp_insert_post($post_data);
+        // remove original post status and save it for later
+        $post_status = $post_data['post_status'];
+
+        // replace original post status with 'draft' so other plugins know this post is not fully populated yet
+        $post_data['post_status'] = 'draft';
+
+        // inserting post
+        $post_id = wp_insert_post( $post_data );
 
         //adding form id and entry id hidden custom fields
         add_post_meta($post_id, "_gform-form-id", $form["id"]);
@@ -2152,6 +2168,7 @@ class GFFormsModel {
 
         $has_content_field = sizeof(GFCommon::get_fields_by_type($form, array("post_content"))) > 0;
         $has_title_field = sizeof(GFCommon::get_fields_by_type($form, array("post_title"))) > 0;
+        $post = false;
 
         //if a post field was configured with a content or title template, process template
         if( (rgar($form, "postContentTemplateEnabled") && $has_content_field) || (rgar($form, "postTitleTemplateEnabled") && $has_title_field) ){
@@ -2186,12 +2203,18 @@ class GFFormsModel {
 
                 $post->post_name = $post_title;
             }
-			if (GFCommon::is_bp_active()){
-				//re-enable buddy press action for save_post since the post data is complete at this point
-        		add_action( 'save_post', 'bp_blogs_record_post', 10, 2 );
-			}
-            wp_update_post($post);
+
         }
+
+        // update post status back to origional status (if not draft)
+        if( $post_status != 'draft' ) {
+            $post = is_object( $post ) ? $post : get_post( $post_id );
+            $post->post_status = $post_status;
+        }
+
+        // if post has been modified since creation, save updates
+        if( is_object( $post ) )
+            wp_update_post($post);
 
         //adding post format
         if(current_theme_supports('post-formats') && rgar($form, 'postFormat')) {
@@ -2392,16 +2415,16 @@ class GFFormsModel {
             }
         }
         else{
-            //Deleting details for this field
-            $sql = $wpdb->prepare("DELETE FROM $lead_detail_table WHERE lead_id=%d AND field_number BETWEEN %s AND %s ", $lead["id"], doubleval($input_id) - 0.001, doubleval($input_id) + 0.001);
-            $wpdb->query($sql);
-
             //Deleting long field if there is one
             $sql = $wpdb->prepare("DELETE FROM $lead_detail_long_table
                                     WHERE lead_detail_id IN(
                                         SELECT id FROM $lead_detail_table WHERE lead_id=%d AND field_number BETWEEN %s AND %s
                                     )",
                                     $lead["id"], doubleval($input_id) - 0.001, doubleval($input_id) + 0.001);
+            $wpdb->query($sql);
+
+            //Deleting details for this field
+            $sql = $wpdb->prepare("DELETE FROM $lead_detail_table WHERE lead_id=%d AND field_number BETWEEN %s AND %s ", $lead["id"], doubleval($input_id) - 0.001, doubleval($input_id) + 0.001);
             $wpdb->query($sql);
         }
     }
@@ -2650,6 +2673,11 @@ class GFFormsModel {
                                                     FROM $notes_table n
                                                     LEFT OUTER JOIN $wpdb->users u ON n.user_id = u.id
                                                     WHERE lead_id=%d ORDER BY id", $lead_id));
+    }
+
+    public static function refresh_lead_field_value($lead_id, $field_id){
+        $cache_key = "GFFormsModel::get_lead_field_value_" . $lead_id . "_" . $field_id;
+        GFCache::delete($cache_key);
     }
 
     public static function get_lead_field_value($lead, $field){

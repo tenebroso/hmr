@@ -1,4 +1,43 @@
 -------------------------------------------------------------------------------------------------------------------
+Version 1.7.5
+    - Fixed issue with new form not displaying fields after first time it was saved
+    - Fixed issue with notification's conditional logic causing notifications to not be sent even when conditional logic was disabled
+	- Updated save_input function to delete from the rg_lead_detail_long table before deleting from rg_lead_detail
+    - Changed GFCache::flush() to prevent deleting persistent transients by default
+    - Various fixes for gaddon support
+    - Updated gf_vars js variable to be automatically included based on script-dependency
+
+-------------------------------------------------------------------------------------------------------------------
+Version 1.7.4
+	- Fixed bug in sending notifications when a form field is chosen
+	- Updated POT file
+    - Added support for object methods to the JavaScript hook framework.
+
+-------------------------------------------------------------------------------------------------------------------
+Version 1.7.3
+    - Changed form switcher so that it redirects to the main form settings tab when switching form while at any other form settings tab
+    - Updated post creation process to create post initially as a draft and then update to desired post status
+	- Fixed issue where merge tag drop down did not display items when a required extended name field was present
+    - Added new hook to prevent new forms from being created in the demo site
+    - Fixed issue with form duplication routine not duplicating confirmations and notifications
+    - Fixed issue with new notifications being created with the "enable conditional logic" checkbox checked
+    - Fixed issue with entry date timezone conversion when exporting entries
+    - Added JS hook: 'gform_is_value_match' allows filtering whether the source and target values are a match
+    - Added PHP hook: 'gform_is_value_match' allows filtering whether the source and target values are a match
+    - Fixed script path issue when registering scripts by using get_base_url()
+    - Added gaddon JS object for use with the upcoming add-on framework
+    - Added support for "tab_label" setting when creating "Settings Pages"
+    - Updated SaveForm() in js.php to delete the data that should no longer be stored in the form meta from the form object: 'notficadtion', 'notifications', 'autoResponder', 'confirmation', and 'confirmations'
+    - Fixed issue with calculating fields not working correctly when it contained another calculated field in its formula
+    - Updated JS GetFieldById() function to allow passing of input ID (i.e. "3.3")
+    - Added JS filter: 'gform_conditional_logic_description' allows you to modify the descriptive HTML (i.e. "Show/hide this field if any/all of the following match")
+    - Added JS filter: 'gform_conditional_object' allows you to modify the conditional logic object based on the object type
+    - Added 'gf_currency_config' to gf_vars array, one step closer to deprecating gf_global array
+    - Fixed several issues with unlocalized strings
+    - Fixed issue with notification logging message
+   - Fixed issue with file uploads where concurrent submissions may result in files being deleted or assigned to the wrong entry
+
+-------------------------------------------------------------------------------------------------------------------
 Version 1.7.2
     - Fixed issue with enqueueing the wrong css file on the preview page
 

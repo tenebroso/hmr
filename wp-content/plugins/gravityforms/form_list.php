@@ -82,8 +82,6 @@ class GFFormList{
         <script type="text/javascript" src="<?php echo GFCommon::get_base_url() . '/js/form_admin.js' ?>"></script>
         <script type="text/javascript">
 
-            <?php GFCommon::gf_vars(); ?>
-
             jQuery(document).ready(function($) {
 
                 <?php if(rgget('page') == 'gf_new_form'): ?>
@@ -186,17 +184,17 @@ class GFFormList{
             <div class="gf_new_form_modal_container">
 
                 <div class="setting-row">
-                    <label for="new_form_title">Form Title<span class="gfield_required">*</span></label><br />
+                    <label for="new_form_title"><?php _e('Form Title', 'gravityforms'); ?><span class="gfield_required">*</span></label><br />
                     <input type="text" class="regular-text" value="" id="new_form_title" tabindex="9000">
                 </div>
 
                 <div class="setting-row">
-                    <label for="new_form_description">Form Description</label><br />
+                    <label for="new_form_description"><?php _e('Form Description', 'gravityforms'); ?></label><br />
                     <textarea class="regular-text" id="new_form_description" tabindex="9001"></textarea>
                 </div>
 
                 <div class="submit-row">
-                    <input id="save_new_form" type="button" class="button button-large button-primary" value="Create Form" onclick="saveNewForm();" tabindex="9002" />
+                    <?php echo apply_filters("gform_new_form_button", '<input id="save_new_form" type="button" class="button button-large button-primary" value="' . __('Create Form', 'gravityforms'). '" onclick="saveNewForm();" tabindex="9002" />'); ?>
                     <div id="gf_new_form_error_message" style="display:inline-block;"></div>
                 </div>
 
@@ -470,6 +468,7 @@ class GFFormList{
         require_once(GFCommon::get_base_path() . '/form_detail.php');
 
         $form = rgpost('form');
+
         if( empty( $form['title'] ) ) {
             $result = array( 'error' => __( 'Please enter a form title.', 'gravityforms' ) );
             die( json_encode( $result ) );

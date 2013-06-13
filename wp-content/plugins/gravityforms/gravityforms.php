@@ -3,7 +3,7 @@
 Plugin Name: Gravity Forms
 Plugin URI: http://www.gravityforms.com
 Description: Easily create web forms and manage form entries within the WordPress admin.
-Version: 1.7.2
+Version: 1.7.5
 Author: rocketgenius
 Author URI: http://www.rocketgenius.com
 
@@ -102,6 +102,7 @@ class GFForms {
     public static function init(){
 
         add_filter("gform_logging_supported", array("RGForms", "set_logging_supported"));
+        add_action( 'admin_head', array( 'GFCommon', 'maybe_output_gf_vars' ) );
 
         self::register_scripts();
 
@@ -214,8 +215,7 @@ class GFForms {
         add_shortcode('gravityforms', array('RGForms', 'parse_shortcode'));
     }
 
-    public static function set_logging_supported($plugins)
-    {
+    public static function set_logging_supported($plugins){
         $plugins["gravityforms"] = "Gravity Forms Core";
         return $plugins;
     }
@@ -537,8 +537,8 @@ class GFForms {
             "common" => array("qtip-init", "sack"),
             "gf_edit_forms" => array("backbone", "editor", "gform_forms", "gform_form_admin", "gform_form_editor", "gform_gravityforms", "gform_json", "gform_menu", "gform_placeholder", "jquery-ui-autocomplete", "jquery-ui-core", "jquery-ui-datepicker", "jquery-ui-sortable", "jquery-ui-tabs", "json2", "media-editor", "media-models", "media-upload", "media-views", "plupload", "plupload-flash", "plupload-html4", "plupload-html5", "plupload-silverlight", "quicktags", "rg_currency", "thickbox", "word-count", "wp-plupload", "wpdialogs-popup", "wplink"),
             "gf_edit_forms_notification" => array("editor", "word-count", "quicktags", "wpdialogs-popup", "media-upload", "wplink", "backbone", "jquery-ui-sortable", "json2", "media-editor", "media-models", "media-views", "plupload", "plupload-flash", "plupload-html4", "plupload-html5", "plupload-silverlight", "wp-plupload", "gform_placeholder", "gform_json", "jquery-ui-autocomplete"),
-            "gf_new_form" => array("thickbox", "jquery-ui-core", "jquery-ui-sortable", "jquery-ui-tabs", "rg_currency", "gforms_gravityforms" ),
-            "gf_entries" => array("thickbox", "gforms_gravityforms", "wp-lists", "gform_json"),
+            "gf_new_form" => array("thickbox", "jquery-ui-core", "jquery-ui-sortable", "jquery-ui-tabs", "rg_currency", "gform_gravityforms" ),
+            "gf_entries" => array("thickbox", "gform_gravityforms", "wp-lists", "gform_json"),
             "gf_settings" => array(),
             "gf_export" => array("gform_form_admin","jquery-ui-datepicker"),
             "gf_help" => array(),
@@ -1197,22 +1197,22 @@ class GFForms {
 
     public static function register_scripts() {
 
-        wp_register_script('gform_chosen', plugins_url('/js/chosen.jquery.min.js', __FILE__), array('jquery'), GFCommon::$version );
-        wp_register_script('gform_conditional_logic', plugins_url('/js/conditional_logic.js', __FILE__), array('jquery'), GFCommon::$version );
-        wp_register_script('gform_datepicker_init', plugins_url('/js/datepicker.js', __FILE__), array('jquery', 'jquery-ui-datepicker'), GFCommon::$version );
-        wp_register_script('gform_dimensions', plugins_url('/js/jquery.dimensions.js', __FILE__), array('jquery'), GFCommon::$version );
-        wp_register_script('gform_floatmenu', plugins_url('/js/floatmenu_init.js', __FILE__), array('jquery'), GFCommon::$version );
-        wp_register_script('gform_form_admin', plugins_url('/js/form_admin.js', __FILE__), array('jquery', 'jquery-ui-autocomplete'), GFCommon::$version );
-        wp_register_script('gform_form_editor', plugins_url('/js/form_editor.js', __FILE__), array('jquery', 'gform_json'), GFCommon::$version );
-        wp_register_script('gform_forms', plugins_url('/js/forms.js', __FILE__), array('jquery'), GFCommon::$version );
-        wp_register_script('gform_gravityforms', plugins_url('/js/gravityforms.js', __FILE__), array('jquery'), GFCommon::$version );
-        wp_register_script('gform_json', plugins_url('/js/jquery.json-1.3.js', __FILE__), array('jquery'), GFCommon::$version );
-        wp_register_script('gform_masked_input', plugins_url('/js/jquery.maskedinput-1.3.min.js', __FILE__), array('jquery'), GFCommon::$version );
-        wp_register_script('gform_menu', plugins_url('/js/menu.js', __FILE__), array('jquery'), GFCommon::$version );
-        wp_register_script('gform_placeholder', plugins_url('/js/jquery.placeholder.1.2.min.js', __FILE__), array('jquery'), GFCommon::$version );
-        wp_register_script('gform_qtip', plugins_url('/js/jquery.qtip-1.0.0-rc2.min.js', __FILE__), array('jquery'), GFCommon::$version );
-        wp_register_script('gform_qtip_init', plugins_url('/js/qtip_init.js', __FILE__), array('jquery'), GFCommon::$version );
-        wp_register_script('gform_textarea_counter', plugins_url('/js/jquery.textareaCounter.plugin.js', __FILE__), array('jquery'), GFCommon::$version );
+        wp_register_script('gform_chosen', GFCommon::get_base_url() . '/js/chosen.jquery.min.js', array('jquery'), GFCommon::$version );
+        wp_register_script('gform_conditional_logic', GFCommon::get_base_url() . '/js/conditional_logic.js', array('jquery'), GFCommon::$version );
+        wp_register_script('gform_datepicker_init', GFCommon::get_base_url() . '/js/datepicker.js', array('jquery', 'jquery-ui-datepicker'), GFCommon::$version );
+        wp_register_script('gform_dimensions', GFCommon::get_base_url() . '/js/jquery.dimensions.js', array('jquery'), GFCommon::$version );
+        wp_register_script('gform_floatmenu', GFCommon::get_base_url() . '/js/floatmenu_init.js', array('jquery'), GFCommon::$version );
+        wp_register_script('gform_form_admin', GFCommon::get_base_url() . '/js/form_admin.js', array('jquery', 'jquery-ui-autocomplete'), GFCommon::$version );
+        wp_register_script('gform_form_editor', GFCommon::get_base_url() . '/js/form_editor.js', array('jquery', 'gform_json'), GFCommon::$version );
+        wp_register_script('gform_forms', GFCommon::get_base_url() . '/js/forms.js', array('jquery'), GFCommon::$version );
+        wp_register_script('gform_gravityforms', GFCommon::get_base_url() . '/js/gravityforms.js', array('jquery'), GFCommon::$version );
+        wp_register_script('gform_json', GFCommon::get_base_url() . '/js/jquery.json-1.3.js', array('jquery'), GFCommon::$version );
+        wp_register_script('gform_masked_input', GFCommon::get_base_url() . '/js/jquery.maskedinput-1.3.min.js', array('jquery'), GFCommon::$version );
+        wp_register_script('gform_menu', GFCommon::get_base_url() . '/js/menu.js', array('jquery'), GFCommon::$version );
+        wp_register_script('gform_placeholder', GFCommon::get_base_url() . '/js/jquery.placeholder.1.2.min.js', array('jquery'), GFCommon::$version );
+        wp_register_script('gform_qtip', GFCommon::get_base_url() . '/js/jquery.qtip-1.0.0-rc2.min.js', array('jquery'), GFCommon::$version );
+        wp_register_script('gform_qtip_init', GFCommon::get_base_url() . '/js/qtip_init.js', array('jquery'), GFCommon::$version );
+        wp_register_script('gform_textarea_counter', GFCommon::get_base_url() . '/js/jquery.textareaCounter.plugin.js', array('jquery'), GFCommon::$version );
 
         // only required for WP versions prior to 3.3
         wp_register_script("gf_thickbox", GFCommon::get_base_url() . "/js/thickbox.js", null, GFCommon::$version);
@@ -1239,6 +1239,7 @@ class GFForms {
         case 'new_form' :
         case 'form_list':
             $scripts = array(
+                'gform_gravityforms',
                 'gform_json',
                 'gform_form_admin',
                 'thickbox'
@@ -1451,7 +1452,7 @@ class GFForms {
         GFSettings::settings_page();
     }
 
-    public static function add_settings_page($name, $handle, $icon_path=""){
+    public static function add_settings_page( $name, $handle = '', $icon_path = '' ){
         require_once(GFCommon::get_base_path() . "/settings.php");
         GFSettings::add_settings_page($name, $handle, $icon_path);
     }
@@ -1867,6 +1868,14 @@ class GFForms {
                     //remove paging from querystring when changing forms
                     new_query = GF_RemoveQuery("paged", query);
                    	new_query = new_query.replace("gf_new_form", "gf_edit_forms");
+
+                    //When switching forms within any form settings tab, go back to main form settings tab
+                    var is_form_settings = new_query.indexOf("page=gf_edit_forms") >=0 && new_query.indexOf("view=settings");
+                    if(is_form_settings){
+                        //going back to main form settings tab
+                        new_query = "page=gf_edit_forms&view=settings&id=" + id;
+                    }
+
                     document.location = "?" + new_query;
                 }
             }

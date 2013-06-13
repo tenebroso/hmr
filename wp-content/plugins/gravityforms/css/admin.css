@@ -8,7 +8,7 @@
 admin.css
 Gravity Forms Administration Form Styles
 http: //www.gravityforms.com
-updated: April 24, 2013 3:30 PM
+updated: May 23, 2013 11:33 AM
 
 Gravity Forms is a Rocketgenius project
 copyright 2013 Rocketgenius Inc.
@@ -211,7 +211,8 @@ label.float_label {
 #gform_fields li{
 	border: 1px solid transparent;
 	padding: 0px 10px 10px 10px;
-	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: visible;
 }
 
 #gform_fields li ul li {

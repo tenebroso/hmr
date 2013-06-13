@@ -96,7 +96,6 @@ class GFFormSettings {
         <script type="text/javascript">
 
         <?php GFCommon::gf_global(); ?>
-        <?php GFCommon::gf_vars(); ?>
 
         var form = <?php echo json_encode($form); ?>;
         var fieldSettings = [];
@@ -760,7 +759,12 @@ class GFFormSettings {
         $form_restrictions = array("limit_entries" => $tr_limit_entries, "number_of_entries" => $tr_limit_entries_count, "entry_limit_message" => $tr_limit_entries_message, "schedule_form" => $tr_schedule_form, "schedule_start" => $tr_schedule_start, "schedule_end" => $tr_schedule_end, "schedule_message" => $tr_schedule_message, "requires_login" => $tr_requires_login, "requires_login_message" => $tr_requires_login_message);
         $form_options = array("honey_pot" => $tr_honey_pot, "enable_animation" => $tr_enable_animation);
 
-        $form_settings = array("Form Basics" => $form_basics, "Form Layout" => $form_layout, "Form Button" => $form_button, "Restrictions" => $form_restrictions, "Form Options" => $form_options);
+        $form_settings = array( 
+            __("Form Basics", "gravityforms") => $form_basics, 
+            __("Form Layout", "gravityforms") => $form_layout, 
+            __("Form Button", "gravityforms") => $form_button, 
+            __("Restrictions", "gravityforms") => $form_restrictions, 
+            __("Form Options", "gravityforms") => $form_options);
 
         $form_settings = apply_filters("gform_form_settings", $form_settings, $form);
         ?>
@@ -816,7 +820,7 @@ class GFFormSettings {
 
                 <?php wp_nonce_field("gform_save_form_settings_{$form_id}", 'gform_save_form_settings'); ?>
                 <input type="hidden" id="gform_meta" name="gform_meta" />
-                <input type="button" id="gform_save_settings" name="gform_save_settings" value="Update Form Settings" class="button-primary gfbutton" onclick="SaveFormSettings();" />
+                <input type="button" id="gform_save_settings" name="gform_save_settings" value="<?php _e('Update Form Settings', 'gravityforms'); ?>" class="button-primary gfbutton" onclick="SaveFormSettings();" />
 
             </form>
 
@@ -857,7 +861,6 @@ class GFFormSettings {
         <?php $form = GFFormsModel::get_form_meta($form_id); ?>
 
         <script type="text/javascript">
-            <?php GFCommon::gf_vars(); ?>
             var form = <?php echo json_encode($form); ?>;
         </script>
 
@@ -892,8 +895,6 @@ class GFFormSettings {
         ?>
 
         <script type="text/javascript">
-
-            <?php GFCommon::gf_vars(); ?>
 
             var confirmation = <?php echo $confirmation ? json_encode($confirmation) : 'new ConfirmationObj()' ?>;
             var form = <?php echo json_encode($form); ?>;

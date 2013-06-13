@@ -605,7 +605,7 @@ class GFExport{
                         case "date_created" :
                             $lead_gmt_time = mysql2date("G", $lead["date_created"]);
                             $lead_local_time = GFCommon::get_local_timestamp($lead_gmt_time);
-                            $value = date_i18n("Y-m-d H:i:s", $lead_local_time);
+                            $value = date_i18n("Y-m-d H:i:s", $lead_local_time, true);
                         break;
                         default :
                             $long_text = "";

@@ -284,52 +284,52 @@ class GFFormDetail{
 
                                 <?php // first step ?>
 
-                                <h4 class="gf_nofield_header gf_nofield_1">1. <?php _e('Select A Field Type'); ?></h4>
-                                <p><?php _e('Start by seleting a field type from the nifty floating panels on the right.'); ?></p>
+                                <h4 class="gf_nofield_header gf_nofield_1">1. <?php _e('Select A Field Type', 'gravityforms'); ?></h4>
+                                <p><?php _e('Start by seleting a field type from the nifty floating panels on the right.', 'gravityforms'); ?></p>
 
                                 <div id="gf_nofield_1_instructions">
-                                    <span class="gf_nofield_1_instructions_heading gf_tips"><?php _e('Start Over There'); ?></span>
-                                    <span class="gf_nofield_1_instructions_copy gf_tips"><?php _e('Pick a field.. any field. Don\'t be shy.'); ?></span>
+                                    <span class="gf_nofield_1_instructions_heading gf_tips"><?php _e('Start Over There', 'gravityforms'); ?></span>
+                                    <span class="gf_nofield_1_instructions_copy gf_tips"><?php _e('Pick a field.. any field. Don\'t be shy.', 'gravityforms'); ?></span>
                                 </div>
 
                                 <?php // second step ?>
 
-                                <h4 class="gf_nofield_header gf_nofield_2">2. <?php _e('Click to Add A Field'); ?></h4>
-                                <p><?php _e('Once you&#39;ve found the field type you want, click to add it to the form editor here on the left side of your screen.'); ?></p>
+                                <h4 class="gf_nofield_header gf_nofield_2">2. <?php _e('Click to Add A Field', 'gravityforms'); ?></h4>
+                                <p><?php _e('Once you&#39;ve found the field type you want, click to add it to the form editor here on the left side of your screen.', 'gravityforms'); ?></p>
 
                                 <div id="gf_nofield_2_instructions">
-                                    <span class="gf_nofield_2_instructions_copy gf_tips"><?php _e('Now your new field magically appears over here.'); ?></span>
+                                    <span class="gf_nofield_2_instructions_copy gf_tips"><?php _e('Now your new field magically appears over here.', 'gravityforms'); ?></span>
                                 </div>
 
                                  <?php // third step ?>
 
-                                <h4 class="gf_nofield_header gf_nofield_3">3. <?php _e('Edit Field Options'); ?></h4>
-                                <p><?php _e('Click on the edit link to configure the various field options'); ?></p>
+                                <h4 class="gf_nofield_header gf_nofield_3">3. <?php _e('Edit Field Options', 'gravityforms'); ?></h4>
+                                <p><?php _e('Click on the edit link to configure the various field options', 'gravityforms'); ?></p>
 
                                 <div id="gf_nofield_3_instructions">
-                                    <span class="gf_nofield_3_instructions_copy_top gf_tips"><?php _e('Preview your changes up here.'); ?></span>
-                                    <span class="gf_nofield_3_instructions_copy_mid gf_tips"><?php _e('Edit the field options. Go ahead.. go crazy.'); ?></span>
-                                    <span class="gf_nofield_3_instructions_copy_bottom gf_tips"><?php _e('If you get stuck, mouseover the tool tips for a little help.'); ?></span>
+                                    <span class="gf_nofield_3_instructions_copy_top gf_tips"><?php _e('Preview your changes up here.', 'gravityforms'); ?></span>
+                                    <span class="gf_nofield_3_instructions_copy_mid gf_tips"><?php _e('Edit the field options. Go ahead.. go crazy.', 'gravityforms'); ?></span>
+                                    <span class="gf_nofield_3_instructions_copy_bottom gf_tips"><?php _e('If you get stuck, mouseover the tool tips for a little help.', 'gravityforms'); ?></span>
                                 </div>
 
                                  <?php // fourth step ?>
 
-                                <h4 class="gf_nofield_header gf_nofield_4">4. <?php _e('Drag to Arrange Fields'); ?></h4>
-                                <p><?php _e('Drag the fields to arrange them the way you prefer'); ?></p>
+                                <h4 class="gf_nofield_header gf_nofield_4">4. <?php _e('Drag to Arrange Fields', 'gravityforms'); ?></h4>
+                                <p><?php _e('Drag the fields to arrange them the way you prefer', 'gravityforms'); ?></p>
 
                                 <div id="gf_nofield_4_instructions">
-                                    <span class="gf_nofield_4_instructions_copy_top gf_tips"><?php _e('Grab here with your cursor.'); ?></span>
-                                    <span class="gf_nofield_4_instructions_copy_bottom gf_tips"><?php _e('Drag up or down to arrange your fields.'); ?></span>
+                                    <span class="gf_nofield_4_instructions_copy_top gf_tips"><?php _e('Grab here with your cursor.', 'gravityforms'); ?></span>
+                                    <span class="gf_nofield_4_instructions_copy_bottom gf_tips"><?php _e('Drag up or down to arrange your fields.', 'gravityforms'); ?></span>
                                 </div>
 
                                  <?php // fifth step ?>
 
-                                <h4 class="gf_nofield_header gf_nofield_5">5. <?php _e('Save Your Form'); ?></h4>
-                                <p><?php _e('Once you&#39;re happy with your form, remember to click on the &quot;update form&quot; button to save all your hard work.'); ?></p>
+                                <h4 class="gf_nofield_header gf_nofield_5">5. <?php _e('Save Your Form', 'gravityforms'); ?></h4>
+                                <p><?php _e('Once you&#39;re happy with your form, remember to click on the &quot;update form&quot; button to save all your hard work.', 'gravityforms'); ?></p>
 
                                 <div id="gf_nofield_5_instructions">
-                                    <span class="gf_nofield_5_instructions_heading gf_tips"><?php _e('Save Your New Form'); ?></span>
-                                    <span class="gf_nofield_5_instructions_copy gf_tips"><?php _e('You\'re done. That\'s it.'); ?></span>
+                                    <span class="gf_nofield_5_instructions_heading gf_tips"><?php _e('Save Your New Form', 'gravityforms'); ?></span>
+                                    <span class="gf_nofield_5_instructions_copy gf_tips"><?php _e('You\'re done. That\'s it.', 'gravityforms'); ?></span>
                                 </div>
 
                             </li>
@@ -2318,7 +2318,7 @@ class GFFormDetail{
         check_ajax_referer('rg_save_form', 'rg_save_form');
         $id = $_POST["id"];
         $form_json = $_POST["form"];
-
+        
         $result = self::save_form_info($id, $form_json);
 
         switch(rgar($result,"status")){

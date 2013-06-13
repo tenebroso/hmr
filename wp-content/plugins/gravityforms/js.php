@@ -309,7 +309,14 @@ function SaveForm(isNew){
     if(!ValidateForm()){
         return false;
     }
-
+    
+    // remove data that is no longer stored in the form object (as of 1.7)
+    delete form.notification;
+    delete form.autoResponder;
+    delete form.notifications;
+    delete form.confirmation;
+    delete form.confirmations;
+    
     //updating original json. used when verifying if there has been any changes unsaved changed before leaving the page
     var form_json = jQuery.toJSON(form);
     gforms_original_json = form_json;

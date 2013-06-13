@@ -963,14 +963,17 @@ var gform = {
         args = Array.prototype.slice.call(args, 1);
 
 		if ( undefined != gform.hooks[hookType][action] ) {
-			var hooks = gform.hooks[hookType][action];
+			var hooks = gform.hooks[hookType][action], hook;
 			//sort by priority
 			hooks.sort(function(a,b){return a["priority"]-b["priority"]});
 			for( var i=0; i<hooks.length; i++) {
+                hook = hooks[i].callable;
+                if(typeof hook != 'function')
+                    hook = window[hook];
 				if ( 'action' == hookType ) {
-					window[hooks[i].callable].apply(null, args);
+                    hook.apply(null, args);
 				} else {
-					args[0] = window[hooks[i].callable].apply(null, args);
+                    args[0] = hook.apply(null, args);
 				}
 			}
 		}
