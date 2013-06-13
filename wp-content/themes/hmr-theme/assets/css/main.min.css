@@ -3214,6 +3214,24 @@ em strong {
   background: url(../img/thinkers.png) no-repeat left top;
 }
 
+.home .img.forward2 {
+  position: absolute;
+  top: 42px;
+  right: 0;
+  width: 246px;
+  height: 36px;
+  background: url(../img/forward.png) no-repeat left top;
+}
+
+.home .img.thinkers2 {
+  position: absolute;
+  top: 86px;
+  right: 0;
+  width: 246px;
+  height: 36px;
+  background: url(../img/thinkers.png) no-repeat left top;
+}
+
 /* =============================================================================
    Header
    ========================================================================== */
