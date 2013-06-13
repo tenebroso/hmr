@@ -9,16 +9,12 @@ HMR.Site = {
   common: {
     init: function() {
       $('#s').clearField();
- 
       $("body").show();
-
       $("a").click(function(event){
-        event.preventDefault();
         linkLocation = this.href;
-        $("body").fadeOut(500, redirectPage);      
+        $("body").fadeOut(500, redirectPage);
+        event.preventDefault();
       });
-         
-
       function redirectPage() {
         window.location = linkLocation;
       }
