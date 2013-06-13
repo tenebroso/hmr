@@ -3209,34 +3209,35 @@ em strong {
 }
 
 .home .img.forward {
-  bottom: calc(80%);
-  left: calc(50%);
   width: 246px;
   height: 36px;
+  margin-top: calc(42%);
+  margin-left: calc(50%);
   background: url(../img/forward.png) no-repeat left top;
 }
 
 .home .img.thinkers {
   width: 246px;
   height: 36px;
+  margin-left: calc(50%);
   background: url(../img/thinkers.png) no-repeat left top;
 }
 
 .home .img.forward2 {
-  position: absolute;
-  top: 42px;
-  right: 0;
+  float: right;
   width: 246px;
   height: 36px;
+  margin-top: 8px;
+  margin-right: calc(50%);
   background: url(../img/forward.png) no-repeat left top;
 }
 
 .home .img.thinkers2 {
-  position: absolute;
-  top: 86px;
-  right: 0;
+  float: right;
   width: 246px;
   height: 36px;
+  margin-right: calc(50%);
+  clear: both;
   background: url(../img/thinkers.png) no-repeat left top;
 }
 
