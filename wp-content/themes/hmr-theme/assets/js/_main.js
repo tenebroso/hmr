@@ -10,6 +10,10 @@ HMR.Site = {
     init: function() {
       $('#s').clearField();
       $("body").show();
+      var navigation = responsiveNav("#navbar", {
+        animate: true,
+        openPos: "relative"
+      });
       $("a").click(function(event){
         linkLocation = this.href;
         $("body").fadeOut(500, redirectPage);

@@ -76,3 +76,47 @@
     }
   }
 }
+
+/*! responsive-nav.js v1.0.14 by @viljamis */
+
+#navbar ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
+
+.js #navbar {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+#navbar.opened {
+  max-height: 9999px;
+}
+
+@media screen and (max-width:767px) { 
+
+  #navbar li {
+    width: 100%;
+    display: block;
+  }
+
+}
+
+@media screen and (min-width: 40em) {
+  .js #navbar {
+    position: relative;
+  }
+  .js #navbar.closed {
+    max-height: none;
+  }
+  #nav-toggle {
+    display: none;
+  }
+}

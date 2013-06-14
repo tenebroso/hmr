@@ -150,6 +150,31 @@ em {
 }
 
 
+@media (max-width: 767px) {
+
+    .banner {
+      background:@blueDark;
+      padding:24px 34px;
+     	.brand {
+     		margin:0;
+     		float:left;
+			width:104px;
+			height:64px;
+			background-size:861%;
+     	}
+    }
+
+    .home {
+    	.banner {
+    		background:@blueDark;
+    		.brand {
+    			background-position:inherit;
+    		}
+    	}
+    }
+
+}
+
 
 
 
@@ -209,6 +234,17 @@ em {
 		text-transform:uppercase;
 		margin:.75em 0 1em 0;
 	}
+}
+
+@media (max-width: 767px) { 
+
+	.wrap {
+		&.container {
+			padding-left:20px;
+			padding-right:20px;
+		}
+	}
+
 }
 
 
