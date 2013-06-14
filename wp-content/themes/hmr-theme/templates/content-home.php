@@ -6,4 +6,7 @@
 	<div class="forward2 img">Forward</div>
 	<div class="thinkers2 img">Thinkers</div>
 
+	<div class="forward3 img">Forward</div>
+	<div class="thinkers3 img">Thinkers</div>
+
 <?php endwhile; ?>

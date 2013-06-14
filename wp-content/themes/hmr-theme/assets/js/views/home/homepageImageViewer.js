@@ -29,6 +29,11 @@
     $('.forward2').transition({ delay:3250, opacity: 0, marginLeft: '-50px'}, 500, 'ease');
     $('.thinkers2').transition({ delay:3250, opacity: 0, marginLeft: '-80px'}, 500, 'easeOutCirc');
 
+    $('.forward3').transition({ delay:14250, opacity: 100, marginRight: '100px'}, 500, 'ease');
+    $('.thinkers3').transition({ delay:14250, opacity: 100, marginRight: '150px'}, 750, 'easeOutCirc');
+    $('.forward3').transition({ delay:3250, opacity: 0, marginLeft: '-50px'}, 500, 'ease');
+    $('.thinkers3').transition({ delay:3250, opacity: 0, marginLeft: '-80px'}, 500, 'easeOutCirc');
+
   };
 
 })();
