@@ -788,11 +788,11 @@ button.close {
 
 .sub-nav .menu li.active a {
   color: white;
-  background: url(../img/sprite.png) no-repeat -149px -161px;
+  background: url("../img/ra-sprite.png") no-repeat -149px -161px;
 }
 
 .sub-nav .menu li.active.menu-our-team a {
-  background: url(../img/sprite.png) no-repeat -158px -161px;
+  background: url("../img/ra-sprite.png") no-repeat -158px -161px;
 }
 
 /*! responsive-nav.js v1.0.14 by @viljamis */
@@ -3064,7 +3064,7 @@ em strong {
 }
 
 .home .banner .brand {
-  background-position: -138px top;
+  background-position: -142px top;
 }
 
 .home .content-info {
@@ -3148,13 +3148,13 @@ em strong {
 
 .banner .brand {
   display: block;
-  width: 139px;
-  height: 81px;
+  width: 142px;
+  height: 83px;
   margin: 15px auto;
   font: 0/0 a;
   color: transparent;
   text-shadow: none;
-  background: url("../img/sprite.png") no-repeat left top;
+  background: url("../img/sprite.svg") no-repeat left top;
   background-color: transparent;
   border: 0;
 }
@@ -3420,7 +3420,7 @@ em strong {
   width: 23px;
   height: 13px;
   margin: 0 auto;
-  background: url(../img/sprite.png) no-repeat -287px -2px;
+  background: url("../img/ra-sprite.png") no-repeat -287px -2px;
   content: "";
 }
 
@@ -3448,7 +3448,7 @@ em strong {
 }
 
 .content-info h4 {
-  margin: 0;
+  margin: 15px 0 0;
   font-family: 'Circe-Regular';
   font-size: 17px;
   letter-spacing: .2em;
