@@ -3175,7 +3175,7 @@ em strong {
     background: #071222;
   }
   .home .banner .brand {
-    background-position: inherit;
+    background-position: left top;
   }
 }
 
