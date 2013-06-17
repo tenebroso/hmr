@@ -30,7 +30,11 @@ function enable_more_buttons($buttons) {
 
 add_filter("mce_buttons", "enable_more_buttons");
 
-/* Custom Post Types */ 
+/* =============================================================================
+   Team Member CPT
+   ========================================================================== */
+
+
 add_action( 'init', 'register_cpt_hmr' );
 
 function register_cpt_hmr() {
@@ -71,7 +75,54 @@ function register_cpt_hmr() {
 
     register_post_type( 'team', $args );
     
-    }
+}
+
+/* =============================================================================
+   Capabilities CPT
+   ========================================================================== */
+
+
+add_action( 'init', 'register_cpt_capabilities' );
+
+function register_cpt_capabilities() {
+
+    $labels = array( 
+        'name' => _x( 'Capabilities', 'capability' ),
+        'singular_name' => _x( 'Capability', 'capability' ),
+        'add_new' => _x( 'Add New', 'capability' ),
+        'add_new_item' => _x( 'Add New Capability', 'capability' ),
+        'edit_item' => _x( 'Edit Capability', 'capability' ),
+        'new_item' => _x( 'New Capability', 'capability' ),
+        'view_item' => _x( 'View Capability', 'capability' ),
+        'search_items' => _x( 'Search Capabilities', 'capability' ),
+        'not_found' => _x( 'No Capabilities found', 'capability' ),
+        'not_found_in_trash' => _x( 'No Capabilities found in Trash', 'capability' ),
+        'parent_item_colon' => _x( 'Parent Capability:', 'capability' ),
+        'menu_name' => _x( 'Capabilities', 'capability' ),
+    );
+
+    $args = array( 
+        'labels' => $labels,
+        'hierarchical' => false,
+        'supports' => array( 'title', 'editor', 'thumbnail' ),
+        'taxonomies' => array(),
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 5,
+        'show_in_nav_menus' => true,
+        'publicly_queryable' => true,
+        'exclude_from_search' => false,
+        'has_archive' => true,
+        'query_var' => true,
+        'can_export' => true,
+        'rewrite' => true,
+        'capability_type' => 'post'
+    );
+
+    register_post_type( 'capability', $args );
+    
+}
 
 /* =============================================================================
    Register Additional Nav (Sub-navs)
