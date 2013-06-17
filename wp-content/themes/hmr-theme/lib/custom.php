@@ -135,7 +135,7 @@ register_nav_menus( array(
 );
 
 /* =============================================================================
-   Ensure the Team Archive shows enoug posts
+   Ensure the Team Archive shows enough posts
    ========================================================================== */
 
 function namespace_add_custom_types( $query ) {
@@ -145,3 +145,9 @@ function namespace_add_custom_types( $query ) {
     }
 }
 add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
+
+/* =============================================================================
+   Register Additional Thumbnail Size (Capabilities Landing Page)
+   ========================================================================== */
+
+add_image_size( 'capabilities-thumb', 270, 270, true );
