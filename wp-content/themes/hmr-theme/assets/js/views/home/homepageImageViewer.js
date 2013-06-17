@@ -18,8 +18,8 @@
       //"/assets/WEDDINGS-22.jpg"
     ], {duration: 5000, fade: 1250});
 
-    $('.forward').transition({ delay:750, opacity: 100, marginLeft: '100px'}, 500, 'ease');
-    $('.thinkers').transition({ delay:1000, opacity: 100, marginLeft: '150px'}, 750, 'easeOutCirc');
+    $('.forward').transition({ delay:1000, opacity: 100, marginLeft: '100px'}, 7500, 'ease');
+    $('.thinkers').transition({ delay:1250, opacity: 100, marginLeft: '150px'}, 1000, 'easeOutCirc');
     //$('.forward').transition({ delay:3950, opacity: 0, marginLeft: '350px'}, 500, 'ease');
     //$('.thinkers').transition({ delay:3950, opacity: 0, marginLeft: '350px'}, 500, 'easeOutCirc');
 
