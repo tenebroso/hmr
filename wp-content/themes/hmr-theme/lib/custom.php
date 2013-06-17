@@ -139,7 +139,7 @@ register_nav_menus( array(
    ========================================================================== */
 
 function namespace_add_custom_types( $query ) {
-  if( 'is_post_type_archive' ) {
+ if ( is_post_type_archive('team')) {
     $query->set( 'posts_per_page', -1);
       return $query;
     }
