@@ -828,7 +828,7 @@ button.close {
   float: right;
   width: 38px;
   height: 32px;
-  margin-top: 25px;
+  margin-top: 15px;
   font: 0/0 a;
   color: transparent;
   text-shadow: none;
@@ -846,15 +846,6 @@ button.close {
 }
 
 @media screen and (max-width: 767px) {
-  .banner .container:before {
-    display: block;
-    float: left;
-    width: 142px;
-    height: 83px;
-    background: url("../img/sprite.svg") no-repeat left top;
-    background-size: 430%;
-    content: "";
-  }
   #navbar ul {
     margin-top: 15px;
   }
@@ -3212,7 +3203,11 @@ em strong {
     position: relative;
   }
   .banner .brand {
-    display: none;
+    float: left;
+    width: 104px;
+    height: 64px;
+    margin: 0;
+    background-size: 430%;
   }
   .home .banner {
     background: #071222;
