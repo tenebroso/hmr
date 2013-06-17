@@ -3178,6 +3178,7 @@ em strong {
    ========================================================================== */
 
 .banner {
+  padding: 0 0 15px 0;
   border-bottom: 2px solid #293240;
 }
 
@@ -3185,7 +3186,7 @@ em strong {
   display: block;
   width: 142px;
   height: 83px;
-  margin: 15px auto;
+  margin: 15px auto 25px auto;
   font: 0/0 a;
   color: transparent;
   text-shadow: none;
