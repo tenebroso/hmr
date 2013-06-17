@@ -12,7 +12,14 @@ HMR.Site = {
       $("body").show();
       var navigation = responsiveNav("#navbar", {
         animate: true,
-        openPos: "relative"
+        openPos: "relative",
+        transition:200,
+        open: function () { 
+          $('#nav-toggle').addClass('opened');
+        },
+        close: function() { 
+          $('#nav-toggle').removeClass('opened');
+        }
       });
       $("a").click(function(event){
         linkLocation = this.href;

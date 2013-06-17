@@ -797,6 +797,10 @@ button.close {
 
 /*! responsive-nav.js v1.0.14 by @viljamis */
 
+#navbar {
+  width: 100%;
+}
+
 #navbar ul {
   display: block;
   width: 100%;
@@ -816,16 +820,56 @@ button.close {
 
 #navbar.opened {
   max-height: 9999px;
+  clear: both;
+}
+
+#nav-toggle {
+  display: inline-block;
+  float: right;
+  width: 38px;
+  height: 32px;
+  margin-top: 25px;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background: url("../img/ra-sprite.png") no-repeat left top;
+  background-color: transparent;
+  border: 0;
+}
+
+#nav-toggle.opened {
+  margin: 0;
+}
+
+#nav-toggle:hover {
+  background-position: -38px top;
 }
 
 @media screen and (max-width: 767px) {
-  #navbar li {
+  .banner .container:before {
+    display: block;
+    float: left;
+    width: 142px;
+    height: 83px;
+    background: url("../img/sprite.svg") no-repeat left top;
+    background-size: 430%;
+    content: "";
+  }
+  #navbar ul {
+    margin-top: 15px;
+  }
+  #navbar ul li {
     display: block;
     width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #293240;
+  }
+  #navbar ul li a {
+    text-align: left;
   }
 }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 767px) {
   .js #navbar {
     position: relative;
   }
@@ -3164,12 +3208,11 @@ em strong {
     padding: 24px 34px;
     background: #071222;
   }
+  .banner .container {
+    position: relative;
+  }
   .banner .brand {
-    float: left;
-    width: 104px;
-    height: 64px;
-    margin: 0;
-    background-size: 861%;
+    display: none;
   }
   .home .banner {
     background: #071222;
