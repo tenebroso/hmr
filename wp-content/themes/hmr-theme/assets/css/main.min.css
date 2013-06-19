@@ -714,12 +714,13 @@ button.close {
 }
 
 .nav > li > a {
-  display: block;
+  display: inline-block;
   font-family: 'Circe-Light', sans-serif;
   font-size: 20px;
-  line-height: 38px;
+  line-height: 1;
   color: #ffffff;
   text-transform: uppercase;
+  vertical-align: middle;
 }
 
 .nav > li > a:hover,
@@ -872,7 +873,7 @@ button.close {
     display: none;
   }
   .nav li {
-    height: 43px;
+    height: 42px;
   }
   .nav li.menu-service:hover {
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHEAAAArCAYAAABPa2dBAAAByUlEQVR42u3cMWtTURgG4GsKglCorenQCg5WcHZpJxdFsEMG14CdtIsUhC7RRfAH6B8QHAQLDlUEEVwLRVf/gIKCoKJY0SIdHpfjoktIrjcJvC/cLfcb3ufmcgI5p6r6DGZwMldjV6uqM2jhlaTJXKkb8RreYrpK/ntwCR8xW9fA0/iO1dTbKOQ27tcxaAavcSe1No54HF9xeZghx/ASzzGVWkcC2SlvwYuD3HwWb/AER1LnSCHX8BMbONTPDWewhR/o1b7MTQaFPI/35RdC5583I46W1ecu9nEPJ1Ld2EFO4xY+4UNxWkO7QrcsZzcwn7rGHvMwVnEXX9D9g7iTeiYSdCeIQUyCmAQxCWIQkyAmQUyCGMQkiEkQkyAGMQliEsQkiEFMgpgEMQliEJPJQvyMGziVaiYCbwk3i1u3wizWy8aZX3iBC6lqLPHOFZ+D4rWOub8/tIjb2MMzLKS6scBbwFN8Kz6L/dzUxqPy9/7l1DhSwOXi8BDtQQZcL9/KldQ5EsCVstF0c9hBPbwb6ClIhul9rux+6tU18DG2Um2jiA+wXefA+bKc7aTeRgA7ZR9iu+7BV3O0zASfY1MQWznlqdGr78MufgPmJR7KBhuWgAAAAABJRU5ErkJggg==) no-repeat center center;
