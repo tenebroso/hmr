@@ -3385,6 +3385,35 @@ em strong {
   border: none;
 }
 
+/* =============================================================================
+   Column Layouts
+   ========================================================================== */
+
+.columns {
+  word-wrap: break-word;
+}
+
+.columns p {
+  margin: .5em 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.columns p a {
+  color: white;
+}
+
+.columns p a:hover {
+  color: #a6a6a6;
+  text-decoration: none;
+}
+
+.columns strong {
+  font-family: 'Circe-Bold';
+  font-size: 16px;
+  font-weight: normal;
+}
+
 /* ==========================================================================
    Capabilities Landing
    ========================================================================== */
