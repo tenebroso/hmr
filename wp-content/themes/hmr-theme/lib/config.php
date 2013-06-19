@@ -43,7 +43,7 @@ function roots_sidebar_class() {
  * See lib/sidebar.php for more details
  */
 function roots_display_sidebar() {
-  if (is_singular('team')) {
+  if (is_singular(array('team','capability'))) {
         return false;
   }
   $sidebar_config = new Roots_Sidebar(

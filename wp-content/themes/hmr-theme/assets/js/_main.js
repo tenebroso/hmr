@@ -39,10 +39,10 @@ HMR.Site = {
       HMR.homepageBodyFade();
     }
   },
-  // About page
-  about: {
+  //Floral Capability Detail
+  floral: {
     init: function() {
-      // JS here
+      HMR.capabilityBGSlideShow();
     }
   },
   // Team archive
