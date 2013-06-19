@@ -10,6 +10,10 @@
 		fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
 	});
 
+	$('.footer').cycle({
+		fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+	});
+
   };
 
 })();

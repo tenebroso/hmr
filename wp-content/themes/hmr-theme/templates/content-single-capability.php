@@ -12,6 +12,21 @@
 
     </ul>
 
+    <ul class="footer">
+
+       <?php while(has_sub_field('photos')): ?>
+
+          <li>
+          
+            <h4><?php bloginfo('title');?></h4>
+            <p><?php the_sub_field('photo_credit');?></p>
+
+          </li>
+
+      <?php endwhile; ?>
+
+    </ul>
+
   <?php endif; ?>
 
 <?php endwhile; ?>
