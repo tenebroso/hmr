@@ -755,7 +755,8 @@ button.close {
 
 .sub-nav {
   position: relative;
-  z-index: 1;
+  z-index: 100;
+  background: #071222;
   border-bottom: 2px solid #202a39;
 }
 
@@ -3113,90 +3114,6 @@ em strong {
 }
 
 /* =============================================================================
-   Home Specifics
-   ========================================================================== */
-
-.home .banner {
-  background: url(../img/gradient.png) repeat-x left bottom;
-  border: none;
-}
-
-.home .banner .brand {
-  background-position: -142px top;
-}
-
-.home .content-info {
-  display: none;
-}
-
-.home .container {
-  position: relative;
-  height: 80%;
-}
-
-.home .img {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -webkit-backface-visibility: hidden;
-}
-
-.home .img.forward {
-  width: 246px;
-  height: 36px;
-  margin-top: calc(42%);
-  margin-left: calc(50%);
-  background: url(../img/forward.png) no-repeat left top;
-}
-
-.home .img.thinkers {
-  width: 246px;
-  height: 36px;
-  margin-left: calc(50%);
-  background: url(../img/thinkers.png) no-repeat left top;
-}
-
-.home .img.forward2 {
-  float: right;
-  width: 246px;
-  height: 36px;
-  margin-top: 8px;
-  margin-right: calc(50%);
-  background: url(../img/forward.png) no-repeat left top;
-}
-
-.home .img.thinkers2 {
-  float: right;
-  width: 246px;
-  height: 36px;
-  margin-right: calc(50%);
-  clear: both;
-  background: url(../img/thinkers.png) no-repeat left top;
-}
-
-.home .img.forward3 {
-  float: left;
-  width: 246px;
-  height: 36px;
-  margin-left: calc(5%);
-  clear: both;
-  background: url(../img/forward.png) no-repeat left top;
-}
-
-.home .img.thinkers3 {
-  float: left;
-  width: 246px;
-  height: 36px;
-  margin-left: calc(5%);
-  clear: both;
-  background: url(../img/thinkers.png) no-repeat left top;
-}
-
-/* =============================================================================
    Header
    ========================================================================== */
 
@@ -3204,6 +3121,7 @@ em strong {
   position: relative;
   z-index: 99;
   padding: 0 0 15px 0;
+  background: #071222;
   border-bottom: 2px solid #293240;
 }
 
@@ -3350,6 +3268,90 @@ em strong {
 
 .sidebar .widget h3 {
   margin: 0;
+}
+
+/* =============================================================================
+   Home Specifics
+   ========================================================================== */
+
+.home .banner {
+  background: url(../img/gradient.png) repeat-x left bottom;
+  border: none;
+}
+
+.home .banner .brand {
+  background-position: -142px top;
+}
+
+.home .content-info {
+  display: none;
+}
+
+.home .container {
+  position: relative;
+  height: 80%;
+}
+
+.home .img {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-backface-visibility: hidden;
+}
+
+.home .img.forward {
+  width: 246px;
+  height: 36px;
+  margin-top: calc(42%);
+  margin-left: calc(50%);
+  background: url(../img/forward.png) no-repeat left top;
+}
+
+.home .img.thinkers {
+  width: 246px;
+  height: 36px;
+  margin-left: calc(50%);
+  background: url(../img/thinkers.png) no-repeat left top;
+}
+
+.home .img.forward2 {
+  float: right;
+  width: 246px;
+  height: 36px;
+  margin-top: 8px;
+  margin-right: calc(50%);
+  background: url(../img/forward.png) no-repeat left top;
+}
+
+.home .img.thinkers2 {
+  float: right;
+  width: 246px;
+  height: 36px;
+  margin-right: calc(50%);
+  clear: both;
+  background: url(../img/thinkers.png) no-repeat left top;
+}
+
+.home .img.forward3 {
+  float: left;
+  width: 246px;
+  height: 36px;
+  margin-left: calc(5%);
+  clear: both;
+  background: url(../img/forward.png) no-repeat left top;
+}
+
+.home .img.thinkers3 {
+  float: left;
+  width: 246px;
+  height: 36px;
+  margin-left: calc(5%);
+  clear: both;
+  background: url(../img/thinkers.png) no-repeat left top;
 }
 
 /* ==========================================================================
@@ -3550,8 +3552,36 @@ ul.fullsize li {
   border: none;
 }
 
+.single-capability .sub-nav {
+  border: none;
+}
+
 .single-capability .content-info {
   display: none;
+}
+
+.single-capability .meta-box {
+  position: absolute;
+  bottom: 6%;
+  left: calc(32%);
+  z-index: 100;
+  width: 35%;
+  padding: 20px;
+  text-align: center;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeoAAACyAQMAAAC3CR5XAAAAA1BMVEUHEiIPoRpoAAAAAXRSTlPM0jRW/QAAACFJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAwEkrzgAB49wm5gAAAABJRU5ErkJggg==) repeat;
+}
+
+.single-capability .meta-box h2 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  color: #a6a6a6;
+  text-transform: uppercase;
+}
+
+.single-capability .meta-box p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 24px;
 }
 
 .single-capability .footer {

@@ -7,7 +7,7 @@
 		wp_nav_menu( array('menu' => 'Who We Are Sub-Nav' ));
 	} ?>
 
-	<?php if(is_page(array('10','124','126','122'))) { 
+	<?php if(is_page(array('10','124','126','122')) || is_singular('capability') ) { 
 		wp_nav_menu( array('menu' => 'What We Do Sub-Nav' ));
 	} ?>
 

@@ -62,77 +62,6 @@ em {
 	}
 }
 
-/* =============================================================================
-   Home Specifics
-   ========================================================================== */
-
-.home {
-	.banner {
-		.brand {
-			background-position:-142px top;
-		}
-		background:url(../img/gradient.png) repeat-x left bottom;
-		border:none;
-	}
-	.content-info {
-		display:none;
-	}
-	.container {
-		position:relative;
-		height:80%;
-	}
-	.img {
-		.hide-text();
-		.opacity(0);
-		-webkit-backface-visibility: hidden;
-		&.forward {
-			background:url(../img/forward.png) no-repeat left top;
-			width:246px;
-			height:36px;
-			margin-left:calc(100% - 50px);
-			margin-top: calc(100% - 58px);
-		}
-		&.thinkers {
-			background:url(../img/thinkers.png) no-repeat left top;
-			width:246px;
-			height:36px;
-			margin-left:calc(100% - 50px);
-		}
-		&.forward2 {
-			background:url(../img/forward.png) no-repeat left top;
-			width:246px;
-			height:36px;
-			float:right;
-			margin-right:calc(100% - 50px);
-			margin-top: 8px;
-		}
-		&.thinkers2 {
-			background:url(../img/thinkers.png) no-repeat left top;
-			width:246px;
-			height:36px;
-			float:right;
-			clear:both;
-			margin-right:calc(100% - 50px);
-		}
-		&.forward3 {
-			background:url(../img/forward.png) no-repeat left top;
-			width:246px;
-			height:36px;
-			float:left;
-			clear:both;
-			margin-left:calc(100% - 95px);
-		}
-		&.thinkers3 {
-			background:url(../img/thinkers.png) no-repeat left top;
-			width:246px;
-			height:36px;
-			float:left;
-			clear:both;
-			margin-left:calc(100% - 95px);
-		}
-	}
-}
-
 
 /* =============================================================================
    Header
@@ -150,6 +79,7 @@ em {
 	padding:0 0 15px 0;
 	position:relative;
 	z-index:99;
+	background:@blueDark;
 }
 
 
@@ -180,8 +110,6 @@ em {
     }
 
 }
-
-
 
 
 /* ==========================================================================
@@ -294,6 +222,77 @@ em {
 		}
 	}
 	font-size:14px;
+}
+
+/* =============================================================================
+   Home Specifics
+   ========================================================================== */
+
+.home {
+	.banner {
+		.brand {
+			background-position:-142px top;
+		}
+		background:url(../img/gradient.png) repeat-x left bottom;
+		border:none;
+	}
+	.content-info {
+		display:none;
+	}
+	.container {
+		position:relative;
+		height:80%;
+	}
+	.img {
+		.hide-text();
+		.opacity(0);
+		-webkit-backface-visibility: hidden;
+		&.forward {
+			background:url(../img/forward.png) no-repeat left top;
+			width:246px;
+			height:36px;
+			margin-left:calc(100% - 50px);
+			margin-top: calc(100% - 58px);
+		}
+		&.thinkers {
+			background:url(../img/thinkers.png) no-repeat left top;
+			width:246px;
+			height:36px;
+			margin-left:calc(100% - 50px);
+		}
+		&.forward2 {
+			background:url(../img/forward.png) no-repeat left top;
+			width:246px;
+			height:36px;
+			float:right;
+			margin-right:calc(100% - 50px);
+			margin-top: 8px;
+		}
+		&.thinkers2 {
+			background:url(../img/thinkers.png) no-repeat left top;
+			width:246px;
+			height:36px;
+			float:right;
+			clear:both;
+			margin-right:calc(100% - 50px);
+		}
+		&.forward3 {
+			background:url(../img/forward.png) no-repeat left top;
+			width:246px;
+			height:36px;
+			float:left;
+			clear:both;
+			margin-left:calc(100% - 95px);
+		}
+		&.thinkers3 {
+			background:url(../img/thinkers.png) no-repeat left top;
+			width:246px;
+			height:36px;
+			float:left;
+			clear:both;
+			margin-left:calc(100% - 95px);
+		}
+	}
 }
 
 
@@ -474,8 +473,32 @@ ul.fullsize {
 		top: -120px;
 		border: none;
 	}
+	.sub-nav {
+		border:none;
+	}
 	.content-info {
 		display:none;
+	}
+	.meta-box {
+		background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeoAAACyAQMAAAC3CR5XAAAAA1BMVEUHEiIPoRpoAAAAAXRSTlPM0jRW/QAAACFJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAwEkrzgAB49wm5gAAAABJRU5ErkJggg==) repeat;
+		width:35%;
+		padding:20px;
+		position:absolute;
+		left: calc(35% - 3em);
+		bottom:6%;
+		text-align:center;
+		z-index:100;
+		h2 {
+			font-size:24px;
+			text-transform:uppercase;
+			margin:0 0 10px 0;
+			color:@gray;
+		}
+		p { 
+			font-size:14px;
+			line-height:24px;
+			margin:0;
+		}
 	}
 	.footer {
 			position:absolute;

@@ -7,12 +7,18 @@
   HMR.capabilityBGSlideShow = function() {
 
 	$('.slideshow').cycle({
-		fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+		fx: 'fade',
+		delay: 3000,
+		speed:100
 	});
 
 	$('.footer').cycle({
-		fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+		fx: 'fade',
+		delay: 3000,
+		speed:100
 	});
+
+	$('.meta-box').transition({ delay:7000, opacity: 0}, 600, 'ease');
 
   };
 
