@@ -125,6 +125,53 @@ function register_cpt_capabilities() {
 }
 
 /* =============================================================================
+   Press Release CPT
+   ========================================================================== */
+
+
+add_action( 'init', 'register_cpt_press' );
+
+function register_cpt_press() {
+
+    $labels = array( 
+        'name' => _x( 'Press Releases', 'press' ),
+        'singular_name' => _x( 'Press Release', 'press' ),
+        'add_new' => _x( 'Add New', 'press' ),
+        'add_new_item' => _x( 'Add New Press Release', 'press' ),
+        'edit_item' => _x( 'Edit Press Release', 'press' ),
+        'new_item' => _x( 'New Press Release', 'press' ),
+        'view_item' => _x( 'View Press Release', 'press' ),
+        'search_items' => _x( 'Search Press Releases', 'press' ),
+        'not_found' => _x( 'No Press Releases found', 'press' ),
+        'not_found_in_trash' => _x( 'No Press Releases found in Trash', 'press' ),
+        'parent_item_colon' => _x( 'Parent Press Release:', 'pressy' ),
+        'menu_name' => _x( 'Press Releases', 'press' ),
+    );
+
+    $args = array( 
+        'labels' => $labels,
+        'hierarchical' => false,
+        'supports' => array( 'title', 'thumbnail' ),
+        'taxonomies' => array(),
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 5,
+        'show_in_nav_menus' => true,
+        'publicly_queryable' => true,
+        'exclude_from_search' => false,
+        'has_archive' => true,
+        'query_var' => true,
+        'can_export' => true,
+        'rewrite' => true,
+        'capability_type' => 'post'
+    );
+
+    register_post_type( 'press', $args );
+    
+}
+
+/* =============================================================================
    Register Additional Nav (Sub-navs)
    ========================================================================== */
 
