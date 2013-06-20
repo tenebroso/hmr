@@ -34,6 +34,27 @@
     //$('.forward3').transition({ delay:3250, opacity: 0, marginLeft: '-50px'}, 500, 'ease');
     //$('.thinkers3').transition({ delay:3250, opacity: 0, marginLeft: '-80px'}, 500, 'easeOutCirc');
 
+
+
+     // Create an array of images that you'd like to use
+    //var images = [
+      //"/assets/CORPORATE-8.jpg",
+      //"/assets/ART-AND-GRAPHIC-16.jpg", 
+      //"/assets/FABRIC-5.jpg",
+      //"/assets/FABRIC-11.jpg",
+      //"/assets/INNOVATION-13.jpg",
+      //"/assets/SOCIAL-5.jpg",
+      //"/assets/SOCIAL-16.jpg",
+      //"/assets/WEDDINGS-2.jpg",
+      //"/assets/WEDDINGS-22.jpg"
+    //];
+    
+    // Get a random number between 0 and the number of images
+    //var randomNumber = Math.floor( Math.random() * images.length );
+ 
+    // Use the random number to load a random image
+    //$.backstretch(images[randomNumber], {duration: 5000, fade: 1250});
+
   };
 
 })();
