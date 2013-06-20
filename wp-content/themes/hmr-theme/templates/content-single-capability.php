@@ -19,7 +19,10 @@
           <li>
           
             <h4><?php bloginfo('title');?></h4>
-            <p>Photography by: <a href="#">Lorem Ipsum Photography</a><?php // the_sub_field('photo_credit');?></p>
+            
+            <?php $credit = get_field('photo_credit'); $url = get_field('photo_url'); if ($credit) { ?>
+            <p>Photography by: <?php if($url) { ?><a href="<?php echo $url; ?>"><?php } ?><?php echo $credit;?><?php if($url) { ?></a><?php } ?></p>
+            <?php } ?>
 
           </li>
 
