@@ -8,17 +8,17 @@
 
 	$('.slideshow').cycle({
 		fx: 'fade',
-		delay: 3000,
-		speed:100
+		delay: 2000,
+		speed:3000
 	});
 
 	$('.footer').cycle({
 		fx: 'fade',
-		delay: 3000,
-		speed:100
+		delay: 2000,
+		speed:3000
 	});
 
-	$('.meta-box').transition({ delay:7000, opacity: 0}, 600, 'ease');
+	$('.meta-box').transition({ delay:7000, opacity: 0}, 2000, 'ease');
 
   };
 
