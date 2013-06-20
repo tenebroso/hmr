@@ -19,13 +19,19 @@
           <li>
           
             <h4><?php bloginfo('title');?></h4>
-            <p><?php the_sub_field('photo_credit');?></p>
+            <p>Photography by: <a href="#">Lorem Ipsum Photography</a><?php // the_sub_field('photo_credit');?></p>
 
           </li>
 
       <?php endwhile; ?>
 
     </ul>
+
+    <div class="gallery-title">
+
+      <h4><?php the_title();?></h4>
+
+    </div>
 
   <?php endif; ?>
 

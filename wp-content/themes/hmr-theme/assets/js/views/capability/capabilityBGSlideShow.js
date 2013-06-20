@@ -17,9 +17,7 @@
 		delay: 2000,
 		speed:3000
 	});
-
-	$('.meta-box').transition({ delay:7000, opacity: 0}, 2000, 'ease');
-
+	
   };
 
 })();

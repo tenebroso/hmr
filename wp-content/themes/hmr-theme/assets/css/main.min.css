@@ -3538,6 +3538,17 @@ ul.fullsize li {
   overflow: hidden;
 }
 
+.single-capability .content h4 {
+  display: inline;
+  margin: 15px 0 0;
+  font-family: 'Circe-Regular';
+  font-size: 17px;
+  letter-spacing: .2em;
+  color: #a4adb5;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .single-capability .wrap .container {
   position: relative;
   width: 100%;
@@ -3584,6 +3595,16 @@ ul.fullsize li {
   line-height: 24px;
 }
 
+.single-capability .gallery-title {
+  position: absolute;
+  bottom: 1px;
+  left: 18px;
+  z-index: 101;
+  text-transform: uppercase;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
 .single-capability .footer {
   position: absolute;
   bottom: 0;
@@ -3603,22 +3624,23 @@ ul.fullsize li {
   text-align: center;
 }
 
-.single-capability .footer h4 {
-  display: inline;
-  margin: 15px 0 0;
-  font-family: 'Circe-Regular';
-  font-size: 17px;
-  letter-spacing: .2em;
-  color: #a4adb5;
-  text-align: center;
-  text-transform: uppercase;
-}
-
 .single-capability .footer p {
   position: absolute;
   right: 18px;
   display: inline;
+  margin: 0;
+  font-size: 12px;
+  color: #777a7f;
   text-align: right;
+}
+
+.single-capability .footer p a {
+  color: #777a7f;
+}
+
+.single-capability .footer p a:hover {
+  color: white;
+  text-decoration: none;
 }
 
 /* ==========================================================================
