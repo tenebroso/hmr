@@ -14,7 +14,7 @@ var HMR = HMR || {};
     
     // This will swap out the backgrund image
     changeBackgroundImage = function (img) {
-        $.backstretch([img]);
+        $.backstretch([img],{ fade: 750});
     };
     
     
@@ -43,6 +43,9 @@ var HMR = HMR || {};
         
         // Handle clicks on ('.slide_thumb') elements
         $thumbs.on('click', function() {
+
+            $thumbs.removeClass('active');
+            $(this).addClass('active');
         
             if(timer) {
                 window.clearInterval(timer);

@@ -2,12 +2,15 @@
 
 <?php if(get_field('photos')): ?>
 
+<div class="thumb_container">
 
+	<div class="left_arrow"></div>
+    <div class="right_arrow"></div>
     <ul class="thumb_nav">
 
       <?php while(has_sub_field('photos')): ?>
 
-      		<?php 
+      		<?php // Get the attachment ID, then assign that ID to both the thumbnail and full-size image
       		$attachment_id = get_sub_field('photo');
       		$thumb = wp_get_attachment_image_src($attachment_id, 'slideshow-thumb'); 
       		$big = wp_get_attachment_image_src($attachment_id, 'full'); ?>
@@ -20,9 +23,13 @@
 
     </ul>
 
+    
+
+</div>
+
     <ul class="gallery-footer">
 
-       <?php while(has_sub_field('photos')): ?>
+       <?php //while(has_sub_field('photos')): ?>
 
           <li>
           
@@ -34,7 +41,7 @@
 
           </li>
 
-      <?php endwhile; ?>
+      <?php //endwhile; ?>
 
     </ul>
 

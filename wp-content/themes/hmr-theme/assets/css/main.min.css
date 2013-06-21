@@ -3667,6 +3667,17 @@ ul.fullsize li {
   text-align: center;
 }
 
+.gallery-footer h4 {
+  display: inline;
+  margin: 15px 0 0;
+  font-family: 'Circe-Regular';
+  font-size: 17px;
+  letter-spacing: .2em;
+  color: #a4adb5;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .gallery-footer p {
   position: absolute;
   right: 18px;
@@ -3686,6 +3697,38 @@ ul.fullsize li {
   text-decoration: none;
 }
 
+.thumb_container {
+  position: relative;
+  padding: 5px 35px;
+  overflow: hidden;
+}
+
+.thumb_container .left_arrow {
+  display: block;
+  float: left;
+  width: 23px;
+  height: 42px;
+  cursor: pointer;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAPCAYAAAAoAdW+AAAASklEQVQoz2NgwAH+//8vj1MCiO/hlADifTglgJiLPAkgnYJTAoj/MUAFPwOxCFRCDYj/AvF/ZJ17MXSi2YmigLBryVJAWtgiKwAAIwfCoKkUtbUAAAAASUVORK5CIIA=) no-repeat center center;
+}
+
+.thumb_container .left_arrow:hover {
+  background: #071222 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAPCAYAAAAoAdW+AAAASklEQVQoz2NgwAH+//8vj1MCiO/hlADifTglgJiLPAkgnYJTAoj/MUAFPwOxCFRCDYj/AvF/ZJ17MXSi2YmigLBryVJAWtgiKwAAIwfCoKkUtbUAAAAASUVORK5CIIA=) no-repeat center center;
+}
+
+.thumb_container .right_arrow {
+  display: block;
+  float: right;
+  width: 23px;
+  height: 42px;
+  cursor: pointer;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAPCAYAAAAoAdW+AAAAUUlEQVQoz2P4//+/HAMuAJS8h1MBUGI/TgVAQS7yFAA5yTgVABn/cCr4DwF/gVgVqkAEiL8A8V6YzhQknfugOuUZcEqguZYECWJCCG/Y4owVAPkdwpsnP6ssAAAAAElFTkSuQmCC) no-repeat center center;
+}
+
+.thumb_container .right_arrow:hover {
+  background: #071222 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAPCAYAAAAoAdW+AAAAUUlEQVQoz2P4//+/HAMuAJS8h1MBUGI/TgVAQS7yFAA5yTgVABn/cCr4DwF/gVgVqkAEiL8A8V6YzhQknfugOuUZcEqguZYECWJCCG/Y4owVAPkdwpsnP6ssAAAAAElFTkSuQmCC) no-repeat center center;
+}
+
 .thumb_nav {
   padding: 0;
   margin: 0;
@@ -3694,8 +3737,19 @@ ul.fullsize li {
 
 .thumb_nav .slide_thumb {
   display: inline-block;
+  margin: 1px;
   vertical-align: middle;
   cursor: pointer;
+  border: 1px solid black;
+}
+
+.thumb_nav .slide_thumb:hover {
+  margin-top: -4px;
+}
+
+.thumb_nav .slide_thumb.active {
+  margin: 0;
+  border: 2px solid white;
 }
 
 /* ==========================================================================
