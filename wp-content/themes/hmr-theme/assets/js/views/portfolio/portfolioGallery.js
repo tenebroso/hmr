@@ -1,11 +1,19 @@
 var HMR = HMR || {};
 
+/*
+* Sample HTML
+* <div data-dir="next"></div> or <div data-dir="prev"></div>
+*
+*/
+
+
 ;(function() {
 
   HMR.portfolioGallery = function() {
 
     // Declare variables
     var $thumbs = $('.slide_thumb'),
+        $bigArrows = $('.big_arrow'),
         current = 0, // This will track our curretly active thumb
         len = $thumbs.length, // This is the # of thubmnails total
         changeBackgroundImage,
@@ -36,7 +44,7 @@ var HMR = HMR || {};
         //hmr.nav.shrink();
 
         // Run the first time
-        changeBackgroundImage( $($thumbs).eq(0).data('img') );
+        changeBackgroundImage( $thumbs.eq(0).data('img') );
         
         // Start timer
         startTimer();
@@ -53,7 +61,26 @@ var HMR = HMR || {};
             }
     
             changeBackgroundImage($(this).data('img'));
-        });        
+        });    
+        
+        
+        // Handle click of big arrows
+        $bigArrows.on('click', function() {
+           
+           var endLen = len-1;
+           
+           if($(this).data('dir') === 'next') {
+               current++;
+           } else {
+               current--;
+           }
+           
+            if(current > endLen) current = 0;
+            if(current < 0) current = endLen;
+            
+            changeBackgroundImage( $thumbs.eq(current).data('img') );
+           
+        });    
     };
     
     
