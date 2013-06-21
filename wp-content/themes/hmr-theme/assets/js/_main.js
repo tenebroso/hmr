@@ -8,6 +8,7 @@ HMR.Site = {
   // All pages
   common: {
     init: function() {
+      HMR.nav = {};
       HMR.navSlideToggle();
       $('#s').clearField();
       $("body").show();
