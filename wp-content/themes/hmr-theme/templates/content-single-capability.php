@@ -6,13 +6,16 @@
 
       <?php while(has_sub_field('photos')): ?>
 
-        <li style="background-image:url(<?php the_sub_field('photo'); ?>);"></li>
+            <?php $attachment_id = get_sub_field('photo');
+            $big = wp_get_attachment_image_src($attachment_id, 'full'); ?>
+
+        <li style="background-image:url(<?php echo $big[0]; ?>);"></li>
 
       <?php endwhile; ?>
 
     </ul>
 
-    <ul class="footer">
+    <ul class="gallery-footer">
 
        <?php while(has_sub_field('photos')): ?>
 

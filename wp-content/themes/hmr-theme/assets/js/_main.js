@@ -8,6 +8,7 @@ HMR.Site = {
   // All pages
   common: {
     init: function() {
+      HMR.navSlideToggle();
       $('#s').clearField();
       $("body").show();
       var navigation = responsiveNav("#navbar", {
@@ -44,6 +45,12 @@ HMR.Site = {
     init: function() {
       HMR.capabilityBGSlideShow();
       HMR.capabilityDescriptionFades();
+    }
+  },
+  //Calling these functions under "Page" since I can't call page-template-template-portfolio-php even though they will then be called on ALL pages...
+  page: {
+    init: function() {
+      HMR.portfolioGallery();
     }
   },
   // Team archive

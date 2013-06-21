@@ -177,7 +177,8 @@ function register_cpt_press() {
 
 register_nav_menus( array(
     'whoweare' => 'Who We Are Sub-Nav',
-    'whatwedo' => 'What We Do Sub-Nav'
+    'whatwedo' => 'What We Do Sub-Nav',
+    'portfolio' => 'Portfolio Sub-Nav'
     ) 
 );
 
@@ -198,3 +199,4 @@ add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
    ========================================================================== */
 
 add_image_size( 'capabilities-thumb', 270, 270, true );
+add_image_size( 'slideshow-thumb', 70, 40, true );

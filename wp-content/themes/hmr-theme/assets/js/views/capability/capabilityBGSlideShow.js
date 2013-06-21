@@ -12,7 +12,7 @@
 		speed:3000
 	});
 
-	$('.footer').cycle({
+	$('.gallery-footer').cycle({
 		fx: 'fade',
 		delay: 2000,
 		speed:3000
