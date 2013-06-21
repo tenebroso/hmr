@@ -41,6 +41,12 @@ HMR.Site = {
       HMR.homepageBodyFade();
     }
   },
+  // Connect
+  connect: {
+    init: function() {
+      HMR.uniform();
+    }
+  },
   //Calling these functions under "Single" since I can't call single-capability even though they will then be called on single blog post and single team member pages...
   single: {
     init: function() {
