@@ -4,39 +4,38 @@ var HMR = HMR || {};
 
   HMR.navSlideToggle = function() {
 
-    var sliderHeight = "30px";
- 
-        $(".scrollTop").each(function () 
-            {
-                var current = $(this);
-                current.attr("box_h", current.height());
-            }
-        );
-        $(".slideUp").click(function() { closeSlider() });
-        $(".slideDown").click(function() { openSlider() });
-     
-     
-    function openSlider()
-     
-    {
-        var open_height = $(".scrollTop").attr("box_h") + "px";
-        $(".scrollTop").animate({"height": open_height}, {duration:250 });
-        $(".banner").slideDown(250);
-        $(".sub-nav").transition({ y:0}, 250, "ease");
-        $(".slideDown").transition({ y:0}, 250, "ease");
-        $(".slideToggle").removeClass("slideUp");
-        $(".slideToggle").addClass("slideDown");
+    var $slideToggle = $('.slideToggle'),
+        $subNav = $('.sub-nav'),
+        $banner = $('.banner'),
+        sliderHeight = "30px",
+        navIsDown = true;
+
+    // Listen for click
+    $slideToggle.on('click', function () {
+      if(navIsDown) {
+        slideUp();
+      } else {
+        slideDown();
+      }
+    });
+
+    // Make nav slide down
+    function slideDown () {
+      navIsDown = true;
+      $banner.slideDown(250);
+      $subNav.transition({y: 0}, 250, "ease");
+      // $(".slideDown").transition({ y:0}, 250, "ease");
+      $slideToggle.removeClass("slideDown");
+      $slideToggle.addClass("slideTop"); 
     }
-     
-    function closeSlider()
-     
-    {
-        $(".scrollTop").animate({"height": sliderHeight}, {duration: 250 });
-        $(".banner").slideUp(250);
-        $(".sub-nav").transition({ y:-9}, 250, "ease");
-        $(".slideUp").transition({ y:-14}, 250, "ease");
-        $(".slideToggle").removeClass("slideDown");
-        $(".slideToggle").addClass("slideUp");
+
+    function slideUp () {
+      navIsDown = false;
+      $banner.slideUp(250);
+      $subNav.transition({y: -9+'px'}, 250, "ease");
+      // $(".slideUp").transition({ y:-14}, 250, "ease");
+      $slideToggle.removeClass("slideUp");
+      $slideToggle.addClass("slideDown");
     }
 
   };
