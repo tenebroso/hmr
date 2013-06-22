@@ -23,6 +23,7 @@ var HMR = HMR || {};
     function slideDown () {
       navIsDown = true;
       $banner.slideDown(250);
+      $subNav.removeClass('up').addClass('down');
       // $subNav.transition({y: 0}, 250, "ease");
       // $(".slideDown").transition({ y:0}, 250, "ease");
       $slideToggle.removeClass("slideDown");
@@ -32,6 +33,7 @@ var HMR = HMR || {};
     function slideUp () {
       navIsDown = false;
       $banner.slideUp(250);
+      $subNav.removeClass('down').addClass('up');
       // $subNav.transition({y: -9+'px'}, 250, "ease");
       // $(".slideUp").transition({ y:-14}, 250, "ease");
       $slideToggle.removeClass("slideUp");

@@ -11,6 +11,14 @@ var HMR = HMR || {};
 
   HMR.portfolioGallery = function() {
 
+    $('.thumb_nav').bxSlider({
+        pager:false, 
+        minSlides:12, 
+        maxSlides:12, 
+        moveSlides:1, 
+        slideWidth:72
+    });
+
     // Declare variables
     var $thumbs = $('.slide_thumb'),
         $bigArrows = $('.big_arrow'),
