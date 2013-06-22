@@ -23,36 +23,28 @@
 // Base modal
 .modal {
   position: fixed;
-  top: 10%;
+  top: 8%;
   left: 50%;
   z-index: @zindexModal;
-  width: 560px;
-  margin-left: -280px;
-  background-color: @white;
-  border: 1px solid #999;
-  border: 1px solid rgba(0,0,0,.3);
-  *border: 1px solid #999; /* IE6-7 */
-  .border-radius(6px);
-  .box-shadow(0 3px 7px rgba(0,0,0,0.3));
+  margin-left: -350px;
   .background-clip(padding-box);
-  // Remove focus outline from opened modal
   outline: none;
 
   &.fade {
     .transition(e('opacity .3s linear, top .3s ease-out'));
     top: -25%;
   }
-  &.fade.in { top: 10%; }
+  &.fade.in { top: 8%; }
 }
 .modal-header {
-  padding: 9px 15px;
-  border-bottom: 1px solid #eee;
-  // Close icon
-  .close { margin-top: 2px; }
-  // Heading
-  h3 {
-    margin: 0;
-    line-height: 30px;
+  width:100%;
+  display:block;
+  .close { 
+    color: white;
+    .opacity(100);
+    background: none;
+    border: none;
+    text-shadow: 0 0 0;
   }
 }
 
@@ -60,8 +52,12 @@
 .modal-body {
   position: relative;
   overflow-y: auto;
-  max-height: 400px;
-  padding: 15px;
+  clear:both;
+  img {
+    margin:0 auto;
+    border:4px solid white;
+    .border-radius(4px);
+  }
 }
 // Remove bottom margin if need be
 .modal-form {
@@ -72,13 +68,13 @@
 .modal-footer {
   padding: 14px 15px 15px;
   margin-bottom: 0;
-  text-align: right; // right align buttons
-  background-color: #f5f5f5;
-  border-top: 1px solid #ddd;
-  .border-radius(0 0 6px 6px);
-  .box-shadow(inset 0 1px 0 @white);
+  text-align: center; // right align buttons
   .clearfix(); // clear it in case folks use .pull-* classes on buttons
-
+  .caps {
+    padding: 10px;
+    font-size: 12px;
+    font-family: 'Circe-Bold';
+  }
   // Properly space out buttons
   .btn + .btn {
     margin-left: 5px;

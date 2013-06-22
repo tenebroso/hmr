@@ -23,7 +23,7 @@ HMR.Site = {
           $('#nav-toggle').removeClass('opened');
         }
       });
-      $("a").click(function(event){
+      $(".scrollTop a").click(function(event){
         linkLocation = this.href;
         $("body").fadeOut(500, redirectPage);
         event.preventDefault();
@@ -59,6 +59,8 @@ HMR.Site = {
   page: {
     init: function() {
       HMR.portfolioGallery();
+      HMR.lightbox();
+      $('.page-template-template-press-php .content .row-fluid .span3:nth-child(4n+9)').addClass('clear');
     }
   },
   // Team archive

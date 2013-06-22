@@ -187,7 +187,7 @@ register_nav_menus( array(
    ========================================================================== */
 
 function namespace_add_custom_types( $query ) {
- if ( is_post_type_archive('team')) {
+ if ( is_post_type_archive('team') || is_post_type_archive('press')) {
     $query->set( 'posts_per_page', -1);
       return $query;
     }
@@ -199,4 +199,14 @@ add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
    ========================================================================== */
 
 add_image_size( 'capabilities-thumb', 270, 270, true );
+add_image_size( 'press-thumb', 235, 280, true );
 add_image_size( 'slideshow-thumb', 70, 40, true );
+
+
+function my_custom_post_type_archive_where($where,$args){  
+    $post_type  = isset($args['post_type'])  ? $args['post_type']  : 'press';  
+    $where = "WHERE post_type = '$post_type' AND post_status = 'publish'";
+    return $where;  
+}
+
+add_filter( 'getarchives_where','my_custom_post_type_archive_where',10,2);
