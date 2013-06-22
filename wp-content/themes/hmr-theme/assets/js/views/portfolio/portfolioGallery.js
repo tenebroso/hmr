@@ -14,6 +14,9 @@ var HMR = HMR || {};
     // Declare variables
     var $thumbs = $('.slide_thumb'),
         $bigArrows = $('.big_arrow'),
+        $leftArrow = $('.left_arrow'),
+        $rightArrow = $('.right_arrow'),
+        $nav = $('.thumb_nav'),
         current = 0, // This will track our curretly active thumb
         len = $thumbs.length, // This is the # of thubmnails total
         changeBackgroundImage,
@@ -42,6 +45,14 @@ var HMR = HMR || {};
     initialize = function () {
 
         //hmr.nav.shrink();
+
+        $leftArrow.on('click', function() {
+            $nav.transition({x: '-72px'}, 750, 'ease');
+        }); 
+
+        $rightArrow.on('click', function() {
+            $nav.transition({x: '72px'}, 750, 'ease');
+        }); 
 
         // Run the first time
         changeBackgroundImage( $thumbs.eq(0).data('img') );

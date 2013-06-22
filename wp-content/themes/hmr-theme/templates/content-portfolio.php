@@ -4,8 +4,13 @@
 
 <div class="thumb_container">
 
-	<div class="left_arrow"></div>
-    <div class="right_arrow"></div>
+  <div class="left_arrow"></div>
+  <div class="right_arrow"></div>
+
+  <div class="hide_thumbs">
+
+	    
+
     <ul class="thumb_nav">
 
       <?php while(has_sub_field('photos')): ?>
@@ -23,7 +28,7 @@
 
     </ul>
 
-    
+  </div>
 
 </div>
 
@@ -52,6 +57,9 @@
     </div>
 
   <?php endif; ?>
+
+
+  <div class="big_arrow"></div>
 
 
 <?php endwhile; ?>
