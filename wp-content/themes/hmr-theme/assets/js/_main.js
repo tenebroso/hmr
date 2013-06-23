@@ -12,7 +12,7 @@ HMR.Site = {
       HMR.navSlideToggle();
       $('#s').clearField();
       $("body").show();
-      var navigation = responsiveNav("#navbar", {
+      var navigation = responsiveNav("#navbar-mobile", {
         animate: true,
         openPos: "relative",
         transition:200,

@@ -120,18 +120,17 @@
 
 /*! responsive-nav.js v1.0.14 by @viljamis */
 
-#navbar {
+#navbar-mobile {
   width:100%;
   ul {
     margin: 0;
     padding: 0;
     width: 100%;
-    display: block;
     list-style: none;
   }
 }
 
-.js #navbar {
+.js #navbar-mobile {
   clip: rect(0 0 0 0);
   max-height: 0;
   position: absolute;
@@ -140,7 +139,7 @@
   zoom: 1;
 }
 
-#navbar.opened {
+#navbar-mobile.opened {
   max-height: 9999px;
   clear:both;
 }
@@ -152,6 +151,10 @@
     display:inline-block;
     float:right;
     margin-top:15px;
+    -webkit-transition-duration: 0s;
+    -moz-transition-duration: 0s;
+    -o-transition-duration: 0s;
+    transition-duration: 0s;
     &.opened {
       margin:0;
     }
@@ -191,16 +194,42 @@
 
 @media screen and (max-width:767px) { 
 
-#navbar {
+#navbar-mobile {
   ul {
     margin-top:15px;
     li { 
       width: 100%;
-      padding:10px 0;
-      border-bottom:1px solid @blue;
       display: block;
+      text-align:left;
+      padding:0;
       a {
-        text-align:left;
+        padding:20px 0 15px 0;
+        display:block;
+        border-bottom:1px solid @blue;
+        &:after {
+          font-size:11px;
+          float:right;
+          content:"+";
+        }
+        &:hover {
+          color:white;
+          text-decoration:none;
+        }
+      }
+    }
+    ul {
+      margin:0;
+      li {
+        a {
+          text-transform: uppercase;
+          font-family: 'Circe-Light', sans-serif;
+          padding:10px 0 10px 25px;
+          &:after {
+            font-size:11px;
+            float:right;
+            content:"»";
+          }
+        }
       }
     }
   }
@@ -209,10 +238,10 @@
 }
 
 @media screen and (min-width: 767px) {
-  .js #navbar {
+  .js #navbar-mobile {
     position: relative;
   }
-  .js #navbar.closed {
+  .js #navbar-mobile.closed {
     max-height: none;
   }
   #nav-toggle {

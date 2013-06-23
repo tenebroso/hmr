@@ -1002,6 +1002,12 @@ ul.fullsize {
 
 }
 
+@media (min-width: 768px) {
+	#navbar-mobile, html.js #navbar-mobile {
+		display:none;
+	}
+}
+
 @media (max-width: 767px) {
 
 	.banner {
@@ -1021,6 +1027,10 @@ ul.fullsize {
 
     .sub-nav {
     	display:none;
+    }
+
+    #navbar-mobile, html.js #navbar-mobile {
+    	display: block;
     }
 
     .home {

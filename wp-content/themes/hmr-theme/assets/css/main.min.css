@@ -2672,19 +2672,18 @@ input[type="submit"].btn.btn-mini {
 
 /*! responsive-nav.js v1.0.14 by @viljamis */
 
-#navbar {
+#navbar-mobile {
   width: 100%;
 }
 
-#navbar ul {
-  display: block;
+#navbar-mobile ul {
   width: 100%;
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-.js #navbar {
+.js #navbar-mobile {
   position: absolute;
   display: block;
   max-height: 0;
@@ -2693,7 +2692,7 @@ input[type="submit"].btn.btn-mini {
   zoom: 1;
 }
 
-#navbar.opened {
+#navbar-mobile.opened {
   max-height: 9999px;
   clear: both;
 }
@@ -2710,6 +2709,10 @@ input[type="submit"].btn.btn-mini {
   background: url("../img/ra-sprite.png") no-repeat left top;
   background-color: transparent;
   border: 0;
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
 }
 
 #nav-toggle.opened {
@@ -2753,25 +2756,49 @@ input[type="submit"].btn.btn-mini {
 }
 
 @media screen and (max-width: 767px) {
-  #navbar ul {
+  #navbar-mobile ul {
     margin-top: 15px;
   }
-  #navbar ul li {
+  #navbar-mobile ul li {
     display: block;
     width: 100%;
-    padding: 10px 0;
+    padding: 0;
+    text-align: left;
+  }
+  #navbar-mobile ul li a {
+    display: block;
+    padding: 20px 0 15px 0;
     border-bottom: 1px solid #293240;
   }
-  #navbar ul li a {
-    text-align: left;
+  #navbar-mobile ul li a:after {
+    float: right;
+    font-size: 11px;
+    content: "+";
+  }
+  #navbar-mobile ul li a:hover {
+    color: white;
+    text-decoration: none;
+  }
+  #navbar-mobile ul ul {
+    margin: 0;
+  }
+  #navbar-mobile ul ul li a {
+    padding: 10px 0 10px 25px;
+    font-family: 'Circe-Light', sans-serif;
+    text-transform: uppercase;
+  }
+  #navbar-mobile ul ul li a:after {
+    float: right;
+    font-size: 11px;
+    content: "»";
   }
 }
 
 @media screen and (min-width: 767px) {
-  .js #navbar {
+  .js #navbar-mobile {
     position: relative;
   }
-  .js #navbar.closed {
+  .js #navbar-mobile.closed {
     max-height: none;
   }
   #nav-toggle {
@@ -6045,6 +6072,13 @@ ul.fullsize li {
   }
 }
 
+@media (min-width: 768px) {
+  #navbar-mobile,
+  html.js #navbar-mobile {
+    display: none;
+  }
+}
+
 @media (max-width: 767px) {
   .banner {
     padding: 24px 34px;
@@ -6062,6 +6096,10 @@ ul.fullsize li {
   }
   .sub-nav {
     display: none;
+  }
+  #navbar-mobile,
+  html.js #navbar-mobile {
+    display: block;
   }
   .home .banner {
     background: #071222;
