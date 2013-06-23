@@ -5640,7 +5640,7 @@ ul.fullsize li {
 
 .thumb_nav .slide_thumb {
   display: inline-block;
-  margin: 0 1px;
+  width: 74px;
   vertical-align: middle;
   cursor: pointer;
 }

@@ -176,9 +176,9 @@ function register_cpt_press() {
    ========================================================================== */
 
 
-add_action( 'init', 'register_cpt_press' );
+add_action( 'init', 'register_cpt_testimonial' );
 
-function register_cpt_press() {
+function register_cpt_testimonial() {
 
     $labels = array( 
         'name' => _x( 'Testimonials', 'testimonial' ),

@@ -16,7 +16,8 @@ var HMR = HMR || {};
         minSlides:12, 
         maxSlides:12, 
         moveSlides:1, 
-        slideWidth:75
+        slideMargin:1,
+        slideWidth:70
     });
 
     // Declare variables
