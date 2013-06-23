@@ -428,6 +428,26 @@ a {
 	}
 }
 
+@media (max-width: 1200px) and (min-width:768px) { 
+	.capability {
+		&.span4 {
+			width:32%;
+			padding:27px 5px;
+			background:none;
+		}
+	}
+}
+
+@media (max-width:979px) and (min-width:768px) { 
+	.capability {
+		.hover {
+			top: 19%;
+			left: 28%;
+		}
+	}
+
+}
+
 /* ==========================================================================
    Capability Single
    ========================================================================== */
@@ -576,7 +596,9 @@ ul.fullsize {
 }
 
 .bx-wrapper {
-	position:relative;
+	position:absolute;
+	top:calc(~"100% - 150px");
+	width:100%;
 	z-index:200;
 	.bx-viewport {
 		z-index:201;
@@ -595,7 +617,7 @@ ul.fullsize {
 				width:23px;
 				height:42px;
 				position:absolute;
-				top:0;
+				top:3px;
 				.hide-text;
 				&.bx-prev {
 					background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAPCAYAAAAoAdW+AAAASklEQVQoz2NgwAH+//8vj1MCiO/hlADifTglgJiLPAkgnYJTAoj/MUAFPwOxCFRCDYj/AvF/ZJ17MXSi2YmigLBryVJAWtgiKwAAIwfCoKkUtbUAAAAASUVORK5CIIA=) no-repeat center center;
@@ -621,7 +643,6 @@ ul.fullsize {
 	margin:0;
 	padding:0;
 	list-style-type:none;
-	width:9999px;
 	height:44px;
 	.slide_thumb {
 		cursor:pointer;
