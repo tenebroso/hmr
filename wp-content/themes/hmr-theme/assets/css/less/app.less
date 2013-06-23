@@ -321,6 +321,7 @@ a {
 		margin: .5em 0;
 		font-size: 14px;
 		line-height: 1.5;
+		color:@blueLight;
 		a {
 			color:white;
 			&:hover {
@@ -328,11 +329,20 @@ a {
 				text-decoration:none;
 			}
 		}
+		&:first-child {
+			strong {
+				padding:0;
+			}
+		}
 	}
 	strong {
 		font-family: 'Circe-Bold';
 		font-size:16px;
 		font-weight:normal;
+		padding: 20px 0 0;
+		display: block;
+		margin: 0 0 -5px 0;
+		color:white;
 	}
 }
 
@@ -1009,6 +1019,10 @@ ul.fullsize {
      	}
     }
 
+    .sub-nav {
+    	display:none;
+    }
+
     .home {
     	.banner {
     		background:@blueDark;
@@ -1022,6 +1036,17 @@ ul.fullsize {
 		&.container {
 			padding-left:20px;
 			padding-right:20px;
+		}
+	}
+	.content-info {
+		text-align:center;
+		.text-right {
+			text-align:center;
+		}
+		.span6 {
+			border:none !important;
+			padding:0 !important;
+			margin:0 !important;
 		}
 	}
 

@@ -2653,6 +2653,10 @@ input[type="submit"].btn.btn-mini {
   background-position: -385px 51px;
 }
 
+.sub-nav .menu li.active.menu-venues a {
+  background-position: -386px 51px;
+}
+
 .page-template-template-portfolio-php .sub-nav .menu li a:hover {
   background: none !important;
 }
@@ -5282,6 +5286,7 @@ a {
   margin: .5em 0;
   font-size: 14px;
   line-height: 1.5;
+  color: #55616f;
 }
 
 .columns p a {
@@ -5293,10 +5298,18 @@ a {
   text-decoration: none;
 }
 
+.columns p:first-child strong {
+  padding: 0;
+}
+
 .columns strong {
+  display: block;
+  padding: 20px 0 0;
+  margin: 0 0 -5px 0;
   font-family: 'Circe-Bold';
   font-size: 16px;
   font-weight: normal;
+  color: white;
 }
 
 /* ==========================================================================
@@ -6047,6 +6060,9 @@ ul.fullsize li {
     margin: 0;
     background-size: 430%;
   }
+  .sub-nav {
+    display: none;
+  }
   .home .banner {
     background: #071222;
   }
@@ -6056,6 +6072,17 @@ ul.fullsize li {
   .wrap.container {
     padding-right: 20px;
     padding-left: 20px;
+  }
+  .content-info {
+    text-align: center;
+  }
+  .content-info .text-right {
+    text-align: center;
+  }
+  .content-info .span6 {
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
   }
 }
 
