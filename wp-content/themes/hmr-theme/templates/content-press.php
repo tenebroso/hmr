@@ -3,7 +3,10 @@
 		$id = get_the_ID();
 		$thumb_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'press-thumb'); 
 		$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large');
-		$full_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full');?>
+		$full_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full');
+		$pdf = get_field('pdf');
+		$url = get_field('url');
+		?>
 
 <article class="span3">
 	<a href="#modal-<?php echo $id; ?>" data-toggle="modal">
@@ -14,7 +17,7 @@
    			<em class="arvo"><?php the_field('publication_date');?></em>
    		</a>
    	</p>
-   	<p class="arvo view-article">View Article: <a href="#">PDF</a> / <a href="#">On the Web</a></p>
+   	<p class="arvo view-article">View Article:<?php if($pdf) { ?> <a href="<?php echo $pdf; ?>">PDF</a><?php if ($url && $pdf) { ?> /<?php } ?><?php } if ($url) { ?> <a href="<?php echo $url; ?>">On the Web</a><?php } ?></p>
 </article>
 
 <div id="modal-<?php echo $id; ?>" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
@@ -22,7 +25,7 @@
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
   	</div>
 	<div class='modal-body'>
-		<img src="<?php echo $large_image_url[0]; ?>">
+		<img src="<?php echo $large_image_url[0]; ?>" class="img">
 	</div>
 	<div class="modal-footer">
 		<a class="btn btn-small circe caps" href="<?php echo $full_image_url[0]; ?>" target="_blank">View full size</a>

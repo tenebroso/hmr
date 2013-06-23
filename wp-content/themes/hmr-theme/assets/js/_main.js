@@ -62,6 +62,7 @@ HMR.Site = {
       HMR.portfolioGallery();
       HMR.lightbox();
       $('.page-template-template-press-php .content .row-fluid .span3:nth-child(4n+9)').addClass('clear');
+      $('.page-template-template-testimonials-php .content .row-fluid .span3:nth-child(4n+9)').addClass('clear');
     }
   },
   // Team archive
