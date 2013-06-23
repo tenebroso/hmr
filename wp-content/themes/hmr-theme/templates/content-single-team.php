@@ -3,7 +3,7 @@
     <div class="row-fluid">
       <div class="span4">
         <?php the_post_thumbnail('medium');?>
-        <p><a href="../">&laquo; Back to Our Team</a></p>
+        <p class="back"><a href="../">&laquo; Back to Our Team</a></p>
       </div>
       <div class="span8">
     <header>

@@ -5257,8 +5257,17 @@ a {
   border: none;
 }
 
-.single-team .hentry em {
+.single-team .hentry .entry-content em {
   color: #a6a6a6;
+}
+
+.single-team .hentry .back {
+  font-size: 15px;
+}
+
+.single-team .hentry a:hover {
+  color: white;
+  text-decoration: none;
 }
 
 /* =============================================================================

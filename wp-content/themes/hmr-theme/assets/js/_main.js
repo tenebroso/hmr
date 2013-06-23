@@ -48,11 +48,12 @@ HMR.Site = {
       HMR.MapTest();
     }
   },
-  //Calling these functions under "Single" since I can't call single-capability even though they will then be called on single blog post and single team member pages...
+  //Calling these functions under "Single" since I can't call single-capability or single-team even though they will then be called on single blog post and single team member pages...
   single: {
     init: function() {
       HMR.capabilityBGSlideShow();
       HMR.capabilityDescriptionFades();
+      $('.single-team .menu li.menu-our-team').addClass('active');
     }
   },
   //Calling these functions under "Page" since I can't call page-template-template-portfolio-php even though they will then be called on ALL pages...
@@ -67,7 +68,6 @@ HMR.Site = {
   archive: {
     init: function() {
       $('article.span2:nth-child(6n+7)').addClass('clear');
-      $('.single-team .menu-our-team').addClass('active');
       HMR.teamArchiveFaceMap();
     }
   }
