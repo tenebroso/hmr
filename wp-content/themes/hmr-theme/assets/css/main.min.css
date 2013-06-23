@@ -5721,7 +5721,7 @@ ul.fullsize li {
 
 .team-photo .mertz {
   right: 55px;
-  bottom: 265px;
+  bottom: 252px;
 }
 
 .team-photo .heff {
@@ -5737,6 +5737,41 @@ ul.fullsize li {
 .team-photo .ahr {
   top: 127px;
   left: 281px;
+}
+
+.team-photo .patel {
+  top: 182px;
+  right: 186px;
+}
+
+.team-photo .crum {
+  top: 119px;
+  left: 360px;
+}
+
+.team-photo .schr {
+  top: 114px;
+  left: 651px;
+}
+
+.team-photo .hens {
+  top: 59px;
+  left: 417px;
+}
+
+.team-photo .grif {
+  top: 145px;
+  left: 135px;
+}
+
+.team-photo .eps {
+  top: 35px;
+  left: 586px;
+}
+
+.team-photo .mil {
+  top: 26px;
+  left: 521px;
 }
 
 .tooltipsy {
