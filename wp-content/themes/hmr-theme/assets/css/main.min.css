@@ -2646,7 +2646,11 @@ input[type="submit"].btn.btn-mini {
 }
 
 .sub-nav .menu li.active.menu-our-team a {
-  background: #071222 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABM4AAAAXCAYAAADz9wOhAAADhUlEQVR42u3dXajfcwDH8Z2zzibLUbNFpH4bNf087GJSv8y4oEhbIRdGS2iSC7aShyQUufF0Q6i5QC7MwwUKTbHc2JIotLKULXmsLctDZ4fPr37/+obpmPPn/P//16veF3s653++/1/tnE//h3lV3WyUJI10G9LR8+iLnO38tM51JkmSJA1c69pv6H+TJI18+9Oj6SRT16wNZpNpU9rt+pIkSZIGsu3tN/ZPSJJGureL/xgOppfTGtPXYQ9my9PDaV9xrrtcZ5IkSdLAdYufcABox54z0pb0czH27ExXpQVOaEZneE56MU0VZ7gtrU3jTggAAABggFV1c2y6O31djD970x1piRP603lNpPXdyNg7r3Z8fDqtdEIAAAAAQ6aqm4XpmvRRMQgd6B6ufIrzaRan29Ke4nzasfGedJwrCAAAAGAEVHVzfnq1e/2zdiCaTq+nC9LYiJ3FivR4NyL2BrN2XLw2HeFqAQAAABhB3Wj0WPqxGI0+TtcN+2hUjIfTxXj4Wvf7Y64OAAAAAHpPU7w1fVkMaN+ke4fpaYp/83TV9hFnK1wJAAAAAPyl7oXxr0jvD9ML4x/iDRL2dK9pttg9DwAAAMCMVXVzdnohTRVj07a0No0PyNdwetrSjX+9r2FH966ZE+5lAAAAAA5bVTdVejDtK8anXenGtGgO3t7xdHF6q7i97fi3Na12jwIAAAAwq6q6OSrdlD4vBqkf0gPpxDlw+xalG9Jnxe1rx76H0jL3IAAAAAB91T2i65L0TjFQ/ZqeT2f9D7fnhG68+764Pe24d3OadI8BAAAA8J+r6mZVeib9UoxW76XL0/w+f+4z03PdaNf73O+mS/v9uQEAAABgRqq6OT7dl74tRqwv0ubZfNRXO4ily9L2Pzza7dl2xHNPAAAAADAnVXVzZNqYPimGrf3pkbT8X3zcybQp7S4+7nfp/na0c/IAAAAADISqbsbShemNNN0NXQfTS2nNP/g4y7oX9y/f0fPTdH070jlpAAAAAAZWVTenpifTT8X4tTNdmSYO8W9Wp61pqvv77fj2ZrqoHeWcKgAAAABDo6qbJenO9FUxoO1Nt6dj2hEtrU87ij9vx7an0mlOEAAAAIChVtXNgrQhfVAMZAe6Ea3363ZcuystdWIAAAAAjJyqbs5Lr3Svf9YOZh+mq9NCpwMAAADAyKvq5uR0rpMAAAD67XddQRsBHS8PoQAAAABJRU5ErkJggg==) no-repeat -372px 51px;
+  background-position: -379px 51px;
+}
+
+.sub-nav .menu li.active.menu-clients a {
+  background-position: -385px 51px;
 }
 
 .page-template-template-portfolio-php .sub-nav .menu li a:hover {
@@ -2717,7 +2721,7 @@ input[type="submit"].btn.btn-mini {
   right: 0;
   bottom: 0;
   z-index: 102;
-  display: block;
+  display: none;
   width: 36px;
   height: 27px;
   cursor: pointer;
@@ -2737,6 +2741,11 @@ input[type="submit"].btn.btn-mini {
 
 .slideToggle.slideDown:hover {
   background: #a6a6a6 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAVCAAAAACWQBrEAAAAVklEQVQoz2NYhgswDHaZLa+frUUIbX39dA1cz/6/7+FSW39834JkGkIKJgG3Z/8fiBRcAuECiBRCAsltICkkCWRX7//zAUkCxT/7/yBJoPp035ZBFdYAb1ZfjOcT1ZwAAAAASUVORK5CIIA=) no-repeat center center;
+}
+
+.page-template-template-portfolio-php .slideToggle,
+.single-capability .slideToggle {
+  display: block;
 }
 
 @media screen and (max-width: 767px) {
@@ -2879,7 +2888,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .modal-footer .caps {
-  padding: 10px;
+  padding: 10px 10px 8px 10px;
   font-family: 'Circe-Bold';
   font-size: 12px;
 }
@@ -5027,29 +5036,6 @@ a {
   border: 0;
 }
 
-@media (max-width: 767px) {
-  .banner {
-    padding: 24px 34px;
-    background: #071222;
-  }
-  .banner .container {
-    position: relative;
-  }
-  .banner .brand {
-    float: left;
-    width: 104px;
-    height: 64px;
-    margin: 0;
-    background-size: 430%;
-  }
-  .home .banner {
-    background: #071222;
-  }
-  .home .banner .brand {
-    background-position: left top;
-  }
-}
-
 /* ==========================================================================
    Content
    ========================================================================== */
@@ -5101,13 +5087,6 @@ a {
   color: #a6a6a6;
   text-align: center;
   text-transform: uppercase;
-}
-
-@media (max-width: 767px) {
-  .wrap.container {
-    padding-right: 20px;
-    padding-left: 20px;
-  }
 }
 
 /* ==========================================================================
@@ -5278,6 +5257,10 @@ a {
   border: none;
 }
 
+.single-team .hentry em {
+  color: #a6a6a6;
+}
+
 /* =============================================================================
    Column Layouts
    ========================================================================== */
@@ -5387,21 +5370,6 @@ a {
   font-family: 'Circe-Regular';
   font-size: 15px;
   text-transform: uppercase;
-}
-
-@media (max-width: 1200px) and (min-width: 768px) {
-  .capability.span4 {
-    width: 32%;
-    padding: 27px 5px;
-    background: none;
-  }
-}
-
-@media (max-width: 979px) and (min-width: 768px) {
-  .capability .hover {
-    top: 19%;
-    left: 28%;
-  }
 }
 
 /* ==========================================================================
@@ -5665,37 +5633,37 @@ ul.fullsize li {
    Team Archive
    ========================================================================== */
 
-.post-type-archive .content .attachment-post-thumbnail {
-  border: 1px solid #a6a6a6;
-}
-
-.post-type-archive .content .attachment-post-thumbnail:hover {
-  border: 1px solid white;
-}
-
-.post-type-archive .content .span2 {
+.post-type-archive-team .content .span2 {
   margin-bottom: 25px;
 }
 
-.post-type-archive .content a {
+.post-type-archive-team .content .span2 img {
+  border: 1px solid #55616f;
+}
+
+.post-type-archive-team .content .span2 img:hover {
+  border: 1px solid white;
+}
+
+.post-type-archive-team .content a {
   display: block;
 }
 
-.post-type-archive .content a:hover {
+.post-type-archive-team .content a:hover {
   color: white;
   text-decoration: none;
 }
 
-.post-type-archive .content .large {
+.post-type-archive-team .content .large {
   font-size: 18px;
   line-height: 1;
 }
 
-.post-type-archive .content .large em {
+.post-type-archive-team .content .large em {
   font-size: 13px;
 }
 
-.post-type-archive .content .large em.arvo {
+.post-type-archive-team .content .large em.arvo {
   font-family: 'ArvoItalic';
 }
 
@@ -5803,55 +5771,6 @@ ul.fullsize li {
   line-height: 1;
 }
 
-/* ==========================================================================
-   Footer
-   ========================================================================== */
-
-.content-info {
-  padding: 20px 0;
-  margin: 80px 0 0;
-  font-family: 'Circe-Regular';
-  background: #293240;
-}
-
-.content-info p {
-  margin: 0;
-  font-size: 13px;
-  line-height: 1.6;
-}
-
-.content-info h4 {
-  margin: 15px 0 0;
-  font-family: 'Circe-Regular';
-  font-size: 17px;
-  letter-spacing: .2em;
-  color: #a4adb5;
-  text-transform: uppercase;
-}
-
-.content-info a {
-  color: white;
-}
-
-.content-info a:hover {
-  color: #a4adb5;
-  text-decoration: none;
-}
-
-.content-info .span6 {
-  padding-left: 25px;
-  margin-left: 0;
-}
-
-.content-info .span6.text-right {
-  padding-right: 25px;
-  padding-left: 0;
-}
-
-.content-info .span6.border-right {
-  border-right: 1px solid #a4adb5;
-}
-
 /* =============================================================================
    Connect Page
    ========================================================================== */
@@ -5861,60 +5780,8 @@ ul.fullsize li {
   height: 450px;
 }
 
-/* =============================================================================
-   Press Release Archive
-   ========================================================================== */
-
-.page-template-template-press-php p {
-  margin: 0;
-  font-size: 14px;
-  line-height: 1.4;
-  color: white;
-}
-
-.page-template-template-press-php p em {
-  font-family: 'ArvoItalic';
-}
-
-.page-template-template-press-php .content a {
-  display: inline;
-}
-
-.page-template-template-press-php .view-article {
-  font-size: 14px;
-  color: #a6a6a6;
-}
-
-.page-template-template-press-php .view-article a:hover {
-  color: white;
-}
-
-.page-template-template-press-php .date_heading {
-  padding: 0 0 5px 0;
-  margin: 0 0 20px 0;
-  font-family: 'Circe-Bold';
-  font-size: 14px;
-  font-weight: normal;
-  color: #55616f;
-  text-align: center;
-  border-bottom: 1px solid #293240;
-}
-
-.page-template-template-press-php .row-fluid .span3 {
-  margin-bottom: 40px;
-}
-
-.page-template-template-press-php .row-fluid .span3 .clear {
-  margin-left: 0;
-  clear: both;
-}
-
-.page-template-template-press-php .row-fluid .span3 img {
-  margin-bottom: 15px;
-}
-
 /* ==========================================================================
-   Gravity Forms
+   Gravity Forms on Connect Page
    ========================================================================== */
 
 .page-template-template-connect-php .gform_wrapper .top_label .gfield_label {
@@ -6020,6 +5887,107 @@ ul.fullsize li {
   margin-right: 0;
 }
 
+/* =============================================================================
+   Press Release Archive
+   ========================================================================== */
+
+.page-template-template-press-php p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: white;
+}
+
+.page-template-template-press-php p em {
+  font-family: 'ArvoItalic';
+}
+
+.page-template-template-press-php .content a {
+  display: inline;
+}
+
+.page-template-template-press-php .view-article {
+  font-size: 14px;
+  color: #a6a6a6;
+}
+
+.page-template-template-press-php .view-article a:hover {
+  color: white;
+}
+
+.page-template-template-press-php .date_heading {
+  padding: 0 0 5px 0;
+  margin: 0 0 20px 0;
+  font-family: 'Circe-Bold';
+  font-size: 14px;
+  font-weight: normal;
+  color: #55616f;
+  text-align: center;
+  border-bottom: 1px solid #293240;
+}
+
+.page-template-template-press-php .row-fluid .span3 {
+  margin-bottom: 40px;
+}
+
+.page-template-template-press-php .row-fluid .span3 .clear {
+  margin-left: 0;
+  clear: both;
+}
+
+.page-template-template-press-php .row-fluid .span3 img {
+  margin-bottom: 15px;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.content-info {
+  padding: 20px 0;
+  margin: 80px 0 0;
+  font-family: 'Circe-Regular';
+  background: #293240;
+}
+
+.content-info p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.content-info h4 {
+  margin: 15px 0 0;
+  font-family: 'Circe-Regular';
+  font-size: 17px;
+  letter-spacing: .2em;
+  color: #a4adb5;
+  text-transform: uppercase;
+}
+
+.content-info a {
+  color: white;
+}
+
+.content-info a:hover {
+  color: #a4adb5;
+  text-decoration: none;
+}
+
+.content-info .span6 {
+  padding-left: 25px;
+  margin-left: 0;
+}
+
+.content-info .span6.text-right {
+  padding-right: 25px;
+  padding-left: 0;
+}
+
+.content-info .span6.border-right {
+  border-right: 1px solid #a4adb5;
+}
+
 /* ==========================================================================
    WordPress Generated Classes
    See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
@@ -6049,6 +6017,57 @@ ul.fullsize li {
    Media Queries
    ========================================================================== */
 
+@media (max-width: 1200px) {
+  .team-photo .hover {
+    display: none;
+  }
+}
+
 @media (max-width: 767px) {
-  
+  .banner {
+    padding: 24px 34px;
+    background: #071222;
+  }
+  .banner .container {
+    position: relative;
+  }
+  .banner .brand {
+    float: left;
+    width: 104px;
+    height: 64px;
+    margin: 0;
+    background-size: 430%;
+  }
+  .home .banner {
+    background: #071222;
+  }
+  .home .banner .brand {
+    background-position: left top;
+  }
+  .wrap.container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 768px) {
+  .capability.span4 {
+    width: 32%;
+    padding: 27px 5px;
+    background: none;
+  }
+  .team-photo {
+    min-height: 440px;
+    margin: 0 0 40px 0;
+  }
+}
+
+@media (max-width: 979px) and (min-width: 768px) {
+  .capability .hover {
+    top: 19%;
+    left: 28%;
+  }
+  .team-photo {
+    min-height: 344px;
+  }
 }

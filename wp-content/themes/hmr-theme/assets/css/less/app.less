@@ -87,35 +87,6 @@ a {
 }
 
 
-@media (max-width: 767px) {
-
-    .banner {
-      background:@blueDark;
-      padding:24px 34px;
-      	.container {
-      		position:relative;
-      	}
-     	.brand {
-     		margin:0;
-			width:104px;
-			height:64px;
-			float:left;
-			background-size:430%;
-     	}
-    }
-
-    .home {
-    	.banner {
-    		background:@blueDark;
-    		.brand {
-    			background-position:left top;
-    		}
-    	}
-    }
-
-}
-
-
 /* ==========================================================================
    Content
    ========================================================================== */
@@ -172,17 +143,6 @@ a {
 		text-transform:uppercase;
 		margin:.75em 0 1em 0;
 	}
-}
-
-@media (max-width: 767px) { 
-
-	.wrap {
-		&.container {
-			padding-left:20px;
-			padding-right:20px;
-		}
-	}
-
 }
 
 
@@ -334,6 +294,9 @@ a {
 .single-team {
 	.hentry {
 		border:none;
+		em {
+			color:@gray;
+		}
 	}
 }
 
@@ -426,26 +389,6 @@ a {
 		font-size:15px;
 		font-family: 'Circe-Regular';
 	}
-}
-
-@media (max-width: 1200px) and (min-width:768px) { 
-	.capability {
-		&.span4 {
-			width:32%;
-			padding:27px 5px;
-			background:none;
-		}
-	}
-}
-
-@media (max-width:979px) and (min-width:768px) { 
-	.capability {
-		.hover {
-			top: 19%;
-			left: 28%;
-		}
-	}
-
 }
 
 /* ==========================================================================
@@ -686,16 +629,16 @@ ul.fullsize {
    Team Archive
    ========================================================================== */
 
-.post-type-archive {
+.post-type-archive-team {
 	.content {
-		.attachment-post-thumbnail {
-		border:1px solid @gray;
-		&:hover {
-			border:1px solid white;
-		}
-		}
 		.span2 {
 			margin-bottom:25px;
+			img {
+				border:1px solid @blueLight;
+				&:hover {
+					border:1px solid white;
+				}
+			}
 		}
 		a {
 			display:block;
@@ -779,6 +722,8 @@ ul.fullsize {
 	}
 }
 
+
+
 .tooltipsy {
 	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAArAQMAAAAubWgzAAAAA1BMVEX///+nxBvIAAAAAXRSTlPZv+myFgAAAAtJREFUGBljGPEAAAECAAFnIZThAAAAAElFTkSuQmCC) repeat;
 	text-align:center;
@@ -805,48 +750,6 @@ ul.fullsize {
 	}
 }
 
-/* ==========================================================================
-   Footer
-   ========================================================================== */
-
-.content-info { 
-	background:@blue;
-	margin:80px 0 0;
-	font-family: 'Circe-Regular';
-	padding:20px 0;
-	p { 
-		font-size:13px;
-		line-height:1.6;
-		margin:0;
-	}
-	h4 {
-		font-size:17px;
-		color:@blueLighter;
-		text-transform:uppercase;
-		font-family: 'Circe-Regular';
-		letter-spacing:.2em;
-		margin:15px 0 0;
-	}
-	a {
-		color:white;
-		&:hover {
-			color:@blueLighter;
-			text-decoration:none;
-		}
-	}
-	.span6 {
-		padding-left:25px;
-		margin-left:0;
-		&.text-right {
-			padding-right:25px;
-			padding-left:0;
-		}
-		&.border-right {
-			border-right:1px solid #a4adb5;
-		}
-	}
-}
-
 /* =============================================================================
    Connect Page
    ========================================================================== */
@@ -856,61 +759,8 @@ ul.fullsize {
 	height:450px;
 }
 
-/* =============================================================================
-   Press Release Archive
-   ========================================================================== */
-
-.page-template-template-press-php {
-	p {
-		color:white;
-		font-size:14px;
-		line-height:1.4;
-		margin:0;
-		em {
-			font-family: 'ArvoItalic';
-		}
-	}
-	.content {
-		a {
-			display:inline;
-		}
-	}
-	.view-article {
-		font-size:14px;
-		color:@gray;
-		a {
-			&:hover {
-				color:white;
-			}
-		}
-	}
-	.date_heading {
-		font-size:14px;
-		color:@blueLight;
-		font-weight:normal;
-		font-family: 'Circe-Bold';
-		border-bottom:1px solid @blue;
-		text-align:center;
-		margin:0 0 20px 0;
-		padding:0 0 5px 0;
-	}
-	.row-fluid {
-		.span3 {
-			margin-bottom:40px;
-			.clear {
-				margin-left:0;
-				clear:both;
-			}
-			img {
-				margin-bottom:15px;
-			}
-		}
-	}
-}
-
-
 /* ==========================================================================
-   Gravity Forms
+   Gravity Forms on Connect Page
    ========================================================================== */
 
 .page-template-template-connect-php {
@@ -1009,6 +859,102 @@ ul.fullsize {
 	}
 }
 
+/* =============================================================================
+   Press Release Archive
+   ========================================================================== */
+
+.page-template-template-press-php {
+	p {
+		color:white;
+		font-size:14px;
+		line-height:1.4;
+		margin:0;
+		em {
+			font-family: 'ArvoItalic';
+		}
+	}
+	.content {
+		a {
+			display:inline;
+		}
+	}
+	.view-article {
+		font-size:14px;
+		color:@gray;
+		a {
+			&:hover {
+				color:white;
+			}
+		}
+	}
+	.date_heading {
+		font-size:14px;
+		color:@blueLight;
+		font-weight:normal;
+		font-family: 'Circe-Bold';
+		border-bottom:1px solid @blue;
+		text-align:center;
+		margin:0 0 20px 0;
+		padding:0 0 5px 0;
+	}
+	.row-fluid {
+		.span3 {
+			margin-bottom:40px;
+			.clear {
+				margin-left:0;
+				clear:both;
+			}
+			img {
+				margin-bottom:15px;
+			}
+		}
+	}
+}
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.content-info { 
+	background:@blue;
+	margin:80px 0 0;
+	font-family: 'Circe-Regular';
+	padding:20px 0;
+	p { 
+		font-size:13px;
+		line-height:1.6;
+		margin:0;
+	}
+	h4 {
+		font-size:17px;
+		color:@blueLighter;
+		text-transform:uppercase;
+		font-family: 'Circe-Regular';
+		letter-spacing:.2em;
+		margin:15px 0 0;
+	}
+	a {
+		color:white;
+		&:hover {
+			color:@blueLighter;
+			text-decoration:none;
+		}
+	}
+	.span6 {
+		padding-left:25px;
+		margin-left:0;
+		&.text-right {
+			padding-right:25px;
+			padding-left:0;
+		}
+		&.border-right {
+			border-right:1px solid #a4adb5;
+		}
+	}
+}
+
+
 /* ==========================================================================
    WordPress Generated Classes
    See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
@@ -1025,6 +971,74 @@ ul.fullsize {
    Media Queries
    ========================================================================== */
 
+@media (max-width: 1200px) {
+
+	.team-photo {
+		.hover {
+			display:none;
+		}
+	}	
+
+}
+
 @media (max-width: 767px) {
+
+	.banner {
+      background:@blueDark;
+      padding:24px 34px;
+      	.container {
+      		position:relative;
+      	}
+     	.brand {
+     		margin:0;
+			width:104px;
+			height:64px;
+			float:left;
+			background-size:430%;
+     	}
+    }
+
+    .home {
+    	.banner {
+    		background:@blueDark;
+    		.brand {
+    			background-position:left top;
+    		}
+    	}
+    }
+
+	.wrap {
+		&.container {
+			padding-left:20px;
+			padding-right:20px;
+		}
+	}
+
+}
+
+@media (max-width: 1200px) and (min-width:768px) { 
+	.capability {
+		&.span4 {
+			width:32%;
+			padding:27px 5px;
+			background:none;
+		}
+	}
+	.team-photo {
+		min-height: 440px;
+		margin: 0 0 40px 0;
+	}
+}
+
+@media (max-width:979px) and (min-width:768px) { 
+	.capability {
+		.hover {
+			top: 19%;
+			left: 28%;
+		}
+	}
+	.team-photo {
+		min-height: 344px;
+	}
 
 }

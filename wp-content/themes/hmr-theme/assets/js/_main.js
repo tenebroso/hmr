@@ -67,6 +67,7 @@ HMR.Site = {
   archive: {
     init: function() {
       $('article.span2:nth-child(6n+7)').addClass('clear');
+      $('.single-team .menu-our-team').addClass('active');
       HMR.teamArchiveFaceMap();
     }
   }
