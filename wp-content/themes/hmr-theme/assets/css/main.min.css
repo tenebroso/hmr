@@ -5563,7 +5563,7 @@ ul.fullsize li {
 
 .bx-wrapper {
   position: absolute;
-  top: calc(-50%);
+  bottom: 80px;
   z-index: 200;
   width: 100%;
 }
