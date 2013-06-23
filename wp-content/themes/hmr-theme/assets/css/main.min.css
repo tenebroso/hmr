@@ -2886,14 +2886,14 @@ input[type="submit"].btn.btn-mini {
   position: relative;
   overflow-y: auto;
   clear: both;
-}
-
-.modal-body img {
-  margin: 0 auto;
   border: 4px solid white;
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
           border-radius: 4px;
+}
+
+.modal-body img {
+  margin: 0 auto;
 }
 
 .modal-form {
@@ -2918,10 +2918,21 @@ input[type="submit"].btn.btn-mini {
   clear: both;
 }
 
-.modal-footer .caps {
-  padding: 10px 10px 8px 10px;
+.modal-footer .caps.circe {
+  padding: 8px 15px;
   font-family: 'Circe-Bold';
   font-size: 12px;
+  line-height: 1.4;
+  color: white;
+  -webkit-text-shadow: 0 0 0;
+     -moz-text-shadow: 0 0 0;
+          text-shadow: 0 0 0;
+  text-transform: uppercase;
+  background: #000;
+  border: 1px solid white;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
 }
 
 .modal-footer .btn + .btn {
@@ -5937,34 +5948,40 @@ ul.fullsize li {
 }
 
 /* =============================================================================
-   Press Release Archive
+   Press Release & Testimonials Archive
    ========================================================================== */
 
-.page-template-template-press-php p {
+.page-template-template-press-php p,
+.page-template-template-testimonials-php p {
   margin: 0;
   font-size: 14px;
   line-height: 1.4;
   color: white;
 }
 
-.page-template-template-press-php p em {
+.page-template-template-press-php p em,
+.page-template-template-testimonials-php p em {
   font-family: 'ArvoItalic';
 }
 
-.page-template-template-press-php .content a {
+.page-template-template-press-php .content a,
+.page-template-template-testimonials-php .content a {
   display: inline;
 }
 
-.page-template-template-press-php .view-article {
+.page-template-template-press-php .view-article,
+.page-template-template-testimonials-php .view-article {
   font-size: 14px;
   color: #a6a6a6;
 }
 
-.page-template-template-press-php .view-article a:hover {
+.page-template-template-press-php .view-article a:hover,
+.page-template-template-testimonials-php .view-article a:hover {
   color: white;
 }
 
-.page-template-template-press-php .date_heading {
+.page-template-template-press-php .date_heading,
+.page-template-template-testimonials-php .date_heading {
   padding: 0 0 5px 0;
   margin: 0 0 20px 0;
   font-family: 'Circe-Bold';
@@ -5975,16 +5992,19 @@ ul.fullsize li {
   border-bottom: 1px solid #293240;
 }
 
-.page-template-template-press-php .row-fluid .span3 {
+.page-template-template-press-php .row-fluid .span3,
+.page-template-template-testimonials-php .row-fluid .span3 {
   margin-bottom: 40px;
 }
 
-.page-template-template-press-php .row-fluid .span3 .clear {
+.page-template-template-press-php .row-fluid .span3 .clear,
+.page-template-template-testimonials-php .row-fluid .span3 .clear {
   margin-left: 0;
   clear: both;
 }
 
-.page-template-template-press-php .row-fluid .span3 img {
+.page-template-template-press-php .row-fluid .span3 img,
+.page-template-template-testimonials-php .row-fluid .span3 img {
   margin-bottom: 15px;
 }
 

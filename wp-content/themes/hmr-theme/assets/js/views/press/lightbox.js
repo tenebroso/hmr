@@ -4,14 +4,16 @@ var HMR = HMR || {};
   HMR.lightbox = function() {
 
     var $modal = $('.modal');
+    var $modalBody = $('.modal-body');
+    var $height = $(window).height();
 
     $modal.modal('hide');
+
     $modal.on('show', function () {
     	$('.modal-body',this).css({width:'auto',height:'auto', 'max-height':'100%'});
-    	var width = $modal.width();
-    	//$modal.css('marginLeft', function() { 
-		    //return $modal.width()/2*-1;
-		//});
+    	$modalBody.css('height', function() { 
+		    return $height/1.3;
+		});
 	});
 
   };

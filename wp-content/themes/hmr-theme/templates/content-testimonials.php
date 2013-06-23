@@ -1,4 +1,3 @@
-
 <?php 	
 		$id = get_the_ID();
 		$thumb_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'press-thumb'); 
@@ -11,10 +10,10 @@
 	</a>
    	<p class="circe">
    		<span class="caps"><?php the_title();?></span><br />
-   			<em class="arvo"><?php the_field('publication_date');?></em>
+   			<em class="arvo"><?php the_time('F Y');?></em>
    		</a>
    	</p>
-   	<p class="arvo view-article">View Article: <a href="#">PDF</a> / <a href="#">On the Web</a></p>
+   	<p class="arvo view-article"><a href="#modal-<?php echo $id; ?>" data-toggle="modal">View Larger</a></p>
 </article>
 
 <div id="modal-<?php echo $id; ?>" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
