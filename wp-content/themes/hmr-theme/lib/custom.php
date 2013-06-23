@@ -176,6 +176,7 @@ function register_cpt_press() {
    ========================================================================== */
 
 register_nav_menus( array(
+    'mobile' => 'Mobile Nav',
     'whoweare' => 'Who We Are Sub-Nav',
     'whatwedo' => 'What We Do Sub-Nav',
     'portfolio' => 'Portfolio Sub-Nav'
@@ -201,12 +202,3 @@ add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
 add_image_size( 'capabilities-thumb', 270, 270, true );
 add_image_size( 'press-thumb', 235, 280, true );
 add_image_size( 'slideshow-thumb', 70, 40, true );
-
-
-function my_custom_post_type_archive_where($where,$args){  
-    $post_type  = isset($args['post_type'])  ? $args['post_type']  : 'press';  
-    $where = "WHERE post_type = '$post_type' AND post_status = 'publish'";
-    return $where;  
-}
-
-add_filter( 'getarchives_where','my_custom_post_type_archive_where',10,2);
