@@ -31,6 +31,8 @@ Template Name: Connect
 
 <hr />
 
-<p class="credit caps text-center circe">Site by: <a href="http://wcst.com/">We Cant Stop Thinking</a></p>
-
 <?php $secondary = get_field('secondary_form'); if ($secondary) { echo $secondary; } ?>
+
+<hr />
+
+<p class="credit caps text-center circe">Site by: <a href="http://wcst.com/">We Cant Stop Thinking</a></p>

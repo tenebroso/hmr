@@ -6181,6 +6181,11 @@ ul.fullsize li {
   background: #55616f;
 }
 
+.page-template-template-connect-php .gform_wrapper input[type=file] {
+  padding: 0;
+  background: none;
+}
+
 .page-template-template-connect-php .gform_wrapper .gfield.half {
   display: inline-block;
   width: 48%;
@@ -6261,7 +6266,7 @@ ul.fullsize li {
 
 .content-info {
   padding: 20px 0;
-  margin: 80px 0 0;
+  margin: 180px 0 0;
   font-family: 'Circe-Regular';
   background: #293240;
 }
