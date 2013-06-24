@@ -72,8 +72,9 @@ html {
 }
 
 a:focus {
+  background: #071222;
   outline: thin dotted #333;
-  outline: 5px auto -webkit-focus-ring-color;
+  outline: 1px solid #293240;
   outline-offset: -2px;
 }
 
@@ -780,14 +781,10 @@ input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus,
 .uneditable-input:focus {
-  border-color: #55616f;
+  background: #071222;
+  border: 1px solid #293240;
   outline: 0;
   outline: thin dotted \9;
-  /* IE6-9 */
-
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
 }
 
 input[type="radio"],
@@ -834,8 +831,9 @@ select:focus,
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
+  background: #071222;
   outline: thin dotted #333;
-  outline: 5px auto -webkit-focus-ring-color;
+  outline: 1px solid #293240;
   outline-offset: -2px;
 }
 
@@ -1714,15 +1712,21 @@ div.selector select {
 div.selector {
   height: 33px;
   max-width: 100%;
-  padding: 4px 5px 3px 7px;
+  padding: 3px 5px 2px 7px;
   margin-top: -3px;
   font-family: 'Circe-Regular';
   font-size: 15px;
   color: #a4adb5;
   background: #293240;
+  border: 1px solid #293240;
   -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
           border-radius: 3px;
+}
+
+div.selector.focus {
+  background: #071222;
+  border: 1px solid #293240;
 }
 
 div.selector span {
@@ -1862,8 +1866,9 @@ button.close {
 }
 
 .btn:focus {
+  background: #071222;
   outline: thin dotted #333;
-  outline: 5px auto -webkit-focus-ring-color;
+  outline: 1px solid #293240;
   outline-offset: -2px;
 }
 
@@ -5941,6 +5946,17 @@ ul.fullsize li {
   -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
           border-radius: 3px;
+  -webkit-transition-duration: 0.1s;
+     -moz-transition-duration: 0.1s;
+       -o-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+}
+
+.page-template-template-connect-php .gform_wrapper input:focus,
+.page-template-template-connect-php .gform_wrapper textarea:focus,
+.page-template-template-connect-php .gform_wrapper select:focus {
+  background: #071222;
+  border: 1px solid #293240;
 }
 
 .page-template-template-connect-php .gform_wrapper input.gform_button {

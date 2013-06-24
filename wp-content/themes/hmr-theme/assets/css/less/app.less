@@ -861,6 +861,11 @@ ul.fullsize {
 			font-size:15px;
 			font-family: 'Circe-Regular';
 			width:100%;
+			.transition-duration(.1s);
+			&:focus {
+				border:1px solid @blue;
+				background:@blueDark;
+			}
 		}
 		input {
 			&.gform_button {
