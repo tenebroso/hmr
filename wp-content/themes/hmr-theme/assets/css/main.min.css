@@ -5209,12 +5209,8 @@ a {
   display: none;
 }
 
-.home .container {
-  position: relative;
-  height: 80%;
-}
-
 .home .img {
+  position: absolute;
   font: 0/0 a;
   color: transparent;
   text-shadow: none;
@@ -5226,17 +5222,18 @@ a {
 }
 
 .home .img.forward {
+  bottom: 18%;
+  left: 10%;
   width: 246px;
   height: 36px;
-  margin-top: calc(42%);
-  margin-left: calc(50%);
   background: url(../img/forward.png) no-repeat left top;
 }
 
 .home .img.thinkers {
+  bottom: 12%;
+  left: 10%;
   width: 246px;
   height: 36px;
-  margin-left: calc(50%);
   background: url(../img/thinkers.png) no-repeat left top;
 }
 
@@ -6113,6 +6110,9 @@ ul.fullsize li {
 }
 
 @media (max-width: 767px) {
+  .scrollTop {
+    border-bottom: 1px solid #55616f;
+  }
   .banner {
     padding: 24px 34px;
     background: #071222;

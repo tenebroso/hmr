@@ -205,26 +205,24 @@ a {
 	.content-info {
 		display:none;
 	}
-	.container {
-		position:relative;
-		height:80%;
-	}
 	.img {
 		.hide-text();
 		.opacity(0);
 		-webkit-backface-visibility: hidden;
+		position:absolute;
 		&.forward {
 			background:url(../img/forward.png) no-repeat left top;
 			width:246px;
 			height:36px;
-			margin-left:calc(100% - 50px);
-			margin-top: calc(100% - 58px);
+			left:10%;
+			bottom: 18%;
 		}
 		&.thinkers {
 			background:url(../img/thinkers.png) no-repeat left top;
 			width:246px;
 			height:36px;
-			margin-left:calc(100% - 50px);
+			left:10%;
+			bottom:12%;
 		}
 		&.forward2 {
 			background:url(../img/forward.png) no-repeat left top;
@@ -1012,6 +1010,10 @@ ul.fullsize {
 }
 
 @media (max-width: 767px) {
+
+	.scrollTop {
+		border-bottom:1px solid @blueLight;
+	}
 
 	.banner {
       background:@blueDark;
