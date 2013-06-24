@@ -46,6 +46,7 @@ HMR.Site = {
     init: function() {
       HMR.uniform();
       HMR.MapTest();
+      $('.pointsOfContact .points:nth-child(4n+5)').addClass('clear');
     }
   },
   //Calling these functions under "Single" since I can't call single-capability or single-team even though they will then be called on single blog post and single team member pages...

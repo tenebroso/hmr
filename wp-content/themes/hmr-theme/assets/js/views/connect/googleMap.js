@@ -113,6 +113,7 @@ HMR.MapTest = function() {
         lng: -87.656130 // Longitude of HMR address
       },
       latLng = new google.maps.LatLng( location.lat, location.lng ),
+      center = new google.maps.LatLng( 41.904366, -87.662659 ),
       options = {
         zoom: 16,
         styles:styles,
@@ -122,7 +123,7 @@ HMR.MapTest = function() {
         scaleControl: false,
         streetViewControl: false,
         overviewMapControl: false,
-        center: latLng,
+        center: center,
         mapTypeId: google.maps.MapTypeId.ROADMAP
       },
 

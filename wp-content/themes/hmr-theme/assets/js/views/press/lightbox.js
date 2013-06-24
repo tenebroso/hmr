@@ -22,9 +22,7 @@ var HMR = HMR || {};
     	$('.modal-body',this).css({width:'auto',height:'auto', 'max-height':'100%'});
     	$modalBody.css('height', function() { 
 		      return $height/1.3;
-		    }).css('max-height', function() { 
-          return imageHeight;
-        });
+		    });
 	});
 
   };

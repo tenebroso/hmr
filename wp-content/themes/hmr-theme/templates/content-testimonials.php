@@ -21,7 +21,7 @@
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
   	</div>
 	<div class='modal-body'>
-		<img src="<?php echo $large_image_url[0]; ?>" class="img" height="200">
+		<img src="<?php echo $large_image_url[0]; ?>" class="img">
 	</div>
 	<div class="modal-footer">
 		<a class="btn btn-small circe caps" href="<?php echo $full_image_url[0]; ?>" target="_blank">View full size</a>

@@ -2854,6 +2854,7 @@ input[type="submit"].btn.btn-mini {
   top: 4%;
   left: 50%;
   z-index: 1050;
+  width: 700px;
   margin-left: -350px;
   outline: none;
   -webkit-background-clip: padding-box;
@@ -2902,6 +2903,9 @@ input[type="submit"].btn.btn-mini {
 }
 
 .modal-body img {
+  display: block;
+  height: auto;
+  max-height: 90%;
   margin: 0 auto;
 }
 
@@ -5054,7 +5058,6 @@ em strong {
 }
 
 hr {
-  float: left;
   width: 100%;
   clear: both;
   border: none;
@@ -5156,55 +5159,6 @@ a {
   text-transform: uppercase;
 }
 
-/* ==========================================================================
-   Sidebar
-   ========================================================================== */
-
-.sidebar {
-  font-size: 14px;
-}
-
-.sidebar h3 {
-  font-size: 16px;
-  color: #a6a6a6;
-  text-transform: uppercase;
-}
-
-.sidebar ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-.sidebar #s {
-  width: 100%;
-  padding: 10px 14px;
-  font-family: 'Circe-Regular';
-  font-size: 15px;
-  color: #ffffff;
-  background: #293240;
-  border: none;
-  -webkit-border-radius: 2px;
-     -moz-border-radius: 2px;
-          border-radius: 2px;
-}
-
-.sidebar .widget {
-  padding: 0 0 25px 0;
-  margin: 0 0 25px 0;
-  border-bottom: 1px solid #293240;
-}
-
-.sidebar .widget.widget-last {
-  padding: 0;
-  margin: 0;
-  border-bottom: none;
-}
-
-.sidebar .widget h3 {
-  margin: 0;
-}
-
 /* =============================================================================
    Home Specifics
    ========================================================================== */
@@ -5287,7 +5241,7 @@ a {
 }
 
 /* ==========================================================================
-   Posts
+   Posts/Blog
    ========================================================================== */
 
 .hentry {
@@ -5311,6 +5265,79 @@ a {
 .hentry .byline {
   margin: .5em 0 2em 0;
   color: #55616f;
+}
+
+.pager {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.pager .previous,
+.pager .next {
+  display: inline-block;
+}
+
+.pager .previous {
+  width: 48%;
+}
+
+.pager .next {
+  float: right;
+  text-align: right;
+}
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+.sidebar {
+  font-size: 14px;
+}
+
+.sidebar h3 {
+  font-size: 16px;
+  color: #a6a6a6;
+  text-transform: uppercase;
+}
+
+.sidebar ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.sidebar #s {
+  width: 100%;
+  padding: 10px 14px;
+  font-family: 'Circe-Regular';
+  font-size: 15px;
+  color: #ffffff;
+  background: #293240;
+  border: none;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
+}
+
+.sidebar .widget {
+  padding: 0 0 25px 0;
+  margin: 0 0 25px 0;
+  border-bottom: 1px solid #293240;
+}
+
+.sidebar .widget.widget-last {
+  padding: 0;
+  margin: 0;
+  border-bottom: none;
+}
+
+.sidebar .widget h3 {
+  margin: 0;
+}
+
+.sidebar .widget-inner form {
+  margin: 0;
 }
 
 /* ==========================================================================
@@ -5899,7 +5926,9 @@ ul.fullsize li {
   width: 24px;
   height: 24px;
   margin: 8px 5px 0 0;
-  background: url("../img/sprite.svg") no-repeat -272px -181px;
+  background: url("../img/sprite.png");
+  background: none, url("../img/sprite.svg");
+  background-position: -272px -181px;
   content: "";
 }
 
@@ -5914,7 +5943,9 @@ ul.fullsize li {
   width: 24px;
   height: 24px;
   margin: 8px 5px 0 0;
-  background: url("../img/sprite.svg") no-repeat -304px -181px;
+  background: url("../img/sprite.png");
+  background: none, url("../img/sprite.svg");
+  background-position: -304px -181px;
   content: "";
 }
 
@@ -5934,7 +5965,8 @@ ul.fullsize li {
   font: 0/0 a;
   color: transparent;
   text-shadow: none;
-  background: url("../img/sprite.svg") no-repeat;
+  background: url("../img/sprite.png");
+  background: none, url("../img/sprite.svg");
   background-color: transparent;
   border: 0;
 }
@@ -5947,15 +5979,20 @@ ul.fullsize li {
 }
 
 #map_holder .container .overlay .social-icons li.twitter {
-  background-position: -143px -123px;
+  background-position: -143px -122px;
 }
 
 #map_holder .container .overlay .social-icons li.facebook {
-  background-position: -189px -123px;
+  background-position: -186px -122px;
 }
 
 #map_holder .container .overlay .social-icons li.pinterest {
-  background-position: -230px -122px;
+  background-position: -228px -122px;
+}
+
+#map_holder .container .overlay .social-icons li:hover {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
 }
 
 #map_nest {
@@ -5963,9 +6000,56 @@ ul.fullsize li {
   height: 450px;
 }
 
+.points {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.points a {
+  font-size: 13px;
+}
+
+.points strong {
+  font-family: 'Circe-Regular';
+  font-size: 18px;
+}
+
+.points.clear {
+  margin-left: 0;
+  clear: left;
+}
+
+.credit {
+  font-size: 14px;
+  color: #55616f;
+}
+
+.credit a {
+  font-family: 'Circe-Bold';
+  color: #55616f;
+}
+
+.credit a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.page-template-template-connect-php .banner {
+  padding-bottom: 0;
+}
+
+.page-template-template-connect-php .nav {
+  margin-bottom: 23px;
+}
+
 /* ==========================================================================
    Gravity Forms on Connect Page
    ========================================================================== */
+
+.page-template-template-connect-php .gform_wrapper {
+  padding: 0 0 25px 0;
+  overflow: hidden;
+}
 
 .page-template-template-connect-php .gform_wrapper .validation_error {
   font-family: 'Circe-Regular';
@@ -6291,6 +6375,75 @@ ul.fullsize li {
     padding: 0 !important;
     margin: 0 !important;
     border: none !important;
+  }
+  .page-template-template-connect-php .gform_wrapper {
+    padding: 0 0 25px 0;
+    overflow: hidden;
+  }
+  .page-template-template-connect-php .gform_wrapper .gform_fields li {
+    padding: 0;
+    margin: 0 0 5px 0;
+  }
+  .page-template-template-connect-php .gform_wrapper .gform_fields li .ginput_complex .ginput_left,
+  .page-template-template-connect-php .gform_wrapper .gform_fields li .ginput_complex .ginput_right {
+    display: block;
+    width: 100%;
+    vertical-align: top;
+  }
+  .page-template-template-connect-php .gform_wrapper .gform_fields li .ginput_complex .ginput_right {
+    float: none;
+  }
+  .page-template-template-connect-php .gform_wrapper .gform_fields li .ginput_complex .ginput_left {
+    width: 100%;
+    margin: 0;
+  }
+  .page-template-template-connect-php .gform_wrapper .gform_fields li span label {
+    margin-top: -15px;
+    font-size: 12px;
+  }
+  .page-template-template-connect-php .gform_wrapper .gform_body,
+  .page-template-template-connect-php .gform_wrapper .gform_footer {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .page-template-template-connect-php .gform_wrapper .gfield.half {
+    display: block;
+    width: 100%;
+    margin: 0;
+    vertical-align: top;
+  }
+  .page-template-template-connect-php .gform_wrapper .gfield.half.half_last {
+    float: none;
+    margin-right: 0;
+  }
+  #map_nest {
+    display: none;
+  }
+  #map_holder .container {
+    height: auto;
+    margin: 0;
+  }
+  #map_holder .container .overlay {
+    margin: 0;
+    text-align: center;
+    background: none;
+  }
+  #map_holder .container .overlay .social-icons {
+    float: none;
+    margin: 0;
+    text-align: center;
+  }
+  #map_holder .container .overlay .email {
+    font-size: 19px;
+  }
+  #map_holder .container .overlay .email:before {
+    display: none;
+  }
+  #map_holder .container .overlay .phone {
+    font-size: 18px;
+  }
+  #map_holder .container .overlay .phone:before {
+    display: none;
   }
 }
 

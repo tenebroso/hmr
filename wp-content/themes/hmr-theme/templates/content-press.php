@@ -7,7 +7,7 @@
 		$pdf = get_field('pdf');
 		$url = get_field('url');
 		?>
-
+		
 <article class="span3">
 	<a href="#modal-<?php echo $id; ?>" data-toggle="modal">
 		<img src="<?php echo $thumb_image_url[0]; ?>" />
@@ -25,7 +25,7 @@
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
   	</div>
 	<div class='modal-body'>
-		<img src="<?php echo $large_image_url[0]; ?>" class="img">
+		<img src="<?php echo $large_image_url[0]; ?>" class="img" />
 	</div>
 	<div class="modal-footer">
 		<a class="btn btn-small circe caps" href="<?php echo $full_image_url[0]; ?>" target="_blank">View full size</a>
