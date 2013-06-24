@@ -1,5 +1,5 @@
 <div class="team-photo">
-  <img class="feature" src="<?php the_field('team_landing_page_photo','options');?>">
+  <img class="feature" src="/assets/OurTeam.jpg">
     <div class="heff hover hastip"></div>
     <div class="ahr hover hastip"></div>
     <div class="ruben hover hastip"></div>

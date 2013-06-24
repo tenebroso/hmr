@@ -24,9 +24,13 @@ HMR.Site = {
         }
       });
       $(".scrollTop a").click(function(event){
-        linkLocation = this.href;
-        $("body").fadeOut(500, redirectPage);
-        event.preventDefault();
+        var isMeta = event.which === 115 || event.ctrlKey || event.metaKey || event.which === 19;
+        if (!isMeta) {
+          linkLocation = this.href;
+          $("body").fadeOut(500, redirectPage);
+          event.preventDefault();
+          return false;
+        }
       });
       function redirectPage() {
         window.location = linkLocation;
