@@ -6,7 +6,7 @@
 
   HMR.capabilityDescriptionFades = function() {
 
-	$('.meta-box').transition({ delay:7000, opacity: 0}, 2000, 'ease');
+	$('.meta-box').transition({ delay:6000, opacity: 0}, 2000, 'ease');
 	$('.gallery-title').transition({ delay:7000, opacity: 100}, 2000, 'ease');
 	
 	$(".meta-box").hover(

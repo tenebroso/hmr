@@ -8,13 +8,13 @@
 
 	$('.slideshow').cycle({
 		fx: 'fade',
-		delay: 2000,
+		delay: 1000,
 		speed:3000
 	});
 
 	$('.gallery-footer').cycle({
 		fx: 'fade',
-		delay: 2000,
+		delay: 1000,
 		speed:3000
 	});
 	

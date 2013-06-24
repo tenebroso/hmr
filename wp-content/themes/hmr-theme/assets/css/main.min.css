@@ -5614,7 +5614,7 @@ ul.fullsize li {
   font-family: 'Circe-Regular';
   font-size: 17px;
   letter-spacing: .2em;
-  color: #a4adb5;
+  color: white;
   text-align: center;
   text-transform: uppercase;
 }
@@ -5636,6 +5636,10 @@ ul.fullsize li {
 .gallery-footer p a:hover {
   color: white;
   text-decoration: none;
+}
+
+.single-capability .gallery-footer h4 {
+  color: blueLighter;
 }
 
 .bx-wrapper {
@@ -5918,6 +5922,11 @@ ul.fullsize li {
 
 #map_holder .container .overlay p {
   margin: 0;
+}
+
+#map_holder .container .overlay a:hover {
+  color: white;
+  text-decoration: none;
 }
 
 #map_holder .container .overlay .phone {

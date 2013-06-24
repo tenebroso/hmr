@@ -561,7 +561,7 @@ ul.fullsize {
 	}
 	h4 {
 		font-size:17px;
-		color:@blueLighter;
+		color:white;
 		text-transform:uppercase;
 		font-family: 'Circe-Regular';
 		letter-spacing:.2em;
@@ -583,6 +583,14 @@ ul.fullsize {
 				color:white;
 				text-decoration:none;
 			}
+		}
+	}
+}
+
+.single-capability {
+	.gallery-footer {
+		h4 {
+			color:blueLighter;
 		}
 	}
 }
@@ -830,6 +838,12 @@ ul.fullsize {
 			}
 			p {
 				margin:0;
+			}
+			a {
+				&:hover {
+					color:white;
+					text-decoration:none;
+				}
 			}
 			.phone {
 				font-size:22px;
