@@ -5853,6 +5853,18 @@ ul.fullsize li {
    Gravity Forms on Connect Page
    ========================================================================== */
 
+.page-template-template-connect-php .gform_wrapper .validation_error {
+  font-family: 'Circe-Regular';
+  color: #55616f;
+  text-align: center;
+}
+
+.page-template-template-connect-php .gform_wrapper .validation_message {
+  margin: -5px 0 15px 0;
+  font-size: 12px;
+  color: #a6a6a6;
+}
+
 .page-template-template-connect-php .gform_wrapper .top_label .gfield_label {
   font-size: 16px;
 }
