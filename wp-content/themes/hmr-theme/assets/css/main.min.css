@@ -2550,14 +2550,31 @@ input[type="submit"].btn.btn-mini {
 }
 
 .nav {
+  padding-left: 0;
   margin-bottom: 0;
   margin-left: 0;
   text-align: center;
   list-style: none;
 }
 
-.nav > li {
-  width: 16%;
+.nav > li.menu-hmr {
+  margin-right: 35px;
+}
+
+.nav > li.menu-service {
+  margin-right: 25px;
+}
+
+.nav > li.menu-portfolio {
+  margin-right: 35px;
+}
+
+.nav > li.menu-blog {
+  margin-right: 35px;
+}
+
+.nav > li.menu-press {
+  margin-right: 38px;
 }
 
 .nav > li > a {
@@ -2612,6 +2629,10 @@ input[type="submit"].btn.btn-mini {
   border-bottom: 2px solid #202a39;
 }
 
+.sub-nav.up {
+  border-bottom: 2px solid #;
+}
+
 .sub-nav .container {
   position: relative;
 }
@@ -2662,17 +2683,9 @@ input[type="submit"].btn.btn-mini {
   background-position: -386px 51px;
 }
 
-.page-template-template-portfolio-php .sub-nav .menu li a:hover {
-  background: none !important;
-}
-
-.page-template-template-portfolio-php .sub-nav .menu li.active a {
-  background: none !important;
-}
-
 .up .menu li {
   padding: 0 0 5px 0;
-  margin: -6px 0 -3px 0;
+  margin: -8px 0 -6px 0;
 }
 
 /*! responsive-nav.js v1.0.14 by @viljamis */
@@ -2734,30 +2747,49 @@ input[type="submit"].btn.btn-mini {
   bottom: 0;
   z-index: 102;
   display: none;
-  width: 36px;
+  width: 43px;
   height: 27px;
   cursor: pointer;
 }
 
 .slideToggle.slideUp {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAbCAIAAACbTrq3AAAA1ElEQVRIx2NQ0LKkG2IYtWzUslHLRi1z8g4/deYCkKS5ZZ6Bsa/fvP3//z+QBLJpaFlQVOqHj58ePX4anZz3+MkzIDswMoUmlgEt+Prt2+27980dfIFcC0d/IPvr12/RSblUtiw1p+znz1+Xr94wtPaECwLZQBGgOFCWapYVlDX8+fPn5OnzuuauaFJAkdNnLwBlgWqoYFltc/ffv3/3HzqmaeSIVQFQ/MDh40A11Y1dFFnW2TcNmPC27dynqm+HRxlQFqgGqBKofrQEGbVs1LKRYxkAFOo8U+yFDJwAAAAASUVORK5CIIA=) no-repeat center center;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAICAQAAAC1vdwiAAAAeUlEQVQYGXXBIQ6CABQA0J8MFgrJ2Y1Uzdo5ABdwnsA70TWrmWrUSqJoYHPsuemmY+h70WfmaBb/ydSoZfGbhcbFylVjHkNW7s4mEabObpbRJ9eqpPEiVWnl8aXwcJDEh8TJQxFvNjo74+gxttdZR4QtSqMYMFJi+wTtXVTgC4pZRwAAAABJRU5ErkJggg==) no-repeat center center;
 }
 
 .slideToggle.slideUp:hover {
-  background: #a6a6a6 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAbCAAAAAAxR3I8AAAAbElEQVQ4y2NYRgRgGFVES0VbXm0hqGjb9//ftxFQtOvn531ffu7Cq2jf74/rl234+HsvHkWH/r5bC6TWvvt7CKeiY/9ergYzVr/6dwyHotP/nq2EMlc++3cKq6IL/x+tgHNWPPp/YTSp0EIRABxfgOvKfIF2AAAAAElFTkSuQmCC) no-repeat center center;
+  background-color: #a6a6a6;
 }
 
 .slideToggle.slideDown {
-  background: #071222 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAVCAMAAACE9bUqAAAAPFBMVEUHEiIYIjEbJjQtNkQvOEYxOkcyO0hLU19NVWC3ur+5vMHHyc3Iys7T1djV19ro6erp6uvr6+33+Pj4+PnkgHKCAAAARklEQVQoz2NgGLKAmZuLCcFj5eFkhHM4hHnhUqyCAixIuhBSaBJAKSGIFIYETIoNUwIihVUCJMWHXQIkxc+Cw1/sLIMqmAFnYQJeHX+wQwAAAABJRU5ErkJggg==) no-repeat center center;
+  height: 100%;
+  background: #293240 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAJCAYAAAA/33wPAAAAY0lEQVQoz2P4//+/OhAfBeLtQCzKQCQAqtUG4mNAvBWIBWGCHkD8A4gvEWMY1JBXQPwCiDXRJYkyDK8haIZ9x2UYUYYQMgzI1iHaEFyGkWUIFsOukG0IFsOek20IkmFuxBgCAG650wjxMe23AAAAAElFTkSuQmCC) no-repeat center center;
 }
 
 .slideToggle.slideDown:hover {
-  background: #a6a6a6 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAVCAAAAACWQBrEAAAAVklEQVQoz2NYhgswDHaZLa+frUUIbX39dA1cz/6/7+FSW39834JkGkIKJgG3Z/8fiBRcAuECiBRCAsltICkkCWRX7//zAUkCxT/7/yBJoPp035ZBFdYAb1ZfjOcT1ZwAAAAASUVORK5CIIA=) no-repeat center center;
+  background-color: #a6a6a6;
 }
 
 .page-template-template-portfolio-php .slideToggle,
 .single-capability .slideToggle {
   display: block;
+}
+
+.page-template-template-portfolio-php .sub-nav,
+.single-capability .sub-nav {
+  border: none;
+}
+
+.page-template-template-portfolio-php .sub-nav.up,
+.single-capability .sub-nav.up {
+  border-bottom: 2px solid #202a39;
+}
+
+.page-template-template-portfolio-php .sub-nav .menu li a:hover {
+  background: none !important;
+}
+
+.page-template-template-portfolio-php .sub-nav .menu li.active a {
+  background: none !important;
 }
 
 @media screen and (max-width: 767px) {
@@ -5576,11 +5608,6 @@ ul.fullsize li {
 .page-template-template-portfolio-php .content-info,
 .single-capability .content-info {
   display: none;
-}
-
-.page-template-template-portfolio-php .sub-nav,
-.single-capability .sub-nav {
-  border: none;
 }
 
 .page-template-template-portfolio-php {
