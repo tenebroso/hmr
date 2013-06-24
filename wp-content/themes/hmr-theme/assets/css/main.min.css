@@ -2672,7 +2672,7 @@ input[type="submit"].btn.btn-mini {
 
 .up .menu li {
   padding: 0 0 5px 0;
-  margin: -5px 0 0;
+  margin: -6px 0 -3px 0;
 }
 
 /*! responsive-nav.js v1.0.14 by @viljamis */
@@ -2864,10 +2864,10 @@ input[type="submit"].btn.btn-mini {
 
 .modal.fade {
   top: -25%;
-  -webkit-transition: opacity 0.3s linear, top 0.3s ease-out;
-     -moz-transition: opacity 0.3s linear, top 0.3s ease-out;
-       -o-transition: opacity 0.3s linear, top 0.3s ease-out;
-          transition: opacity 0.3s linear, top 0.3s ease-out;
+  -webkit-transition: opacity 0.1s linear, top 0.1s ease-out;
+     -moz-transition: opacity 0.1s linear, top 0.1s ease-out;
+       -o-transition: opacity 0.1s linear, top 0.1s ease-out;
+          transition: opacity 0.1s linear, top 0.1s ease-out;
 }
 
 .modal.fade.in {
@@ -5185,11 +5185,15 @@ a {
   border: 0;
   opacity: 0;
   filter: alpha(opacity=0);
+  -webkit-transform: translate3d(0, 0, 0);
+     -moz-transform: translate3d(0, 0, 0);
+       -o-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   -webkit-backface-visibility: hidden;
 }
 
 .home .img.forward {
-  bottom: 18%;
+  bottom: 38%;
   left: 10%;
   width: 246px;
   height: 36px;
@@ -5197,7 +5201,7 @@ a {
 }
 
 .home .img.thinkers {
-  bottom: 12%;
+  bottom: 32%;
   left: 10%;
   width: 246px;
   height: 36px;
@@ -5305,6 +5309,10 @@ a {
   padding: 0;
   margin: 0;
   list-style-type: none;
+}
+
+.sidebar ul li {
+  line-height: 1.6;
 }
 
 .sidebar #s {
@@ -5867,6 +5875,10 @@ ul.fullsize li {
   color: #071222;
   text-align: center;
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAArAQMAAAAubWgzAAAAA1BMVEX///+nxBvIAAAAAXRSTlPZv+myFgAAAAtJREFUGBljGPEAAAECAAFnIZThAAAAAElFTkSuQmCC) repeat;
+  -webkit-transform: translate3d(0, 0, 0);
+     -moz-transform: translate3d(0, 0, 0);
+       -o-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 
 .tooltipsy h4 {
@@ -5950,7 +5962,7 @@ ul.fullsize li {
 
 #map_holder .container .overlay .email {
   font-family: 'Circe-Regular';
-  font-size: 26px;
+  font-size: 24px;
 }
 
 #map_holder .container .overlay .email:before {
@@ -6182,8 +6194,13 @@ ul.fullsize li {
 }
 
 .page-template-template-connect-php .gform_wrapper input[type=file] {
-  padding: 0;
+  padding: 5px 0 0;
+  line-height: 1;
   background: none;
+}
+
+.page-template-template-connect-php .gform_wrapper textarea {
+  resize: none;
 }
 
 .page-template-template-connect-php .gform_wrapper .gfield.half {
@@ -6348,6 +6365,9 @@ ul.fullsize li {
   #navbar-mobile,
   html.js #navbar-mobile {
     display: none;
+  }
+  .hentry {
+    padding-right: 1em;
   }
 }
 

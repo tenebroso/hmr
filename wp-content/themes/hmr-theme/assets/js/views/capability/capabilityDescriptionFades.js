@@ -11,21 +11,19 @@
 	
 	$(".meta-box").hover(
 	  function () {
-	    $(this).transition({ opacity: 100}, 1000, 'ease').transition({ delay:4000, opacity: 0}, 1000, 'ease');
-	    $('.gallery-title').transition({ opacity: 0}, 1000, 'ease').transition({ delay:4000, opacity: 100}, 1000, 'ease');
+	    $(this).transition({ opacity: 100}, 1000, 'ease');
 	  },
 	  function () {
-	    
+	     $(this).transition({ opacity: 0}, 1000, 'ease');
 	  }
 	);
 
 	$(".gallery-title").hover(
 	  function () {
-	    $('.meta-box').transition({ opacity: 100}, 1000, 'ease').transition({ delay:4000, opacity: 0}, 1000, 'ease');
-	    $(this).transition({ opacity: 0}, 1000, 'ease').transition({ delay:4000, opacity: 100}, 1000, 'ease');
+	    $('.meta-box').transition({ opacity: 100}, 1000, 'ease');
 	  },
 	  function () {
-	    
+	    $('.meta-box').transition({ opacity: 0}, 1000, 'ease');
 	  }
 	);
 

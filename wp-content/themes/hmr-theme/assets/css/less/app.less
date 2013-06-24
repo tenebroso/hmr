@@ -174,19 +174,20 @@ a {
 		.opacity(0);
 		-webkit-backface-visibility: hidden;
 		position:absolute;
+		.translate3d(0,0,0);
 		&.forward {
 			background:url(../img/forward.png) no-repeat left top;
 			width:246px;
 			height:36px;
 			left:10%;
-			bottom: 18%;
+			bottom: 38%;
 		}
 		&.thinkers {
 			background:url(../img/thinkers.png) no-repeat left top;
 			width:246px;
 			height:36px;
 			left:10%;
-			bottom:12%;
+			bottom:32%;
 		}
 		&.forward2 {
 			background:url(../img/forward.png) no-repeat left top;
@@ -282,6 +283,9 @@ a {
 		list-style-type:none;
 		margin:0;
 		padding:0;
+		li {
+			line-height:1.6;
+		}
 	}
 	#s {
 		background:@blue;
@@ -793,6 +797,7 @@ ul.fullsize {
 	text-align:center;
 	padding:10px 15px;
 	color:@blueDark;
+	.translate3d(0,0,0);
 	h4 {
 		font-size:16px;
 		font-family: 'Circe-Bold';
@@ -863,7 +868,7 @@ ul.fullsize {
 				}
 			}
 			.email {
-				font-size:26px;
+				font-size:24px;
 				font-family: 'Circe-Regular';
 				&:before {
 					background: url(@fbsprite);
@@ -1061,8 +1066,12 @@ ul.fullsize {
 			}
 			&[type=file] {
 				background:none;
-				padding:0;
+				padding:5px 0 0;
+				line-height:1;
 			}
+		}
+		textarea {
+			resize:none;
 		}
 		.gfield {
 			&.half {
@@ -1205,6 +1214,9 @@ ul.fullsize {
 @media (min-width: 768px) {
 	#navbar-mobile, html.js #navbar-mobile {
 		display:none;
+	}
+	.hentry {
+		padding-right:1em;
 	}
 }
 

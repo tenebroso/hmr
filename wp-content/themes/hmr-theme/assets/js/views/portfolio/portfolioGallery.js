@@ -89,6 +89,8 @@ var HMR = HMR || {};
             if(current < 0) current = endLen;
             
             changeBackgroundImage( $thumbs.eq(current).data('img'), 1000 );
+            $thumbs.removeClass('active');
+            $(this).addClass('active');
            
         });    
     };

@@ -71,7 +71,7 @@
 				}
 			],
 			settings: {
-				slideTime: 500,
+				slideTime: 167,
 				alignTo: 'element',
 				offset: [0,1]
 			}
