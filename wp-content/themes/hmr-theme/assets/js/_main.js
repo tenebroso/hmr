@@ -23,7 +23,7 @@ HMR.Site = {
           $('#nav-toggle').removeClass('opened');
         }
       });
-      $(".scrollTop a").click(function(event){
+      $(".scrollTop a, .post-type-archive-team a, .back a").click(function(event){
         var isMeta = event.which === 115 || event.ctrlKey || event.metaKey || event.which === 19;
         if (!isMeta) {
           linkLocation = this.href;

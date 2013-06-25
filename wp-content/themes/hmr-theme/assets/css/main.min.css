@@ -5873,6 +5873,12 @@ ul.fullsize li {
   cursor: pointer;
 }
 
+.team-photo .hover a {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 .team-photo .mertz {
   right: 55px;
   bottom: 252px;
