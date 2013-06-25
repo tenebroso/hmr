@@ -28,7 +28,6 @@ HMR.Site = {
         if (!isMeta) {
           linkLocation = this.href;
           $("body").fadeOut(500, redirectPage);
-          event.preventDefault();
           return false;
         }
       });

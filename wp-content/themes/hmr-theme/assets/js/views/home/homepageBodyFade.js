@@ -7,9 +7,9 @@
   HMR.homepageBodyFade = function() {
   	
     $('html').css('background','none');
-	$('a').click(function (e) {
-		$('html').css('background','#071222');
-	});
+	//$('a').click(function (e) {
+		//$('html').css('background','#071222');
+	//});
 
   };
 
