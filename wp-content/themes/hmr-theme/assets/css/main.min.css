@@ -6354,7 +6354,6 @@ ul.fullsize li {
 
 .content-info {
   padding: 20px 0;
-  margin: 180px 0 0;
   font-family: 'Circe-Regular';
   background: #293240;
 }
@@ -6423,6 +6422,14 @@ ul.fullsize li {
 }
 
 /* ==========================================================================
+   Sticky Footer
+   ========================================================================== */
+
+#wrap {
+  min-height: 100%;
+}
+
+/* ==========================================================================
    Media Queries
    ========================================================================== */
 
@@ -6440,9 +6447,29 @@ ul.fullsize li {
   .hentry {
     padding-right: 1em;
   }
+  .wrap {
+    padding-bottom: 129px;
+    overflow: auto;
+  }
+  .content-info {
+    position: relative;
+    height: 129px;
+    margin-top: -129px;
+    clear: both;
+  }
 }
 
 @media (max-width: 767px) {
+  .wrap {
+    padding-bottom: 169px;
+    overflow: auto;
+  }
+  .content-info {
+    position: relative;
+    height: 169px;
+    margin-top: -169px;
+    clear: both;
+  }
   .scrollTop {
     border-bottom: 1px solid #55616f;
   }

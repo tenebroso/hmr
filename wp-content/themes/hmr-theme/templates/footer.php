@@ -1,3 +1,4 @@
+</div><!-- end #wrap -->
 <footer class="content-info" role="contentinfo">
   <div class="container">
 	<div class="row-fluid">

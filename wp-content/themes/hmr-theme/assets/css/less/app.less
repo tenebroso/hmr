@@ -1167,7 +1167,6 @@ ul.fullsize {
 
 .content-info { 
 	background:@blue;
-	margin:180px 0 0;
 	font-family: 'Circe-Regular';
 	padding:20px 0;
 	p { 
@@ -1214,6 +1213,13 @@ ul.fullsize {
 .alignright { float: right; margin:0 0 1.625em 1.625em; }
 .alignnone { margin-left: 0; margin-right: 0; }
 
+/* ==========================================================================
+   Sticky Footer
+   ========================================================================== */
+
+#wrap {
+	min-height:100%;
+}
 
 
 /* ==========================================================================
@@ -1237,9 +1243,32 @@ ul.fullsize {
 	.hentry {
 		padding-right:1em;
 	}
+	.wrap {
+		overflow:auto;
+		padding-bottom:129px;
+	}
+
+	.content-info {
+		position:relative;
+		margin-top:-129px;
+		height:129px;
+		clear:both;
+	}
 }
 
 @media (max-width: 767px) {
+
+	.wrap {
+		overflow:auto;
+		padding-bottom:169px;
+	}
+
+	.content-info {
+		position:relative;
+		margin-top:-169px;
+		height:169px;
+		clear:both;
+	}
 
 	.scrollTop {
 		border-bottom:1px solid @blueLight;
