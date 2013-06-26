@@ -52,30 +52,37 @@ HMR.Site = {
       $('.pointsOfContact .points:nth-child(4n+5)').addClass('clear');
     }
   },
-  //Calling these functions under "Single" since I can't call single-capability or single-team even though they will then be called on single blog post and single team member pages...
   single: {
     init: function() {
-      HMR.capabilityBGSlideShow();
-      HMR.capabilityDescriptionFades();
-      $('.single-team .menu li.menu-our-team').addClass('active');
-      $('.single-capability .menu-capabilities').addClass('active');
-      $('.single-capability .menu-blog').removeClass('active');
+      if($('.single-capability').length) {
+        HMR.capabilityBGSlideShow();
+        HMR.capabilityDescriptionFades();
+        $('.menu-capabilities').addClass('active');
+        $('.menu-blog').removeClass('active');
+      }
+      if($('.single-team').length) {
+        $('.menu li.menu-our-team').addClass('active');
+      }
     }
   },
-  //Calling these functions under "Page" since I can't call page-template-template-portfolio-php even though they will then be called on ALL pages...
   page: {
     init: function() {
-      HMR.portfolioGallery();
-      HMR.lightbox();
+      if($('.page-template-template-portfolio-php').length) {
+        HMR.portfolioGallery();
+      }
+      if($('.press-releases, .page-template-template-testimonials-php').length) {
+        HMR.lightbox();
+      }
       $('.page-template-template-press-php .content .row-fluid .span3:nth-child(4n+9)').addClass('clear');
       $('.page-template-template-testimonials-php .content .row-fluid .span3:nth-child(4n+9)').addClass('clear');
     }
   },
-  // Team archive
   archive: {
     init: function() {
-      $('article.span2:nth-child(6n+7)').addClass('clear');
-      HMR.teamArchiveFaceMap();
+      if($('.post-type-archive-team').length) {
+        HMR.teamArchiveFaceMap();
+        $('article.span2:nth-child(6n+7)').addClass('clear');
+      }
     }
   }
 };
