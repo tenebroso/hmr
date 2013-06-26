@@ -7,7 +7,7 @@
       <?php while(has_sub_field('photos')): ?>
 
             <?php $attachment_id = get_sub_field('photo');
-            $big = wp_get_attachment_image_src($attachment_id, 'full'); ?>
+            $big = wp_get_attachment_image_src($attachment_id, 'large'); ?>
 
         <li style="background-image:url(<?php echo $big[0]; ?>);"></li>
 
