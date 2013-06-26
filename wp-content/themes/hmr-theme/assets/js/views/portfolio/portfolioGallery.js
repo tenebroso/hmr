@@ -11,6 +11,10 @@ var HMR = HMR || {};
 
   HMR.portfolioGallery = function() {
 
+    $(function() {
+        HMR.nav.slideUp;
+    });
+
     $('.thumb_nav').bxSlider({
         pager:false, 
         minSlides:12, 

@@ -58,6 +58,8 @@ HMR.Site = {
       HMR.capabilityBGSlideShow();
       HMR.capabilityDescriptionFades();
       $('.single-team .menu li.menu-our-team').addClass('active');
+      $('.single-capability .menu-capabilities').addClass('active');
+      $('.single-capability .menu-blog').removeClass('active');
     }
   },
   //Calling these functions under "Page" since I can't call page-template-template-portfolio-php even though they will then be called on ALL pages...
