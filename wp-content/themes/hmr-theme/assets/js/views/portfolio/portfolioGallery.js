@@ -17,11 +17,11 @@ var HMR = HMR || {};
     var $thumbs = $('.slide_thumb'),
         $bigArrows = $('.big_arrow'),
         $nav = $('.thumb_nav'),
-        //$footerCredit = $('.credit');
-        //$postId = $footerCredit.getAttribute('data-id');
+        $credit = $('.photographer'),
         current = -1, // This will track our curretly active thumb
         len = $thumbs.length, // This is the # of thubmnails total
         changeBackgroundImage,
+        changeFooterCredit,
         timer, startTimer, initialize;
 
     $($nav).bxSlider({
@@ -35,8 +35,13 @@ var HMR = HMR || {};
     
     
     // This will swap out the backgrund image
-    changeBackgroundImage = function (img) {
-        $.backstretch([img],{ fade: 750});
+    changeBackgroundImage = function (img, duration) {
+        $.backstretch([img],{ fade: duration});
+    };
+
+    // This will swap out the photo credit
+    changeFooterCredit = function (active) {
+        $('.id-' + (active)).transition({opacity:1}, 750, 'ease');
     };
     
     
@@ -45,11 +50,10 @@ var HMR = HMR || {};
         timer = window.setInterval(function() {
             current++;
             if(current > len-1) current = 0;
-            
             changeBackgroundImage( $thumbs.eq(current).data('img'), 1000 );
             $thumbs.removeClass('active');
             $thumbs.eq(current).addClass('active');            
-        }, 1000);
+        }, 6000);
     };
 
     
@@ -76,8 +80,9 @@ var HMR = HMR || {};
                 window.clearInterval(timer);
                 timer = null;
             }
-    
-            changeBackgroundImage($(this).data('img'));
+            $credit.transition({opacity:0}, 250, 'ease');
+            changeFooterCredit($(this).data('id'));
+            changeBackgroundImage($(this).data('img'), 1000);
         });    
         
         

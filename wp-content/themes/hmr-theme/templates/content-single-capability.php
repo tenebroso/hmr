@@ -23,7 +23,7 @@
           
             <h4><?php bloginfo('title');?></h4>
             
-            <?php $credit = get_field('photo_credit'); $url = get_field('photo_url'); if ($credit) { ?>
+            <?php $credit = get_sub_field('photo_credit'); $url = get_sub_field('photo_credit_url'); if ($credit) { ?>
             <p>Photography by: <?php if($url) { ?><a href="<?php echo $url; ?>"><?php } ?><?php echo $credit;?><?php if($url) { ?></a><?php } ?></p>
             <?php } ?>
 

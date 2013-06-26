@@ -3,18 +3,24 @@
 
 <?php if(get_field('photos')): ?>
 
+  <?php $i=0; ?>
+
     <ul class="thumb_nav">
 
-      <?php while(has_sub_field('photos')): $id = get_the_ID(); ?>
+      <?php while(has_sub_field('photos')):  ?>
+
+      
 
       		<?php // Get the attachment ID, then assign that ID to both the thumbnail and full-size image
       		$attachment_id = get_sub_field('photo');
       		$thumb = wp_get_attachment_image_src($attachment_id, 'slideshow-thumb'); 
       		$big = wp_get_attachment_image_src($attachment_id, 'large'); ?>
 
-        <li data-id="<?php echo $id; ?>" class="slide_thumb" data-img="<?php echo $big[0]?>">
+        <li class="slide_thumb" data-img="<?php echo $big[0]?>" data-id="<?php echo $i; ?>" >
         	<img src="<?php echo $thumb[0]?>" />
         </li>
+
+        <?php $i++; ?>
 
       <?php endwhile; ?>
 
@@ -23,19 +29,31 @@
 
     <ul class="gallery-footer">
 
-       <?php while(has_sub_field('photos')): $id = get_the_ID(); ?>
-
-          <li class="credit" data-id="<?php echo $id; ?>">
+          <li class="credit">
           
             <h4><?php bloginfo('title');?></h4>
+
+            <?php $i=0; ?>
+
+            <?php while(has_sub_field('photos')): ?>
             
-            <?php $credit = get_field('photo_credit'); $url = get_field('photo_url'); if ($credit) { ?>
-            <p>Photography by: <?php if($url) { ?><a href="<?php echo $url; ?>"><?php } ?><?php echo $credit;?><?php if($url) { ?></a><?php } ?></p>
-            <?php } ?>
+              <?php $credit = get_sub_field('photo_credit'); $url = get_sub_field('photo_credit_url'); if ($credit) { ?>
+
+                <p class="photographer id-<?php echo $i; ?>">Photography by: <?php if($url) { ?><a href="<?php echo $url; ?>"><?php } ?><?php echo $credit;?><?php if($url) { ?></a><?php } ?></p>
+                
+                <?php } else { ?>
+
+                <p class="photographer id-<?php echo $i; ?>"></p>
+              
+              <?php } ?>
+
+              <?php $i++; ?>
+
+            <?php endwhile; ?>
 
           </li>
 
-      <?php endwhile; ?>
+        
 
     </ul>
 
