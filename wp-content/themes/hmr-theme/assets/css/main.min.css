@@ -5707,8 +5707,10 @@ ul.fullsize li {
 .bx-wrapper {
   position: absolute;
   bottom: 80px;
+  left: 50%;
   z-index: 200;
   width: 100%;
+  margin-left: -426px !important;
 }
 
 .bx-wrapper .bx-viewport {
