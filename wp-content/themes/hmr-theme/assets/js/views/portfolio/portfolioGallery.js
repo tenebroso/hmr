@@ -11,9 +11,7 @@ var HMR = HMR || {};
 
   HMR.portfolioGallery = function() {
 
-    $(function() {
-        HMR.nav.slideUp;
-    });
+    HMR.nav.slideUp();
 
     // Declare variables
     var $thumbs = $('.slide_thumb'),
