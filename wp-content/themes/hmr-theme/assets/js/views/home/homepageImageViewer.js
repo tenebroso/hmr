@@ -18,9 +18,9 @@ var HMR = HMR || {};
     instance.resize();
 
     // Use in case we want something to happen only after backstretch runs. Placeholder for now.
-    $(window).on("backstretch.after", function (e, instance, index) {
+    //$(window).on("backstretch.after", function (e, instance, index) {
       // Do something
-    });
+    //});
 
 
     if($(window).width() > 767) {

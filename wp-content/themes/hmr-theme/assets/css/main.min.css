@@ -5685,6 +5685,7 @@ ul.fullsize li {
 
 .gallery-footer p {
   position: absolute;
+  top: 4px;
   right: 18px;
   display: inline;
   margin: 0;

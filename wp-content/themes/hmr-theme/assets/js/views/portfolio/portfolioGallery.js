@@ -11,7 +11,7 @@ var HMR = HMR || {};
 
   HMR.portfolioGallery = function() {
 
-    HMR.nav.slideUp();
+    //HMR.nav.slideUp();
 
     // Declare variables
     var $thumbs = $('.slide_thumb'),
@@ -36,7 +36,7 @@ var HMR = HMR || {};
     
     // This will swap out the backgrund image
     changeBackgroundImage = function (img, duration) {
-        $.backstretch([img],{ fade: duration});
+        $.backstretch([img],{ fade: duration}).resize();
     };
 
     // This will swap out the photo credit
@@ -50,7 +50,7 @@ var HMR = HMR || {};
         timer = window.setInterval(function() {
             current++;
             if(current > len-1) current = 0;
-            changeBackgroundImage( $thumbs.eq(current).data('img'), 1000 );
+            changeBackgroundImage( $thumbs.eq(current).data('img'), 1000 ).resize();
             $thumbs.removeClass('active');
             $thumbs.eq(current).addClass('active');            
         }, 6000);
@@ -82,7 +82,7 @@ var HMR = HMR || {};
             }
             $credit.transition({opacity:0}, 250, 'ease');
             changeFooterCredit($(this).data('id'));
-            changeBackgroundImage($(this).data('img'), 1000);
+            changeBackgroundImage($(this).data('img'), 1000).resize();
         });    
         
         
@@ -105,7 +105,7 @@ var HMR = HMR || {};
             if(current > endLen) current = 0;
             if(current < 0) current = endLen;
             
-            changeBackgroundImage( $thumbs.eq(current).data('img'), 1000 );
+            changeBackgroundImage( $thumbs.eq(current).data('img'), 1000 ).resize();
             $thumbs.removeClass('active');
             $thumbs.eq(current).addClass('active');
            

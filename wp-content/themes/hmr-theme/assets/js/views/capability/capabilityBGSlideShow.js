@@ -4,7 +4,10 @@
 
 ;(function() {
 
+
   HMR.capabilityBGSlideShow = function() {
+
+  	HMR.nav.slideUp();
 
 	$('.slideshow').cycle({
 		fx: 'fade',
