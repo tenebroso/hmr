@@ -2774,16 +2774,6 @@ input[type="submit"].btn.btn-mini {
   display: block;
 }
 
-.page-template-template-portfolio-php .sub-nav,
-.single-capability .sub-nav {
-  border: none;
-}
-
-.page-template-template-portfolio-php .sub-nav.up,
-.single-capability .sub-nav.up {
-  border-bottom: 2px solid #202a39;
-}
-
 .page-template-template-portfolio-php .sub-nav .menu li a:hover,
 .single-capability .sub-nav .menu li a:hover {
   background: none !important;
