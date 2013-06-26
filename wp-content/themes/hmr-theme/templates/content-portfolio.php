@@ -1,17 +1,18 @@
-<?php while (have_posts()) : the_post(); ?>
+<?php while (have_posts()) : the_post(); 
+       ?>
 
 <?php if(get_field('photos')): ?>
 
     <ul class="thumb_nav">
 
-      <?php while(has_sub_field('photos')): ?>
+      <?php while(has_sub_field('photos')): $id = get_the_ID(); ?>
 
       		<?php // Get the attachment ID, then assign that ID to both the thumbnail and full-size image
       		$attachment_id = get_sub_field('photo');
       		$thumb = wp_get_attachment_image_src($attachment_id, 'slideshow-thumb'); 
       		$big = wp_get_attachment_image_src($attachment_id, 'large'); ?>
 
-        <li class="slide_thumb" data-img="<?php echo $big[0]?>">
+        <li data-id="<?php echo $id; ?>" class="slide_thumb" data-img="<?php echo $big[0]?>">
         	<img src="<?php echo $thumb[0]?>" />
         </li>
 
@@ -22,9 +23,9 @@
 
     <ul class="gallery-footer">
 
-       <?php //while(has_sub_field('photos')): ?>
+       <?php while(has_sub_field('photos')): $id = get_the_ID(); ?>
 
-          <li>
+          <li class="credit" data-id="<?php echo $id; ?>">
           
             <h4><?php bloginfo('title');?></h4>
             
@@ -34,7 +35,7 @@
 
           </li>
 
-      <?php //endwhile; ?>
+      <?php endwhile; ?>
 
     </ul>
 

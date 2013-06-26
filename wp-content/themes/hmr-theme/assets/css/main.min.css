@@ -5240,7 +5240,7 @@ a:hover {
 }
 
 .home .img.forward {
-  bottom: 38%;
+  top: 400px;
   left: 10%;
   width: 246px;
   height: 36px;
@@ -5248,7 +5248,7 @@ a:hover {
 }
 
 .home .img.thinkers {
-  bottom: 32%;
+  top: 440px;
   left: 10%;
   width: 246px;
   height: 36px;
@@ -5698,6 +5698,10 @@ ul.fullsize li {
 .gallery-footer p a:hover {
   color: white;
   text-decoration: none;
+}
+
+.credit {
+  display: none;
 }
 
 .single-capability .gallery-footer h4 {

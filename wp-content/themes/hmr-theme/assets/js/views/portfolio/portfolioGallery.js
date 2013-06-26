@@ -15,7 +15,18 @@ var HMR = HMR || {};
         HMR.nav.slideUp;
     });
 
-    $('.thumb_nav').bxSlider({
+    // Declare variables
+    var $thumbs = $('.slide_thumb'),
+        $bigArrows = $('.big_arrow'),
+        $nav = $('.thumb_nav'),
+        //$footerCredit = $('.credit');
+        //$postId = $footerCredit.getAttribute('data-id');
+        current = 0, // This will track our curretly active thumb
+        len = $thumbs.length, // This is the # of thubmnails total
+        changeBackgroundImage,
+        timer, startTimer, initialize;
+
+    $($nav).bxSlider({
         pager:false, 
         minSlides:12, 
         maxSlides:12, 
@@ -23,15 +34,6 @@ var HMR = HMR || {};
         slideMargin:1,
         slideWidth:70
     });
-
-    // Declare variables
-    var $thumbs = $('.slide_thumb'),
-        $bigArrows = $('.big_arrow'),
-        $nav = $('.thumb_nav'),
-        current = 0, // This will track our curretly active thumb
-        len = $thumbs.length, // This is the # of thubmnails total
-        changeBackgroundImage,
-        timer, startTimer, initialize;
     
     
     // This will swap out the backgrund image
