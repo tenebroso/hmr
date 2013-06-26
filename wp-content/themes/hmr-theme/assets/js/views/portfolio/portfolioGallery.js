@@ -48,7 +48,9 @@ var HMR = HMR || {};
             current++;
             if(current > len-1) current = 0;
             
-            $($thumbs).eq(current).data('img');
+            changeBackgroundImage( $thumbs.eq(current).data('img'), 1000 );
+            $thumbs.removeClass('active');
+            $thumbs.eq(current).addClass('active');            
         }, 1000);
     };
 
@@ -61,10 +63,11 @@ var HMR = HMR || {};
 
         // Run the first time
         changeBackgroundImage( $thumbs.eq(0).data('img') );
-        
+        $thumbs.eq(0).addClass('active');
+
         // Start timer
         startTimer();
-        
+
         // Handle clicks on ('.slide_thumb') elements
         $thumbs.on('click', function() {
 
@@ -84,6 +87,11 @@ var HMR = HMR || {};
         $bigArrows.on('click', function() {
            
            var endLen = len-1;
+
+            if(timer) {
+                window.clearInterval(timer);
+                timer = null;
+            }           
            
            if($(this).data('dir') === 'next') {
                current++;
@@ -96,7 +104,7 @@ var HMR = HMR || {};
             
             changeBackgroundImage( $thumbs.eq(current).data('img'), 1000 );
             $thumbs.removeClass('active');
-            $(this).addClass('active');
+            $thumbs.eq(current).addClass('active');
            
         });    
     };

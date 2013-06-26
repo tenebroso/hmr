@@ -48,8 +48,8 @@
   <?php endif; ?>
 
 
-  <div class="big_arrow left" data-dir="next"></div>
-  <div class="big_arrow right" data-dir="prev"></div>
+  <div class="big_arrow left" data-dir="prev"></div>
+  <div class="big_arrow right" data-dir="next"></div>
 
 
 <?php endwhile; ?>
