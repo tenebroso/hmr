@@ -21,7 +21,7 @@ var HMR = HMR || {};
         $nav = $('.thumb_nav'),
         //$footerCredit = $('.credit');
         //$postId = $footerCredit.getAttribute('data-id');
-        current = 0, // This will track our curretly active thumb
+        current = -1, // This will track our curretly active thumb
         len = $thumbs.length, // This is the # of thubmnails total
         changeBackgroundImage,
         timer, startTimer, initialize;
@@ -62,8 +62,8 @@ var HMR = HMR || {};
         //hmr.nav.shrink();
 
         // Run the first time
-        changeBackgroundImage( $thumbs.eq(0).data('img') );
-        $thumbs.eq(0).addClass('active');
+        // changeBackgroundImage( $thumbs.eq(0).data('img') );
+        // $thumbs.eq(0).addClass('active');
 
         // Start timer
         startTimer();
