@@ -6497,6 +6497,8 @@ ul.fullsize li {
   
     /* Connect Page */
   
+    /* Blog & Single Post */
+  
   }
   .page-header h1 {
     margin-bottom: 0;
@@ -6770,6 +6772,15 @@ ul.fullsize li {
   }
   .page-template-template-connect-php .content-info {
     margin-top: 0;
+  }
+  .blog .sidebar,
+  .single-post .sidebar {
+    display: none;
+  }
+  .blog .post-nav,
+  .single-post .post-nav {
+    margin-top: -25px;
+    margin-bottom: 50px;
   }
 }
 
