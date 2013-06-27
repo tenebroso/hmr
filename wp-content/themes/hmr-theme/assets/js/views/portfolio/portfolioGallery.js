@@ -47,6 +47,11 @@ var HMR = HMR || {};
     changeFooterCredit = function (active) {
         $('.id-' + (active)).transition({opacity:1}, 750, 'ease');
     };
+
+    loadFirstImage = function () {
+        current = 0;
+        changeBackgroundImage( $thumbs.eq(current).data('img'), 1000 );
+    };
     
     
     // Fire up our timer
@@ -70,6 +75,8 @@ var HMR = HMR || {};
         // Run the first time
         // changeBackgroundImage( $thumbs.eq(0).data('img') );
         // $thumbs.eq(0).addClass('active');
+
+        loadFirstImage();
 
         // Start timer
         startTimer();
