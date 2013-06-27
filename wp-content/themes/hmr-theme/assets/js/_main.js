@@ -73,6 +73,10 @@ HMR.Site = {
       if($('.press-releases, .page-template-template-testimonials-php').length) {
         HMR.lightbox();
       }
+      if($('.page-template-template-capabilities-php').length) {
+        $('.first-row .span4:nth-child(4n+4)').addClass('clear');
+         $('.first-row .span4:nth-child(3n+3)').addClass('no-right');
+      }
       $('.page-template-template-press-php .content .row-fluid .span3:nth-child(4n+9)').addClass('clear');
       $('.page-template-template-testimonials-php .content .row-fluid .span3:nth-child(4n+9)').addClass('clear');
     }

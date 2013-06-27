@@ -249,3 +249,4 @@ add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
 add_image_size( 'capabilities-thumb', 270, 270, true );
 add_image_size( 'press-thumb', 235, 280, true );
 add_image_size( 'slideshow-thumb', 70, 40, true );
+add_image_size( 'slideshow-lg', 1800, 1800 );

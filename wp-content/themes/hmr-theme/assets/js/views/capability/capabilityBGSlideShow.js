@@ -7,7 +7,11 @@
 
   HMR.capabilityBGSlideShow = function() {
 
-  	HMR.nav.slideUp();
+  	if($(window).width() > 767) {
+
+  		HMR.nav.slideUp();
+
+  	}
 
 	$('.slideshow').cycle({
 		fx: 'fade',

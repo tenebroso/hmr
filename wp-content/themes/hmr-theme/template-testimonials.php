@@ -4,6 +4,10 @@ Template Name: Testimonials
 */
 ?>
 
+<div class="visible-phone">
+  <?php get_template_part('templates/page', 'header'); ?>
+</div>
+
 <?php
     $args=array(
       'posts_per_page' => -1,

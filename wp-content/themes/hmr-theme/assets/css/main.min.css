@@ -5496,7 +5496,11 @@ a:hover {
   margin: 0 12px 25px 0;
 }
 
-.capability.span4:last-child {
+.capability.span4.clear {
+  clear: left;
+}
+
+.capability.span4.no-right {
   margin-right: 0;
 }
 
@@ -5703,6 +5707,10 @@ ul.fullsize li {
   text-decoration: none;
 }
 
+.page-template-template-portfolio-php .gallery-footer p {
+  opacity: 0;
+}
+
 .single-capability .gallery-footer h4 {
   color: blueLighter;
 }
@@ -5861,6 +5869,7 @@ ul.fullsize li {
 }
 
 .post-type-archive-team .content .large em {
+  display: block;
   font-size: 13px;
 }
 
@@ -6475,9 +6484,30 @@ ul.fullsize li {
 }
 
 @media (max-width: 767px) {
+  {
+    /* Team Page */
+  
+    /* Capabilities Landing */
+  
+    /* Single Capability */
+  
+    /* Single Portfolio */
+  
+    /* Press & Testimonials */
+  
+    /* Connect Page */
+  
+  }
+  .page-header h1 {
+    margin-bottom: 0;
+    line-height: 1.2;
+  }
   .wrap {
     padding-bottom: 169px;
     overflow: auto;
+  }
+  .wrap.container {
+    margin-top: 0;
   }
   .content-info {
     position: relative;
@@ -6491,6 +6521,7 @@ ul.fullsize li {
   .banner {
     padding: 24px 34px;
     background: #071222;
+    border-bottom: none;
   }
   .banner .container {
     position: relative;
@@ -6601,6 +6632,144 @@ ul.fullsize li {
   }
   #map_holder .container .overlay .phone:before {
     display: none;
+  }
+  .team-photo {
+    display: none;
+  }
+  .post-type-archive-team .content .large em {
+    display: inline;
+  }
+  .post-type-archive-team .content .large .name:after {
+    content: ", ";
+  }
+  .single-team .team {
+    margin: 45px 0 0;
+  }
+  .single-team .team img {
+    display: block;
+    margin: 0 auto 35px auto;
+  }
+  .single-team .team .back {
+    display: none;
+  }
+  .single-team .team .text-right {
+    margin: 10px 0 0;
+    text-align: left;
+  }
+  .single-team .content .meta {
+    line-height: 1.2;
+  }
+  .single-team .content .meta.match-height {
+    line-height: inherit;
+  }
+  .page-template-template-capabilities-php .capability.span4 {
+    display: inline-block;
+    width: 47%;
+    height: auto;
+    padding: 10px 5px;
+    margin: 0;
+    clear: none;
+    word-wrap: break-word;
+    vertical-align: top;
+    background: none;
+  }
+  .page-template-template-capabilities-php .capability.span4.clear {
+    clear: none;
+  }
+  .page-template-template-capabilities-php .capability.span4 p {
+    display: none;
+  }
+  .page-template-template-capabilities-php .capability:hover .hover {
+    display: none;
+  }
+  .page-template-template-capabilities-php .capability h2 {
+    font-size: 15px;
+    line-height: 1.2;
+  }
+  .single-capability {
+    height: auto;
+    overflow: visible;
+  }
+  .single-capability .content-info {
+    display: block;
+  }
+  .single-capability #wrap {
+    background: none;
+  }
+  .single-capability .wrap.container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .single-capability .fullsize.slideshow {
+    position: relative;
+    width: 100%;
+    height: 475px;
+    background: #000;
+  }
+  .single-capability .gallery-footer {
+    position: relative;
+    bottom: auto;
+    left: auto;
+  }
+  .single-capability .gallery-footer p {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid #293240;
+  }
+  .single-capability .gallery-footer h4 {
+    display: none;
+  }
+  .single-capability .meta-box.relative {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    width: auto;
+    padding-top: 0;
+    clear: both;
+    background: none;
+  }
+  .page-template-template-portfolio-php .gallery-footer h4 {
+    display: none;
+  }
+  .page-template-template-portfolio-php .gallery-footer p {
+    top: 5px;
+    right: auto;
+    left: 18px;
+    display: block;
+    margin: 0;
+  }
+  .page-template-template-portfolio-php .big_arrow {
+    top: 31%;
+    margin-top: 0;
+  }
+  .page-template-template-testimonials-php .modal-header .close,
+  .page-template-template-press-php .modal-header .close {
+    margin-right: 45px;
+  }
+  .page-template-template-testimonials-php .page-header h1,
+  .page-template-template-press-php .page-header h1 {
+    margin-bottom: 1em;
+  }
+  .page-template-template-testimonials-php .row-fluid .span3,
+  .page-template-template-press-php .row-fluid .span3 {
+    display: inline-block;
+    width: 49%;
+    padding: 0 2%;
+    margin-bottom: 40px;
+    vertical-align: top;
+  }
+  .span3.points {
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+  }
+  .page-template-template-connect-php .content-info {
+    margin-top: 0;
   }
 }
 

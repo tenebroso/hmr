@@ -4,6 +4,10 @@ Template Name: Press Releases
 */
 ?>
 
+<div class="visible-phone">
+  <?php get_template_part('templates/page', 'header'); ?>
+</div>
+
 <?php
 $args=array(
     'orderby' => 'date',

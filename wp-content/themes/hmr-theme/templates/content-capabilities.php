@@ -18,10 +18,7 @@
 	</div>
 
 <?php endwhile; endif; wp_reset_postdata(); ?>
-</div>
 
-
-<div class="row-fluid">
 <?php wp_reset_query(); $args2 = array('posts_per_page' => 3, 'offset' => 3, 'post_type' => 'capability' ); $the_query2 = new WP_Query( $args2 ); if ( $the_query2->have_posts() ) : while ( $the_query2->have_posts() ) : $the_query2->the_post(); ?>
 
 	<div class="span4 capability">

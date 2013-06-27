@@ -41,7 +41,7 @@
 
   <?php endif; ?>
 
-  <div class="meta-box">
+  <div class="meta-box hidden-phone">
     
     <h2><?php the_title();?></h2>
     <?php the_content();?>

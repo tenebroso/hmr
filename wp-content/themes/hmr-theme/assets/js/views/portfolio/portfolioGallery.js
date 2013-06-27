@@ -11,7 +11,11 @@ var HMR = HMR || {};
 
   HMR.portfolioGallery = function() {
 
-    //HMR.nav.slideUp();
+    if($(window).width() > 767) {
+
+        HMR.nav.slideUp();
+
+    }
 
     // Declare variables
     var $thumbs = $('.slide_thumb'),
@@ -104,8 +108,9 @@ var HMR = HMR || {};
            
             if(current > endLen) current = 0;
             if(current < 0) current = endLen;
-            
-            changeBackgroundImage( $thumbs.eq(current).data('img'), 1000 ).resize();
+            $credit.transition({opacity:0}, 250, 'ease');
+            changeFooterCredit($($thumbs.eq(current)).data('id'));
+            changeBackgroundImage( $thumbs.eq(current).data('img'), 1000 );
             $thumbs.removeClass('active');
             $thumbs.eq(current).addClass('active');
            
