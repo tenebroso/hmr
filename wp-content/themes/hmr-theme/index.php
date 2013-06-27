@@ -16,4 +16,7 @@
       <li class="next"><?php previous_posts_link(__('Newer posts &rarr;', 'roots')); ?></li>
     </ul>
   </nav>
+
+    <?php kriesi_pagination(); ?>
+
 <?php endif; ?>

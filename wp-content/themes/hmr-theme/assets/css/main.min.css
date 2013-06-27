@@ -5338,6 +5338,39 @@ a:hover {
   text-align: right;
 }
 
+.blog .main .post:last-of-type {
+  padding: 0;
+  margin: 0;
+  border-bottom: none;
+}
+
+.pagination {
+  padding: 0;
+  margin: 25px 0;
+  text-align: center;
+  list-style-type: none;
+  border-top: 1px solid #293240;
+}
+
+.pagination li {
+  display: inline-block;
+  padding: 0;
+  margin: 0 20px;
+  font-size: 14px;
+}
+
+.pagination li.next {
+  float: right;
+  padding: 3px 0 0;
+  margin-right: 0;
+}
+
+.pagination li.prev {
+  float: left;
+  padding: 3px 0 0;
+  margin-left: 0;
+}
+
 /* ==========================================================================
    Sidebar
    ========================================================================== */

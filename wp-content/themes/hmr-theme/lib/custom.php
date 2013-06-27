@@ -250,3 +250,44 @@ add_image_size( 'capabilities-thumb', 270, 270, true );
 add_image_size( 'press-thumb', 235, 280, true );
 add_image_size( 'slideshow-thumb', 70, 40, true );
 add_image_size( 'slideshow-lg', 1800, 1800 );
+
+
+/* Pagination */
+
+
+function kriesi_pagination($pages = '', $range = 2)
+{  
+     $showitems = ($range * 2)+1;  
+
+     global $paged;
+     if(empty($paged)) $paged = 1;
+
+     if($pages == '')
+     {
+         global $wp_query;
+         $pages = $wp_query->max_num_pages;
+         if(!$pages)
+         {
+             $pages = 1;
+         }
+     }   
+
+     if(1 != $pages)
+     {
+         echo "<ul class='pagination hidden-phone'>";
+         if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo "<li class='hidden'><a href='".get_pagenum_link(1)."'>&laquo;</a></li>";
+         if($paged > 1 && $showitems < $pages) echo "<li class='prev'><a href='".get_pagenum_link($paged - 1)."'>&laquo;  Previous Page</a></li>";
+
+         for ($i=1; $i <= $pages; $i++)
+         {
+             if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
+             {
+                 echo ($paged == $i)? "<li><span class='current'>".$i."</span></li>":"<li><a href='".get_pagenum_link($i)."' class='inactive' >".$i."</a></li>";
+             }
+         }
+
+         if ($paged < $pages && $showitems < $pages) echo "<li class='next'><a href='".get_pagenum_link($paged + 1)."'>Next Page &raquo;</a></li>";  
+         if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<li class='hidden'><a class='next' href='".get_pagenum_link($pages)."'></a></li>";
+         echo "</ul>\n";
+     }
+}

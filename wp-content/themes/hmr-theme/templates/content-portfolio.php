@@ -14,7 +14,7 @@
       		<?php // Get the attachment ID, then assign that ID to both the thumbnail and full-size image
       		$attachment_id = get_sub_field('photo');
       		$thumb = wp_get_attachment_image_src($attachment_id, 'slideshow-thumb'); 
-      		$big = wp_get_attachment_image_src($attachment_id, 'large'); ?>
+      		$big = wp_get_attachment_image_src($attachment_id, 'slideshow-lg'); ?>
 
         <li class="slide_thumb" data-img="<?php echo $big[0]?>" data-id="<?php echo $i; ?>" >
         	<img src="<?php echo $thumb[0]?>" />
