@@ -6812,8 +6812,9 @@ ul.fullsize li {
   }
   .blog .post-nav,
   .single-post .post-nav {
-    margin-top: -25px;
-    margin-bottom: 50px;
+    padding: 25px 0 0;
+    margin: 25px 0;
+    border-top: 1px solid #293240;
   }
 }
 
