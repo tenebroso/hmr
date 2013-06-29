@@ -28,7 +28,7 @@ var HMR = HMR || {};
         changeFooterCredit,
         timer, startTimer, initialize;
 
-    $($nav).bxSlider({
+    var $slider = $($nav).bxSlider({
         pager:false, 
         minSlides:12, 
         maxSlides:12, 
@@ -51,6 +51,7 @@ var HMR = HMR || {};
     loadFirstImage = function () {
         current = 0;
         changeBackgroundImage( $thumbs.eq(current).data('img'), 1000 );
+        $thumbs.eq(current).addClass('active');
     };
     
     
@@ -59,9 +60,10 @@ var HMR = HMR || {};
         timer = window.setInterval(function() {
             current++;
             if(current > len-1) current = 0;
-            changeBackgroundImage( $thumbs.eq(current).data('img'), 1000 ).resize();
+            changeBackgroundImage( $thumbs.eq(current).data('img'), 1000 );
             $thumbs.removeClass('active');
-            $thumbs.eq(current).addClass('active');            
+            $thumbs.eq(current).addClass('active');
+            $slider.goToNextSlide();
         }, 6000);
     };
 
@@ -93,7 +95,7 @@ var HMR = HMR || {};
             }
             $credit.transition({opacity:0}, 250, 'ease');
             changeFooterCredit($(this).data('id'));
-            changeBackgroundImage($(this).data('img'), 500).resize();
+            changeBackgroundImage($(this).data('img'), 500);
         });    
         
         
@@ -109,18 +111,21 @@ var HMR = HMR || {};
            
            if($(this).data('dir') === 'next') {
                current++;
+               $slider.goToNextSlide();
            } else {
                current--;
+               $slider.goToPrevSlide();
            }
+
+            $thumbs.removeClass('active');
+            $thumbs.eq(current).addClass('active');
            
             if(current > endLen) current = 0;
             if(current < 0) current = endLen;
             $credit.transition({opacity:0}, 250, 'ease');
             changeFooterCredit($($thumbs.eq(current)).data('id'));
             changeBackgroundImage( $thumbs.eq(current).data('img'), 1000 );
-            $thumbs.removeClass('active');
-            $thumbs.eq(current).addClass('active');
-           
+            
         });    
     };
     
