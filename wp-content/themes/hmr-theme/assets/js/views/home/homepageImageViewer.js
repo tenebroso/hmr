@@ -25,8 +25,8 @@ var HMR = HMR || {};
 
     if($(window).width() > 767) {
         // Do the text anims
-        $('.forward').transition({delay:1000, opacity: 1, x: '100px'}, 750, 'ease');
-        $('.thinkers').transition({ delay:1250, opacity: 1, x: '150px'}, 1000, 'easeOutCirc');    
+        $('.forward').transition({delay:1500, opacity: 1, x: '200px'}, 2550, 'ease');
+        $('.thinkers').transition({ delay:3250, opacity: 1, x: '250px'}, 3550, 'easeOutCirc');    
     } else {
         if(Modernizr.touch) $('.thinkers, .forward').remove();
     }
