@@ -16,7 +16,10 @@
 	$('.slideshow').cycle({
 		fx: 'fade',
 		delay: 1000,
-		speed:3000
+		speed:3000,
+		containerResize: false,
+		slideResize: false,
+		fit: 1
 	});
 
 	$('.gallery-footer').cycle({

@@ -138,7 +138,7 @@ a {
 
 .wrap {
 	&.container {
-		margin:50px auto 0;
+		margin:50px auto;
 	}
 	.clear {
 		clear:left;
@@ -282,6 +282,13 @@ a {
 	}
 }
 
+.blog, .single-post {
+	.hentry {
+		font-size:15px;
+		line-height:1.7;
+	}
+}
+
 .pagination {
 	margin: 25px 0;
 	padding: 0;
@@ -290,13 +297,38 @@ a {
 	text-align: center;
 	li {
 		display:inline-block;
-		margin:0 20px;
+		margin:0;
 		padding:0;
 		font-size:14px;
+		.current {
+			padding: 10px 20px 0;
+			position: relative;
+			top: -1px;
+			border-top:1px solid @blue;
+		}
+		a {
+			border-top:1px solid @blue;
+			position: relative;
+			top: -1px;
+			padding: 10px 20px 0;
+			&:hover {
+				border-top:1px solid white;
+			}
+		}
 		&.next {
 			float:right;
 			margin-right:0;
 			padding:3px 0 0;
+			a {
+				padding: 4px 20px 0 20px;
+				position: relative;
+				top: -4px;
+				float: right;
+				border-top:1px solid @blue;
+				&:hover {
+					border-top:1px solid white;
+				}
+			}
 		}
 		&.prev {
 			float:left;
@@ -334,6 +366,7 @@ a {
 		padding:10px 14px;
 		.border-radius(2px);
 		width:100%;
+		line-height:1.5;
 	}
 	.widget {
 		border-bottom:1px solid @blue;
@@ -539,6 +572,8 @@ ul.fullsize {
 			margin:15px 0 0;
 			text-align:center;
 			display:inline;
+			position:relative;
+			top:3px;
 		}
 	}
 	.wrap {
@@ -555,9 +590,11 @@ ul.fullsize {
 		padding:20px;
 		position:absolute;
 		left: calc(35% - 3em);
+		left:-webkit-calc(35% - 3em);
 		bottom:6%;
 		text-align:center;
 		z-index:100;
+		.translate3d(0,0,0);
 		h2 {
 			font-size:24px;
 			text-transform:uppercase;
@@ -592,6 +629,7 @@ ul.fullsize {
 	left: 18px;
 	z-index: 101;
 	text-transform: uppercase;
+	.translate3d(0,0,0);
 	.opacity(0);
 }
 .gallery-footer {
@@ -1316,6 +1354,12 @@ ul.fullsize {
 		height:129px;
 		clear:both;
 	}
+
+	.page-template-template-connect-php {
+		.content-info {
+			margin-top:80px;
+		}
+	}
 }
 
 @media (max-width: 767px) {
@@ -1695,6 +1739,23 @@ ul.fullsize {
 }
 
 @media (max-width: 1200px) and (min-width:768px) { 
+	.team-photo {
+		min-height: 440px;
+		margin: 0 0 40px 0;
+	}
+}
+
+@media (min-width: 1000px) { 
+
+.page-template-template-capabilities-php {
+	.container {
+		width:999px;
+	}
+}
+
+}
+
+@media (max-width:979px) and (min-width:768px) { 
 	.capability {
 		&.span4 {
 			width:32%;
@@ -1702,13 +1763,6 @@ ul.fullsize {
 			background:none;
 		}
 	}
-	.team-photo {
-		min-height: 440px;
-		margin: 0 0 40px 0;
-	}
-}
-
-@media (max-width:979px) and (min-width:768px) { 
 	.capability {
 		.hover {
 			top: 19%;

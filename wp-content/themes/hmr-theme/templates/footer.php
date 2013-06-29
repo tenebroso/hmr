@@ -16,7 +16,7 @@
 	<div class="row-fluid">
 		<div class="span12 text-center">
 
-			<h4><?php bloginfo('title');?></h4>
+			<h4><a href="<?php bloginfo('url');?>"><?php bloginfo('title');?></a></h4>
 
 		</div>
 	</div>

@@ -2579,13 +2579,17 @@ input[type="submit"].btn.btn-mini {
 
 .nav > li > a {
   display: inline-block;
-  padding: 15px 20px 10px 20px;
+  padding: 15px 20px 11px 20px;
   font-family: 'Circe-Light', sans-serif;
   font-size: 20px;
   line-height: 1.2;
   color: #ffffff;
   text-transform: uppercase;
   vertical-align: middle;
+  -webkit-transform: translate3d(0, 0, 0);
+     -moz-transform: translate3d(0, 0, 0);
+       -o-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   -webkit-transition-duration: 0s;
      -moz-transition-duration: 0s;
        -o-transition-duration: 0s;
@@ -5188,7 +5192,7 @@ a:hover {
    ========================================================================== */
 
 .wrap.container {
-  margin: 50px auto 0;
+  margin: 50px auto;
 }
 
 .wrap .clear {
@@ -5344,6 +5348,12 @@ a:hover {
   border-bottom: none;
 }
 
+.blog .hentry,
+.single-post .hentry {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
 .pagination {
   padding: 0;
   margin: 25px 0;
@@ -5355,14 +5365,44 @@ a:hover {
 .pagination li {
   display: inline-block;
   padding: 0;
-  margin: 0 20px;
+  margin: 0;
   font-size: 14px;
+}
+
+.pagination li .current {
+  position: relative;
+  top: -1px;
+  padding: 10px 20px 0;
+  border-top: 1px solid #293240;
+}
+
+.pagination li a {
+  position: relative;
+  top: -1px;
+  padding: 10px 20px 0;
+  border-top: 1px solid #293240;
+}
+
+.pagination li a:hover {
+  border-top: 1px solid white;
 }
 
 .pagination li.next {
   float: right;
   padding: 3px 0 0;
   margin-right: 0;
+}
+
+.pagination li.next a {
+  position: relative;
+  top: -4px;
+  float: right;
+  padding: 4px 20px 0 20px;
+  border-top: 1px solid #293240;
+}
+
+.pagination li.next a:hover {
+  border-top: 1px solid white;
 }
 
 .pagination li.prev {
@@ -5400,6 +5440,7 @@ a:hover {
   padding: 10px 14px;
   font-family: 'Circe-Regular';
   font-size: 15px;
+  line-height: 1.5;
   color: #ffffff;
   background: #293240;
   border: none;
@@ -5624,6 +5665,8 @@ ul.fullsize li {
 }
 
 .single-capability .content h4 {
+  position: relative;
+  top: 3px;
   display: inline;
   margin: 15px 0 0;
   font-family: 'Circe-Regular';
@@ -5645,11 +5688,16 @@ ul.fullsize li {
   position: absolute;
   bottom: 6%;
   left: calc(32%);
+  left: -webkit-calc(32%);
   z-index: 100;
   width: 35%;
   padding: 20px;
   text-align: center;
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeoAAACyAQMAAAC3CR5XAAAAA1BMVEUHEiIPoRpoAAAAAXRSTlPM0jRW/QAAACFJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAwEkrzgAB49wm5gAAAABJRU5ErkJggg==) repeat;
+  -webkit-transform: translate3d(0, 0, 0);
+     -moz-transform: translate3d(0, 0, 0);
+       -o-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 
 .single-capability .meta-box h2 {
@@ -5686,6 +5734,10 @@ ul.fullsize li {
   text-transform: uppercase;
   opacity: 0;
   filter: alpha(opacity=0);
+  -webkit-transform: translate3d(0, 0, 0);
+     -moz-transform: translate3d(0, 0, 0);
+       -o-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 
 .gallery-footer {
@@ -6514,6 +6566,9 @@ ul.fullsize li {
     margin-top: -129px;
     clear: both;
   }
+  .page-template-template-connect-php .content-info {
+    margin-top: 80px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -6819,18 +6874,24 @@ ul.fullsize li {
 }
 
 @media (max-width: 1200px) and (min-width: 768px) {
-  .capability.span4 {
-    width: 32%;
-    padding: 27px 5px;
-    background: none;
-  }
   .team-photo {
     min-height: 440px;
     margin: 0 0 40px 0;
   }
 }
 
+@media (min-width: 1000px) {
+  .page-template-template-capabilities-php .container {
+    width: 999px;
+  }
+}
+
 @media (max-width: 979px) and (min-width: 768px) {
+  .capability.span4 {
+    width: 32%;
+    padding: 27px 5px;
+    background: none;
+  }
   .capability .hover {
     top: 19%;
     left: 28%;
