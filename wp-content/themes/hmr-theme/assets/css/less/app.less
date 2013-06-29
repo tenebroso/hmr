@@ -112,7 +112,8 @@ a {
 		color:@gray;
 		margin:0;
 		&.match-height {
-			line-height:38px;
+			line-height:34px;
+			margin:9px 0 -5px 0;
 		}
 	}
 	.thumbnail {
@@ -397,8 +398,16 @@ a {
 	.hentry {
 		border:none;
 		.entry-content {
+			padding:5px 0 0;
+			line-height:1.7;
+			hr {
+				margin:1.5em 0 1em 0;
+			}
 			em {
-			color:@gray;
+				color:@gray;
+				margin:0 0 -5px 0;
+				padding:10px 0 0;
+				display:block;
 			}
 		}
 		.back {
@@ -410,10 +419,7 @@ a {
 				text-decoration:none;
 			}
 		}
-	}
-	.entry-content {
-		padding:5px 0 0;
-	}
+	}	
 	header {
 		padding:0 0 10px 0;
 	}
@@ -819,6 +825,9 @@ ul.fullsize {
 			&:hover {
 				color:white;
 				text-decoration:none;
+				img {
+					border:1px solid white;
+				}
 			}
 		}
 		.large {

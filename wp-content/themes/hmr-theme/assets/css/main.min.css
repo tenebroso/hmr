@@ -5325,7 +5325,8 @@ a:hover {
 }
 
 .content .meta.match-height {
-  line-height: 38px;
+  margin: 9px 0 -5px 0;
+  line-height: 34px;
 }
 
 .content .thumbnail {
@@ -5631,7 +5632,19 @@ a:hover {
   border: none;
 }
 
+.single-team .hentry .entry-content {
+  padding: 5px 0 0;
+  line-height: 1.7;
+}
+
+.single-team .hentry .entry-content hr {
+  margin: 1.5em 0 1em 0;
+}
+
 .single-team .hentry .entry-content em {
+  display: block;
+  padding: 10px 0 0;
+  margin: 0 0 -5px 0;
   color: #a6a6a6;
 }
 
@@ -5642,10 +5655,6 @@ a:hover {
 .single-team .hentry a:hover {
   color: white;
   text-decoration: none;
-}
-
-.single-team .entry-content {
-  padding: 5px 0 0;
 }
 
 .single-team header {
@@ -6100,6 +6109,10 @@ ul.fullsize li {
 .post-type-archive-team .content a:hover {
   color: white;
   text-decoration: none;
+}
+
+.post-type-archive-team .content a:hover img {
+  border: 1px solid white;
 }
 
 .post-type-archive-team .content .large {
