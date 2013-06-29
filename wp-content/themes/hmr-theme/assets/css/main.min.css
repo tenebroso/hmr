@@ -649,6 +649,158 @@ a:focus {
   clear: both;
 }
 
+/* ==========================================================================
+   Gravity Forms on Connect Page
+   ========================================================================== */
+
+.page-template-template-connect-php .gform_wrapper {
+  padding: 0 0 25px 0;
+  overflow: hidden;
+}
+
+.page-template-template-connect-php .gform_wrapper .validation_error {
+  font-family: 'Circe-Regular';
+  color: #55616f;
+  text-align: center;
+}
+
+.page-template-template-connect-php .gform_wrapper .validation_message {
+  margin: -5px 0 15px 0;
+  font-size: 12px;
+  color: #a6a6a6;
+}
+
+.page-template-template-connect-php .gform_wrapper .top_label .gfield_label {
+  margin: 0;
+  font-size: 16px;
+}
+
+.page-template-template-connect-php .gform_wrapper .gform_fields {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.page-template-template-connect-php .gform_wrapper .gform_fields li {
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+.page-template-template-connect-php .gform_wrapper .gform_fields li .ginput_complex .ginput_left,
+.page-template-template-connect-php .gform_wrapper .gform_fields li .ginput_complex .ginput_right {
+  display: inline-block;
+  width: 48%;
+  vertical-align: top;
+}
+
+.page-template-template-connect-php .gform_wrapper .gform_fields li .ginput_complex .ginput_right {
+  float: right;
+}
+
+.page-template-template-connect-php .gform_wrapper .gform_fields li .ginput_complex .ginput_left {
+  width: 48%;
+  margin-right: 2%;
+}
+
+.page-template-template-connect-php .gform_wrapper .gform_fields li .ginput_container {
+  position: relative;
+}
+
+.page-template-template-connect-php .gform_wrapper .gform_fields li span label {
+  font-size: 12px;
+}
+
+.page-template-template-connect-php .gform_wrapper .gfield_required {
+  color: #a6a6a6;
+}
+
+.page-template-template-connect-php .gform_wrapper .gform_body,
+.page-template-template-connect-php .gform_wrapper .gform_footer {
+  width: 480px;
+  margin: 0 auto;
+}
+
+.page-template-template-connect-php .gform_wrapper .gform_title {
+  margin: .75em 0 1em 0;
+  font-family: 'Circe-Regular';
+  font-size: 24px;
+  font-weight: normal;
+  color: #a6a6a6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.page-template-template-connect-php .gform_wrapper .gform_description {
+  display: block;
+  margin: 0 0 25px 0;
+  font-family: 'ArvoItalic';
+  font-size: 15px;
+  text-align: center;
+}
+
+.page-template-template-connect-php .gform_wrapper input,
+.page-template-template-connect-php .gform_wrapper textarea,
+.page-template-template-connect-php .gform_wrapper select {
+  width: 100%;
+  font-family: 'Circe-Regular';
+  font-size: 15px;
+  line-height: 26px;
+  color: #a4adb5;
+  background: #293240;
+  border: 1px solid #071222;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-transition-duration: 0.1s;
+     -moz-transition-duration: 0.1s;
+       -o-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+}
+
+.page-template-template-connect-php .gform_wrapper input:focus,
+.page-template-template-connect-php .gform_wrapper textarea:focus,
+.page-template-template-connect-php .gform_wrapper select:focus {
+  background: #071222;
+  border: 1px solid #293240;
+}
+
+.page-template-template-connect-php .gform_wrapper input.gform_button {
+  float: right;
+  width: auto;
+  padding: 5px 40px;
+  margin: 10px 0 0;
+  letter-spacing: .1em;
+  color: white;
+  text-transform: uppercase;
+}
+
+.page-template-template-connect-php .gform_wrapper input.gform_button:hover {
+  background: #55616f;
+}
+
+.page-template-template-connect-php .gform_wrapper input[type=file] {
+  height: 25px;
+  padding: 3px 0;
+  line-height: 1;
+  background: none;
+}
+
+.page-template-template-connect-php .gform_wrapper textarea {
+  resize: none;
+}
+
+.page-template-template-connect-php .gform_wrapper .gfield.half {
+  display: inline-block;
+  width: 48%;
+  margin-right: 2%;
+  vertical-align: top;
+}
+
+.page-template-template-connect-php .gform_wrapper .gfield.half.half_last {
+  float: right;
+  margin-right: 0;
+}
+
 form {
   margin: 0 0 2;
 }
@@ -1665,7 +1817,6 @@ div.button * {
 /* Select */
 
 div.selector {
-  position: relative;
   height: 26px;
   padding: 0 0 0 10px;
   overflow: hidden;
@@ -1674,6 +1825,8 @@ div.selector {
 }
 
 div.selector span {
+  position: absolute;
+  top: 6px;
   display: block;
   width: 100%;
   height: 26px;
@@ -1683,7 +1836,7 @@ div.selector span {
   text-overflow: ellipsis;
   white-space: nowrap;
   cursor: pointer;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAICAQAAABn7dZ6AAAAXklEQVQIW2WJIRZAQAAFv6JSPKfQdIeQXUCTdNfQJzuEI6iSM2y1wq61eFP+nxEN44+BVBTs2A89EqLCvPSMXBAtZ9Ar6RPE5PVB6cwdEhYshtr/EETGRhdeFEQebV0xDWLqJLz24QAAAABJRU5ErkJggg==) no-repeat 205px center;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAICAQAAABn7dZ6AAAAXklEQVQIW2WJIRZAQAAFv6JSPKfQdIeQXUCTdNfQJzuEI6iSM2y1wq61eFP+nxEN44+BVBTs2A89EqLCvPSMXBAtZ9Ar6RPE5PVB6cwdEhYshtr/EETGRhdeFEQebV0xDWLqJLz24QAAAABJRU5ErkJggg==) no-repeat 200px center;
 }
 
 div.selector.fixedWidth {
@@ -1713,7 +1866,7 @@ div.selector {
   height: 33px;
   max-width: 100%;
   padding: 3px 5px 2px 7px;
-  margin-top: -3px;
+  margin-top: -2px;
   font-family: 'Circe-Regular';
   font-size: 15px;
   color: #a4adb5;
@@ -2748,7 +2901,7 @@ input[type="submit"].btn.btn-mini {
 .slideToggle {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: 12px;
   z-index: 102;
   display: none;
   width: 43px;
@@ -2765,6 +2918,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .slideToggle.slideDown {
+  bottom: 0;
   height: 100%;
   background: #293240 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAJCAYAAAA/33wPAAAAY0lEQVQoz2P4//+/OhAfBeLtQCzKQCQAqtUG4mNAvBWIBWGCHkD8A4gvEWMY1JBXQPwCiDXRJYkyDK8haIZ9x2UYUYYQMgzI1iHaEFyGkWUIFsOukG0IFsOek20IkmFuxBgCAG650wjxMe23AAAAAElFTkSuQmCC) no-repeat center center;
 }
@@ -5907,13 +6061,13 @@ ul.fullsize li {
 }
 
 .big_arrow.left {
-  left: 10px;
+  left: 40px;
   padding-right: 250px;
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAA/CAYAAABjJtHDAAAApElEQVRo3u3aIQ6DMBSH8TbZOfDF7AgYbjAU3AnLYeASGAyaHQLT/UVFQ9gcaRe+l3zmqV+eqKoxCcd7X6j6pErZlDCnNjWpMbSqXTU5wLpo9ww7YMCAAQMGDBgwYMCAAQMGDBgwYF9gVs1qiHYPtajepB4hynCl9nC5t3oBBAgQ4HXAtA80QIAAAQIECDAboPsXYAcQIECANwfm9ZcpAv78BfYBhy02JgqWbH0AAAAASUVORK5CIIA=) no-repeat left center;
 }
 
 .big_arrow.right {
-  right: 10px;
+  right: 40px;
   padding-left: 250px;
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAA9CAYAAAAqG6D1AAAB2UlEQVRo3uXaR07DQBjFcTgCNRBKILRTIUQVgtB7FSggBDfgAtyDPV30FspB/mxsabA/D8s3El7O6icnmjfzPlcB29jPGVBTpXoi2C3Q6KwdAedq2CZwB+SctcMIVquEbRiwA+ACqFPC1oF7oCk02BrwkIDtA5dAvRK2GsGanbU94EoNWwYegbyzVo5gDaHBdoFrNWwReAJaErAbNWzBgMWbrhQ2DzwDrb40UMBmgZcELJUGSlibLw0UsGngNQFLpYES1m5sulJYCXgDCr40UMAmDVi86UphE8A70OGsLSXTQAEbN2CpNFDBKkCnLw0UsDHgIwFLpYECNhrBir40UMBGgE+gy5cGCtiQAUulgRLW40sDBWzQgMVpEASs15cGCtiAAUulgQr2BfT50kABO456impn7QQ4VYH6gW/jTf2Kp//70/3xJy+Esh2UZNtBcBunEzHdQUQMMGyE8YzslOAcW4pBHFuck6cLmpOdPCNQJZijcMalQXebybj3xaC8EmTdkCUgq0tYkXUJwJSndZGArBpI109lNHkxKKcEhdF5ZrTDW7J22AFZPboEZE0cdmQTB6uNk45AgptiZcz7yrJ5n9WFSyejwc2Qg5u2B/ddQnBfcIT4rcsPzD4BXI7MPy8AAAAASUVORK5CIIA=) no-repeat right center;
 }
@@ -6245,154 +6399,6 @@ ul.fullsize li {
 
 .page-template-template-connect-php .nav {
   margin-bottom: 23px;
-}
-
-/* ==========================================================================
-   Gravity Forms on Connect Page
-   ========================================================================== */
-
-.page-template-template-connect-php .gform_wrapper {
-  padding: 0 0 25px 0;
-  overflow: hidden;
-}
-
-.page-template-template-connect-php .gform_wrapper .validation_error {
-  font-family: 'Circe-Regular';
-  color: #55616f;
-  text-align: center;
-}
-
-.page-template-template-connect-php .gform_wrapper .validation_message {
-  margin: -5px 0 15px 0;
-  font-size: 12px;
-  color: #a6a6a6;
-}
-
-.page-template-template-connect-php .gform_wrapper .top_label .gfield_label {
-  margin: 0;
-  font-size: 16px;
-}
-
-.page-template-template-connect-php .gform_wrapper .gform_fields {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-.page-template-template-connect-php .gform_wrapper .gform_fields li {
-  padding: 0;
-  margin: 0 0 15px 0;
-}
-
-.page-template-template-connect-php .gform_wrapper .gform_fields li .ginput_complex .ginput_left,
-.page-template-template-connect-php .gform_wrapper .gform_fields li .ginput_complex .ginput_right {
-  display: inline-block;
-  width: 48%;
-  vertical-align: top;
-}
-
-.page-template-template-connect-php .gform_wrapper .gform_fields li .ginput_complex .ginput_right {
-  float: right;
-}
-
-.page-template-template-connect-php .gform_wrapper .gform_fields li .ginput_complex .ginput_left {
-  width: 48%;
-  margin-right: 2%;
-}
-
-.page-template-template-connect-php .gform_wrapper .gform_fields li span label {
-  font-size: 12px;
-}
-
-.page-template-template-connect-php .gform_wrapper .gfield_required {
-  color: #a6a6a6;
-}
-
-.page-template-template-connect-php .gform_wrapper .gform_body,
-.page-template-template-connect-php .gform_wrapper .gform_footer {
-  width: 480px;
-  margin: 0 auto;
-}
-
-.page-template-template-connect-php .gform_wrapper .gform_title {
-  margin: .75em 0 1em 0;
-  font-family: 'Circe-Regular';
-  font-size: 24px;
-  font-weight: normal;
-  color: #a6a6a6;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.page-template-template-connect-php .gform_wrapper .gform_description {
-  display: block;
-  margin: 0 0 25px 0;
-  font-family: 'ArvoItalic';
-  font-size: 15px;
-  text-align: center;
-}
-
-.page-template-template-connect-php .gform_wrapper input,
-.page-template-template-connect-php .gform_wrapper textarea,
-.page-template-template-connect-php .gform_wrapper select {
-  width: 100%;
-  font-family: 'Circe-Regular';
-  font-size: 15px;
-  line-height: 26px;
-  color: #a4adb5;
-  background: #293240;
-  border: none;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-  -webkit-transition-duration: 0.1s;
-     -moz-transition-duration: 0.1s;
-       -o-transition-duration: 0.1s;
-          transition-duration: 0.1s;
-}
-
-.page-template-template-connect-php .gform_wrapper input:focus,
-.page-template-template-connect-php .gform_wrapper textarea:focus,
-.page-template-template-connect-php .gform_wrapper select:focus {
-  background: #071222;
-  border: 1px solid #293240;
-}
-
-.page-template-template-connect-php .gform_wrapper input.gform_button {
-  float: right;
-  width: auto;
-  padding: 5px 40px;
-  margin: 10px 0 0;
-  letter-spacing: .1em;
-  color: white;
-  text-transform: uppercase;
-}
-
-.page-template-template-connect-php .gform_wrapper input.gform_button:hover {
-  background: #55616f;
-}
-
-.page-template-template-connect-php .gform_wrapper input[type=file] {
-  height: 25px;
-  padding: 0;
-  line-height: 1;
-  background: none;
-}
-
-.page-template-template-connect-php .gform_wrapper textarea {
-  resize: none;
-}
-
-.page-template-template-connect-php .gform_wrapper .gfield.half {
-  display: inline-block;
-  width: 48%;
-  margin-right: 2%;
-  vertical-align: top;
-}
-
-.page-template-template-connect-php .gform_wrapper .gfield.half.half_last {
-  float: right;
-  margin-right: 0;
 }
 
 /* =============================================================================

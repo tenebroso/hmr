@@ -31,7 +31,7 @@
 
           <li class="credit">
           
-            <h4><?php bloginfo('title');?></h4>
+            <h4><a href="<?php bloginfo('url');?>"><?php bloginfo('title');?></a></h4>
 
             <?php $i=0; ?>
 

@@ -3,6 +3,137 @@
 // --------------------------------------------------
 
 
+/* ==========================================================================
+   Gravity Forms on Connect Page
+   ========================================================================== */
+
+.page-template-template-connect-php {
+  .gform_wrapper {
+    padding:0 0 25px 0;
+    overflow:hidden;
+    .validation_error {
+      font-family:'Circe-Regular';
+      color:@blueLight;
+      text-align:center;
+    }
+    .validation_message {
+      font-size: 12px;
+      margin: -5px 0 15px 0;
+      color:@gray;
+    }
+    .top_label {
+      .gfield_label {
+        font-size:16px;
+        margin:0;
+      }
+    }
+    .gform_fields {
+      list-style-type:none;
+      margin:0;
+      padding:0;
+      li {
+        margin:0 0 15px 0;
+        padding:0;
+        .ginput_complex {
+          .ginput_left, .ginput_right {
+            width:48%;
+            display:inline-block;
+            vertical-align:top;
+          }
+          .ginput_right {
+            float:right;
+          }
+          .ginput_left {
+            margin-right:2%;
+            width:48%;
+          }
+        }
+        .ginput_container {
+            position:relative;
+          }
+        span {
+          label {
+            font-size:12px;
+          }
+        }
+      }
+    }
+    .gfield_required {
+      color:@gray;
+    }
+    .gform_body, .gform_footer {
+      width:480px;
+      margin:0 auto;
+    }
+    .gform_title {
+      font-size:24px;
+      color:@gray;
+      text-align:center;
+      font-family: 'Circe-Regular';
+      font-weight:normal;
+      text-transform:uppercase;
+      margin:.75em 0 1em 0;
+    }
+    .gform_description {
+      font-size:15px;
+      font-family: 'ArvoItalic';
+      display:block;
+      text-align:center;
+      margin:0 0 25px 0;
+    }
+    input, textarea, select {
+      background:@blue;
+      border:1px solid @blueDark;
+      color:@blueLighter;
+      .border-radius(3px);
+      font-size:15px;
+      font-family: 'Circe-Regular';
+      width:100%;
+      line-height:26px;
+      .transition-duration(.1s);
+      &:focus {
+        border:1px solid @blue;
+        background:@blueDark;
+      }
+    }
+    input {
+      &.gform_button {
+        width: auto;
+        float: right;
+        text-transform: uppercase;
+        color: white;
+        letter-spacing: .1em;
+        padding: 5px 40px;
+        margin:10px 0 0;
+        &:hover {
+          background:@blueLight;
+        }
+      }
+      &[type=file] {
+        background:none;
+        padding:3px 0;
+        height:25px;
+        line-height:1;
+      }
+    }
+    textarea {
+      resize:none;
+    }
+    .gfield {
+      &.half {
+        display:inline-block;
+        vertical-align:top;
+        width:48%;
+        margin-right:2%;
+        &.half_last {
+          margin-right:0;
+          float:right;
+        }
+      }
+    }
+  }
+}
+
 // GENERAL STYLES
 // --------------
 
@@ -721,14 +852,15 @@ div.selector {
   line-height: 26px;
   height: 26px;
   padding: 0 0 0 10px;
-  position: relative;
   overflow: hidden; }
   div.selector span {
     text-overflow: ellipsis;
     display: block;
     overflow: hidden;
     white-space: nowrap;
-    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAICAQAAABn7dZ6AAAAXklEQVQIW2WJIRZAQAAFv6JSPKfQdIeQXUCTdNfQJzuEI6iSM2y1wq61eFP+nxEN44+BVBTs2A89EqLCvPSMXBAtZ9Ar6RPE5PVB6cwdEhYshtr/EETGRhdeFEQebV0xDWLqJLz24QAAAABJRU5ErkJggg==) no-repeat 205px center;
+    position:absolute;
+    top:6px;
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAICAQAAABn7dZ6AAAAXklEQVQIW2WJIRZAQAAFv6JSPKfQdIeQXUCTdNfQJzuEI6iSM2y1wq61eFP+nxEN44+BVBTs2A89EqLCvPSMXBAtZ9Ar6RPE5PVB6cwdEhYshtr/EETGRhdeFEQebV0xDWLqJLz24QAAAABJRU5ErkJggg==) no-repeat 200px center;
     height: 26px;
     line-height: 26px;
     padding-right: 25px;
@@ -761,7 +893,7 @@ div.selector {
   padding:3px 5px 2px 7px;
   .border-radius(3px);
   max-width:100%;
-  margin-top:-3px;
+  margin-top:-2px;
   font-family: 'Circe-Regular';
   &.focus {
     border:1px solid @blue;

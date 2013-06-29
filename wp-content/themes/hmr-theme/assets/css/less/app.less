@@ -786,12 +786,12 @@ ul.fullsize {
 	.transition(.5s);
 	&.left {
 		background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAA/CAYAAABjJtHDAAAApElEQVRo3u3aIQ6DMBSH8TbZOfDF7AgYbjAU3AnLYeASGAyaHQLT/UVFQ9gcaRe+l3zmqV+eqKoxCcd7X6j6pErZlDCnNjWpMbSqXTU5wLpo9ww7YMCAAQMGDBgwYMCAAQMGDBgwYF9gVs1qiHYPtajepB4hynCl9nC5t3oBBAgQ4HXAtA80QIAAAQIECDAboPsXYAcQIECANwfm9ZcpAv78BfYBhy02JgqWbH0AAAAASUVORK5CIIA=) no-repeat left center;
-		left:10px;
+		left:40px;
 		padding-right: 250px;
 	}
 	&.right {
 		background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAA9CAYAAAAqG6D1AAAB2UlEQVRo3uXaR07DQBjFcTgCNRBKILRTIUQVgtB7FSggBDfgAtyDPV30FspB/mxsabA/D8s3El7O6icnmjfzPlcB29jPGVBTpXoi2C3Q6KwdAedq2CZwB+SctcMIVquEbRiwA+ACqFPC1oF7oCk02BrwkIDtA5dAvRK2GsGanbU94EoNWwYegbyzVo5gDaHBdoFrNWwReAJaErAbNWzBgMWbrhQ2DzwDrb40UMBmgZcELJUGSlibLw0UsGngNQFLpYES1m5sulJYCXgDCr40UMAmDVi86UphE8A70OGsLSXTQAEbN2CpNFDBKkCnLw0UsDHgIwFLpYECNhrBir40UMBGgE+gy5cGCtiQAUulgRLW40sDBWzQgMVpEASs15cGCtiAAUulgQr2BfT50kABO456impn7QQ4VYH6gW/jTf2Kp//70/3xJy+Esh2UZNtBcBunEzHdQUQMMGyE8YzslOAcW4pBHFuck6cLmpOdPCNQJZijcMalQXebybj3xaC8EmTdkCUgq0tYkXUJwJSndZGArBpI109lNHkxKKcEhdF5ZrTDW7J22AFZPboEZE0cdmQTB6uNk45AgptiZcz7yrJ5n9WFSyejwc2Qg5u2B/ddQnBfcIT4rcsPzD4BXI7MPy8AAAAASUVORK5CIIA=) no-repeat right center;
-		right:10px;
+		right:40px;
 		padding-left: 250px;
 	}
 	&:hover {
@@ -1076,134 +1076,6 @@ ul.fullsize {
 	}
 	.nav {
 		margin-bottom:23px;
-	}
-}
-
-/* ==========================================================================
-   Gravity Forms on Connect Page
-   ========================================================================== */
-
-.page-template-template-connect-php {
-	.gform_wrapper {
-		padding:0 0 25px 0;
-		overflow:hidden;
-		.validation_error {
-			font-family:'Circe-Regular';
-			color:@blueLight;
-			text-align:center;
-		}
-		.validation_message {
-			font-size: 12px;
-			margin: -5px 0 15px 0;
-			color:@gray;
-		}
-		.top_label {
-			.gfield_label {
-				font-size:16px;
-				margin:0;
-			}
-		}
-		.gform_fields {
-			list-style-type:none;
-			margin:0;
-			padding:0;
-			li {
-				margin:0 0 15px 0;
-				padding:0;
-				.ginput_complex {
-					.ginput_left, .ginput_right {
-						width:48%;
-						display:inline-block;
-						vertical-align:top;
-					}
-					.ginput_right {
-						float:right;
-					}
-					.ginput_left {
-						margin-right:2%;
-						width:48%;
-					}
-				}
-				span {
-					label {
-						font-size:12px;
-					}
-				}
-			}
-		}
-		.gfield_required {
-			color:@gray;
-		}
-		.gform_body, .gform_footer {
-			width:480px;
-			margin:0 auto;
-		}
-		.gform_title {
-			font-size:24px;
-			color:@gray;
-			text-align:center;
-			font-family: 'Circe-Regular';
-			font-weight:normal;
-			text-transform:uppercase;
-			margin:.75em 0 1em 0;
-		}
-		.gform_description {
-			font-size:15px;
-			font-family: 'ArvoItalic';
-			display:block;
-			text-align:center;
-			margin:0 0 25px 0;
-		}
-		input, textarea, select {
-			background:@blue;
-			border:none;
-			color:@blueLighter;
-			.border-radius(3px);
-			font-size:15px;
-			font-family: 'Circe-Regular';
-			width:100%;
-			line-height:26px;
-			.transition-duration(.1s);
-			&:focus {
-				border:1px solid @blue;
-				background:@blueDark;
-			}
-		}
-		input {
-			&.gform_button {
-				width: auto;
-				float: right;
-				text-transform: uppercase;
-				color: white;
-				letter-spacing: .1em;
-				padding: 5px 40px;
-				margin:10px 0 0;
-				&:hover {
-					background:@blueLight;
-				}
-			}
-			&[type=file] {
-				background:none;
-				padding:0;
-				height:25px;
-				line-height:1;
-			}
-		}
-		textarea {
-			resize:none;
-		}
-		.gfield {
-			&.half {
-				display:inline-block;
-				vertical-align:top;
-				width:48%;
-				margin-right:2%;
-				&.half_last {
-					margin-right:0;
-					float:right;
-				}
-			}
-		}
 	}
 }
 

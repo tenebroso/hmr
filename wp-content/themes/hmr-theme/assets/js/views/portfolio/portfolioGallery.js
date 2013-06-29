@@ -93,7 +93,7 @@ var HMR = HMR || {};
             }
             $credit.transition({opacity:0}, 250, 'ease');
             changeFooterCredit($(this).data('id'));
-            changeBackgroundImage($(this).data('img'), 1000).resize();
+            changeBackgroundImage($(this).data('img'), 500).resize();
         });    
         
         
