@@ -9,7 +9,7 @@
 		<img src="<?php echo $thumb_image_url[0]; ?>" />
 	</a>
 	<div class="hidden">
-		<p>View Testimonial</p>
+		<p><a href="#modal-<?php echo $id; ?>" data-toggle="modal">View Testimonial</a></p>
 	</div>
    	<p class="circe">
    		<span class="caps"><?php the_title();?></span><br />

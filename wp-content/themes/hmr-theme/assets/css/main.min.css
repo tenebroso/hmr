@@ -6482,6 +6482,11 @@ ul.fullsize li {
   margin: 0;
 }
 
+.page-template-template-press-php .hidden p a,
+.page-template-template-testimonials-php .hidden p a {
+  color: white;
+}
+
 .page-template-template-press-php .hover,
 .page-template-template-testimonials-php .hover {
   position: relative;
