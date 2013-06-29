@@ -247,12 +247,14 @@ add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
    ========================================================================== */
 
 add_image_size( 'capabilities-thumb', 270, 270, true );
-add_image_size( 'press-thumb', 235, 280, true );
+add_image_size( 'press-thumb', 233, 280, true );
 add_image_size( 'slideshow-thumb', 70, 40, true );
 add_image_size( 'slideshow-lg', 1800, 1800 );
 
 
-/* Pagination */
+/* =============================================================================
+   Blog Pagination Courtesy: http://www.kriesi.at/archives/how-to-build-a-wordpress-post-pagination-without-plugin
+   ========================================================================== */
 
 
 function kriesi_pagination($pages = '', $range = 2)

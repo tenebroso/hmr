@@ -8,10 +8,13 @@
 		$url = get_field('url');
 		?>
 		
-<article class="span3">
+<article class="span3 hover">
 	<a href="#modal-<?php echo $id; ?>" data-toggle="modal">
 		<img src="<?php echo $thumb_image_url[0]; ?>" />
 	</a>
+	<div class="hidden">
+		<p>View Press</p>
+	</div>
    	<p class="circe">
    		<span class="caps"><?php the_title();?></span><br />
    			<em class="arvo"><?php the_field('publication_date');?></em>

@@ -4,10 +4,13 @@
 		$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large');
 		$full_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full');?>
 
-<article class="span3">
+<article class="span3 hover">
 	<a href="#modal-<?php echo $id; ?>" data-toggle="modal">
 		<img src="<?php echo $thumb_image_url[0]; ?>" />
 	</a>
+	<div class="hidden">
+		<p>View Testimonial</p>
+	</div>
    	<p class="circe">
    		<span class="caps"><?php the_title();?></span><br />
    			<em class="arvo"><?php the_time('F Y');?></em>

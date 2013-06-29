@@ -6457,6 +6457,52 @@ ul.fullsize li {
   margin-bottom: 15px;
 }
 
+.page-template-template-press-php .hidden,
+.page-template-template-testimonials-php .hidden {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: none;
+  width: 100%;
+  margin-top: -50px;
+  font-family: 'Circe-Regular';
+  font-size: 15px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.page-template-template-press-php .hidden p,
+.page-template-template-testimonials-php .hidden p {
+  margin: 0;
+}
+
+.page-template-template-press-php .hover,
+.page-template-template-testimonials-php .hover {
+  position: relative;
+}
+
+.page-template-template-press-php .hover img,
+.page-template-template-testimonials-php .hover img {
+  border: 1px solid #071222;
+  -webkit-transition: 0.25s;
+     -moz-transition: 0.25s;
+       -o-transition: 0.25s;
+          transition: 0.25s;
+}
+
+.page-template-template-press-php .hover:hover img,
+.page-template-template-testimonials-php .hover:hover img {
+  border: 1px solid white;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+
+.page-template-template-press-php .hover:hover .hidden,
+.page-template-template-testimonials-php .hover:hover .hidden {
+  display: block;
+  visibility: visible;
+}
+
 /* ==========================================================================
    Footer
    ========================================================================== */
@@ -6587,6 +6633,10 @@ ul.fullsize li {
   
     /* Blog & Single Post */
   
+  }
+  .hover .hidden {
+    left: 4%;
+    max-width: 235px;
   }
   .page-header h1 {
     margin-bottom: 0;
@@ -6898,5 +6948,8 @@ ul.fullsize li {
   }
   .team-photo {
     min-height: 344px;
+  }
+  .hover .hidden {
+    margin-top: -60px;
   }
 }

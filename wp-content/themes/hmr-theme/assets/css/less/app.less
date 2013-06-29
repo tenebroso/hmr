@@ -1258,6 +1258,38 @@ ul.fullsize {
 			}
 		}
 	}
+	.hidden {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		display: none;
+		font-family: 'Circe-Regular';
+		font-size: 15px;
+		text-align: center;
+		text-transform: uppercase;
+		width: 100%;
+		margin-top: -50px;
+		p {
+			margin:0;
+		}
+	}
+	.hover {
+		position:relative;
+		img {
+			.transition(.25s);
+			border:1px solid @blueDark;
+		}
+		&:hover {
+			img {
+				.opacity(60);
+				border:1px solid white;
+			}
+			.hidden {
+				display:block;
+				visibility:visible;
+			}
+		}
+	}
 }
 
 
@@ -1363,6 +1395,13 @@ ul.fullsize {
 }
 
 @media (max-width: 767px) {
+
+	.hover {
+		.hidden {
+			max-width:235px;
+			left:4%;
+		}
+	}
 
 	.page-header {
 		h1 {
@@ -1771,6 +1810,11 @@ ul.fullsize {
 	}
 	.team-photo {
 		min-height: 344px;
+	}
+	.hover {
+		.hidden {
+			margin-top:-60px;
+		}
 	}
 
 }
