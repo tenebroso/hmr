@@ -2957,11 +2957,6 @@ input[type="submit"].btn.btn-mini {
     padding: 20px 0 15px 0;
     border-bottom: 1px solid #293240;
   }
-  #navbar-mobile ul li a:after {
-    float: right;
-    font-size: 11px;
-    content: "+";
-  }
   #navbar-mobile ul li a:hover {
     color: white;
     text-decoration: none;
@@ -2973,11 +2968,6 @@ input[type="submit"].btn.btn-mini {
     padding: 10px 0 10px 25px;
     font-family: 'Circe-Light', sans-serif;
     text-transform: uppercase;
-  }
-  #navbar-mobile ul ul li a:after {
-    float: right;
-    font-size: 11px;
-    content: "»";
   }
 }
 
@@ -6678,6 +6668,9 @@ ul.fullsize li {
     height: 169px;
     margin-top: -169px;
     clear: both;
+  }
+  .content-info h4 {
+    line-height: 1;
   }
   .scrollTop {
     border-bottom: 1px solid #55616f;
