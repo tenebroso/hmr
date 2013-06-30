@@ -5464,6 +5464,27 @@ a:hover {
   color: #ffffff;
 }
 
+.hentry header .entry-title a:after {
+  margin: 0 0 0 10px;
+  font-size: 24px;
+  content: "»";
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transform: translate3d(0, 0, 0);
+     -moz-transform: translate3d(0, 0, 0);
+       -o-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: 0.5s;
+     -moz-transition: 0.5s;
+       -o-transition: 0.5s;
+          transition: 0.5s;
+}
+
+.hentry header .entry-title a:hover:after {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
 .hentry .byline {
   margin: .5em 0 2em 0;
   color: #55616f;
@@ -5610,6 +5631,34 @@ a:hover {
 
 .sidebar .widget h3 {
   margin: 0;
+}
+
+.sidebar .widget .cat-item a {
+  position: relative;
+  display: block;
+}
+
+.sidebar .widget .cat-item a:before {
+  position: absolute;
+  top: -2px;
+  left: -12px;
+  color: white;
+  content: "»";
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transform: translate3d(0, 0, 0);
+     -moz-transform: translate3d(0, 0, 0);
+       -o-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: 0.5s;
+     -moz-transition: 0.5s;
+       -o-transition: 0.5s;
+          transition: 0.5s;
+}
+
+.sidebar .widget .cat-item a:hover:before {
+  opacity: 1;
+  filter: alpha(opacity=100);
 }
 
 .sidebar .widget-inner form {
@@ -5879,6 +5928,12 @@ ul.fullsize li {
 .page-template-template-portfolio-php .content-info,
 .single-capability .content-info {
   display: none;
+}
+
+.page-template-template-portfolio-php .scrollTop,
+.single-capability .scrollTop {
+  position: relative;
+  z-index: 999;
 }
 
 .page-template-template-portfolio-php {
