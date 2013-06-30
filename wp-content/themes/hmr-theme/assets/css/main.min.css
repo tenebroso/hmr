@@ -2733,7 +2733,7 @@ input[type="submit"].btn.btn-mini {
 .nav > li > a {
   display: inline-block;
   padding: 15px 20px 11px 20px;
-  font-family: 'Circe-Light', sans-serif;
+  font-family: 'Circe-Regular', sans-serif;
   font-size: 20px;
   line-height: 1.2;
   color: #ffffff;
@@ -5840,8 +5840,8 @@ ul.fullsize li {
 .single-capability .meta-box {
   position: absolute;
   bottom: 6%;
-  left: calc(32%);
-  left: -webkit-calc(32%);
+  left: calc(32.5%);
+  left: -webkit-calc(32.5%);
   z-index: 100;
   width: 35%;
   padding: 20px;
@@ -5950,7 +5950,8 @@ ul.fullsize li {
 }
 
 .single-capability .gallery-footer h4 {
-  color: blueLighter;
+  top: -1px;
+  color: #a4adb5;
 }
 
 .bx-wrapper {
@@ -6615,6 +6616,10 @@ ul.fullsize li {
   }
   .hentry {
     padding-right: 1em;
+  }
+  .credit {
+    position: relative;
+    top: 30px;
   }
   .wrap {
     padding-bottom: 129px;

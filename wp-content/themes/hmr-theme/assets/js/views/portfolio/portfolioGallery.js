@@ -50,7 +50,7 @@ var HMR = HMR || {};
 
     loadFirstImage = function () {
         current = 0;
-        changeBackgroundImage( $thumbs.eq(current).data('img'), 1000 );
+        changeBackgroundImage( $thumbs.eq(current).data('img'), 500 );
         $thumbs.eq(current).addClass('active');
     };
     
@@ -60,7 +60,7 @@ var HMR = HMR || {};
         timer = window.setInterval(function() {
             current++;
             if(current > len-1) current = 0;
-            changeBackgroundImage( $thumbs.eq(current).data('img'), 1000 );
+            changeBackgroundImage( $thumbs.eq(current).data('img'), 500 );
             $thumbs.removeClass('active');
             $thumbs.eq(current).addClass('active');
             $slider.goToNextSlide();
@@ -124,7 +124,7 @@ var HMR = HMR || {};
             if(current < 0) current = endLen;
             $credit.transition({opacity:0}, 250, 'ease');
             changeFooterCredit($($thumbs.eq(current)).data('id'));
-            changeBackgroundImage( $thumbs.eq(current).data('img'), 1000 );
+            changeBackgroundImage( $thumbs.eq(current).data('img'), 500 );
             
         });    
     };

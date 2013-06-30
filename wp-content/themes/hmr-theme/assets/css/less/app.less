@@ -595,8 +595,8 @@ ul.fullsize {
 		width:35%;
 		padding:20px;
 		position:absolute;
-		left: calc(35% - 3em);
-		left:-webkit-calc(35% - 3em);
+		left: calc(35.5% - 3em);
+		left:-webkit-calc(35.5% - 3em);
 		bottom:6%;
 		text-align:center;
 		z-index:100;
@@ -696,7 +696,8 @@ ul.fullsize {
 .single-capability {
 	.gallery-footer {
 		h4 {
-			color:blueLighter;
+			color:@blueLighter;
+			top:-1px;
 		}
 	}
 }
@@ -1258,6 +1259,10 @@ ul.fullsize {
 	}
 	.hentry {
 		padding-right:1em;
+	}
+	.credit {
+		position:relative;
+		top:30px;
 	}
 	.wrap {
 		overflow:auto;
