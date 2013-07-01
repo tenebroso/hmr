@@ -34,8 +34,21 @@ var HMR = HMR || {};
         maxSlides:12, 
         moveSlides:1, 
         slideMargin:1,
-        slideWidth:70
+        slideWidth:70,
+        onSlideBefore: function(_$el, _oldIndex, _newIndex) {
+            $('.active').removeClass('active');
+            _$el.addClass('active');
+        }//,
+        // infiniteLoop: false//,
+        // onSlideAfter: function(el, old, _new) {
+        //     console.log(el);
+        //     console.log(old);
+        //     console.log(_new);            
+        // }
     });
+
+
+    // $slid            
     
     
     // This will swap out the backgrund image
@@ -84,7 +97,7 @@ var HMR = HMR || {};
         startTimer();
 
         // Handle clicks on ('.slide_thumb') elements
-        $thumbs.on('click', function() {
+        $('.thumb_nav').on('click', '.slide_thumb', function() {
 
             $thumbs.removeClass('active');
             $(this).addClass('active');
@@ -117,13 +130,13 @@ var HMR = HMR || {};
                current--;
                $slider.goToPrevSlide();
            }
-
-           $('.active').removeClass('active');
+           
+           // $('.active').removeClass('active');
            
             if(current > endLen) current = 0;
             if(current < 0) current = endLen;
 
-            $thumbs.eq(current).addClass('active');
+            // $thumbs.eq(current).addClass('active');
 
             $credit.transition({opacity:0}, 250, 'ease');
             changeFooterCredit($($thumbs.eq(current)).data('id'));
