@@ -119,6 +119,7 @@ HMR.MapTest = function() {
         styles:styles,
         mapTypeControl: false,
         panControl: false,
+        draggable: false,
         maxZoom: 16,
         minZoom: 16,
         zoomControl: false,
