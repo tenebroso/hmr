@@ -26,7 +26,7 @@ var HMR = HMR || {};
         len = $thumbs.length, // This is the # of thubmnails total
         changeBackgroundImage,
         changeFooterCredit,
-        timer, startTimer, initialize;
+        timer, startTimer, initialize, changeIt;
 
     var $slider = $($nav).bxSlider({
         pager:false, 
@@ -38,6 +38,7 @@ var HMR = HMR || {};
         onSlideBefore: function(_$el, _oldIndex, _newIndex) {
             $('.active').removeClass('active');
             _$el.addClass('active');
+            changeIt(_$el);
         }//,
         // infiniteLoop: false//,
         // onSlideAfter: function(el, old, _new) {
@@ -96,22 +97,32 @@ var HMR = HMR || {};
         // Start timer
         startTimer();
 
-        // Handle clicks on ('.slide_thumb') elements
-        $('.thumb_nav').on('click', '.slide_thumb', function() {
-            var _id = $(this).data('id');
-            // $thumbs.removeClass('active');
-            // $(this).addClass('active');
-        
+
+        changeIt = function (_$el) {
             if(timer) {
                 window.clearInterval(timer);
                 timer = null;
             }
 
+            $credit.transition({opacity:0}, 250, 'ease');
+            changeFooterCredit(_$el.data('id'));
+            changeBackgroundImage(_$el.data('img'), 500);            
+        }
+
+        // Handle clicks on ('.slide_thumb') elements
+        $('.thumb_nav').on('click', '.slide_thumb', function() {
+            var _id = $(this).data('id');
+        
+            // if(timer) {
+            //     window.clearInterval(timer);
+            //     timer = null;
+            // }
+
             $slider.goToSlide(_id);
 
-            $credit.transition({opacity:0}, 250, 'ease');
-            changeFooterCredit($(this).data('id'));
-            changeBackgroundImage($(this).data('img'), 500);
+            // $credit.transition({opacity:0}, 250, 'ease');
+            // changeFooterCredit($(this).data('id'));
+            // changeBackgroundImage($(this).data('img'), 500);
         });    
         
         
@@ -121,10 +132,10 @@ var HMR = HMR || {};
            var endLen = len-1,
                 oldCur = current;
 
-            if(timer) {
-                window.clearInterval(timer);
-                timer = null;
-            }           
+            // if(timer) {
+            //     window.clearInterval(timer);
+            //     timer = null;
+            // }           
            
            if($(this).data('dir') === 'next') {
                current++;
@@ -136,14 +147,14 @@ var HMR = HMR || {};
            
            // $('.active').removeClass('active');
            
-            if(current > endLen) current = 0;
-            if(current < 0) current = endLen;
+            // if(current > endLen) current = 0;
+            // if(current < 0) current = endLen;
 
             // $thumbs.eq(current).addClass('active');
 
-            $credit.transition({opacity:0}, 250, 'ease');
-            changeFooterCredit($($thumbs.eq(current)).data('id'));
-            changeBackgroundImage( $thumbs.eq(current).data('img'), 500 );
+            // $credit.transition({opacity:0}, 250, 'ease');
+            // changeFooterCredit($($thumbs.eq(current)).data('id'));
+            // changeBackgroundImage( $thumbs.eq(current).data('img'), 500 );
             
         });    
     };
