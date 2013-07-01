@@ -102,7 +102,8 @@ var HMR = HMR || {};
         // Handle click of big arrows
         $bigArrows.on('click', function() {
            
-           var endLen = len-1;
+           var endLen = len-1,
+                oldCur = current;
 
             if(timer) {
                 window.clearInterval(timer);
@@ -117,11 +118,13 @@ var HMR = HMR || {};
                $slider.goToPrevSlide();
            }
 
-            $thumbs.removeClass('active');
-            $thumbs.eq(current).addClass('active');
+           $('.active').removeClass('active');
            
             if(current > endLen) current = 0;
             if(current < 0) current = endLen;
+
+            $thumbs.eq(current).addClass('active');
+
             $credit.transition({opacity:0}, 250, 'ease');
             changeFooterCredit($($thumbs.eq(current)).data('id'));
             changeBackgroundImage( $thumbs.eq(current).data('img'), 500 );
