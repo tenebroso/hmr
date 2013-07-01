@@ -98,14 +98,17 @@ var HMR = HMR || {};
 
         // Handle clicks on ('.slide_thumb') elements
         $('.thumb_nav').on('click', '.slide_thumb', function() {
-
-            $thumbs.removeClass('active');
-            $(this).addClass('active');
+            var _id = $(this).data('id');
+            // $thumbs.removeClass('active');
+            // $(this).addClass('active');
         
             if(timer) {
                 window.clearInterval(timer);
                 timer = null;
             }
+
+            $slider.goToSlide(_id);
+
             $credit.transition({opacity:0}, 250, 'ease');
             changeFooterCredit($(this).data('id'));
             changeBackgroundImage($(this).data('img'), 500);
