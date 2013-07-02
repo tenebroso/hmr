@@ -21,7 +21,7 @@
 
           <li>
           
-            <h4><?php bloginfo('title');?></h4>
+            <h4><?php if(is_single('118')) { ?>HMR<?php } else { ?><?php bloginfo('title');?><?php } ?></h4>
             
             <?php $credit = get_sub_field('photo_credit'); $url = get_sub_field('photo_credit_url'); if ($credit) { ?>
             <p>Photography by: <?php if($url) { ?><a href="<?php echo $url; ?>"><?php } ?><?php echo $credit;?><?php if($url) { ?></a><?php } ?></p>

@@ -2957,6 +2957,32 @@ input[type="submit"].btn.btn-mini {
   background: none !important;
 }
 
+@media (max-width: 885px) and (min-width: 768px) {
+  .nav > li a {
+    padding: 15px 15px 11px 15px;
+    font-size: 19px;
+  }
+  .nav > li a:hover {
+    color: #a6a6a6;
+    background: none !important;
+  }
+  .nav > li.menu-hmr {
+    margin-right: 27px;
+  }
+  .nav > li.menu-service {
+    margin-right: 17px;
+  }
+  .nav > li.menu-portfolio {
+    margin-right: 27px;
+  }
+  .nav > li.menu-blog {
+    margin-right: 27px;
+  }
+  .nav > li.menu-press {
+    margin-right: 30px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   #navbar-mobile ul {
     margin-top: 15px;
@@ -3087,6 +3113,7 @@ input[type="submit"].btn.btn-mini {
 .modal-header .close {
   position: relative;
   top: 35px;
+  z-index: 999;
   display: block;
   width: 30px;
   height: 30px;
@@ -5925,6 +5952,7 @@ ul.fullsize li {
 .single-capability .meta-box h2 {
   margin: 0 0 10px 0;
   font-size: 24px;
+  line-height: 1.2;
   color: #a6a6a6;
   text-transform: uppercase;
 }
@@ -7042,6 +7070,9 @@ ul.fullsize li {
     min-height: 440px;
     margin: 0 0 40px 0;
   }
+  .capability .hover {
+    display: none !important;
+  }
 }
 
 @media (min-width: 1000px) {
@@ -7056,9 +7087,8 @@ ul.fullsize li {
     padding: 27px 5px;
     background: none;
   }
-  .capability .hover {
-    top: 19%;
-    left: 28%;
+  .touch .capability .hover {
+    display: none !important;
   }
   .team-photo {
     min-height: 344px;
@@ -7073,7 +7103,9 @@ ul.fullsize li {
 
 @media (max-width: 901px) and (min-width: 768px) {
   .bx-wrapper {
+    right: 8.5%;
+    left: 8.5%;
     width: 83%;
-    margin-left: -38% !important;
+    margin-left: auto !important;
   }
 }
