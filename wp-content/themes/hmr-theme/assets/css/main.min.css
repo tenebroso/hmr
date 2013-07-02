@@ -6267,11 +6267,14 @@ ul.fullsize li {
   font-family: 'ArvoItalic';
 }
 
+.team-photo-container {
+  margin: 50px auto 0 auto;
+}
+
 .team-photo {
   position: relative;
   width: 100%;
   min-height: 475px;
-  margin: 0 0 100px 0;
 }
 
 .team-photo img {
@@ -6772,7 +6775,7 @@ ul.fullsize li {
    Media Queries
    ========================================================================== */
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
   .team-photo .hover {
     display: none;
   }
@@ -7123,6 +7126,15 @@ ul.fullsize li {
 @media (min-width: 1000px) {
   .page-template-template-capabilities-php .container {
     width: 999px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .team-photo-container {
+    width: 1000px;
+  }
+  .team-photo {
+    min-height: 475px;
   }
 }
 

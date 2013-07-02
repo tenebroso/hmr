@@ -913,6 +913,10 @@ ul.fullsize {
 	}
 }
 
+.team-photo-container {
+	margin:50px auto 0 auto;
+}
+
 .team-photo {
 	img {
 		position:absolute;
@@ -922,7 +926,6 @@ ul.fullsize {
 	position:relative;
 	width:100%;
 	min-height:475px;
-	margin:0 0 100px 0;
 	.hover {
 		cursor:pointer;
 		position:absolute;
@@ -1324,7 +1327,7 @@ ul.fullsize {
    Media Queries
    ========================================================================== */
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
 
 	.team-photo {
 		.hover {
@@ -1770,6 +1773,15 @@ ul.fullsize {
 		}
 	}
 
+}
+
+@media (min-width: 1000px) and (max-width:1200px) { 
+	.team-photo-container {
+		width:1000px;
+	}
+	.team-photo {
+		min-height:475px;
+	}
 }
 
 @media (max-width:979px) and (min-width:768px) { 

@@ -1,5 +1,7 @@
 
-<?php get_template_part('templates/content', 'team-hero'); ?>
+<?php //get_template_part('templates/content', 'team-hero'); 
+	  // This template part now lives in base.php
+?>
 
 <div class="row-fluid">
 
