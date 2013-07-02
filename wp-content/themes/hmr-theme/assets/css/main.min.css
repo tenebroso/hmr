@@ -6391,7 +6391,18 @@ ul.fullsize li {
   margin: 0 0 25px 0;
 }
 
+#map_holder #coverup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+}
+
 #map_holder .container {
+  position: relative;
+  z-index: 201;
   height: 450px;
   margin: -450px auto 0;
 }

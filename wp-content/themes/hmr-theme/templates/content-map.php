@@ -1,5 +1,6 @@
 
 <div id="map_holder">
+	<div id="coverup"></div>
 	<div id="map_nest"></div>
 	<div class="container">
 		<div class="row-fluid">
