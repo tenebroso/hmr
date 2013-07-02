@@ -6690,6 +6690,10 @@ ul.fullsize li {
   visibility: visible;
 }
 
+.touch .hover .hidden {
+  display: none !important;
+}
+
 /* ==========================================================================
    Footer
    ========================================================================== */
@@ -7145,6 +7149,9 @@ ul.fullsize li {
     background: none;
   }
   .touch .capability .hover {
+    display: none !important;
+  }
+  .touch .hover .hidden {
     display: none !important;
   }
   .team-photo {
