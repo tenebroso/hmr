@@ -2825,19 +2825,23 @@ input[type="submit"].btn.btn-mini {
 
 .sub-nav .menu li.active a {
   color: white;
-  background: #071222 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABM4AAAAXCAYAAADz9wOhAAADhUlEQVR42u3dXajfcwDH8Z2zzibLUbNFpH4bNf087GJSv8y4oEhbIRdGS2iSC7aShyQUufF0Q6i5QC7MwwUKTbHc2JIotLKULXmsLctDZ4fPr37/+obpmPPn/P//16veF3s653++/1/tnE//h3lV3WyUJI10G9LR8+iLnO38tM51JkmSJA1c69pv6H+TJI18+9Oj6SRT16wNZpNpU9rt+pIkSZIGsu3tN/ZPSJJGureL/xgOppfTGtPXYQ9my9PDaV9xrrtcZ5IkSdLAdYufcABox54z0pb0czH27ExXpQVOaEZneE56MU0VZ7gtrU3jTggAAABggFV1c2y6O31djD970x1piRP603lNpPXdyNg7r3Z8fDqtdEIAAAAAQ6aqm4XpmvRRMQgd6B6ufIrzaRan29Ke4nzasfGedJwrCAAAAGAEVHVzfnq1e/2zdiCaTq+nC9LYiJ3FivR4NyL2BrN2XLw2HeFqAQAAABhB3Wj0WPqxGI0+TtcN+2hUjIfTxXj4Wvf7Y64OAAAAAHpPU7w1fVkMaN+ke4fpaYp/83TV9hFnK1wJAAAAAPyl7oXxr0jvD9ML4x/iDRL2dK9pttg9DwAAAMCMVXVzdnohTRVj07a0No0PyNdwetrSjX+9r2FH966ZE+5lAAAAAA5bVTdVejDtK8anXenGtGgO3t7xdHF6q7i97fi3Na12jwIAAAAwq6q6OSrdlD4vBqkf0gPpxDlw+xalG9Jnxe1rx76H0jL3IAAAAAB91T2i65L0TjFQ/ZqeT2f9D7fnhG68+764Pe24d3OadI8BAAAA8J+r6mZVeib9UoxW76XL0/w+f+4z03PdaNf73O+mS/v9uQEAAABgRqq6OT7dl74tRqwv0ubZfNRXO4ily9L2Pzza7dl2xHNPAAAAADAnVXVzZNqYPimGrf3pkbT8X3zcybQp7S4+7nfp/na0c/IAAAAADISqbsbShemNNN0NXQfTS2nNP/g4y7oX9y/f0fPTdH070jlpAAAAAAZWVTenpifTT8X4tTNdmSYO8W9Wp61pqvv77fj2ZrqoHeWcKgAAAABDo6qbJenO9FUxoO1Nt6dj2hEtrU87ij9vx7an0mlOEAAAAIChVtXNgrQhfVAMZAe6Ea3363ZcuystdWIAAAAAjJyqbs5Lr3Svf9YOZh+mq9NCpwMAAADAyKvq5uR0rpMAAAD67XddQRsBHS8PoQAAAABJRU5ErkJggg==) no-repeat -372px 51px;
+  background: #071222 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABM4AAAAXCAYAAADz9wOhAAADhUlEQVR42u3dXajfcwDH8Z2zzibLUbNFpH4bNf087GJSv8y4oEhbIRdGS2iSC7aShyQUufF0Q6i5QC7MwwUKTbHc2JIotLKULXmsLctDZ4fPr37/+obpmPPn/P//16veF3s653++/1/tnE//h3lV3WyUJI10G9LR8+iLnO38tM51JkmSJA1c69pv6H+TJI18+9Oj6SRT16wNZpNpU9rt+pIkSZIGsu3tN/ZPSJJGureL/xgOppfTGtPXYQ9my9PDaV9xrrtcZ5IkSdLAdYufcABox54z0pb0czH27ExXpQVOaEZneE56MU0VZ7gtrU3jTggAAABggFV1c2y6O31djD970x1piRP603lNpPXdyNg7r3Z8fDqtdEIAAAAAQ6aqm4XpmvRRMQgd6B6ufIrzaRan29Ke4nzasfGedJwrCAAAAGAEVHVzfnq1e/2zdiCaTq+nC9LYiJ3FivR4NyL2BrN2XLw2HeFqAQAAABhB3Wj0WPqxGI0+TtcN+2hUjIfTxXj4Wvf7Y64OAAAAAHpPU7w1fVkMaN+ke4fpaYp/83TV9hFnK1wJAAAAAPyl7oXxr0jvD9ML4x/iDRL2dK9pttg9DwAAAMCMVXVzdnohTRVj07a0No0PyNdwetrSjX+9r2FH966ZE+5lAAAAAA5bVTdVejDtK8anXenGtGgO3t7xdHF6q7i97fi3Na12jwIAAAAwq6q6OSrdlD4vBqkf0gPpxDlw+xalG9Jnxe1rx76H0jL3IAAAAAB91T2i65L0TjFQ/ZqeT2f9D7fnhG68+764Pe24d3OadI8BAAAA8J+r6mZVeib9UoxW76XL0/w+f+4z03PdaNf73O+mS/v9uQEAAABgRqq6OT7dl74tRqwv0ubZfNRXO4ily9L2Pzza7dl2xHNPAAAAADAnVXVzZNqYPimGrf3pkbT8X3zcybQp7S4+7nfp/na0c/IAAAAADISqbsbShemNNN0NXQfTS2nNP/g4y7oX9y/f0fPTdH070jlpAAAAAAZWVTenpifTT8X4tTNdmSYO8W9Wp61pqvv77fj2ZrqoHeWcKgAAAABDo6qbJenO9FUxoO1Nt6dj2hEtrU87ij9vx7an0mlOEAAAAIChVtXNgrQhfVAMZAe6Ea3363ZcuystdWIAAAAAjJyqbs5Lr3Svf9YOZh+mq9NCpwMAAADAyKvq5uR0rpMAAAD67XddQRsBHS8PoQAAAABJRU5ErkJggg==) no-repeat -372px 50px;
+}
+
+.sub-nav .menu li.active.menu-testimonials a {
+  background-position: -364px 50px;
 }
 
 .sub-nav .menu li.active.menu-our-team a {
-  background-position: -379px 51px;
+  background-position: -379px 50px;
 }
 
 .sub-nav .menu li.active.menu-clients a {
-  background-position: -385px 51px;
+  background-position: -385px 50px;
 }
 
 .sub-nav .menu li.active.menu-venues a {
-  background-position: -386px 51px;
+  background-position: -386px 50px;
 }
 
 .up .menu li {
@@ -6694,6 +6698,10 @@ ul.fullsize li {
   display: none !important;
 }
 
+.touch .capabiilty .hover {
+  display: none !important;
+}
+
 /* ==========================================================================
    Footer
    ========================================================================== */
@@ -7114,16 +7122,6 @@ ul.fullsize li {
     padding: 25px 0 0;
     margin: 25px 0;
     border-top: 1px solid #293240;
-  }
-}
-
-@media (max-width: 1200px) and (min-width: 768px) {
-  .team-photo {
-    min-height: 440px;
-    margin: 0 0 40px 0;
-  }
-  .capability .hover {
-    display: none !important;
   }
 }
 
