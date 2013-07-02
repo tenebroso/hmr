@@ -19,29 +19,14 @@
 		speed:3000,
 		containerResize: false,
 		slideResize: false,
-		fit: 1,
-		next:   '#next', 
-      	prev:   '#prev',
+		fit: 1
 	});
 
 	$('.gallery-footer').cycle({
 		fx: 'fade',
 		delay: 1000,
-		speed:3000,
-		next:   '#next', 
-      	prev:   '#prev',
+		speed:3000
 	});
-
-
-	$("#wrap").touchwipe({
-		wipeLeft: function() {
-			$("#my_slider").cycle("next");
-	    },
-	    wipeRight: function() {
-			$("#my_slider").cycle("prev");
-	    }
-	});
-	
   };
 
 })();
