@@ -377,10 +377,29 @@ a {
 		color:@white;
 		font-size:15px;
 		font-family: 'Circe-Regular';
-		padding:10px 14px;
+		padding:10px 40px 10px 14px;
 		.border-radius(2px);
 		width:100%;
 		line-height:1.5;
+	}
+	#searchsubmit {
+		position:absolute;
+		right:7px;
+		top:10px;
+		.hide-text();
+		.opacity(70);
+		.translate3d(0,0,0);
+		.transition(.25s);
+
+		.size(24px,24px);
+		margin:0;
+		padding:0;
+		background: url(@fbsprite);
+  		background: none, url(@sprite);
+  		background-position:-168px -262px;
+  		&:hover {
+  			.opacity(100);
+  		}
 	}
 	.widget {
 		border-bottom:1px solid @blue;
@@ -419,6 +438,7 @@ a {
 	.widget-inner {
 		form {
 			margin:0;
+			position:relative;
 		}
 	}
 	font-size:14px;
