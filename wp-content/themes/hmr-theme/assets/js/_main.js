@@ -44,6 +44,7 @@ HMR.Site = {
     init: function() {
 
       HMR.sidebarPadding();
+      $(".type-post").fitVids();
 
       // Call the capability detail slideshow & description fades
       if($('.single-capability').length) {
