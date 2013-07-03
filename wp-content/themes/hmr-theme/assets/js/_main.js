@@ -10,56 +10,47 @@ HMR.Site = {
     init: function() {
       HMR.nav = {};
       HMR.navSlideToggle();
+      HMR.navMobileVersion();
+      HMR.pageFading();
       $('#s').clearField();
-      $("body").show();
-      var navigation = responsiveNav("#navbar-mobile", {
-        animate: true,
-        openPos: "relative",
-        transition:200,
-        open: function () { 
-          $('#nav-toggle').addClass('opened');
-        },
-        close: function() { 
-          $('#nav-toggle').removeClass('opened');
-        }
-      });
-      $(".scrollTop a, .post-type-archive-team a, .back a").click(function(event){
-        var isMeta = event.which === 115 || event.ctrlKey || event.metaKey || event.which === 19;
-        if (!isMeta) {
-          linkLocation = this.href;
-          $("body").fadeOut(500, redirectPage);
-          return false;
-        }
-      });
-      function redirectPage() {
-        window.location = linkLocation;
-      }
-      },
-      finalize: function() { }
+    }
   },
   // Home page
   home: {
     init: function() {
+
+      // The following call deal with fading in images/copy on the homepage
       HMR.homepageImageViewer();
+
+      // Specific homepage based body fade
       HMR.homepageBodyFade();
     }
   },
   // Connect
   connect: {
     init: function() {
+
+      // Uniform is a plugin to style the dropdown select in the form
       HMR.uniform();
+
+      // Call the Google Map
       HMR.MapTest();
+
+      //Clear floats on the Connect page, the points of contact section
       $('.pointsOfContact .points:nth-child(4n+5)').addClass('clear');
     }
   },
   single: {
     init: function() {
+      // Call the capability detail slideshow & description fades
       if($('.single-capability').length) {
         HMR.capabilityBGSlideShow();
         HMR.capabilityDescriptionFades();
         $('.menu-capabilities').addClass('active');
         $('.menu-blog').removeClass('active');
       }
+
+      // Add the active class to the nav on a individual bio pages
       if($('.single-team').length) {
         $('.menu li.menu-our-team').addClass('active');
       }
@@ -67,26 +58,13 @@ HMR.Site = {
   },
   page: {
     init: function() {
-      if($('.page-template-template-portfolio-php').length) {
-        HMR.portfolioGallery();
-      }
-      if($('.press-releases, .page-template-template-testimonials-php').length) {
-        HMR.lightbox();
-      }
-      if($('.page-template-template-capabilities-php').length) {
-        $('.first-row .span4:nth-child(4n+4)').addClass('clear');
-         $('.first-row .span4:nth-child(3n+3)').addClass('no-right');
-      }
-      $('.page-template-template-press-php .content .row-fluid .span3:nth-child(4n+9)').addClass('clear');
-      $('.page-template-template-testimonials-php .content .row-fluid .span3:nth-child(4n+9)').addClass('clear');
+      HMR.subNavFixes();
+      HMR.conditionals();
     }
   },
   archive: {
     init: function() {
-      if($('.post-type-archive-team').length) {
-        HMR.teamArchiveFaceMap();
-        $('article.span2:nth-child(6n+7)').addClass('clear');
-      }
+      HMR.conditionals();
     }
   }
 };
