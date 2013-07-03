@@ -39,10 +39,22 @@ var HMR = HMR || {};
       $slideToggle.removeClass("slideUp");
       $slideToggle.addClass("slideDown");
     }
+
+    $('.scrollTop').hover(
+      function () {
+        slideDown();
+      },
+      function () {
+        slideUp();
+      }
+    );
     
     
     HMR.nav.slideUp = slideUp;
     HMR.nav.slideDown = slideDown;
+
+    
+
 
   };
 
