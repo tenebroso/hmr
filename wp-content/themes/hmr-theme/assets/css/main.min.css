@@ -2733,7 +2733,7 @@ input[type="submit"].btn.btn-mini {
 .nav > li > a {
   display: inline-block;
   padding: 15px 20px 11px 20px;
-  font-family: 'Circe-Regular', sans-serif;
+  font-family: 'Circe-Light', sans-serif;
   font-size: 20px;
   line-height: 1.2;
   color: #ffffff;
@@ -2964,7 +2964,6 @@ input[type="submit"].btn.btn-mini {
 
 @media (max-width: 885px) and (min-width: 768px) {
   .nav > li a {
-    padding: 15px 15px 11px 15px;
     font-size: 19px;
   }
   .nav > li a:hover {
@@ -2972,19 +2971,19 @@ input[type="submit"].btn.btn-mini {
     background: none !important;
   }
   .nav > li.menu-hmr {
-    margin-right: 27px;
-  }
-  .nav > li.menu-service {
     margin-right: 17px;
   }
+  .nav > li.menu-service {
+    margin-right: 7px;
+  }
   .nav > li.menu-portfolio {
-    margin-right: 27px;
+    margin-right: 17px;
   }
   .nav > li.menu-blog {
-    margin-right: 27px;
+    margin-right: 17px;
   }
   .nav > li.menu-press {
-    margin-right: 30px;
+    margin-right: 20px;
   }
 }
 
