@@ -16,7 +16,7 @@ function hide_admin_menu()
 	}
 }
 
-//add_action('admin_head', 'hide_admin_menu');
+add_action('admin_head', 'hide_admin_menu');
 
 
 /* =============================================================================
