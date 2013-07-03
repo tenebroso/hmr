@@ -2814,6 +2814,7 @@ input[type="submit"].btn.btn-mini {
   margin: 0 0 -40px 0;
   font-family: 'Circe-Regular';
   font-size: 15px;
+  letter-spacing: 1px;
   color: #55616f;
   text-transform: uppercase;
 }
