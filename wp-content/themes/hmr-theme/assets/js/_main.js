@@ -44,7 +44,7 @@ HMR.Site = {
     init: function() {
 
       HMR.sidebarPadding();
-      
+
       // Call the capability detail slideshow & description fades
       if($('.single-capability').length) {
         HMR.capabilityBGSlideShow();
@@ -73,6 +73,7 @@ HMR.Site = {
   archive: {
     init: function() {
       HMR.conditionals();
+      HMR.sidebarPadding();
     }
   }
 };
