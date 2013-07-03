@@ -17,6 +17,7 @@
 							<li class="twitter"><a href="<?php the_field('twitter');?>">Twitter</a></li>
 							<li class="facebook"><a href="<?php the_field('facebook');?>">Facebook</a></li>
 							<li class="pinterest"><a href="<?php the_field('pinterest');?>">Pinterest</a></li>
+							<li class="instagram"><a href="<?php the_field('instagram_url');?>">Instagram</a></li>
 						</ul>
 					</div>
 				</div>

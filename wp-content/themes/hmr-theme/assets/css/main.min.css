@@ -6543,6 +6543,10 @@ ul.fullsize li {
   background-position: -228px -122px;
 }
 
+#map_holder .container .overlay .social-icons li.instagram {
+  background-position: -147px -167px;
+}
+
 #map_holder .container .overlay .social-icons li:hover {
   opacity: 0.7;
   filter: alpha(opacity=70);
