@@ -42,6 +42,9 @@ HMR.Site = {
   },
   single: {
     init: function() {
+
+      HMR.sidebarPadding();
+      
       // Call the capability detail slideshow & description fades
       if($('.single-capability').length) {
         HMR.capabilityBGSlideShow();
@@ -60,6 +63,11 @@ HMR.Site = {
     init: function() {
       HMR.subNavFixes();
       HMR.conditionals();
+    }
+  },
+  blog: {
+    init: function() {
+      HMR.sidebarPadding();
     }
   },
   archive: {
