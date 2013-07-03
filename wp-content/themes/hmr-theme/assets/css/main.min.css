@@ -2930,7 +2930,7 @@ input[type="submit"].btn.btn-mini {
 .slideToggle.slideUp {
   bottom: 0;
   height: 100%;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAICAQAAAC1vdwiAAAAeUlEQVQYGXXBIQ6CABQA0J8MFgrJ2Y1Uzdo5ABdwnsA70TWrmWrUSqJoYHPsuemmY+h70WfmaBb/ydSoZfGbhcbFylVjHkNW7s4mEabObpbRJ9eqpPEiVWnl8aXwcJDEh8TJQxFvNjo74+gxttdZR4QtSqMYMFJi+wTtXVTgC4pZRwAAAABJRU5ErkJggg==) no-repeat center center;
+  background: #293240 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAICAQAAAC1vdwiAAAAeUlEQVQYGXXBIQ6CABQA0J8MFgrJ2Y1Uzdo5ABdwnsA70TWrmWrUSqJoYHPsuemmY+h70WfmaBb/ydSoZfGbhcbFylVjHkNW7s4mEabObpbRJ9eqpPEiVWnl8aXwcJDEh8TJQxFvNjo74+gxttdZR4QtSqMYMFJi+wTtXVTgC4pZRwAAAABJRU5ErkJggg==) no-repeat center center;
 }
 
 .slideToggle.slideUp:hover {
@@ -2940,11 +2940,11 @@ input[type="submit"].btn.btn-mini {
 .slideToggle.slideDown {
   bottom: 0;
   height: 100%;
-  background: #293240 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAJCAYAAAA/33wPAAAAY0lEQVQoz2P4//+/OhAfBeLtQCzKQCQAqtUG4mNAvBWIBWGCHkD8A4gvEWMY1JBXQPwCiDXRJYkyDK8haIZ9x2UYUYYQMgzI1iHaEFyGkWUIFsOukG0IFsOek20IkmFuxBgCAG650wjxMe23AAAAAElFTkSuQmCC) no-repeat center center;
+  background: #a6a6a6 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAJCAYAAAA/33wPAAAAY0lEQVQoz2P4//+/OhAfBeLtQCzKQCQAqtUG4mNAvBWIBWGCHkD8A4gvEWMY1JBXQPwCiDXRJYkyDK8haIZ9x2UYUYYQMgzI1iHaEFyGkWUIFsOukG0IFsOek20IkmFuxBgCAG650wjxMe23AAAAAElFTkSuQmCC) no-repeat center center;
 }
 
 .slideToggle.slideDown:hover {
-  background-color: #a6a6a6;
+  background-color: #293240;
 }
 
 .page-template-template-portfolio-php .slideToggle,
@@ -5574,6 +5574,10 @@ a:hover {
 
 .single-post .post-nav {
   font-size: 14px;
+}
+
+.single-post .addthis_toolbox {
+  margin: 2em 0 0;
 }
 
 .pagination {
