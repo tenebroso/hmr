@@ -40,14 +40,16 @@ var HMR = HMR || {};
       $slideToggle.addClass("slideDown");
     }
 
-    $('.scrollTop').hover(
-      function () {
-        slideDown();
-      },
-      function () {
-        slideUp();
-      }
-    );
+    if($('.page-template-template-portfolio-php, .single-capability').length) {
+      $('.scrollTop').hover(
+        function () {
+          slideDown();
+        },
+        function () {
+          slideUp();
+        }
+      );
+    }
     
     
     HMR.nav.slideUp = slideUp;
