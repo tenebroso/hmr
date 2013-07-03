@@ -36,7 +36,7 @@ var HMR = HMR || {};
         slideMargin:1,
         slideWidth:70,
         onSlideBefore: function(_$el, _oldIndex, _newIndex) {
-            $('.active').removeClass('active');
+            $('.slide_thumb.active').removeClass('active');
             _$el.addClass('active');
             changeIt(_$el);
         }//,

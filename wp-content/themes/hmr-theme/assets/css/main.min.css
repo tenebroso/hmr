@@ -6102,13 +6102,13 @@ ul.fullsize li {
   position: absolute;
   bottom: 80px;
   left: 50%;
-  z-index: 200;
+  z-index: 301;
   width: 100%;
   margin-left: -426px !important;
 }
 
 .bx-wrapper .bx-viewport {
-  z-index: 201;
+  z-index: 302;
   height: 47px !important;
   padding: 4px 0;
 }
@@ -6197,12 +6197,11 @@ ul.fullsize li {
 
 .big_arrow {
   position: absolute;
-  top: 50%;
+  top: 0;
+  bottom: 0;
   z-index: 300;
   width: 50px;
-  height: 70px;
-  padding: 140px 0;
-  margin-top: -210px;
+  height: 100%;
   cursor: pointer;
   opacity: 0;
   filter: alpha(opacity=0);
