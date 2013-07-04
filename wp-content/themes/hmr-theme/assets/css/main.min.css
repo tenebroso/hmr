@@ -5407,8 +5407,8 @@ a:hover {
    ========================================================================== */
 
 .home .banner {
-  background: url(../img/gradient.png) repeat-x left top;
-  border-bottom: 1px solid #071222;
+  background: url(../img/gradient.png) repeat-x left -10px;
+  border-bottom: 1px solid #ffffff;
 }
 
 .home .banner .brand {
