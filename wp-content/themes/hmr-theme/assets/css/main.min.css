@@ -6876,6 +6876,19 @@ ul.fullsize li {
   }
 }
 
+@media (max-width: 940px) and (min-width: 768px) {
+  .single-capability .gallery-footer h4 {
+    font-size: 14px;
+  }
+  .single-capability .gallery-footer p {
+    margin: 2px 0 0;
+    font-size: 11px;
+  }
+  .single-capability .gallery-title h4 {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 767px) {
   {
     /* Team Page */
@@ -7200,16 +7213,16 @@ ul.fullsize li {
   }
 }
 
-@media (max-width: 979px) and (min-width: 768px) {
+@media (max-width: 999px) and (min-width: 768px) {
   .capability.span4 {
     width: 32%;
     padding: 27px 5px;
     background: none;
   }
-  .touch .capability .hover {
+  .capability .hover {
     display: none !important;
   }
-  .touch .hover .hidden {
+  .hover .hidden {
     display: none !important;
   }
   .team-photo {
