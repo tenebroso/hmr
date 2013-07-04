@@ -2,11 +2,12 @@
  * Roots 6.4.0
  */
 
+@import "bootstrap/fonts.less";
 @import "bootstrap/variables.less";
 @import "bootstrap/mixins.less";
 @import "bootstrap/responsive-utilities.less";
 @import "bootstrap/utilities.less";
-@import "bootstrap/fonts.less";
+
 
 /* ==========================================================================
    Base
@@ -24,7 +25,7 @@ html {
 }
 
 body { 
-	font-family:@serifFontFamily;
+	font-family:@sansFontFamily;
 }
 
 html, body {
@@ -37,18 +38,16 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 strong {
-	font-weight:normal;
-	font-family: 'ArvoBold';
-	em {
-		font-family: 'ArvoBoldItalic';
-	}
+	font-weight:700;
+	//em {
+		//font-family: 'ArvoBoldItalic';
+	//}
 }
 
 em {
-	font-family: 'ArvoItalic';
-	font-style:normal;
+	font-style:italic;
 	strong {
-		font-family: 'ArvoBoldItalic';
+		font-weight:700;
 	}
 }
 
@@ -153,8 +152,7 @@ a {
 		font-size:30px;
 		color:@gray;
 		text-align:center;
-		font-family: 'Circe-Light';
-		font-weight:normal;
+		font-weight:200;
 		text-transform:uppercase;
 		margin:.75em 0 1em 0;
 	}
@@ -331,13 +329,13 @@ a {
 		.current {
 			padding: 10px 20px 0;
 			position: relative;
-			top: -1px;
+			top: 1px;
 			border-top:1px solid @blue;
 		}
 		a {
 			border-top:1px solid @blue;
 			position: relative;
-			top: -1px;
+			top: 1px;
 			padding: 10px 20px 0;
 			&:hover {
 				border-top:1px solid white;
@@ -393,7 +391,7 @@ a {
 		border:none;
 		color:@white;
 		font-size:15px;
-		font-family: 'Circe-Regular';
+		font-family:@sansFontFamily;
 		padding:10px 40px 10px 14px;
 		.border-radius(2px);
 		width:100%;
@@ -521,7 +519,7 @@ a {
 		}
 	}
 	strong {
-		font-family: 'Circe-Bold';
+		font-weight:700;
 		font-size:16px;
 		font-weight:normal;
 		padding: 20px 0 0;
@@ -598,7 +596,8 @@ a {
 		display:none;
 		text-transform:uppercase;
 		font-size:15px;
-		font-family: 'Circe-Light';
+		font-family:@sansFontFamily;
+		font-weight:300;
 		.translate3d(0,0,0);
 	}
 }
@@ -649,7 +648,8 @@ ul.fullsize {
 			font-size:17px;
 			color:@blueLighter;
 			text-transform:uppercase;
-			font-family: 'Circe-Regular';
+			font-family:@sansFontFamily;
+			font-weight:300;
 			letter-spacing:.2em;
 			margin:15px 0 0;
 			text-align:center;
@@ -741,7 +741,8 @@ ul.fullsize {
 		font-size:17px;
 		color:white;
 		text-transform:uppercase;
-		font-family: 'Circe-Regular';
+		font-family:@sansFontFamily;
+		font-weight:400;
 		letter-spacing:.2em;
 		margin:15px 0 0;
 		text-align:center;
@@ -926,7 +927,8 @@ ul.fullsize {
 				font-size:13px;
 				display:block;
 				&.arvo {
-					font-family: 'ArvoItalic';
+					font-family:@serifFontFamily;
+					font-style:italic;
 				}
 			}
 		}
@@ -1014,7 +1016,8 @@ ul.fullsize {
 	.translate3d(0,0,0);
 	h4 {
 		font-size:16px;
-		font-family: 'Circe-Bold';
+		font-family:@sansFontFamily;
+		font-weight:700;
 		margin:0 0 5px 0;
 		line-height:1;
 		&:before {
@@ -1087,7 +1090,8 @@ ul.fullsize {
 				font-size:22px;
 				text-transform:uppercase;
 				margin:15px 0 0;
-				font-family: 'Circe-Light';
+				font-family:@sansFontFamily;
+				font-weight:300;
 				line-height:1.4;
 				&:before {
 					background: url(@fbsprite);
@@ -1103,7 +1107,8 @@ ul.fullsize {
 			}
 			.email {
 				font-size:24px;
-				font-family: 'Circe-Regular';
+				font-family:@sansFontFamily;
+				font-weight:400;
 				line-height:1.7;
 				&:before {
 					background: url(@fbsprite);
@@ -1172,7 +1177,8 @@ ul.fullsize {
 	}
 	strong {
 		font-size:18px;
-		font-family: 'Circe-Regular';
+		font-family:@sansFontFamily;
+		font-weight:400;
 	}
 	&.clear {
 		clear:left;
@@ -1183,8 +1189,13 @@ ul.fullsize {
 .credit {
 	color:@blueLight;
 	font-size:14px;
+	&.text-center
+	{
+		a {
+			font-weight:700;
+		}
+	}
 	a {
-		font-family: 'Circe-Bold';
 		color:@blueLight;
 		&:hover {
 			color:white;
@@ -1213,7 +1224,8 @@ ul.fullsize {
 		line-height:1.4;
 		margin:0;
 		em {
-			font-family: 'ArvoItalic';
+			font-family:@serifFontFamily;
+			font-style:italic;
 		}
 	}
 	.content {
@@ -1234,8 +1246,8 @@ ul.fullsize {
 	.date_heading {
 		font-size:14px;
 		color:@blueLight;
-		font-weight:normal;
-		font-family: 'Circe-Bold';
+		font-family:@sansFontFamily;
+		font-weight:700;
 		border-bottom:1px solid @blue;
 		text-align:center;
 		margin:0 0 20px 0;
@@ -1258,7 +1270,8 @@ ul.fullsize {
 		top: 50%;
 		left: 0;
 		display: none;
-		font-family: 'Circe-Light';
+		font-family:@sansFontFamily;
+		font-weight:300;
 		font-size: 15px;
 		text-align: center;
 		text-transform: uppercase;
@@ -1310,7 +1323,7 @@ ul.fullsize {
 
 .content-info { 
 	background:@blue;
-	font-family: 'Circe-Regular';
+	font-family:@sansFontFamily;
 	padding:20px 0;
 	p { 
 		font-size:13px;
@@ -1321,7 +1334,7 @@ ul.fullsize {
 		font-size:17px;
 		color:@blueLighter;
 		text-transform:uppercase;
-		font-family: 'Circe-Regular';
+		font-family:@sansFontFamily;
 		letter-spacing:.2em;
 		margin:15px 0 0;
 	}
@@ -1386,10 +1399,12 @@ ul.fullsize {
 	.hentry {
 		padding-right:1em;
 	}
-	//.credit {
-	//	position:relative;
-	//	top:30px;
-	//}
+	.connect {
+		.credit {
+			position:relative;
+			top:30px;
+		}
+	}
 	.wrap {
 		overflow:auto;
 		padding-bottom:129px;

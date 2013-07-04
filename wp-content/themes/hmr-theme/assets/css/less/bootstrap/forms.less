@@ -12,7 +12,8 @@
     padding:0 0 25px 0;
     overflow:hidden;
     .validation_error {
-      font-family:'Circe-Regular';
+      font-family:@sansFontFamily;
+      font-weight:400;
       color:@blueLight;
       text-align:center;
     }
@@ -69,14 +70,14 @@
       font-size:24px;
       color:@gray;
       text-align:center;
-      font-family: 'Circe-Regular';
       font-weight:normal;
       text-transform:uppercase;
       margin:.75em 0 1em 0;
     }
     .gform_description {
       font-size:15px;
-      font-family: 'ArvoItalic';
+      font-family: @sansFontFamily;
+      font-style:italic;
       display:block;
       text-align:center;
       margin:0 0 25px 0;
@@ -87,7 +88,7 @@
       color:@blueLighter;
       .border-radius(3px);
       font-size:15px;
-      font-family: 'Circe-Regular';
+      font-weight:normal;
       width:100%;
       line-height:26px;
       .transition-duration(.1s);
@@ -903,7 +904,7 @@ div.selector {
   div.selector span {
     color: @blueLighter; }
   div.selector select {
-    font-family: 'Circe-Regular';
+    font-weight:normal;
     font-size: 15px; }
   div.selector.disabled span, div.selector.disabled.active span {
     color: @gray; }

@@ -224,7 +224,7 @@ textarea {
 
 body {
   margin: 0;
-  font-family: 'Circe-Light', sans-serif;
+  font-family: 'Circe-Regular', sans-serif;
   font-size: 18px;
   line-height: 2;
   color: #ffffff;
@@ -659,7 +659,8 @@ a:focus {
 }
 
 .page-template-template-connect-php .gform_wrapper .validation_error {
-  font-family: 'Circe-Regular';
+  font-family: 'Circe-Regular', sans-serif;
+  font-weight: 400;
   color: #55616f;
   text-align: center;
 }
@@ -722,7 +723,6 @@ a:focus {
 
 .page-template-template-connect-php .gform_wrapper .gform_title {
   margin: .75em 0 1em 0;
-  font-family: 'Circe-Regular';
   font-size: 24px;
   font-weight: normal;
   color: #a6a6a6;
@@ -733,8 +733,9 @@ a:focus {
 .page-template-template-connect-php .gform_wrapper .gform_description {
   display: block;
   margin: 0 0 25px 0;
-  font-family: 'ArvoItalic';
+  font-family: 'Circe-Regular', sans-serif;
   font-size: 15px;
+  font-style: italic;
   text-align: center;
 }
 
@@ -742,8 +743,8 @@ a:focus {
 .page-template-template-connect-php .gform_wrapper textarea,
 .page-template-template-connect-php .gform_wrapper select {
   width: 100%;
-  font-family: 'Circe-Regular';
   font-size: 15px;
+  font-weight: normal;
   line-height: 26px;
   color: #a4adb5;
   background: #293240;
@@ -842,7 +843,7 @@ input,
 button,
 select,
 textarea {
-  font-family: 'Circe-Light', sans-serif;
+  font-family: 'Circe-Regular', sans-serif;
 }
 
 label {
@@ -1887,8 +1888,8 @@ div.selector span {
 }
 
 div.selector select {
-  font-family: 'Circe-Regular';
   font-size: 15px;
+  font-weight: normal;
 }
 
 div.selector.disabled span,
@@ -2733,8 +2734,9 @@ input[type="submit"].btn.btn-mini {
 .nav > li > a {
   display: inline-block;
   padding: 15px 20px 11px 20px;
-  font-family: 'Circe-Light', sans-serif;
+  font-family: 'Circe-Regular', sans-serif;
   font-size: 20px;
+  font-weight: 300;
   line-height: 1.2;
   color: #ffffff;
   text-transform: uppercase;
@@ -2812,8 +2814,9 @@ input[type="submit"].btn.btn-mini {
   display: inline-block;
   padding: 10px 15px 40px 15px;
   margin: 0 0 -40px 0;
-  font-family: 'Circe-Light';
+  font-family: 'Circe-Regular', sans-serif;
   font-size: 15px;
+  font-weight: 300;
   letter-spacing: 1px;
   color: #55616f;
   text-transform: uppercase;
@@ -2918,8 +2921,9 @@ input[type="submit"].btn.btn-mini {
 
 .slideToggle {
   position: absolute;
-  right: 0;
+  right: auto;
   bottom: 12px;
+  left: 0;
   z-index: 102;
   display: none;
   width: 43px;
@@ -3011,7 +3015,8 @@ input[type="submit"].btn.btn-mini {
   }
   #navbar-mobile ul ul li a {
     padding: 10px 0 10px 25px;
-    font-family: 'Circe-Light', sans-serif;
+    font-family: 'Circe-Regular', sans-serif;
+    font-weight: 300;
     text-transform: uppercase;
   }
 }
@@ -5029,6 +5034,94 @@ a.badge:focus {
  * Roots 6.4.0
  */
 
+@font-face {
+  font-family: 'Circe-Regular';
+  font-style: normal;
+  font-weight: 900;
+  src: url('webfonts/277C38_2_0.eot');
+  src: url('webfonts/277C38_2_0.eot?#iefix') format('embedded-opentype'), url('webfonts/277C38_2_0.woff') format('woff'), url('webfonts/277C38_2_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Circe-Regular';
+  font-style: normal;
+  font-weight: 700;
+  src: url('webfonts/277C38_3_0.eot');
+  src: url('webfonts/277C38_3_0.eot?#iefix') format('embedded-opentype'), url('webfonts/277C38_3_0.woff') format('woff'), url('webfonts/277C38_3_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Circe-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('webfonts/277C38_5_0.eot');
+  src: url('webfonts/277C38_5_0.eot?#iefix') format('embedded-opentype'), url('webfonts/277C38_5_0.woff') format('woff'), url('webfonts/277C38_5_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Circe-Regular';
+  font-style: normal;
+  font-weight: 300;
+  src: url('webfonts/277C38_0_0.eot');
+  src: url('webfonts/277C38_0_0.eot?#iefix') format('embedded-opentype'), url('webfonts/277C38_0_0.woff') format('woff'), url('webfonts/277C38_0_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Circe-Regular';
+  font-style: normal;
+  font-weight: 200;
+  src: url('webfonts/277C38_1_0.eot');
+  src: url('webfonts/277C38_1_0.eot?#iefix') format('embedded-opentype'), url('webfonts/277C38_1_0.woff') format('woff'), url('webfonts/277C38_1_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Circe-Regular';
+  font-style: normal;
+  font-weight: 100;
+  src: url('webfonts/277C38_4_0.eot');
+  src: url('webfonts/277C38_4_0.eot?#iefix') format('embedded-opentype'), url('webfonts/277C38_4_0.woff') format('woff'), url('webfonts/277C38_4_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ArvoRegular';
+  font-style: normal;
+  font-weight: 700;
+  src: url('webfonts/Arvo-Bold-webfont.eot');
+  src: url('webfonts/Arvo-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('webfonts/Arvo-Bold-webfont.woff') format('woff'), url('webfonts/Arvo-Bold-webfont.ttf') format('truetype'), url('webfonts/Arvo-Bold-webfont.svg#ArvoBold') format('svg');
+}
+
+@font-face {
+  font-family: 'ArvoRegular';
+  font-style: italic;
+  font-weight: 700;
+  src: url('webfonts/Arvo-BoldItalic-webfont.eot');
+  src: url('webfonts/Arvo-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'), url('webfonts/Arvo-BoldItalic-webfont.woff') format('woff'), url('webfonts/Arvo-BoldItalic-webfont.ttf') format('truetype'), url('webfonts/Arvo-BoldItalic-webfont.svg#ArvoBoldItalic') format('svg');
+}
+
+@font-face {
+  font-family: 'ArvoRegular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('webfonts/Arvo-Regular-webfont.eot');
+  src: url('webfonts/Arvo-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('webfonts/Arvo-Regular-webfont.woff') format('woff'), url('webfonts/Arvo-Regular-webfont.ttf') format('truetype'), url('webfonts/Arvo-Regular-webfont.svg#ArvoRegular') format('svg');
+}
+
+@font-face {
+  font-family: 'ArvoRegular';
+  font-style: italic;
+  font-weight: 400;
+  src: url('webfonts/Arvo-Italic-webfont.eot');
+  src: url('webfonts/Arvo-Italic-webfont.eot?#iefix') format('embedded-opentype'), url('webfonts/Arvo-Italic-webfont.woff') format('woff'), url('webfonts/Arvo-Italic-webfont.ttf') format('truetype'), url('webfonts/Arvo-Italic-webfont.svg#ArvoItalic') format('svg');
+}
+
+.circe {
+  font-family: 'Circe-Regular', sans-serif;
+}
+
+.arvo {
+  font-family: 'ArvoRegular', serif;
+}
+
 .clearfix {
   *zoom: 1;
 }
@@ -5165,82 +5258,6 @@ a.badge:focus {
   text-align: center;
 }
 
-@font-face {
-  font-family: 'Circe-Light';
-  src: url('webfonts/277C38_0_0.eot');
-  src: url('webfonts/277C38_0_0.eot?#iefix') format('embedded-opentype'), url('webfonts/277C38_0_0.woff') format('woff'), url('webfonts/277C38_0_0.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Circe-ExtraLight';
-  src: url('webfonts/277C38_1_0.eot');
-  src: url('webfonts/277C38_1_0.eot?#iefix') format('embedded-opentype'), url('webfonts/277C38_1_0.woff') format('woff'), url('webfonts/277C38_1_0.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Circe-ExtraBold';
-  src: url('webfonts/277C38_2_0.eot');
-  src: url('webfonts/277C38_2_0.eot?#iefix') format('embedded-opentype'), url('webfonts/277C38_2_0.woff') format('woff'), url('webfonts/277C38_2_0.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Circe-Bold';
-  src: url('webfonts/277C38_3_0.eot');
-  src: url('webfonts/277C38_3_0.eot?#iefix') format('embedded-opentype'), url('webfonts/277C38_3_0.woff') format('woff'), url('webfonts/277C38_3_0.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Circe-Thin';
-  src: url('webfonts/277C38_4_0.eot');
-  src: url('webfonts/277C38_4_0.eot?#iefix') format('embedded-opentype'), url('webfonts/277C38_4_0.woff') format('woff'), url('webfonts/277C38_4_0.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Circe-Regular';
-  src: url('webfonts/277C38_5_0.eot');
-  src: url('webfonts/277C38_5_0.eot?#iefix') format('embedded-opentype'), url('webfonts/277C38_5_0.woff') format('woff'), url('webfonts/277C38_5_0.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'ArvoRegular';
-  font-style: normal;
-  font-weight: normal;
-  src: url('webfonts/Arvo-Regular-webfont.eot');
-  src: url('webfonts/Arvo-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('webfonts/Arvo-Regular-webfont.woff') format('woff'), url('webfonts/Arvo-Regular-webfont.ttf') format('truetype'), url('webfonts/Arvo-Regular-webfont.svg#ArvoRegular') format('svg');
-}
-
-@font-face {
-  font-family: 'ArvoItalic';
-  font-style: normal;
-  font-weight: normal;
-  src: url('webfonts/Arvo-Italic-webfont.eot');
-  src: url('webfonts/Arvo-Italic-webfont.eot?#iefix') format('embedded-opentype'), url('webfonts/Arvo-Italic-webfont.woff') format('woff'), url('webfonts/Arvo-Italic-webfont.ttf') format('truetype'), url('webfonts/Arvo-Italic-webfont.svg#ArvoItalic') format('svg');
-}
-
-@font-face {
-  font-family: 'ArvoBold';
-  font-style: normal;
-  font-weight: normal;
-  src: url('webfonts/Arvo-Bold-webfont.eot');
-  src: url('webfonts/Arvo-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('webfonts/Arvo-Bold-webfont.woff') format('woff'), url('webfonts/Arvo-Bold-webfont.ttf') format('truetype'), url('webfonts/Arvo-Bold-webfont.svg#ArvoBold') format('svg');
-}
-
-@font-face {
-  font-family: 'ArvoBoldItalic';
-  font-style: normal;
-  font-weight: normal;
-  src: url('webfonts/Arvo-BoldItalic-webfont.eot');
-  src: url('webfonts/Arvo-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'), url('webfonts/Arvo-BoldItalic-webfont.woff') format('woff'), url('webfonts/Arvo-BoldItalic-webfont.ttf') format('truetype'), url('webfonts/Arvo-BoldItalic-webfont.svg#ArvoBoldItalic') format('svg');
-}
-
-.circe {
-  font-family: 'Circe-Regular';
-}
-
-.arvo {
-  font-family: 'ArvoRegular';
-}
-
 /* ==========================================================================
    Base
    ========================================================================== */
@@ -5257,7 +5274,7 @@ html {
 }
 
 body {
-  font-family: 'ArvoRegular', serif;
+  font-family: 'Circe-Regular', sans-serif;
 }
 
 html,
@@ -5271,26 +5288,20 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Circe-Light', sans-serif;
+  font-family: 'Circe-Regular', sans-serif;
   font-weight: normal;
 }
 
 strong {
-  font-family: 'ArvoBold';
-  font-weight: normal;
-}
-
-strong em {
-  font-family: 'ArvoBoldItalic';
+  font-weight: 700;
 }
 
 em {
-  font-family: 'ArvoItalic';
-  font-style: normal;
+  font-style: italic;
 }
 
 em strong {
-  font-family: 'ArvoBoldItalic';
+  font-weight: 700;
 }
 
 hr {
@@ -5394,9 +5405,8 @@ a:hover {
 
 .page-header h1 {
   margin: .75em 0 1em 0;
-  font-family: 'Circe-Light';
   font-size: 30px;
-  font-weight: normal;
+  font-weight: 200;
   color: #a6a6a6;
   text-align: center;
   text-transform: uppercase;
@@ -5597,14 +5607,14 @@ a:hover {
 
 .pagination li .current {
   position: relative;
-  top: -1px;
+  top: 1px;
   padding: 10px 20px 0;
   border-top: 1px solid #293240;
 }
 
 .pagination li a {
   position: relative;
-  top: -1px;
+  top: 1px;
   padding: 10px 20px 0;
   border-top: 1px solid #293240;
 }
@@ -5666,7 +5676,7 @@ a:hover {
 .sidebar #s {
   width: 100%;
   padding: 10px 40px 10px 14px;
-  font-family: 'Circe-Regular';
+  font-family: 'Circe-Regular', sans-serif;
   font-size: 15px;
   line-height: 1.5;
   color: #ffffff;
@@ -5828,8 +5838,8 @@ a:hover {
   display: block;
   padding: 20px 0 0;
   margin: 0 0 -5px 0;
-  font-family: 'Circe-Bold';
   font-size: 16px;
+  font-weight: 700;
   font-weight: normal;
   color: white;
 }
@@ -5916,8 +5926,9 @@ a:hover {
   top: 148px;
   left: 110px;
   display: none;
-  font-family: 'Circe-Light';
+  font-family: 'Circe-Regular', sans-serif;
   font-size: 15px;
+  font-weight: 300;
   text-transform: uppercase;
   -webkit-transform: translate3d(0, 0, 0);
      -moz-transform: translate3d(0, 0, 0);
@@ -5972,8 +5983,9 @@ ul.fullsize li {
   top: 3px;
   display: inline;
   margin: 15px 0 0;
-  font-family: 'Circe-Regular';
+  font-family: 'Circe-Regular', sans-serif;
   font-size: 17px;
+  font-weight: 300;
   letter-spacing: .2em;
   color: #a4adb5;
   text-align: center;
@@ -6074,8 +6086,9 @@ ul.fullsize li {
 .gallery-footer h4 {
   display: inline;
   margin: 15px 0 0;
-  font-family: 'Circe-Regular';
+  font-family: 'Circe-Regular', sans-serif;
   font-size: 17px;
+  font-weight: 400;
   letter-spacing: .2em;
   color: white;
   text-align: center;
@@ -6288,7 +6301,8 @@ ul.fullsize li {
 }
 
 .post-type-archive-team .content .large em.arvo {
-  font-family: 'ArvoItalic';
+  font-family: 'ArvoRegular', serif;
+  font-style: italic;
 }
 
 .team-photo-container {
@@ -6389,8 +6403,9 @@ ul.fullsize li {
 
 .tooltipsy h4 {
   margin: 0 0 5px 0;
-  font-family: 'Circe-Bold';
+  font-family: 'Circe-Regular', sans-serif;
   font-size: 16px;
+  font-weight: 700;
   line-height: 1;
 }
 
@@ -6471,8 +6486,9 @@ ul.fullsize li {
 
 #map_holder .container .overlay .phone {
   margin: 15px 0 0;
-  font-family: 'Circe-Light';
+  font-family: 'Circe-Regular', sans-serif;
   font-size: 22px;
+  font-weight: 300;
   line-height: 1.4;
   text-transform: uppercase;
 }
@@ -6490,8 +6506,9 @@ ul.fullsize li {
 }
 
 #map_holder .container .overlay .email {
-  font-family: 'Circe-Regular';
+  font-family: 'Circe-Regular', sans-serif;
   font-size: 24px;
+  font-weight: 400;
   line-height: 1.7;
 }
 
@@ -6578,8 +6595,9 @@ ul.fullsize li {
 }
 
 .points strong {
-  font-family: 'Circe-Regular';
+  font-family: 'Circe-Regular', sans-serif;
   font-size: 18px;
+  font-weight: 400;
 }
 
 .points.clear {
@@ -6592,8 +6610,11 @@ ul.fullsize li {
   color: #55616f;
 }
 
+.credit.text-center a {
+  font-weight: 700;
+}
+
 .credit a {
-  font-family: 'Circe-Bold';
   color: #55616f;
 }
 
@@ -6624,7 +6645,8 @@ ul.fullsize li {
 
 .page-template-template-press-php p em,
 .page-template-template-testimonials-php p em {
-  font-family: 'ArvoItalic';
+  font-family: 'ArvoRegular', serif;
+  font-style: italic;
 }
 
 .page-template-template-press-php .content a,
@@ -6648,9 +6670,9 @@ ul.fullsize li {
 .page-template-template-testimonials-php .date_heading {
   padding: 0 0 5px 0;
   margin: 0 0 20px 0;
-  font-family: 'Circe-Bold';
+  font-family: 'Circe-Regular', sans-serif;
   font-size: 14px;
-  font-weight: normal;
+  font-weight: 700;
   color: #55616f;
   text-align: center;
   border-bottom: 1px solid #293240;
@@ -6680,8 +6702,9 @@ ul.fullsize li {
   display: none;
   width: 100%;
   margin-top: -50px;
-  font-family: 'Circe-Light';
+  font-family: 'Circe-Regular', sans-serif;
   font-size: 15px;
+  font-weight: 300;
   text-align: center;
   text-transform: uppercase;
   -webkit-transform: translate3d(0, 0, 0);
@@ -6741,7 +6764,7 @@ ul.fullsize li {
 
 .content-info {
   padding: 20px 0;
-  font-family: 'Circe-Regular';
+  font-family: 'Circe-Regular', sans-serif;
   background: #293240;
 }
 
@@ -6753,7 +6776,7 @@ ul.fullsize li {
 
 .content-info h4 {
   margin: 15px 0 0;
-  font-family: 'Circe-Regular';
+  font-family: 'Circe-Regular', sans-serif;
   font-size: 17px;
   letter-spacing: .2em;
   color: #a4adb5;
@@ -6833,6 +6856,10 @@ ul.fullsize li {
   }
   .hentry {
     padding-right: 1em;
+  }
+  .connect .credit {
+    position: relative;
+    top: 30px;
   }
   .wrap {
     padding-bottom: 129px;
