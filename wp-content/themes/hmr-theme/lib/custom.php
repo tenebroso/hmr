@@ -246,7 +246,8 @@ add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
    Register Additional Thumbnail Size (Capabilities Landing Page)
    ========================================================================== */
 
-add_image_size( 'capabilities-thumb', 270, 270, true );
+//Removing this due to the use of specifically cropped thumbnails on the Capabilities landing page
+   //add_image_size( 'capabilities-thumb', 270, 270, true );
 add_image_size( 'press-thumb', 233, 280, true );
 add_image_size( 'slideshow-thumb', 70, 40, true );
 add_image_size( 'slideshow-lg', 1800, 1800 );

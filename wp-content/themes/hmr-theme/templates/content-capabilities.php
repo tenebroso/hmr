@@ -5,7 +5,7 @@
 
 		<a href="<?php the_permalink();?>">
 
-			<?php the_post_thumbnail('capabilities-thumb'); ?>
+			<?php the_post_thumbnail('full'); ?>
 
 			<h2><?php the_title(); ?></h2>
 
@@ -25,7 +25,7 @@
 
 		<a href="<?php the_permalink();?>">
 
-			<?php the_post_thumbnail('capabilities-thumb'); ?>
+			<?php the_post_thumbnail('full'); ?>
 
 			<h2><?php the_title(); ?></h2>
 
