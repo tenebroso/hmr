@@ -6259,6 +6259,11 @@ ul.fullsize li {
   border: 1px solid white;
 }
 
+.post-type-archive-team .content .span2 img.custom-thumb {
+  width: 150px;
+  height: 191px;
+}
+
 .post-type-archive-team .content a {
   display: block;
 }
