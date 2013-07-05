@@ -49,7 +49,7 @@ var HMR = HMR || {};
     });
 
 
-    // $slid            
+    var $sliderParent = $('.bx-wrapper');          
     
     
     // This will swap out the backgrund image
@@ -78,6 +78,7 @@ var HMR = HMR || {};
             $thumbs.removeClass('active');
             $thumbs.eq(current).addClass('active');
             $slider.goToNextSlide();
+            $sliderParent.transition({ opacity: 0}, 1000, 'ease');
         }, 6000);
     };
 
@@ -91,6 +92,15 @@ var HMR = HMR || {};
         // Run the first time
         // changeBackgroundImage( $thumbs.eq(0).data('img') );
         // $thumbs.eq(0).addClass('active');
+
+        $($sliderParent).hover(
+            function () {
+              $(this).transition({ opacity: 100}, 100, 'ease');
+            },
+            function () {
+              $(this).transition({ opacity: 0}, 2000, 'ease');
+            }
+        );
 
         loadFirstImage();
 
