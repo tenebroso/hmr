@@ -1,0 +1,166 @@
+#map_holder {
+	position:relative;
+	width:100%;
+	margin:0 0 25px 0;
+	#coverup {
+		position:absolute;
+		width:100%;
+		height:100%;
+		top:0;
+		left:0;
+		z-index:200;
+	}
+	.container {
+		margin:-450px auto 0; //The height of the #map_nest DIV
+		height:450px; //Now push the rest of the page back down
+		position:relative;
+		z-index:201;
+		.overlay {
+			background:#71222;
+			background:hsla(216, 66%, 8%, 0.9);
+			position:relative;
+			z-index: 9999;
+			margin-top:110px;
+			padding:30px;
+			min-width:500px;
+			h2 {
+				font-size:22px;
+				text-transform:uppercase;
+				margin:0;
+				line-height:1.2;
+			}
+			p {
+				margin:0;
+			}
+			a {
+				&:hover {
+					color:white;
+					text-decoration:none;
+				}
+			}
+			.phone {
+				font-size:22px;
+				text-transform:uppercase;
+				margin:15px 0 0;
+				font-family:@sansFontFamily;
+				font-weight:300;
+				line-height:1.4;
+				&:before {
+					background: url(@fbsprite);
+  					background: none, url(@sprite);
+  					background-position: -272px -181px;
+					width:24px;
+					height:24px;
+					content:"";
+					display:block;
+					float:left;
+					margin:3px 5px 0 0;
+				}
+			}
+			.email {
+				font-size:24px;
+				font-family:@sansFontFamily;
+				font-weight:400;
+				line-height:1.7;
+				&:before {
+					background: url(@fbsprite);
+  					background: none, url(@sprite);
+  					background-position: -304px -181px;
+					width:24px;
+					height:24px;
+					content:"";
+					display:block;
+					float:left;
+					margin:8px 5px 0 0;
+				}
+			}
+			.social-icons {
+				margin:30px 0 0;
+				padding:0;
+				list-style-type:none;
+				float:right;
+				li {
+					padding:0;
+					margin:0;
+					display:inline-block;
+					background: url(@fbsprite);
+  					background: none, url(@sprite);
+					width:30px;
+					height:30px;
+					.hide-text();
+					a {
+						display:block;
+						position:relative;
+						width:100%;
+						height:100%;
+					}
+					&.twitter {
+						background-position:-143px -122px;
+					}
+					&.facebook {
+						background-position:-186px -122px;
+					}
+					&.pinterest {
+						background-position:-228px -122px;
+					}
+					&.instagram {
+						background-position:-147px -167px;
+					}
+					&:hover {
+						.opacity(70);
+					}
+				}
+			}
+		}
+	}
+}
+
+#map_nest {
+	width:100%;
+	height:450px;
+}
+
+.points {
+	font-size:14px;
+	line-height:1.4;
+	.hyphens(@mode: auto);
+	a {
+		font-size:13px;
+	}
+	strong {
+		font-size:18px;
+		font-family:@sansFontFamily;
+		font-weight:400;
+	}
+	&.clear {
+		clear:left;
+		margin-left:0;
+	}
+}
+
+.credit {
+	color:@blueLight;
+	font-size:14px;
+	&.text-center
+	{
+		a {
+			font-weight:700;
+		}
+	}
+	a {
+		color:@blueLight;
+		&:hover {
+			color:white;
+			text-decoration:none;
+		}
+	}
+}
+
+.page-template-template-connect-php {
+	.banner {
+		padding-bottom:0;
+	}
+	.nav {
+		margin-bottom:23px;
+	}
+}
