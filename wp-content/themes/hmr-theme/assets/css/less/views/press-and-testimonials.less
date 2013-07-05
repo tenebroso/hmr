@@ -1,0 +1,99 @@
+.page-template-template-press-php, .page-template-template-testimonials-php {
+	p {
+		color:white;
+		font-size:14px;
+		line-height:1.4;
+		margin:0;
+		em {
+			font-family:@serifFontFamily;
+			font-style:italic;
+		}
+	}
+	.content {
+		a {
+			display:inline;
+		}
+	}
+	.view-article {
+		font-size:14px;
+		color:@gray;
+		a {
+			&:hover {
+				color:white;
+				text-decoration:none;
+			}
+		}
+	}
+	.date_heading {
+		font-size:14px;
+		color:@blueLight;
+		font-family:@sansFontFamily;
+		font-weight:700;
+		border-bottom:1px solid @blue;
+		text-align:center;
+		margin:0 0 20px 0;
+		padding:0 0 5px 0;
+	}
+	.row-fluid {
+		.span3 {
+			margin-bottom:40px;
+			.clear {
+				margin-left:0;
+				clear:both;
+			}
+			img {
+				margin-bottom:15px;
+			}
+		}
+	}
+	.hidden {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		display: none;
+		font-family:@sansFontFamily;
+		font-weight:300;
+		font-size: 15px;
+		text-align: center;
+		text-transform: uppercase;
+		width: 100%;
+		margin-top: -50px;
+		.translate3d(0,0,0);
+		p {
+			margin:0;
+			a {
+				color:white;
+			}
+		}
+	}
+	.hover {
+		position:relative;
+		img {
+			.transition(.25s);
+			border:1px solid @blueDark;
+		}
+		&:hover {
+			img {
+				.opacity(60);
+				border:1px solid white;
+			}
+			.hidden {
+				display:block;
+				visibility:visible;
+			}
+		}
+	}
+}
+
+.touch {
+	.hover {
+		.hidden {
+			display:none !important;
+		}
+	}
+	.capabiilty {
+		.hover {
+			display:none !important;
+		}
+	}
+}

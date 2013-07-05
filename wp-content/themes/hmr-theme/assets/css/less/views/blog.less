@@ -1,0 +1,139 @@
+.hentry {
+	header { 
+		.entry-title {
+			font-size:35px;
+			margin:0;
+			line-height:1.1;
+				a {
+					color:@white;
+					&:after {
+						.translate3d(0,0,0);
+						.transition(.5s);
+						.opacity(0);
+						content: "»";
+						font-size: 24px;
+						margin: 0 0 0 10px;
+					}
+					&:hover {
+						&:after {
+							.opacity(100);
+						}
+					}
+				}
+			}
+		}
+	.byline {
+		color:@blueLight;
+		margin:.5em 0 2em 0;
+	}
+	margin: 0 0 4em 0;
+	padding: 0 0 2em 0;
+	border-bottom:1px solid @blue;
+	font-size:16px;
+	line-height:2;
+}
+
+.pager {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	.previous, .next {
+		display:inline-block;
+	}
+	.previous {
+		width:48%;
+	}
+	.next {
+		text-align:right;
+		float:right;
+	}
+}
+
+.blog {
+	.main {
+		.post:last-of-type {
+			padding:0;
+			margin:0;
+			border-bottom:none;
+		}
+	}
+}
+
+.blog, .single-post {
+	.hentry {
+		font-size:15px;
+		line-height:1.7;
+	}
+}
+
+.single-post {
+	.hentry {
+		padding:0 0 1em 0;
+		margin:0 0 1em 0;
+	}
+	.post-nav {
+		font-size:14px;
+	}
+	.addthis_toolbox {
+		margin:2em 0 0;
+	}
+}
+
+.pagination {
+	margin: 25px 0;
+	padding: 0;
+	border-top:1px solid @blue;
+	list-style-type: none;
+	text-align: center;
+	li {
+		display:inline-block;
+		margin:0;
+		padding:0;
+		font-size:14px;
+		.current {
+			padding: 10px 20px 0;
+			position: relative;
+			top: 1px;
+			border-top:1px solid @blue;
+		}
+		a {
+			border-top:1px solid @blue;
+			position: relative;
+			top: 1px;
+			padding: 10px 20px 0;
+			&:hover {
+				border-top:1px solid white;
+			}
+		}
+		&.next {
+			float:right;
+			margin-right:0;
+			padding:3px 0 0;
+			a {
+				padding: 4px 20px 0 20px;
+				position: relative;
+				top: -4px;
+				float: right;
+				border-top:1px solid @blue;
+				&:hover {
+					border-top:1px solid white;
+				}
+			}
+		}
+		&.prev {
+			float:left;
+			margin-left:0;
+			padding:3px 0 0;
+		}
+	}
+}
+
+/* ==========================================================================
+   WordPress Generated Classes
+   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+   ========================================================================== */
+
+.aligncenter { display: block; margin: 1.625em auto; }
+.alignleft { float: left; margin:0 1.625em 1.625em 0; }
+.alignright { float: right; margin:0 0 1.625em 1.625em; }
+.alignnone { margin-left: 0; margin-right: 0; }

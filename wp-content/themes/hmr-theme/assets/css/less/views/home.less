@@ -1,0 +1,65 @@
+.home {
+	.banner {
+		.brand {
+			background-position:-142px top;
+		}
+		background:url(../img/gradient.png) repeat-x left -10px;
+		border-bottom:1px solid @white;
+	}
+	.content-info {
+		display:none;
+	}
+	.img {
+		.hide-text();
+		.opacity(0);
+		-webkit-backface-visibility: hidden;
+		position:absolute;
+		.translate3d(0,0,0);
+		&.forward {
+			background:url(../img/forward.png) no-repeat left top;
+			width:246px;
+			height:36px;
+			left:10%;
+			top:400px;
+		}
+		&.thinkers {
+			background:url(../img/thinkers.png) no-repeat left top;
+			width:246px;
+			height:36px;
+			left:10%;
+			top:440px;
+		}
+		&.forward2 {
+			background:url(../img/forward.png) no-repeat left top;
+			width:246px;
+			height:36px;
+			float:right;
+			margin-right:calc(100% - 50px);
+			margin-top: 8px;
+		}
+		&.thinkers2 {
+			background:url(../img/thinkers.png) no-repeat left top;
+			width:246px;
+			height:36px;
+			float:right;
+			clear:both;
+			margin-right:calc(100% - 50px);
+		}
+		&.forward3 {
+			background:url(../img/forward.png) no-repeat left top;
+			width:246px;
+			height:36px;
+			float:left;
+			clear:both;
+			margin-left:calc(100% - 95px);
+		}
+		&.thinkers3 {
+			background:url(../img/thinkers.png) no-repeat left top;
+			width:246px;
+			height:36px;
+			float:left;
+			clear:both;
+			margin-left:calc(100% - 95px);
+		}
+	}
+}
