@@ -19,25 +19,31 @@
 
     <ul class="gallery-footer">
 
-       <?php while(has_sub_field('photos')): ?>
-
           <li>
           
             <h4><?php bloginfo('title');?></h4>
-            
-            <?php $credit = get_sub_field('photo_credit'); $url = get_sub_field('photo_credit_url'); if ($credit) { ?>
-            <p>Photography by: <?php if($url) { ?><a href="<?php echo $url; ?>"><?php } ?><?php echo $credit;?><?php if($url) { ?></a><?php } ?></p>
-            <?php } ?>
 
           </li>
-
-      <?php endwhile; ?>
 
     </ul>
 
     <div class="gallery-title">
 
       <h4><?php the_title();?></h4>
+
+    </div>
+
+    <div class="photo-credit">
+
+      <?php while(has_sub_field('photos')): ?>
+    
+      <?php $credit = get_sub_field('photo_credit'); $url = get_sub_field('photo_credit_url'); if ($credit) { ?>
+        <p>Photography by: <?php if($url) { ?><a href="<?php echo $url; ?>"><?php } ?><?php echo $credit;?><?php if($url) { ?></a><?php } ?></p>
+      <?php } else { ?>
+        <p class="hidden">Photography by: No Photo Credit</p>
+      <?php } ?>
+
+       <?php endwhile; ?>
 
     </div>
 

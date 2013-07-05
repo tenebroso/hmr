@@ -5137,6 +5137,21 @@ ul.fullsize li {
           transform: translate3d(0, 0, 0);
 }
 
+.photo-credit {
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+  z-index: 200;
+  text-align: right;
+}
+
+.photo-credit p {
+  right: 18px;
+  margin: 0;
+  font-size: 12px;
+  color: #777a7f;
+}
+
 .gallery-footer {
   position: absolute;
   bottom: 0;
@@ -5779,7 +5794,8 @@ ul.fullsize li {
     line-height: 1.2;
   }
   .watermark,
-  .gallery-footer {
+  .gallery-footer,
+  .photo-credit {
     display: none;
   }
   .single-capability {
@@ -5793,6 +5809,7 @@ ul.fullsize li {
     background: none;
   }
   .single-capability .wrap.container {
+    padding-top: 0;
     padding-right: 0;
     padding-left: 0;
   }
@@ -5825,7 +5842,6 @@ ul.fullsize li {
     bottom: auto;
     left: auto;
     width: auto;
-    padding-top: 0;
     clear: both;
     background: none;
   }
@@ -5843,9 +5859,14 @@ ul.fullsize li {
     top: 31%;
     margin-top: 0;
   }
+  .page-template-template-testimonials-php .modal-header,
+  .page-template-template-press-php .modal-header {
+    height: 40px;
+  }
   .page-template-template-testimonials-php .modal-header .close,
   .page-template-template-press-php .modal-header .close {
-    margin-right: 45px;
+    margin-top: -35px;
+    margin-right: 5px;
   }
   .page-template-template-testimonials-php .page-header h1,
   .page-template-template-press-php .page-header h1 {

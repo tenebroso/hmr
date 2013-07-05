@@ -22,7 +22,7 @@
 		fit: 1
 	});
 
-	$('.gallery-footer').cycle({
+	$('.photo-credit').cycle({
 		fx: 'fade',
 		delay: 1000,
 		speed:3000
