@@ -5675,10 +5675,6 @@ ul.fullsize li {
     width: 100%;
     margin: 0;
   }
-  .page-template-template-connect-php .gform_wrapper .gform_fields li span label {
-    margin-top: -15px;
-    font-size: 12px;
-  }
   .page-template-template-connect-php .gform_wrapper .gform_body,
   .page-template-template-connect-php .gform_wrapper .gform_footer {
     width: 90%;
@@ -5694,6 +5690,10 @@ ul.fullsize li {
     float: none;
     margin-right: 0;
   }
+  div.selector span {
+    max-width: 95%;
+    background-position: right center;
+  }
   #map_nest {
     display: none;
   }
@@ -5702,6 +5702,8 @@ ul.fullsize li {
     margin: 0;
   }
   #map_holder .container .overlay {
+    width: auto;
+    min-width: auto;
     margin: 0;
     text-align: center;
     background: none;
