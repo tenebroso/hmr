@@ -12,6 +12,25 @@
 	background:none;
 }
 
+
+.watermark {
+	.size(66px,104px);
+	position:absolute;
+	z-index:999;
+	top:55px;
+	left:50%;
+	/* Adjusted to center over a few photos */
+	margin-left:-57px;
+
+	.opacity(30);
+	display:block;
+	background: url(@fbsprite);
+	background: none, url(@sprite);
+	background-position:-103px top;
+	background-size:426%;
+	.hide-text();
+}
+
 .gallery-title {
 	position: absolute;
 	bottom: 1px;

@@ -4902,6 +4902,28 @@ ul.fullsize li {
   background: none;
 }
 
+.watermark {
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  z-index: 999;
+  display: block;
+  width: 104px;
+  height: 66px;
+  margin-left: -57px;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background: url("../img/sprite.png");
+  background: none, url("../img/sprite.svg");
+  background-color: transparent;
+  background-position: -103px top;
+  background-size: 426%;
+  border: 0;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+
 .gallery-title {
   position: absolute;
   bottom: 1px;

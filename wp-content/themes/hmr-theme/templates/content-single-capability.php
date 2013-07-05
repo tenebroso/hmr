@@ -1,5 +1,7 @@
 <?php while (have_posts()) : the_post(); ?>
 
+  <div class="watermark"></div>
+
   <?php if(get_field('photos')): ?>
 
     <ul class="fullsize slideshow">

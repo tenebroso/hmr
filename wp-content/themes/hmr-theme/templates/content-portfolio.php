@@ -1,5 +1,6 @@
-<?php while (have_posts()) : the_post(); 
-       ?>
+<?php while (have_posts()) : the_post(); ?>
+
+  <div class="watermark"></div>
 
 <?php if(get_field('photos')): ?>
 
@@ -8,8 +9,6 @@
     <ul class="thumb_nav">
 
       <?php while(has_sub_field('photos')):  ?>
-
-      
 
       		<?php // Get the attachment ID, then assign that ID to both the thumbnail and full-size image
       		$attachment_id = get_sub_field('photo');
