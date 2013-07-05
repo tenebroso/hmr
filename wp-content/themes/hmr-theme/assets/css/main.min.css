@@ -5107,6 +5107,7 @@ ul.fullsize li {
   left: 50%;
   z-index: 200;
   display: block;
+  display: none;
   width: 104px;
   height: 66px;
   margin-left: -57px;
@@ -5121,6 +5122,12 @@ ul.fullsize li {
   border: 0;
   opacity: 0.3;
   filter: alpha(opacity=30);
+}
+
+.backgroundsize .watermark {
+  /* Activate watermark only if browser can do background-size */
+
+  display: block;
 }
 
 .gallery-title {
@@ -5609,6 +5616,7 @@ ul.fullsize li {
     overflow: auto;
   }
   .wrap.container {
+    padding-top: 0;
     margin-top: 0;
   }
   .content-info {
@@ -5669,6 +5677,9 @@ ul.fullsize li {
   .bx-wrapper {
     display: none;
   }
+  .page-template-template-connect-php .banner {
+    padding-bottom: 24px;
+  }
   .page-template-template-connect-php .gform_wrapper {
     padding: 0 0 25px 0;
     overflow: hidden;
@@ -5718,7 +5729,7 @@ ul.fullsize li {
   }
   #map_holder .container .overlay {
     width: auto;
-    min-width: auto;
+    min-width: 100%;
     margin: 0;
     text-align: center;
     background: none;
@@ -5740,7 +5751,8 @@ ul.fullsize li {
   #map_holder .container .overlay .phone:before {
     display: none;
   }
-  .team-photo {
+  .team-photo,
+  .team-photo-container {
     display: none;
   }
   .post-type-archive-team .content .large em {
@@ -5749,8 +5761,11 @@ ul.fullsize li {
   .post-type-archive-team .content .large .name:after {
     content: ", ";
   }
+  .single-team .banner {
+    padding: 24px 34px;
+  }
   .single-team .team {
-    margin: 45px 0 0;
+    margin: 25px 0 0;
   }
   .single-team .team img {
     display: block;
@@ -5793,7 +5808,7 @@ ul.fullsize li {
     font-size: 15px;
     line-height: 1.2;
   }
-  .watermark,
+  .backgroundsize .watermark,
   .gallery-footer,
   .photo-credit {
     display: none;

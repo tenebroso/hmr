@@ -13,6 +13,7 @@
 }
 
 
+
 .watermark {
 	.size(66px,104px);
 	position:absolute;
@@ -29,6 +30,16 @@
 	background-position:-103px top;
 	background-size:426%;
 	.hide-text();
+
+	/* Hide this on browsers that don't use backround-size */
+	display:none;
+}
+
+.backgroundsize {
+	.watermark {
+		/* Activate watermark only if browser can do background-size */
+		display:block;
+	}
 }
 
 .gallery-title {
