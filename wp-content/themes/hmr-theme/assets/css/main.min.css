@@ -2008,7 +2008,6 @@ button.close {
   display: block;
   width: 30px;
   height: 30px;
-  margin-right: 45px;
   font: 0/0 a;
   color: transparent;
   text-shadow: none;
@@ -4529,7 +4528,7 @@ a:hover {
 }
 
 .post-type-archive-team .content .large em.arvo {
-  font-family: 'ArvoRegular', serif;
+  font-family: 'Circe-Regular', sans-serif;
   font-style: italic;
 }
 
@@ -5367,7 +5366,7 @@ ul.fullsize li {
 
 .page-template-template-press-php p em,
 .page-template-template-testimonials-php p em {
-  font-family: 'ArvoRegular', serif;
+  font-family: 'Circe-Regular', sans-serif;
   font-style: italic;
 }
 
