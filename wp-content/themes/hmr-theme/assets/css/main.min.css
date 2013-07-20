@@ -4046,7 +4046,7 @@ a:hover {
 }
 
 .wrap.container {
-  padding: 50px 0 179px 0;
+  padding: 50px 0 34px 0;
   margin: 0 auto;
 }
 
@@ -4751,14 +4751,14 @@ a:hover {
   content: "";
 }
 
-#map_holder .container .overlay .social-icons {
+.social-icons {
   float: right;
   padding: 0;
   margin: 30px 0 0;
   list-style-type: none;
 }
 
-#map_holder .container .overlay .social-icons li {
+.social-icons li {
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -4773,30 +4773,30 @@ a:hover {
   border: 0;
 }
 
-#map_holder .container .overlay .social-icons li a {
+.social-icons li a {
   position: relative;
   display: block;
   width: 100%;
   height: 100%;
 }
 
-#map_holder .container .overlay .social-icons li.twitter {
+.social-icons li.twitter {
   background-position: -143px -122px;
 }
 
-#map_holder .container .overlay .social-icons li.facebook {
+.social-icons li.facebook {
   background-position: -186px -122px;
 }
 
-#map_holder .container .overlay .social-icons li.pinterest {
+.social-icons li.pinterest {
   background-position: -228px -122px;
 }
 
-#map_holder .container .overlay .social-icons li.instagram {
+.social-icons li.instagram {
   background-position: -147px -167px;
 }
 
-#map_holder .container .overlay .social-icons li:hover {
+.social-icons li:hover {
   opacity: 0.7;
   filter: alpha(opacity=70);
 }
@@ -5484,7 +5484,6 @@ ul.fullsize li {
    ========================================================================== */
 
 .content-info {
-  padding: 20px 0;
   font-family: 'Circe-Regular', sans-serif;
   background: #293240;
 }
@@ -5496,9 +5495,10 @@ ul.fullsize li {
 }
 
 .content-info h4 {
-  margin: 15px 0 0;
+  margin: 0;
   font-family: 'Circe-Regular', sans-serif;
   font-size: 17px;
+  line-height: 35px;
   letter-spacing: .2em;
   color: #a4adb5;
   text-transform: uppercase;
@@ -5527,12 +5527,103 @@ ul.fullsize li {
   border-right: 1px solid #a4adb5;
 }
 
+.content-info .text-center {
+  position: relative;
+}
+
+.content-info .social-icons {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  float: none;
+  margin: 0;
+}
+
+.content-info .social-icons li {
+  width: 26px;
+  height: 26px;
+  vertical-align: middle;
+  background-size: 550px 711px;
+}
+
+.content-info .social-icons li.instagram {
+  background-position: -133px -151px;
+}
+
+.content-info .social-icons li.pinterest {
+  background-position: -205px -110px;
+}
+
+.content-info .social-icons li.facebook {
+  background-position: -167px -110px;
+}
+
+.content-info .social-icons li.twitter {
+  background-position: -128px -110px;
+}
+
 /* ==========================================================================
    Sticky Footer
    ========================================================================== */
 
 #wrap {
   min-height: 100%;
+}
+
+/* ==========================================================================
+   767 and Below
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  .content-info {
+    position: relative;
+    height: 76px;
+    margin-top: -76px;
+    clear: both;
+  }
+  .content-info h4 {
+    margin: 15px 0 5px 0;
+    line-height: 1;
+  }
+  .content-info .social-icons {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    text-align: center;
+  }
+  .content-info {
+    text-align: center;
+  }
+  .content-info .text-right {
+    text-align: center;
+  }
+  .content-info .span6 {
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+  }
+  .single-capability .content-info {
+    display: block;
+  }
+  .page-template-template-connect-php .content-info {
+    margin-top: 0;
+  }
+}
+
+/* ==========================================================================
+   768 and Above
+   ========================================================================== */
+
+@media (min-width: 768px) {
+  .content-info {
+    position: relative;
+    height: 34px;
+    margin-top: 34px;
+    clear: both;
+  }
+  .page-template-template-connect-php .content-info {
+    margin-top: 80px;
+  }
 }
 
 /* ==========================================================================
@@ -5560,15 +5651,6 @@ ul.fullsize li {
   .wrap {
     padding-bottom: 129px;
     overflow: auto;
-  }
-  .content-info {
-    position: relative;
-    height: 129px;
-    margin-top: -129px;
-    clear: both;
-  }
-  .page-template-template-connect-php .content-info {
-    margin-top: 80px;
   }
 }
 
@@ -5618,15 +5700,6 @@ ul.fullsize li {
     padding-top: 0;
     margin-top: 0;
   }
-  .content-info {
-    position: relative;
-    height: 169px;
-    margin-top: -169px;
-    clear: both;
-  }
-  .content-info h4 {
-    line-height: 1;
-  }
   .scrollTop {
     border-bottom: 1px solid #55616f;
   }
@@ -5661,17 +5734,6 @@ ul.fullsize li {
   .wrap.container {
     padding-right: 20px;
     padding-left: 20px;
-  }
-  .content-info {
-    text-align: center;
-  }
-  .content-info .text-right {
-    text-align: center;
-  }
-  .content-info .span6 {
-    padding: 0 !important;
-    margin: 0 !important;
-    border: none !important;
   }
   .bx-wrapper {
     display: none;
@@ -5816,9 +5878,6 @@ ul.fullsize li {
     height: auto;
     overflow: visible;
   }
-  .single-capability .content-info {
-    display: block;
-  }
   .single-capability #wrap {
     background: none;
   }
@@ -5898,9 +5957,6 @@ ul.fullsize li {
     display: inline-block;
     width: 49%;
     vertical-align: top;
-  }
-  .page-template-template-connect-php .content-info {
-    margin-top: 0;
   }
   .blog .sidebar,
   .single-post .sidebar {

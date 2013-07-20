@@ -1,7 +1,6 @@
 .content-info { 
 	background:@blue;
 	font-family:@sansFontFamily;
-	padding:20px 0;
 	p { 
 		font-size:13px;
 		line-height:1.6;
@@ -13,7 +12,8 @@
 		text-transform:uppercase;
 		font-family:@sansFontFamily;
 		letter-spacing:.2em;
-		margin:15px 0 0;
+		margin:0;
+		line-height:35px;
 	}
 	a {
 		color:white;
@@ -33,6 +33,34 @@
 			border-right:1px solid #a4adb5;
 		}
 	}
+	.text-center {
+		position:relative;
+	}
+	.social-icons {
+		margin:0;
+		float:none;
+		position:absolute;
+		right:0;
+		bottom:0;
+		li {
+			vertical-align:middle;
+			width:26px;
+			height:26px;
+			background-size: 550px 711px;
+			&.instagram {
+				background-position: -133px -151px;
+			}
+			&.pinterest {
+				background-position: -205px -110px;
+			}
+			&.facebook {
+				background-position: -167px -110px;
+			}
+			&.twitter {
+				background-position: -128px -110px;
+			}
+		}
+	}
 }
 
 /* ==========================================================================
@@ -42,3 +70,73 @@
 #wrap {
 	min-height:100%;
 }
+
+/* ==========================================================================
+   767 and Below
+   ========================================================================== */
+
+
+@media (max-width: 767px) {
+
+	.content-info {
+		position:relative;
+		margin-top:-76px;
+		height:76px;
+		clear:both;
+		h4 {
+			line-height:1;
+			margin:15px 0 5px 0;
+		}
+		.social-icons {
+			position:relative;
+			text-align:center;
+			right:auto;
+			bottom:auto;
+		}
+	}
+
+	.content-info {
+		text-align:center;
+		.text-right {
+			text-align:center;
+		}
+		.span6 {
+			border:none !important;
+			padding:0 !important;
+			margin:0 !important;
+		}
+	}
+
+	.single-capability {
+		.content-info {
+			display:block;
+		}
+	}
+
+	.page-template-template-connect-php {
+		.content-info {
+			margin-top:0;
+		}
+	}
+}
+
+/* ==========================================================================
+   768 and Above
+   ========================================================================== */
+
+@media (min-width: 768px) {
+
+	.content-info {
+		position:relative;
+		margin-top:34px;
+		height:34px;
+		clear:both;
+	}
+
+	.page-template-template-connect-php {
+		.content-info {
+			margin-top:80px;
+		}
+	}
+}
+

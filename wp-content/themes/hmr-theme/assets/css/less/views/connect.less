@@ -74,43 +74,44 @@
 					margin:8px 5px 0 0;
 				}
 			}
-			.social-icons {
-				margin:30px 0 0;
-				padding:0;
-				list-style-type:none;
-				float:right;
-				li {
-					padding:0;
-					margin:0;
-					display:inline-block;
-					background: url(@fbsprite);
-  					background: none, url(@sprite);
-					width:30px;
-					height:30px;
-					.hide-text();
-					a {
-						display:block;
-						position:relative;
-						width:100%;
-						height:100%;
-					}
-					&.twitter {
-						background-position:-143px -122px;
-					}
-					&.facebook {
-						background-position:-186px -122px;
-					}
-					&.pinterest {
-						background-position:-228px -122px;
-					}
-					&.instagram {
-						background-position:-147px -167px;
-					}
-					&:hover {
-						.opacity(70);
-					}
-				}
-			}
+		}
+	}
+}
+
+.social-icons {
+	margin:30px 0 0;
+	padding:0;
+	list-style-type:none;
+	float:right;
+	li {
+		padding:0;
+		margin:0;
+		display:inline-block;
+		background: url(@fbsprite);
+			background: none, url(@sprite);
+		width:30px;
+		height:30px;
+		.hide-text();
+		a {
+			display:block;
+			position:relative;
+			width:100%;
+			height:100%;
+		}
+		&.twitter {
+			background-position:-143px -122px;
+		}
+		&.facebook {
+			background-position:-186px -122px;
+		}
+		&.pinterest {
+			background-position:-228px -122px;
+		}
+		&.instagram {
+			background-position:-147px -167px;
+		}
+		&:hover {
+			.opacity(70);
 		}
 	}
 }
