@@ -224,7 +224,7 @@ textarea {
 
 body {
   margin: 0;
-  font-family: 'Circe-Thin', sans-serif;
+  font-family: 'Circe-Regular', sans-serif;
   font-size: 18px;
   line-height: 2;
   color: #ffffff;
@@ -661,7 +661,7 @@ a:focus {
 }
 
 .page-template-template-connect-php .gform_wrapper .validation_error {
-  font-family: 'Circe-Thin', sans-serif;
+  font-family: 'Circe-Regular', sans-serif;
   font-weight: 400;
   color: #55616f;
   text-align: center;
@@ -735,7 +735,7 @@ a:focus {
 .page-template-template-connect-php .gform_wrapper .gform_description {
   display: block;
   margin: 0 0 25px 0;
-  font-family: 'Circe-Thin', sans-serif;
+  font-family: 'Circe-Regular', sans-serif;
   font-size: 15px;
   font-style: italic;
   text-align: center;
@@ -849,7 +849,7 @@ input,
 button,
 select,
 textarea {
-  font-family: 'Circe-Thin', sans-serif;
+  font-family: 'Circe-Regular', sans-serif;
 }
 
 label {
@@ -2395,7 +2395,7 @@ button.close {
 
 .nav > li > a {
   display: inline-block;
-  font-family: 'Circe-Thin', sans-serif;
+  font-family: 'Circe-Regular', sans-serif;
   font-size: 16px;
   font-weight: 300;
   line-height: 1.2;
@@ -2461,7 +2461,7 @@ button.close {
   display: inline-block;
   padding: 10px 15px 40px 15px;
   margin: 0 0 -40px 0;
-  font-family: 'Circe-Thin', sans-serif;
+  font-family: 'Circe-Regular', sans-serif;
   font-size: 15px;
   font-weight: 300;
   letter-spacing: 1px;
@@ -2662,7 +2662,7 @@ button.close {
   }
   #navbar-mobile ul ul li a {
     padding: 10px 0 10px 25px;
-    font-family: 'Circe-Thin', sans-serif;
+    font-family: 'Circe-Regular', sans-serif;
     font-weight: 300;
     text-transform: uppercase;
   }
@@ -3937,7 +3937,8 @@ html {
 }
 
 body {
-  font-family: 'Circe-Thin', sans-serif;
+  font-family: 'Circe-Regular', sans-serif;
+  font-weight: 100;
 }
 
 html,
@@ -3951,7 +3952,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Circe-Thin', sans-serif;
+  font-family: 'Circe-Regular', sans-serif;
   font-weight: normal;
 }
 
@@ -4356,7 +4357,7 @@ a:hover {
 .sidebar #s {
   width: 100%;
   padding: 10px 40px 10px 14px;
-  font-family: 'Circe-Thin', sans-serif;
+  font-family: 'Circe-Regular', sans-serif;
   font-size: 15px;
   line-height: 1.5;
   color: #ffffff;
@@ -4723,7 +4724,7 @@ a:hover {
 
 #map_holder .container .overlay .phone {
   margin: 15px 0 0;
-  font-family: 'Circe-Thin', sans-serif;
+  font-family: 'Circe-Regular', sans-serif;
   font-size: 22px;
   font-weight: 300;
   line-height: 1.4;
@@ -4743,7 +4744,7 @@ a:hover {
 }
 
 #map_holder .container .overlay .email {
-  font-family: 'Circe-Thin', sans-serif;
+  font-family: 'Circe-Regular', sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 1.7;
@@ -4832,7 +4833,7 @@ a:hover {
 }
 
 .points strong {
-  font-family: 'Circe-Thin', sans-serif;
+  font-family: 'Circe-Regular', sans-serif;
   font-size: 18px;
   font-weight: 400;
 }
@@ -4988,7 +4989,7 @@ a:hover {
   top: 148px;
   left: 110px;
   display: none;
-  font-family: 'Circe-Thin', sans-serif;
+  font-family: 'Circe-Regular', sans-serif;
   font-size: 15px;
   font-weight: 300;
   text-transform: uppercase;
@@ -5045,7 +5046,7 @@ ul.fullsize li {
   top: 3px;
   display: inline;
   margin: 15px 0 0;
-  font-family: 'Circe-Thin', sans-serif;
+  font-family: 'Circe-Regular', sans-serif;
   font-size: 17px;
   font-weight: 300;
   letter-spacing: .2em;
@@ -5192,7 +5193,7 @@ ul.fullsize li {
 .gallery-footer h4 {
   display: inline;
   margin: 15px 0 0;
-  font-family: 'Circe-Thin', sans-serif;
+  font-family: 'Circe-Regular', sans-serif;
   font-size: 17px;
   font-weight: 400;
   letter-spacing: .2em;
@@ -5401,7 +5402,7 @@ ul.fullsize li {
 .page-template-template-testimonials-php .date_heading {
   padding: 0 0 5px 0;
   margin: 0 0 20px 0;
-  font-family: 'Circe-Thin', sans-serif;
+  font-family: 'Circe-Regular', sans-serif;
   font-size: 14px;
   font-weight: 700;
   color: #55616f;
@@ -5433,7 +5434,7 @@ ul.fullsize li {
   display: none;
   width: 100%;
   margin-top: -50px;
-  font-family: 'Circe-Thin', sans-serif;
+  font-family: 'Circe-Regular', sans-serif;
   font-size: 15px;
   font-weight: 300;
   text-align: center;
@@ -5494,7 +5495,7 @@ ul.fullsize li {
    ========================================================================== */
 
 .content-info {
-  font-family: 'Circe-Thin', sans-serif;
+  font-family: 'Circe-Regular', sans-serif;
   background: #293240;
 }
 
@@ -5504,9 +5505,13 @@ ul.fullsize li {
   line-height: 1.6;
 }
 
+.content-info p.copyright {
+  line-height: 36px;
+}
+
 .content-info h4 {
   margin: 0;
-  font-family: 'Circe-Thin', sans-serif;
+  font-family: 'Circe-Regular', sans-serif;
   font-size: 17px;
   line-height: 35px;
   letter-spacing: .2em;
@@ -5584,13 +5589,18 @@ ul.fullsize li {
 @media (max-width: 767px) {
   .content-info {
     position: relative;
-    height: 76px;
-    margin-top: -76px;
+    height: 115px;
+    margin-top: 115px;
     clear: both;
   }
   .content-info h4 {
-    margin: 15px 0 5px 0;
+    margin: 11px 0 5px 0;
     line-height: 1;
+  }
+  .content-info p.copyright {
+    margin: 1.25em 0 0;
+    line-height: 1.4;
+    text-align: center;
   }
   .content-info .social-icons {
     position: relative;
