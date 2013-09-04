@@ -70,7 +70,7 @@ HMR.Site = {
     init: function() {
       HMR.sidebarPadding();
       $(".type-post").fitVids();
-      $('html').css('background','none !important');
+      $('html').css('background','none');
     }
   },
   archive: {
@@ -78,6 +78,15 @@ HMR.Site = {
       HMR.conditionals();
       HMR.sidebarPadding();
       $(".type-post").fitVids();
+    }
+  },
+  history: {
+    init: function() {
+      $('html').css('background','none');
+      var img = '/assets/history-bg.jpg';
+      $("body").backstretch([img]);
+      var instance = $("body").data("backstretch");
+      instance.resize();
     }
   }
 };

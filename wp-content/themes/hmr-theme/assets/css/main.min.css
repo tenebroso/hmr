@@ -5674,6 +5674,10 @@ ul.fullsize li {
     padding-bottom: 129px;
     overflow: auto;
   }
+  .history .content {
+    padding: 2em;
+    border: 2px solid #fff;
+  }
 }
 
 @media (max-width: 940px) and (min-width: 768px) {
