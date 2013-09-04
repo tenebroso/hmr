@@ -70,6 +70,7 @@ HMR.Site = {
     init: function() {
       HMR.sidebarPadding();
       $(".type-post").fitVids();
+      $('html').css('background','none !important');
     }
   },
   archive: {
