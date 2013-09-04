@@ -5535,9 +5535,6 @@ ul.fullsize li {
 }
 
 .content-info .social-icons {
-  position: absolute;
-  right: 0;
-  bottom: 0;
   float: none;
   margin: 0;
 }
@@ -5657,7 +5654,7 @@ ul.fullsize li {
   }
   body.history .content {
     padding: 2em;
-    border: 2px solid #fff;
+    border: 2px solid #55616f;
   }
 }
 

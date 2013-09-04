@@ -14,8 +14,13 @@
 		</div>
 	</div>-->
 	<div class="row-fluid">
-		<div class="span12 text-center">
+		<div class="span3 text-left">
+			<p>&copy; 2013 HMR Designs</p>
+		</div>
+		<div class="span6 text-center">
 			<h4><a href="<?php bloginfo('url');?>"><?php bloginfo('title');?></a></h4>
+		</div>
+		<div class="span3 text-right">
 			<ul class="social-icons">
 				<li class="facebook"><a href="<?php the_field('facebook');?>">Facebook</a></li>
 				<li class="twitter"><a href="<?php the_field('twitter');?>">Twitter</a></li>
