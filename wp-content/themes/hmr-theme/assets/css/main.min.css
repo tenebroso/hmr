@@ -2698,7 +2698,7 @@ button.close {
   }
 }
 
-/* Utility Classes */
+/* Utility Classes - including button styles */
 
 .pull-right {
   float: right;
@@ -2734,6 +2734,24 @@ button.close {
 
 .text-center {
   text-align: center;
+}
+
+.btn {
+  padding: 5px 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  background: none;
+  border: 1px solid #55616f;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
+}
+
+.btn:hover {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
 }
 
 /*!
@@ -3911,6 +3929,24 @@ button.close {
   text-align: center;
 }
 
+.btn {
+  padding: 5px 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  background: none;
+  border: 1px solid #55616f;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
+}
+
+.btn:hover {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+
 /* ==========================================================================
    Other stylesheets of note, and their locations:
 
@@ -3939,6 +3975,10 @@ html {
 body {
   font-family: 'Circe-Regular', sans-serif;
   font-weight: 100;
+}
+
+body.js {
+  display: none;
 }
 
 html,
@@ -4499,8 +4539,34 @@ a:hover {
    Team Archive - Team Landing Page
    ========================================================================== */
 
+.post-type-archive-team .page-title {
+  margin: 30px 0 0;
+  font-size: 27px;
+}
+
+.post-type-archive-team .page-title.team-title {
+  margin: -20px 0 20px 0;
+}
+
+.post-type-archive-team .content {
+  /*.large {
+			font-size:18px;
+			line-height:1;
+			em {
+				font-size:13px;
+				display:block;
+				&.arvo {
+					font-family:@serifFontFamily;
+					font-style:italic;
+				}
+			}
+		}*/
+
+}
+
 .post-type-archive-team .content .span2 {
   margin-bottom: 25px;
+  text-align: center;
 }
 
 .post-type-archive-team .content .span2 img {
@@ -4518,6 +4584,7 @@ a:hover {
 
 .post-type-archive-team .content a {
   display: block;
+  color: #55616f;
 }
 
 .post-type-archive-team .content a:hover {
@@ -4529,24 +4596,45 @@ a:hover {
   border: 1px solid white;
 }
 
-.post-type-archive-team .content .large {
-  font-size: 18px;
+.post-type-archive-team .content p {
   line-height: 1;
 }
 
-.post-type-archive-team .content .large em {
+.post-type-archive-team .content .name {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.post-type-archive-team .content .title {
   display: block;
+  font-family: "Myriad Pro", 'Circe-Regular', sans-serif;
   font-size: 13px;
 }
 
-.post-type-archive-team .content .large em.arvo {
-  font-family: 'Circe-Regular', sans-serif;
-  font-style: italic;
+.team-photo-container {
+  position: relative;
+  margin: 30px auto;
+  border: 1px solid #55616f;
 }
 
-.team-photo-container {
-  margin: 50px auto 0 auto;
-  border: 1px solid #55616f;
+.team-photo-container .photo-credit {
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1;
+  color: #071222;
+}
+
+.team-photo-container .photo-credit a {
+  color: #071222;
+}
+
+.team-photo-container .photo-credit a:hover {
+  color: #55616f;
 }
 
 .team-photo {
@@ -4676,6 +4764,27 @@ a:hover {
 
 .tooltipsy p em {
   font-style: normal;
+}
+
+#team {
+  position: relative;
+  height: 663px;
+  overflow: hidden;
+}
+
+#team.active {
+  height: auto;
+}
+
+#team-photo {
+  position: relative;
+  z-index: 20;
+}
+
+#team-members {
+  position: absolute;
+  z-index: 21;
+  width: 100%;
 }
 
 /* =============================================================================
@@ -5642,8 +5751,8 @@ ul.fullsize li {
 @media (min-width: 768px) {
   .content-info {
     position: relative;
-    height: 34px;
-    margin-top: 34px;
+    height: 36px;
+    margin-top: 36px;
     clear: both;
   }
   .page-template-template-connect-php .content-info {
@@ -6043,5 +6152,18 @@ ul.fullsize li {
     left: 8.5%;
     width: 83%;
     margin-left: auto !important;
+  }
+}
+
+@media (max-width: 979px) {
+  .post-type-archive-team .content .span2 img.custom-thumb {
+    width: auto;
+    height: auto;
+  }
+  .post-type-archive-team .page-title.team-title {
+    margin: 20px 0 10px 0;
+  }
+  #team-members {
+    position: relative;
   }
 }

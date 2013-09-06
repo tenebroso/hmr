@@ -2,8 +2,10 @@
 <?php //get_template_part('templates/content', 'team-hero'); 
 	  // This template part now lives in base.php
 ?>
-
+<h1 class="text-center page-title team-title">THE HMR DESIGNS TEAM</h1>
 <div class="row-fluid">
+
+  
 
   <?php while (have_posts()) : the_post(); ?>
     <?php get_template_part('templates/content', 'team'); ?>

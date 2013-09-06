@@ -11,9 +11,9 @@
 				<?php the_post_thumbnail('thumbnail');?>
 			<?php } ?>
 		</span>
-	   	<p class="circe large">
+	   	<p>
 			<span class="name"><?php the_title();?></span>
-			<em class="arvo"><?php the_field('title');?></em>
+			<span class="title"><?php the_field('title');?></span>
 		</p>
 	</a>
 </article>

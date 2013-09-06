@@ -29,6 +29,7 @@ var HMR = HMR || {};
       // Call the Team Hero face rollover function and clear floats. Also, remove the active state that WP adds to the blog
       if($('.post-type-archive-team').length) {
         HMR.teamArchiveFaceMap();
+        HMR.teamSlide();
         $('article.span2:nth-child(6n+7)').addClass('clear');
         $('.menu-blog').removeClass('active');
       }
