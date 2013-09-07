@@ -3,7 +3,7 @@
 Plugin Name: Gravity Forms
 Plugin URI: http://www.gravityforms.com
 Description: Easily create web forms and manage form entries within the WordPress admin.
-Version: 1.7.7
+Version: 1.7.8
 Author: rocketgenius
 Author URI: http://www.rocketgenius.com
 
@@ -197,7 +197,7 @@ class GFForms {
 
                     }
 
-                    add_filter("plugins_api", array("RGForms", "get_addon_info"), 10, 3);
+                    add_filter("plugins_api", array("RGForms", "get_addon_info"), 100, 3);
                     add_action('after_plugin_row_gravityforms/gravityforms.php', array('RGForms', 'plugin_row') );
                     add_action('install_plugins_pre_plugin-information', array('RGForms', 'display_changelog'));
                     add_filter('plugin_action_links', array('RGForms', 'plugin_settings_link'),10,2);
@@ -268,7 +268,7 @@ class GFForms {
         return GFCommon::check_update($update_plugins_option, true);
     }
 
-        //Creates or updates database tables. Will only run when version changes
+    //Creates or updates database tables. Will only run when version changes
     public static function setup($force_setup = false){
         global $wpdb;
 
@@ -280,12 +280,23 @@ class GFForms {
 
             require_once(ABSPATH . '/wp-admin/includes/plugin.php');
 
-            if(is_plugin_active_for_network("gravityforms/gravityforms.php") && is_network_admin() ){
-                //if gravity forms is network activated, run the database setup for every site
-                $blog_ids = $wpdb->get_col( $wpdb->prepare("SELECT blog_id FROM $wpdb->blogs WHERE site_id = %d AND public = '1' AND archived = '0' AND mature = '0' AND spam = '0' AND deleted = '0'", $wpdb->siteid) );
-                foreach($blog_ids as $id){
-                    self::setup_site($id);
+            if(is_plugin_active_for_network("gravityforms/gravityforms.php") ){
+
+                if(self::start_multisite_setup($force_setup))
+                {
+                    //if gravity forms is network activated, run the database setup for every site
+                    $sql = $wpdb->prepare("SELECT blog_id FROM $wpdb->blogs WHERE site_id = %d", $wpdb->siteid);
+                    GFCommon::log_debug("Installing multisite. SQL: {$sql}");
+                    $blog_ids = $wpdb->get_col( $sql );
+                    GFCommon::log_debug("Blog Ids: " . print_r($blog_ids, true));
+
+                    foreach($blog_ids as $id){
+                        self::setup_site($id);
+                    }
+
+                    self::finish_multisite_setup();
                 }
+
             }
             else{
                 self::setup_site();
@@ -313,14 +324,72 @@ class GFForms {
 
     }
 
+    public static function start_multisite_setup($force_setup){
+
+        $can_start = false;
+        GFCommon::log_debug("Starting multisite setup from blog: " . get_current_blog_id());
+
+        //switching to primary blog
+        if(switch_to_blog(BLOG_ID_CURRENT_SITE)){
+
+            GFCommon::log_debug("Switched to primary blog: " . BLOG_ID_CURRENT_SITE);
+
+            $is_doing_setup = self::get_wp_option("gf_doing_setup");
+
+            $is_completed_setup = self::get_wp_option("gf_setup_completed") == GFCommon::$version;
+
+
+            //Can start a multisite setup if the setup has not already started and has not been completed.
+            //Allow setup to start no matter what if "force" mode is specified
+            $can_start = $force_setup || (!$is_doing_setup && !$is_completed_setup);
+
+            if($can_start)
+                update_option("gf_doing_setup", 1);
+
+            GFCommon::log_debug("Is doing setup: {$is_doing_setup}. Last setup version: " . self::get_wp_option("gf_setup_completed") . ". Is setup completed {$is_setup_completed}. Force setup: {$force_setup}. Can start: {$can_start}");
+
+            restore_current_blog();
+        }
+
+        return $can_start;
+    }
+
+    public static function finish_multisite_setup(){
+        GFCommon::log_debug("Finishing multisite setup");
+
+        if(switch_to_blog(BLOG_ID_CURRENT_SITE)){
+
+            GFCommon::log_debug("Switched to main blog: " . BLOG_ID_CURRENT_SITE);
+
+            update_option("gf_setup_completed", GFCommon::$version);
+            update_option("gf_doing_setup", 0);
+            restore_current_blog();
+
+        }
+
+    }
+
+    public static function get_wp_option($option_name){
+        global $wpdb;
+        return $wpdb->get_var($wpdb->prepare("SELECT option_value FROM {$wpdb->prefix}options WHERE option_name=%s", $option_name));
+    }
+
     public static function setup_site($blog_id=null){
 
-        if(empty($blog_id))
+        GFCommon::log_debug("Blog {$blog_id} - Beginning of setup site");
+
+        if(empty($blog_id)){
             $blog_id = get_current_blog_id();
+        }
+
+        GFCommon::log_debug("Blog {$blog_id} - Trying to switch to blog");
 
         //if a blog id is specified, switch to it
-        if(MULTISITE && !switch_to_blog($blog_id))
+        if(MULTISITE && !switch_to_blog($blog_id)){
+            GFCommon::log_debug("Could not switch to blog {$blog_id}");
             return;
+        }
+
 
         GFCommon::log_debug("Blog {$blog_id} - Executing database scripts.");
 
@@ -1629,15 +1698,21 @@ class GFForms {
 
     public static function all_leads_page(){
 
+
+        $view = rgget("view");
+        $lead_id = rgget('lid');
+
+
         //displaying lead detail page if lead id is in the query string
-        if(rgget('lid') || !rgblank(rgget('pos')))
-        {
+        if($view == 'entry' && (rgget('lid') || !rgblank(rgget('pos')))) {
             require_once(GFCommon::get_base_path() . "/entry_detail.php");
             GFEntryDetail::lead_detail_page();
-        }
-        else{
+        } else if ($view == 'entries' || empty($view)){
             require_once(GFCommon::get_base_path() . "/entry_list.php");
             GFEntryList::all_leads_page();
+        } else {
+            $form_id = rgget('id');
+            do_action("gform_entries_view", $view, $form_id, $lead_id);
         }
     }
 
@@ -2217,7 +2292,7 @@ class GFForms {
             case "entries" :
                 if(rgget("page") == "gf_new_form")
                     return "gf_toolbar_disabled";
-                else if(rgget("page") == "gf_entries")
+                else if(rgget("page") == "gf_entries" && rgempty("view", $_GET))
                     return "gf_toolbar_active";
 
             break;

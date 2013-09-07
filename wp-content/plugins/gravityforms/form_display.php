@@ -707,7 +707,12 @@ class GFFormDisplay{
         }
         else{
             //to prevent multiple form submissions when button is pressed multiple times
-            $onclick="onclick='if(window[\"gf_submitting\"]){return false;} window[\"gf_submitting\"]=true;'";
+            if(GFFormsModel::is_html5_enabled())
+                $set_submitting = "if( !jQuery(\"#gform_{$form_id}\")[0].checkValidity || jQuery(\"#gform_{$form_id}\")[0].checkValidity()){window[\"gf_submitting_{$form_id}\"]=true;}";
+            else
+                $set_submitting = "window[\"gf_submitting_{$form_id}\"]=true;";
+
+            $onclick="onclick='if(window[\"gf_submitting_{$form_id}\"]){return false;}  $set_submitting '";
         }
 
         if($button["type"] == "text" || empty($button["imageUrl"])){
@@ -1484,6 +1489,11 @@ class GFFormDisplay{
     }
 
     public static function enqueue_form_scripts($form, $ajax=false){
+        
+        // adding pre enqueue scripts hook so that scripts can be added first if a need exists
+        do_action("gform_pre_enqueue_scripts", $form, $ajax);
+        do_action("gform_pre_enqueue_scripts_{$form["id"]}", $form, $ajax);
+        
         if(!get_option('rg_gforms_disable_css')){
             wp_enqueue_style("gforms_reset_css", GFCommon::get_base_url() . "/css/formreset.css", null, GFCommon::$version);
             wp_enqueue_style("gforms_datepicker_css", GFCommon::get_base_url() . "/css/datepicker.css", null, GFCommon::$version);
@@ -1683,11 +1693,11 @@ class GFFormDisplay{
                 if(is_array(rgar($field, "inputs"))){
                     $field_val = array();
                     foreach($field["inputs"] as $input){
-                        $field_val["input_{$input["id"]}"] = RGFormsModel::get_parameter_value(rgar($input, "name"), $field, $field_values);
+                        $field_val["input_{$input["id"]}"] = RGFormsModel::get_parameter_value(rgar($input, "name"), $field_values, $field);
                     }
                 }
                 else if($input_type == "time"){
-                    $parameter_val = RGFormsModel::get_parameter_value(rgar($field, "inputName"), $field, $field_values);
+                    $parameter_val = RGFormsModel::get_parameter_value(rgar($field, "inputName"), $field_values, $field);
                     if(!empty($parameter_val) && preg_match('/^(\d*):(\d*) ?(.*)$/', $parameter_val, $matches)){
                         $field_val = array();
                         $field_val[] = esc_attr($matches[1]); //hour
@@ -1696,7 +1706,7 @@ class GFFormDisplay{
                     }
                 }
                 else if($input_type == "list"){
-                    $parameter_val = RGFormsModel::get_parameter_value(rgar($field, "inputName"), $field, $field_values);
+                    $parameter_val = RGFormsModel::get_parameter_value(rgar($field, "inputName"), $field_values, $field);
                     $field_val = is_array($parameter_val) ? $parameter_val : explode(",", str_replace("|", ",", $parameter_val));
                 }
                 else {

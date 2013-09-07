@@ -9,11 +9,13 @@ jQuery.fn.prop = function() {
     }
 }
 
+
 //Formatting free form currency fields to currency
-jQuery(document).bind('gform_post_render', gformBindFormatPricingFields);
+jQuery(document).ready(function(){
+    jQuery(document).bind('gform_post_render', gformBindFormatPricingFields);
+});
 
 function gformBindFormatPricingFields(){
-
     jQuery(".ginput_amount, .ginput_donation_amount").bind("change", function(){
         gformFormatPricingField(this);
     });
@@ -22,6 +24,7 @@ function gformBindFormatPricingFields(){
         gformFormatPricingField(this);
     });
 }
+
 
 
 //------------------------------------------------
