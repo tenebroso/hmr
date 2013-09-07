@@ -66,14 +66,41 @@
       .translate3d(0,0,0);
       .transition(color);
       .transition-duration(.5s);
+
+      /* New HOVER Effects */
+      padding:0 5px;
+      overflow:hidden;
+      height:1em;
+      span {
+        position: relative;
+        display: inline-block;
+        -webkit-transition: -webkit-transform 0.3s;
+        -moz-transition: -moz-transform 0.3s;
+        transition: transform 0.3s;
+        &:before {
+          position: absolute;
+          top: 100%;
+          content: attr(data-hover);
+          font-weight: 700;
+          -webkit-transform: translate3d(0,0,0);
+          -moz-transform: translate3d(0,0,0);
+          transform: translate3d(0,0,0);
+        }
+      }
       &:hover, &:focus {
         text-decoration: none;
-        //color:white;
-        color:#55656f;
+        color:@white;
+        //color:#55656f;
+        span {
+          -webkit-transform: translateY(-100%);
+          -moz-transform: translateY(-100%);
+          transform: translateY(-100%);
+        }
       }
     }
   }
 }
+
 
 .sub-nav {
   border-bottom:2px solid #202a39;
@@ -257,11 +284,12 @@
 }
 
 
-@media (max-width:885px) and (min-width:768px) {
+@media (max-width:979px) and (min-width:768px) {
 
   .nav > li { 
+    margin-right:18px;
     a {
-      font-size:19px;
+      font-size:14px;
       &:hover {
         background:none !important;
         color:@gray;
@@ -281,6 +309,9 @@
     }
     &.menu-press {
       margin-right:20px;
+    }
+    &.brand {
+      margin-right:18px;
     }
   }
 

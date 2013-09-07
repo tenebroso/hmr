@@ -2395,6 +2395,9 @@ button.close {
 
 .nav > li > a {
   display: inline-block;
+  height: 1em;
+  padding: 0 5px;
+  overflow: hidden;
   font-family: 'Circe-Regular', sans-serif;
   font-size: 16px;
   font-weight: 300;
@@ -2417,10 +2420,35 @@ button.close {
           transition-duration: 0.5s;
 }
 
+.nav > li > a span {
+  position: relative;
+  display: inline-block;
+  -webkit-transition: -webkit-transform 0.3s;
+     -moz-transition: -moz-transform 0.3s;
+          transition: transform 0.3s;
+}
+
+.nav > li > a span:before {
+  position: absolute;
+  top: 100%;
+  font-weight: 700;
+  content: attr(data-hover);
+  -webkit-transform: translate3d(0, 0, 0);
+     -moz-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
 .nav > li > a:hover,
 .nav > li > a:focus {
-  color: #55656f;
+  color: #ffffff;
   text-decoration: none;
+}
+
+.nav > li > a:hover span,
+.nav > li > a:focus span {
+  -webkit-transform: translateY(-100%);
+     -moz-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
 .sub-nav {
@@ -2613,9 +2641,12 @@ button.close {
   background: none !important;
 }
 
-@media (max-width: 885px) and (min-width: 768px) {
+@media (max-width: 979px) and (min-width: 768px) {
+  .nav > li {
+    margin-right: 18px;
+  }
   .nav > li a {
-    font-size: 19px;
+    font-size: 14px;
   }
   .nav > li a:hover {
     color: #a6a6a6;
@@ -2635,6 +2666,9 @@ button.close {
   }
   .nav > li.menu-press {
     margin-right: 20px;
+  }
+  .nav > li.brand {
+    margin-right: 18px;
   }
 }
 
@@ -3699,6 +3733,21 @@ button.close {
   .carousel-caption {
     position: static;
   }
+}
+
+/* ==========================================================================
+   ANIMATE ALL THE THINGS
+   ========================================================================== */
+
+* {
+  -webkit-transition: all;
+     -moz-transition: all;
+       -o-transition: all;
+          transition: all;
+  -webkit-transition-duration: 500ms;
+     -moz-transition-duration: 500ms;
+       -o-transition-duration: 500ms;
+          transition-duration: 500ms;
 }
 
 /* ==========================================================================
