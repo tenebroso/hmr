@@ -1,28 +1,35 @@
-body.blog, body.category, body.single {
-	background:@white;
-	color:@blueDark;
-	font-weight:200;
-	.entry-content {
-		a {
-			color:@slate;
-			border-bottom:1px solid @blueLighter;
-			&:hover {
-				color:@blueDark;
-				border-bottom:1px solid @blue;
+.js {
+	//Only turn the blog text colors if the javascript has fired to remove the blue bg from <html>
+	body.blog, body.category, body.single {
+		background:@white;
+		color:@blueDark;
+		font-weight:200;
+		.entry-content {
+			a {
+				color:@slate;
+				border-bottom:1px solid @blueLighter;
+				&:hover {
+					color:@blueDark;
+					border-bottom:1px solid @blue;
+				}
+			}
+		}
+		.banner {
+			background:none;
+			border-bottom:none;
+		}
+		.nav {
+			> li {
+				&.brand {
+					background-position:-132px -654px;
+				}
+				> a {
+					color:@blueDark;
+				}
 			}
 		}
 	}
-	.banner {
-		background:none;
-		border-bottom:none;
-	}
-	.nav {
-		> li {
-			> a {
-				color:@blueDark;
-			}
-		}
-	}
+
 }
 
 .hentry {
