@@ -4246,12 +4246,47 @@ a:hover {
    Posts/Blog
    ========================================================================== */
 
+body.blog,
+body.category,
+body.single {
+  font-weight: 200;
+  color: #071222;
+  background: #ffffff;
+}
+
+body.blog .entry-content a,
+body.category .entry-content a,
+body.single .entry-content a {
+  color: #55616f;
+  border-bottom: 1px solid #a4adb5;
+}
+
+body.blog .entry-content a:hover,
+body.category .entry-content a:hover,
+body.single .entry-content a:hover {
+  color: #071222;
+  border-bottom: 1px solid #293240;
+}
+
+body.blog .banner,
+body.category .banner,
+body.single .banner {
+  background: none;
+  border-bottom: none;
+}
+
+body.blog .nav > li > a,
+body.category .nav > li > a,
+body.single .nav > li > a {
+  color: #071222;
+}
+
 .hentry {
   padding: 0 0 2em 0;
   margin: 0 0 4em 0;
   font-size: 16px;
   line-height: 2;
-  border-bottom: 1px solid #293240;
+  border-bottom: 1px solid #55616f;
 }
 
 .hentry header .entry-title {
@@ -4261,7 +4296,7 @@ a:hover {
 }
 
 .hentry header .entry-title a {
-  color: #ffffff;
+  color: #071222;
 }
 
 .hentry header .entry-title a:after {
@@ -4278,6 +4313,10 @@ a:hover {
      -moz-transition: 0.5s;
        -o-transition: 0.5s;
           transition: 0.5s;
+}
+
+.hentry header .entry-title a:hover {
+  color: #55616f;
 }
 
 .hentry header .entry-title a:hover:after {
@@ -4320,6 +4359,7 @@ a:hover {
 .single-post .hentry {
   font-size: 15px;
   line-height: 1.7;
+  border-bottom: none;
 }
 
 .single-post .hentry {
@@ -4331,6 +4371,10 @@ a:hover {
   font-size: 14px;
 }
 
+.single-post .post-nav a:hover {
+  color: #000000;
+}
+
 .single-post .addthis_toolbox {
   margin: 2em 0 0;
 }
@@ -4340,7 +4384,7 @@ a:hover {
   margin: 25px 0;
   text-align: center;
   list-style-type: none;
-  border-top: 1px solid #293240;
+  border-top: 1px solid #55616f;
 }
 
 .pagination li {
@@ -4354,18 +4398,19 @@ a:hover {
   position: relative;
   top: 1px;
   padding: 10px 20px 0;
-  border-top: 1px solid #293240;
+  border-top: 1px solid #55616f;
 }
 
 .pagination li a {
   position: relative;
   top: 1px;
   padding: 10px 20px 0;
-  border-top: 1px solid #293240;
+  border-top: 1px solid #55616f;
 }
 
 .pagination li a:hover {
-  border-top: 1px solid white;
+  color: #071222;
+  border-top: 1px solid #071222;
 }
 
 .pagination li.next {
@@ -4379,11 +4424,11 @@ a:hover {
   top: -4px;
   float: right;
   padding: 4px 20px 0 20px;
-  border-top: 1px solid #293240;
+  border-top: 1px solid #55616f;
 }
 
 .pagination li.next a:hover {
-  border-top: 1px solid white;
+  border-top: 1px solid #071222;
 }
 
 .pagination li.prev {
@@ -4429,6 +4474,7 @@ a:hover {
 
 .sidebar h3 {
   font-size: 16px;
+  font-weight: 200;
   color: #a6a6a6;
   text-transform: uppercase;
 }
@@ -4443,14 +4489,19 @@ a:hover {
   line-height: 1.6;
 }
 
+.sidebar #searchform label {
+  display: none;
+}
+
 .sidebar #s {
   width: 100%;
   padding: 10px 40px 10px 14px;
   font-family: 'Circe-Regular', sans-serif;
   font-size: 15px;
+  font-weight: 200;
   line-height: 1.5;
   color: #ffffff;
-  background: #293240;
+  background: #071222;
   border: none;
   -webkit-border-radius: 2px;
      -moz-border-radius: 2px;
@@ -4493,7 +4544,7 @@ a:hover {
 .sidebar .widget {
   padding: 0 0 25px 0;
   margin: 0 0 25px 0;
-  border-bottom: 1px solid #293240;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .sidebar .widget.widget-last {
@@ -4509,6 +4560,11 @@ a:hover {
 .sidebar .widget .cat-item a {
   position: relative;
   display: block;
+  color: #55616f;
+}
+
+.sidebar .widget .cat-item a:hover {
+  color: #071222;
 }
 
 .sidebar .widget .cat-item a:before {
@@ -5673,6 +5729,7 @@ ul.fullsize li {
 
 .content-info p.copyright {
   line-height: 36px;
+  color: #ffffff;
 }
 
 .content-info h4 {
@@ -6144,6 +6201,10 @@ ul.fullsize li {
     display: inline-block;
     width: 49%;
     vertical-align: top;
+  }
+  .blog .wrap.container,
+  .single-post .wrap.container {
+    padding-top: 40px;
   }
   .blog .sidebar,
   .single-post .sidebar {

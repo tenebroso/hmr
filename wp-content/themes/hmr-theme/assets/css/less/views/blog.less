@@ -1,3 +1,30 @@
+body.blog, body.category, body.single {
+	background:@white;
+	color:@blueDark;
+	font-weight:200;
+	.entry-content {
+		a {
+			color:@slate;
+			border-bottom:1px solid @blueLighter;
+			&:hover {
+				color:@blueDark;
+				border-bottom:1px solid @blue;
+			}
+		}
+	}
+	.banner {
+		background:none;
+		border-bottom:none;
+	}
+	.nav {
+		> li {
+			> a {
+				color:@blueDark;
+			}
+		}
+	}
+}
+
 .hentry {
 	header { 
 		.entry-title {
@@ -5,7 +32,8 @@
 			margin:0;
 			line-height:1.1;
 				a {
-					color:@white;
+					//color:@white;
+					color:@blueDark;
 					&:after {
 						.translate3d(0,0,0);
 						.transition(.5s);
@@ -15,6 +43,7 @@
 						margin: 0 0 0 10px;
 					}
 					&:hover {
+						color:@slate;
 						&:after {
 							.opacity(100);
 						}
@@ -28,7 +57,7 @@
 	}
 	margin: 0 0 4em 0;
 	padding: 0 0 2em 0;
-	border-bottom:1px solid @blue;
+	border-bottom:1px solid @blueLight;
 	font-size:16px;
 	line-height:2;
 }
@@ -63,6 +92,7 @@
 	.hentry {
 		font-size:15px;
 		line-height:1.7;
+		border-bottom:none;
 	}
 }
 
@@ -73,6 +103,11 @@
 	}
 	.post-nav {
 		font-size:14px;
+		a {
+			&:hover {
+				color:@black;
+			}
+		}
 	}
 	.addthis_toolbox {
 		margin:2em 0 0;
@@ -82,7 +117,7 @@
 .pagination {
 	margin: 25px 0;
 	padding: 0;
-	border-top:1px solid @blue;
+	border-top:1px solid @blueLight;
 	list-style-type: none;
 	text-align: center;
 	li {
@@ -94,15 +129,16 @@
 			padding: 10px 20px 0;
 			position: relative;
 			top: 1px;
-			border-top:1px solid @blue;
+			border-top:1px solid @blueLight;
 		}
 		a {
-			border-top:1px solid @blue;
+			border-top:1px solid @blueLight;
 			position: relative;
 			top: 1px;
 			padding: 10px 20px 0;
 			&:hover {
-				border-top:1px solid white;
+				border-top:1px solid @blueDark;
+				color:@blueDark;
 			}
 		}
 		&.next {
@@ -114,9 +150,9 @@
 				position: relative;
 				top: -4px;
 				float: right;
-				border-top:1px solid @blue;
+				border-top:1px solid @blueLight;
 				&:hover {
-					border-top:1px solid white;
+					border-top:1px solid @blueDark;
 				}
 			}
 		}

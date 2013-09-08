@@ -58,6 +58,12 @@ HMR.Site = {
       if($('.single-team').length) {
         $('.menu li.menu-our-team').addClass('active');
       }
+
+      // White BG for Blog Pages
+      if($('.single-post').length) {
+        $('html').css('background-color','#fff');
+      }
+      
     }
   },
   page: {
@@ -70,7 +76,7 @@ HMR.Site = {
     init: function() {
       HMR.sidebarPadding();
       $(".type-post").fitVids();
-      $('html').css('background','none');
+      $('html').css('background-color','#fff');
     }
   },
   archive: {
@@ -78,6 +84,11 @@ HMR.Site = {
       HMR.conditionals();
       HMR.sidebarPadding();
       $(".type-post").fitVids();
+
+      // White BG for Blog Pages
+      if($('.category').length) {
+        $('html').css('background-color','#fff');
+      }
     }
   },
   history: {
