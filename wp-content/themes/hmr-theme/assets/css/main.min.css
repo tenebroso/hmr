@@ -4160,7 +4160,7 @@ a:hover {
   margin: .75em 0 1em 0;
   font-size: 30px;
   font-weight: 200;
-  color: #a6a6a6;
+  color: #ffffff;
   text-align: center;
   text-transform: uppercase;
 }
@@ -5127,7 +5127,7 @@ a:hover {
 }
 
 .columns p a:hover {
-  color: #a6a6a6;
+  color: #55616f;
   text-decoration: none;
 }
 
