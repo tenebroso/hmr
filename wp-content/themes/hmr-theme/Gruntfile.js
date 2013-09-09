@@ -38,17 +38,7 @@ module.exports = function(grunt) {
         files: {
           'assets/js/scripts.min.js': [
             'assets/js/plugins/bootstrap/bootstrap-transition.js',
-            'assets/js/plugins/bootstrap/bootstrap-alert.js',
-            'assets/js/plugins/bootstrap/bootstrap-button.js',
-            'assets/js/plugins/bootstrap/bootstrap-carousel.js',
-            'assets/js/plugins/bootstrap/bootstrap-collapse.js',
-            'assets/js/plugins/bootstrap/bootstrap-dropdown.js',
             'assets/js/plugins/bootstrap/bootstrap-modal.js',
-            'assets/js/plugins/bootstrap/bootstrap-tooltip.js',
-            'assets/js/plugins/bootstrap/bootstrap-popover.js',
-            'assets/js/plugins/bootstrap/bootstrap-scrollspy.js',
-            'assets/js/plugins/bootstrap/bootstrap-tab.js',
-            'assets/js/plugins/bootstrap/bootstrap-typehead.js',
             'assets/js/plugins/*.js',
             'assets/js/views/**/*.js',
             'assets/js/_*.js'
