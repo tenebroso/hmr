@@ -4289,27 +4289,8 @@ a:hover {
 
 .pibfi_pinterest .xc_pin,
 .pibfi_pinterest img {
-  left: 660px !important;
-}
-
-@media (max-width: 1200px) and (min-width: 980px) {
-  .pibfi_pinterest .xc_pin,
-  .pibfi_pinterest img {
-    left: 615px !important;
-  }
-}
-
-@media (max-width: 979px) and (min-width: 768px) {
-  .pibfi_pinterest .xc_pin,
-  .pibfi_pinterest img {
-    left: 454px !important;
-  }
-}
-
-@media (max-width: 767px) {
-  .pibfi_pinterest img {
-    display: none !important;
-  }
+  right: 10px;
+  left: auto !important;
 }
 
 .hentry {
@@ -5843,8 +5824,8 @@ ul.fullsize li {
 @media (max-width: 767px) {
   .content-info {
     position: relative;
-    height: 115px;
-    margin-top: 115px;
+    height: 125px;
+    margin-top: 125px;
     clear: both;
   }
   .content-info h4 {

@@ -35,25 +35,8 @@
 // This overrides the Pinterest Pin It Button for Images Plugin, which was incorrectly adjusting the placement of the label on hover
 
 .pibfi_pinterest .xc_pin, .pibfi_pinterest img {
-	left:660px !important;
-}
-
-@media (max-width: 1200px) and (min-width: 980px) {
-	.pibfi_pinterest .xc_pin, .pibfi_pinterest img {
-		left:615px !important;
-	}
-}
-
-@media (max-width: 979px) and (min-width: 768px) {
-	.pibfi_pinterest .xc_pin, .pibfi_pinterest img {
-		left:454px !important;
-	}
-}
-
-@media (max-width: 767px) {
-	.pibfi_pinterest img {
-		display:none !important;
-	}
+	left:auto !important;
+	right:10px;
 }
 
 .hentry {
