@@ -2495,6 +2495,10 @@ button.close {
   letter-spacing: 1px;
   color: #55616f;
   text-transform: uppercase;
+  -webkit-transform: translate3d(0, 0, 0);
+     -moz-transform: translate3d(0, 0, 0);
+       -o-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 
 .sub-nav .menu li a:hover {
@@ -5729,6 +5733,7 @@ ul.fullsize li {
    ========================================================================== */
 
 .content-info {
+  z-index: 100;
   font-family: 'Circe-Regular', sans-serif;
   background: #293240;
 }
