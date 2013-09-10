@@ -5,18 +5,18 @@
    Uncomment add_action('admin_head', 'hide_admin_menu'); when in production
    ========================================================================== */
 
-function hide_admin_menu()
+function hide_acf_menu()
 {
 	global $current_user;
 	get_currentuserinfo();
  
-	if($current_user->user_login != 'admin')
+	if($current_user->user_login != 'jonbukiewicz')
 	{
-		echo '<style type="text/css">#toplevel_page_edit-post_type-acf{display:none;}</style>';
+		
 	}
 }
 
-add_action('admin_head', 'hide_admin_menu');
+add_action('admin_head', 'hide_acf_menu');
 
 
 /* =============================================================================
@@ -375,32 +375,36 @@ add_action( 'admin_menu', array ( 'chg_Posts_to_Blog', 'admin_menu' ) );
 /* =============================================================================
    Cleanup Dashboard
    ========================================================================== */
-if (!current_user_can('manage_options')) {
-add_action( 'admin_menu', 'remove_menu_links' );
-add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
+
+function hide_admin_menu()
+{
+    global $current_user;
+    get_currentuserinfo();
+ 
+    if($current_user->user_login != 'jonbukiewicz')
+    {
+        global $wp_meta_boxes;
+        unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press']);
+        unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links']);
+        unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_right_now']);
+        unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins']);
+        unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_drafts']);
+        unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_comments']);
+        unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);
+        unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);
+        remove_menu_page('upload.php'); //remove media
+        remove_menu_page('tools.php'); //remove tools
+        remove_menu_page('themes.php'); 
+        remove_menu_page('plugins.php');
+        remove_menu_page('options-general.php');
+        remove_menu_page('edit-comments.php'); //remove comments
+        remove_submenu_page( 'edit.php', 'edit-tags.php?taxonomy=post_tag' ); // remove tags
+        remove_action( 'admin_notices', 'update_nag', 3 );
+        echo '<style type="text/css">#toplevel_page_edit-post_type-acf, #toplevel_page_gf_edit_forms {display:none;}</style>';
+    }
 }
 
-function remove_dashboard_widgets() {
-    global $wp_meta_boxes;
-
-    unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press']);
-    unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links']);
-    unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_right_now']);
-    unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins']);
-    unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_drafts']);
-    unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_comments']);
-    unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);
-    unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);
-
-}
-
-function remove_menu_links() {
-    remove_menu_page('upload.php'); //remove media
-    remove_menu_page('tools.php'); //remove tools
-    remove_menu_page('profile.php'); //remove profile
-    remove_menu_page('edit-comments.php'); //remove comments
-    remove_submenu_page( 'edit.php', 'edit-tags.php?taxonomy=post_tag' ); // remove tags
-}
+add_action('admin_head', 'hide_admin_menu');
 
 /* =============================================================================
    Ensure the Team Archive shows enough posts
