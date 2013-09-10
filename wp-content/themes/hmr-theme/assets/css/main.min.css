@@ -4252,7 +4252,8 @@ a:hover {
 
 .js body.blog,
 .js body.category,
-.js body.single {
+.js body.single-post,
+.js body.search {
   font-weight: 200;
   color: #071222;
   background: #ffffff;
@@ -4260,34 +4261,39 @@ a:hover {
 
 .js body.blog .entry-content a,
 .js body.category .entry-content a,
-.js body.single .entry-content a {
+.js body.single-post .entry-content a,
+.js body.search .entry-content a {
   color: #55616f;
   border-bottom: 1px solid #a4adb5;
 }
 
 .js body.blog .entry-content a:hover,
 .js body.category .entry-content a:hover,
-.js body.single .entry-content a:hover {
+.js body.single-post .entry-content a:hover,
+.js body.search .entry-content a:hover {
   color: #071222;
   border-bottom: 1px solid #293240;
 }
 
 .js body.blog .banner,
 .js body.category .banner,
-.js body.single .banner {
+.js body.single-post .banner,
+.js body.search .banner {
   background: none;
   border-bottom: none;
 }
 
 .js body.blog .nav > li.brand,
 .js body.category .nav > li.brand,
-.js body.single .nav > li.brand {
+.js body.single-post .nav > li.brand,
+.js body.search .nav > li.brand {
   background-position: -132px -654px;
 }
 
 .js body.blog .nav > li > a,
 .js body.category .nav > li > a,
-.js body.single .nav > li > a {
+.js body.single-post .nav > li > a,
+.js body.search .nav > li > a {
   color: #071222;
 }
 
