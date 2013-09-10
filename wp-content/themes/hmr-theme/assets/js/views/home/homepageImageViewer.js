@@ -15,12 +15,14 @@ var HMR = HMR || {};
     $("body").backstretch([img]);
 
     var instance = $("body").data("backstretch");
-    instance.resize();
+    
+    
 
     // Use in case we want something to happen only after backstretch runs. Placeholder for now.
-    //$(window).on("backstretch.after", function (e, instance, index) {
-      // Do something
-    //});
+    $(window).on("backstretch.after", function (e, instance, index) {
+        $('.backstretch').transition({ scale: 1.1 }, 10000);
+        instance.resize();
+    });
 
 
     if($(window).width() > 767) {

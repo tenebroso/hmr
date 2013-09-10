@@ -3754,6 +3754,17 @@ button.close {
           transition-duration: 500ms;
 }
 
+.backstretch * {
+  -webkit-transition: all;
+     -moz-transition: all;
+       -o-transition: all;
+          transition: all;
+  -webkit-transition-duration: 0;
+     -moz-transition-duration: 0;
+       -o-transition-duration: 0;
+          transition-duration: 0;
+}
+
 /* ==========================================================================
    Bootstrap & Stock Bootstrap/Roots Theme Setup
    ========================================================================== */
