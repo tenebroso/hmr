@@ -419,6 +419,19 @@ function namespace_add_custom_types( $query ) {
 add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
 
 /* =============================================================================
+   Custom Login Logo
+   ========================================================================== */
+
+function custom_logo() {
+  echo '<style type="text/css">
+    #login h1 a { background-image: url('.get_bloginfo('template_directory').'/assets/img/sprite.png) !important; background-position: -143px -697px;
+background-size: auto;width: 142px;height: 84px;float: none;display: block;margin: 0 auto 20px auto; }
+    </style>';
+}
+
+add_action('login_head', 'custom_logo');
+
+/* =============================================================================
    Register Additional Thumbnail Size (Capabilities Landing Page)
    ========================================================================== */
 
