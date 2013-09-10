@@ -156,7 +156,7 @@ function register_cpt_press() {
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => true,
-        'menu_position' => 5,
+        'menu_position' => 4,
         'show_in_nav_menus' => true,
         'publicly_queryable' => true,
         'exclude_from_search' => false,
@@ -168,6 +168,100 @@ function register_cpt_press() {
     );
 
     register_post_type( 'press', $args );
+    
+}
+
+/* =============================================================================
+   Web CPT
+   ========================================================================== */
+
+
+add_action( 'init', 'register_cpt_web' );
+
+function register_cpt_web() {
+
+    $labels = array( 
+        'name' => _x( 'Web', 'web' ),
+        'singular_name' => _x( 'Web', 'web' ),
+        'add_new' => _x( 'Add New', 'web' ),
+        'add_new_item' => _x( 'Add New Web Item', 'web' ),
+        'edit_item' => _x( 'Edit Web Item', 'web' ),
+        'new_item' => _x( 'New Web Item', 'web' ),
+        'view_item' => _x( 'View Web', 'web' ),
+        'search_items' => _x( 'Search Web items', 'web' ),
+        'not_found' => _x( 'No Web Items found', 'web' ),
+        'not_found_in_trash' => _x( 'No Web Items found in Trash', 'web' ),
+        'parent_item_colon' => _x( 'Parent Web Item:', 'web' ),
+        'menu_name' => _x( 'Web', 'web' ),
+    );
+
+    $args = array( 
+        'labels' => $labels,
+        'hierarchical' => false,
+        'supports' => array( 'title', 'thumbnail' ),
+        'taxonomies' => array(),
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 4,
+        'show_in_nav_menus' => true,
+        'publicly_queryable' => true,
+        'exclude_from_search' => false,
+        'has_archive' => true,
+        'query_var' => true,
+        'can_export' => true,
+        'rewrite' => true,
+        'capability_type' => 'post'
+    );
+
+    register_post_type( 'web', $args );
+    
+}
+
+/* =============================================================================
+   Videos CPT
+   ========================================================================== */
+
+
+add_action( 'init', 'register_cpt_videos' );
+
+function register_cpt_videos() {
+
+    $labels = array( 
+        'name' => _x( 'Video', 'video' ),
+        'singular_name' => _x( 'Video', 'video' ),
+        'add_new' => _x( 'Add New', 'video' ),
+        'add_new_item' => _x( 'Add New Video', 'video' ),
+        'edit_item' => _x( 'Edit Video', 'video' ),
+        'new_item' => _x( 'New Video', 'video' ),
+        'view_item' => _x( 'View Video', 'video' ),
+        'search_items' => _x( 'Search Videos', 'video' ),
+        'not_found' => _x( 'No Videos found', 'video' ),
+        'not_found_in_trash' => _x( 'No Videos found in Trash', 'video' ),
+        'parent_item_colon' => _x( 'Parent Video:', 'video' ),
+        'menu_name' => _x( 'Video', 'video' ),
+    );
+
+    $args = array( 
+        'labels' => $labels,
+        'hierarchical' => false,
+        'supports' => array( 'title', 'thumbnail' ),
+        'taxonomies' => array(),
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 4,
+        'show_in_nav_menus' => true,
+        'publicly_queryable' => true,
+        'exclude_from_search' => false,
+        'has_archive' => true,
+        'query_var' => true,
+        'can_export' => true,
+        'rewrite' => true,
+        'capability_type' => 'post'
+    );
+
+    register_post_type( 'video', $args );
     
 }
 
@@ -214,7 +308,7 @@ function register_cpt_testimonial() {
         'capability_type' => 'post'
     );
 
-    register_post_type( 'testimonial', $args );
+    //register_post_type( 'testimonial', $args );
     
 }
 
@@ -229,6 +323,72 @@ register_nav_menus( array(
     'portfolio' => 'Portfolio Sub-Nav'
     ) 
 );
+
+/* =============================================================================
+   Change Posts to say Blog Posts
+   ========================================================================== */
+
+class chg_Posts_to_Blog
+{
+    public static function init()
+    {
+        global $wp_post_types;
+        $labels = &$wp_post_types['post']->labels;
+        $labels->name = 'Blog Posts';
+        $labels->singular_name = 'Blog Post';
+        $labels->add_new = 'Add Blog Post';
+        $labels->add_new_item = 'Add Blog Post';
+        $labels->edit_item = 'Edit Blog Post';
+        $labels->new_item = 'Blog Post';
+        $labels->view_item = 'View Blog Post';
+        $labels->search_items = 'Search Blog Posts';
+        $labels->not_found = 'No Blog Posts found';
+        $labels->not_found_in_trash = 'No Blog Posts found in trash';
+        $labels->name_admin_bar = 'Blog Posts';
+    }
+
+    public static function admin_menu()
+    {
+        global $menu;
+        global $submenu;
+        $menu[5][0] = 'Blog Posts';
+        $submenu['edit.php'][5][0] = 'Blog Posts';
+        $submenu['edit.php'][10][0] = 'Add Blog Post';
+    }
+}
+
+add_action( 'init', array ( 'chg_Posts_to_Blog', 'init' ) );
+add_action( 'admin_menu', array ( 'chg_Posts_to_Blog', 'admin_menu' ) );
+
+/* =============================================================================
+   Cleanup Dashboard
+   ========================================================================== */
+if (!current_user_can('manage_options')) {
+add_action( 'admin_menu', 'remove_menu_links' );
+add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
+}
+
+function remove_dashboard_widgets() {
+    global $wp_meta_boxes;
+
+    unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press']);
+    unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links']);
+    unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_right_now']);
+    unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins']);
+    unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_drafts']);
+    unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_comments']);
+    unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);
+    unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);
+
+}
+
+function remove_menu_links() {
+    remove_menu_page('upload.php'); //remove media
+    remove_menu_page('tools.php'); //remove tools
+    remove_menu_page('profile.php'); //remove profile
+    remove_menu_page('edit-comments.php'); //remove comments
+    remove_submenu_page( 'edit.php', 'edit-tags.php?taxonomy=post_tag' ); // remove tags
+}
 
 /* =============================================================================
    Ensure the Team Archive shows enough posts
