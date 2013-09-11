@@ -4692,6 +4692,10 @@ a:hover {
    Team Archive - Team Landing Page
    ========================================================================== */
 
+.post-type-archive-team #wrap {
+  min-height: 94.5%;
+}
+
 .post-type-archive-team .page-title {
   margin: 30px 0 0;
   font-size: 27px;
@@ -5762,6 +5766,17 @@ ul.fullsize li {
   z-index: 100;
   font-family: 'Circe-Regular', sans-serif;
   background: #293240;
+  -webkit-transform: translate3d(0, 0, 0);
+     -moz-transform: translate3d(0, 0, 0);
+       -o-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.content-info * {
+  -webkit-transform: translate3d(0, 0, 0);
+     -moz-transform: translate3d(0, 0, 0);
+       -o-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 
 .content-info p {
