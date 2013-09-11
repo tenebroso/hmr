@@ -1,0 +1,87 @@
+1.0.10
+==========
+[New] Added filter searchwp_common_words
+[New] Added filter searchwp_enable_parent_attribution_{posttype}
+[New] Added filter searchwp_enable_attribution_{posttype}
+
+
+1.0.9
+==========
+[Improvement] Better cleaning and processing of taxonomy terms
+[Improvement] Additional parameter when invoking SearchWPSearch for 3rd party integrations (props Matt Gibbs)
+[Fix] Fixed an issue with Firefox not liking SVG files
+
+
+1.0.8
+==========
+[Fix] Fixed an issue where duplicate terms could get returned when sanitizing
+[New] Extension: Fuzzy Searching
+[New] Extension: Term Archive Priority
+[New] Added filter searchwp_results to faciliate filtration of results before they're returned
+[New] Added filter searchwp_query_limit_start to allow offsetting the main query results
+[New] Added filter searchwp_query_limit_total to allow offsetting the main query results
+[New] Added filter searchwp_pre_search_terms to allow filtering search terms before searches run
+[New] Added filter searchwp_load_posts so as to prevent weighty loading of all post data when all you want is IDs (props Matt Gibbs)
+[Improvement] More arguments passed to searchwp_before_query_index and searchwp_after_query_index actions
+
+
+1.0.7
+==========
+[NOTICE] Due to an indexer update, it is recommended that you purge your index after updating
+[Improvement] Better, more performant indexer behavior during updates
+[Improvement] Added logging for supplemental searches
+[Improvement] Better punctuation handling during indexing and searching
+[Improvement] Better cleanup of stored options when applicable
+[Fix] Better logging of original search queries compared to what actually gets sent through the algorithm
+[Fix] Fixed potential PHP warning
+
+
+1.0.6
+==========
+[Improvement] Better handling of source code-related indexing and searching
+[New] Added filter searchwp_engine_settings_{$engine} to allow adjustment of weights at runtime
+[New] Added filter searchwp_max_search_terms to cap the number of search terms that can be searched for (default 6)
+[New] Added filter searchwp_max_search_terms_supplemental to cap the number of terms for supplemental searches
+[New] Added filter searchwp_max_search_terms_supplemental_{$engine} to cap the number of terms for supplemental searches by engine
+[Fix] Fixed an issue with empty search queries showing up in search stats
+[Fix] Fixed an issue with CSS alignment of search stats
+[Fix] Fixed an issue where the indexer would index and then re-index posts when not needed
+[Fix] Fixed a MySQL error when logging indexer actions
+
+
+1.0.5
+==========
+[Change] Updated user-agent of indexer background process for easier debugging
+[New] Added initial support for common debugging assistance via searchwp_log action
+[Improvement] Better support for WordPress installations in subdirectories
+[Improvement] If the initial index is already built by the time you go from activation to settings screen, a notice is displayed
+[Improvement] Better support for generating your own pagination with supplemental searches http://d.pr/MXgp
+[Fix] Stopped 'empty' search queries from being logged
+[New] Added filter searchwp_index_chunk_size to adjust how many posts are indexed at a clip
+
+
+1.0.4
+==========
+[Fix] Much better handling of all UTF-8 characters both when indexing and when searching
+
+
+1.0.3
+==========
+[Fix] Fixed an issue with the auto-update script not resolving properly
+[Improvement] Better handling of special characters both when indexing and querying
+
+
+1.0.2
+==========
+[Fix] Fixed an issue where Custom Field weights weren't saving properly on the Settings screen
+
+
+1.0.1
+==========
+[Fix] Fixed an issue that would cause searches to fail if an enabled custom post type had a hyphen in it's name
+[Fix] Fixed an off-by-one issue in generating statistical figures
+
+
+1.0.0
+==========
+Initial release

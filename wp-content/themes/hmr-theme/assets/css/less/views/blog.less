@@ -18,6 +18,13 @@
 			background:none;
 			border-bottom:none;
 		}
+		.page-header {
+			h1 {
+				color:@slate;
+				text-align:left;
+				border-bottom:1px solid @grayLighter;
+			}
+		}
 		.nav {
 			> li {
 				&.brand {
@@ -30,6 +37,12 @@
 		}
 	}
 
+}
+
+.search-results .main.span9 article:nth-of-type(2) {
+	border-bottom: none;
+	margin-bottom:1em;
+	padding-bottom:2em;
 }
 
 // This overrides the Pinterest Pin It Button for Images Plugin, which was incorrectly adjusting the placement of the label on hover

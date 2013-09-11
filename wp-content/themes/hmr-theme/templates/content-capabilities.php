@@ -9,9 +9,9 @@
 
 			<h2><?php the_title(); ?></h2>
 
-			<?php the_content();?>
+			<?php //the_content();?>
 
-			<div class="hover caps">View Gallery</div>
+			<!--<div class="hover caps">View Gallery</div>-->
 
 		</a>
 
@@ -29,9 +29,9 @@
 
 			<h2><?php the_title(); ?></h2>
 
-			<?php the_content();?>
+			<?php //the_content();?>
 
-			<div class="hover caps">View Gallery</div>
+			<!--<div class="hover caps">View Gallery</div>-->
 
 		</a>
 

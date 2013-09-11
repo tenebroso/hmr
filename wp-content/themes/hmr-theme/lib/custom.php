@@ -1,25 +1,6 @@
 <?php
 
 /* =============================================================================
-   Optionally hide the Advanced Custom Fields Admin Menu
-   Uncomment add_action('admin_head', 'hide_admin_menu'); when in production
-   ========================================================================== */
-
-function hide_acf_menu()
-{
-	global $current_user;
-	get_currentuserinfo();
- 
-	if($current_user->user_login != 'jonbukiewicz')
-	{
-		
-	}
-}
-
-add_action('admin_head', 'hide_acf_menu');
-
-
-/* =============================================================================
    Add an HR to the WP Post editor
    ========================================================================== */
 
@@ -334,7 +315,8 @@ function exclude_pages_from_search($query) {
     }
         return $query;
     }
-add_filter('pre_get_posts','exclude_pages_from_search');
+//Using the Search WP Plugin instead
+    //add_filter('pre_get_posts','exclude_pages_from_search');
 
 /* =============================================================================
    Change Posts to say Blog Posts
@@ -410,13 +392,24 @@ add_action('admin_head', 'hide_admin_menu');
    Ensure the Team Archive shows enough posts
    ========================================================================== */
 
-function namespace_add_custom_types( $query ) {
+function hmr_search_only_posts( $query ) {
  if ( is_post_type_archive('team') || is_post_type_archive('press')) {
     $query->set( 'posts_per_page', -1);
       return $query;
     }
 }
-add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
+add_filter( 'pre_get_posts', 'hmr_search_only_posts' );
+
+/* =============================================================================
+   Ensure the Search Results shows enough posts
+   ========================================================================== */
+
+function myCustomizePostsPerPage()
+{
+    return 5;
+}
+ 
+add_filter( 'searchwp_posts_per_page', 'myCustomizePostsPerPage' );
 
 /* =============================================================================
    Custom Login Logo
