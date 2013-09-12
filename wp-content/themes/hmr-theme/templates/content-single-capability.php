@@ -21,7 +21,7 @@
 
           <li>
           
-            <h4><?php bloginfo('title');?></h4>
+            <h4><?php //bloginfo('title');?></h4>
 
           </li>
 

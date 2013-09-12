@@ -302,7 +302,8 @@ register_nav_menus( array(
     'whoweare' => 'Who We Are Sub-Nav',
     'whatwedo' => 'What We Do Sub-Nav',
     'portfolio' => 'Portfolio Sub-Nav',
-    'media' => 'Media Sub-Nav'
+    'media' => 'Media Sub-Nav',
+    'capabilities' => 'Capabilities Sub-Nav'
     ) 
 );
 
