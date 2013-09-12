@@ -595,7 +595,7 @@ class GFFormDisplay{
                                 "var current_page = jQuery('#gform_source_page_number_{$form_id}').val();".
                                 "gformInitSpinner_{$form_id}();" .
                                 "jQuery(document).trigger('gform_page_loaded', [{$form_id}, current_page]);" .
-                                "window['gf_submitting'] = false;" .
+                                "window['gf_submitting_{$form_id}'] = false;" .
                             "}" .
                             "else if(!is_redirect){" .
                                 "var confirmation_content = jQuery(this).contents().find('#gforms_confirmation_message').html();" .
@@ -606,7 +606,7 @@ class GFFormDisplay{
                                     "jQuery('#gform_wrapper_{$form_id}').replaceWith('<' + 'div id=\'gforms_confirmation_message\' class=\'gform_confirmation_message_{$form_id}\'' + '>' + confirmation_content + '<' + '/div' + '>');" .
                                     "{$scroll_position['confirmation']}" .
                                     "jQuery(document).trigger('gform_confirmation_loaded', [{$form_id}]);" .
-                                    "window['gf_submitting'] = false;" .
+                                    "window['gf_submitting_{$form_id}'] = false;" .
                                 "}, 50);" .
                             "}" .
                             "else{" .

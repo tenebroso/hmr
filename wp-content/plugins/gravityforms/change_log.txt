@@ -1,4 +1,10 @@
 -------------------------------------------------------------------------------------------------------------------
+Version 1.7.9
+	- Fixed issue with legacy notifications causing emails to be sent using field id instead of email address
+	- Fixed issue where zero amount totals were not being saved to carry over in Total merge tags
+	- Fixed issues between validation and the script to prevent duplicate submissions for AJAX forms.
+
+-------------------------------------------------------------------------------------------------------------------
 Version 1.7.8
     - Added gform_pre_enqueue_scripts hook so that scripts can be added first if a need exists. This was added in order to resolve conflicts caused by new Picatcha's JS.
     - Added logging statements

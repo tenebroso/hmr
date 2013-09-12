@@ -2387,11 +2387,11 @@ class GFFormsModel {
         $value = self::prepare_value($form, $field, $value, $input_name, rgar($lead, "id"));
 
         //ignore fields that have not changed
-        if($lead != null && $value == rgget($input_id, $lead)){
+        if($lead != null && $value === rgget($input_id, $lead)){
             return;
 		}
 
-        if(!empty($value) || $value === "0"){
+        if(!rgblank($value)){
 
             $value = apply_filters("gform_save_field_value", $value, $lead, $field, $form);
             $truncated_value = substr($value, 0, GFORMS_MAX_FIELD_LENGTH);

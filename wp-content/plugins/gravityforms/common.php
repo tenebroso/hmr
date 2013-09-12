@@ -1,7 +1,7 @@
 <?php
 class GFCommon{
 
-    public static $version = "1.7.8";
+    public static $version = "1.7.9";
     public static $tab_index = 1;
     public static $errors = array();
 
@@ -1456,13 +1456,13 @@ class GFCommon{
 
         $to_field = "";
         if(rgar($notification, "toType") == "field"){
-            if(rgempty("toField", $notification))
+        	$to_field = rgar($notification, "toField");
+            if(rgempty("toField", $notification)){
                 $to_field = rgar($notification, "to");
-            else if(rgempty("to", $notification))
-                $to_field = rgar($notification, "toField");
+			}
         }
 
-        $email_to = rgar($notification, "to");
+		$email_to = rgar($notification, "to");
         //do routing logic if "to" field doesn't have a value (to support legacy notifications what will run routing prior to this method
         if(empty($email_to) && rgar($notification, "toType") == "routing"){
             $email_to = array();
