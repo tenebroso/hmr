@@ -3,6 +3,10 @@
 
 	<div class="container">
 
+	<?php if(is_page(array('329','573','575'))) { 
+		wp_nav_menu( array('menu' => 'Media Sub-Nav' ));
+	} ?>
+
 	<?php if(is_page(array('27','122','124')) || is_post_type_archive('team') || is_singular('team')) { 
 		wp_nav_menu( array('menu' => 'Who We Are Sub-Nav' ));
 	} ?>

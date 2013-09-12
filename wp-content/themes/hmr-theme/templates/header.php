@@ -24,7 +24,7 @@
 
   
 
-  <?php if(is_page(array('27','29','10','124','126','122','11','297','295','293')) || is_post_type_archive('team') ||  is_singular('team') || is_singular('capability') ) { get_template_part('templates/header', 'sub-nav'); } ?>
+  <?php if(is_page(array('27','29','10','124','126','122','11','297','295','293','329','573','575')) || is_post_type_archive('team') ||  is_singular('team') || is_singular('capability') ) { get_template_part('templates/header', 'sub-nav'); } ?>
 
   <div class="clearfix"></div>
 
