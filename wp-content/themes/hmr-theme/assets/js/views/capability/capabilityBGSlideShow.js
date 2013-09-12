@@ -19,7 +19,9 @@
 		speed:3000,
 		containerResize: false,
 		slideResize: false,
-		fit: 1
+		fit: 1,
+		next:   '#next', 
+      	prev:   '#prev'
 	});
 
 	$('.photo-credit').cycle({
@@ -27,6 +29,16 @@
 		delay: 1000,
 		speed:3000
 	});
+
+	jQuery(".slideshow").touchwipe({
+		wipeLeft: function() {
+			jQuery(".slideshow").cycle("next");
+	    },
+	    wipeRight: function() {
+	        jQuery(".slideshow").cycle("prev");
+	    }
+	});
+
   };
 
 })();
