@@ -116,6 +116,9 @@
       }
     }
   }
+  * {
+      .transition-duration(0);
+    }
   .container {
     position:relative;
   }
@@ -241,20 +244,27 @@
   z-index:102;
   cursor:pointer;
   display:none;
+  .transition-duration(0);
   &.slideUp {
   height:100%;
   bottom:0;
-  background:@blue url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAICAQAAAC1vdwiAAAAeUlEQVQYGXXBIQ6CABQA0J8MFgrJ2Y1Uzdo5ABdwnsA70TWrmWrUSqJoYHPsuemmY+h70WfmaBb/ydSoZfGbhcbFylVjHkNW7s4mEabObpbRJ9eqpPEiVWnl8aXwcJDEh8TJQxFvNjo74+gxttdZR4QtSqMYMFJi+wTtXVTgC4pZRwAAAABJRU5ErkJggg==) no-repeat center center;
+  //background:@blue url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAICAQAAAC1vdwiAAAAeUlEQVQYGXXBIQ6CABQA0J8MFgrJ2Y1Uzdo5ABdwnsA70TWrmWrUSqJoYHPsuemmY+h70WfmaBb/ydSoZfGbhcbFylVjHkNW7s4mEabObpbRJ9eqpPEiVWnl8aXwcJDEh8TJQxFvNjo74+gxttdZR4QtSqMYMFJi+wTtXVTgC4pZRwAAAABJRU5ErkJggg==) no-repeat center center;
+  background: url(@fbsprite);
+  background: none, url(@sprite);
+  background-position:-287px -225px;  
     &:hover {
-      background-color:@gray;
+      //background-color:@gray;
     }
   }
   &.slideDown {
     height:100%;
     bottom:0;
-    background:@gray url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAJCAYAAAA/33wPAAAAY0lEQVQoz2P4//+/OhAfBeLtQCzKQCQAqtUG4mNAvBWIBWGCHkD8A4gvEWMY1JBXQPwCiDXRJYkyDK8haIZ9x2UYUYYQMgzI1iHaEFyGkWUIFsOukG0IFsOek20IkmFuxBgCAG650wjxMe23AAAAAElFTkSuQmCC) no-repeat center center;
+    //background:@gray url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAJCAYAAAA/33wPAAAAY0lEQVQoz2P4//+/OhAfBeLtQCzKQCQAqtUG4mNAvBWIBWGCHkD8A4gvEWMY1JBXQPwCiDXRJYkyDK8haIZ9x2UYUYYQMgzI1iHaEFyGkWUIFsOukG0IFsOek20IkmFuxBgCAG650wjxMe23AAAAAElFTkSuQmCC) no-repeat center center;
+    background: url(@fbsprite);
+    background: none, url(@sprite);
+    background-position:-287px -233px;
     &:hover {
-      background-color:@blue;
+      //background-color:@blue;
     }
   }
 }
@@ -267,6 +277,7 @@
 
 .page-template-template-portfolio-php, .single-capability {
   .sub-nav {
+    .transition-duration(0);
     .menu {
       li {
         a {
@@ -311,7 +322,7 @@
     &.menu-press {
       margin-right:20px;
     }
-    &.brand {
+    &slideTogglerand {
       margin-right:18px;
     }
   }

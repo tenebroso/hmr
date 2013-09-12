@@ -133,7 +133,36 @@ var HMR = HMR || {};
             // $credit.transition({opacity:0}, 250, 'ease');
             // changeFooterCredit($(this).data('id'));
             // changeBackgroundImage($(this).data('img'), 500);
-        });    
+        });
+
+        // Handle keyboard - left/right arrow keys
+        (function($){
+            $(window).keyup(function(e){
+                var key = e.which | e.keyCode;
+                if(key === 37){ // 37 is left arrow
+                    current--;
+                    $slider.goToPrevSlide();
+                }
+                else if(key === 39){ // 39 is right arrow
+                    current++;
+                    $slider.goToNextSlide();
+                }
+            });
+        })(jQuery);
+
+        // Handle swipe
+        (function($){
+            $(window).touchwipe({
+                wipeLeft: function() {
+                    current++;
+                    $slider.goToNextSlide();
+                },
+                wipeRight: function() {
+                    current--;
+                    $slider.goToPrevSlide();
+                }
+            });
+        })(jQuery);
         
         
         // Handle click of big arrows

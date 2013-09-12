@@ -2467,6 +2467,13 @@ button.close {
   margin: -8px 0 -6px 0;
 }
 
+.sub-nav * {
+  -webkit-transition-duration: 0;
+     -moz-transition-duration: 0;
+       -o-transition-duration: 0;
+          transition-duration: 0;
+}
+
 .sub-nav .container {
   position: relative;
 }
@@ -2608,31 +2615,39 @@ button.close {
   width: 43px;
   height: 27px;
   cursor: pointer;
+  -webkit-transition-duration: 0;
+     -moz-transition-duration: 0;
+       -o-transition-duration: 0;
+          transition-duration: 0;
 }
 
 .slideToggle.slideUp {
   bottom: 0;
   height: 100%;
-  background: #293240 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAICAQAAAC1vdwiAAAAeUlEQVQYGXXBIQ6CABQA0J8MFgrJ2Y1Uzdo5ABdwnsA70TWrmWrUSqJoYHPsuemmY+h70WfmaBb/ydSoZfGbhcbFylVjHkNW7s4mEabObpbRJ9eqpPEiVWnl8aXwcJDEh8TJQxFvNjo74+gxttdZR4QtSqMYMFJi+wTtXVTgC4pZRwAAAABJRU5ErkJggg==) no-repeat center center;
-}
-
-.slideToggle.slideUp:hover {
-  background-color: #a6a6a6;
+  background: url("../img/sprite.png");
+  background: none, url("../img/sprite.svg");
+  background-position: -287px -225px;
 }
 
 .slideToggle.slideDown {
   bottom: 0;
   height: 100%;
-  background: #a6a6a6 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAJCAYAAAA/33wPAAAAY0lEQVQoz2P4//+/OhAfBeLtQCzKQCQAqtUG4mNAvBWIBWGCHkD8A4gvEWMY1JBXQPwCiDXRJYkyDK8haIZ9x2UYUYYQMgzI1iHaEFyGkWUIFsOukG0IFsOek20IkmFuxBgCAG650wjxMe23AAAAAElFTkSuQmCC) no-repeat center center;
-}
-
-.slideToggle.slideDown:hover {
-  background-color: #293240;
+  background: url("../img/sprite.png");
+  background: none, url("../img/sprite.svg");
+  background-position: -287px -233px;
 }
 
 .page-template-template-portfolio-php .slideToggle,
 .single-capability .slideToggle {
   display: block;
+}
+
+.page-template-template-portfolio-php .sub-nav,
+.single-capability .sub-nav {
+  -webkit-transition-duration: 0;
+     -moz-transition-duration: 0;
+       -o-transition-duration: 0;
+          transition-duration: 0;
 }
 
 .page-template-template-portfolio-php .sub-nav .menu li a:hover,
@@ -2671,7 +2686,7 @@ button.close {
   .nav > li.menu-press {
     margin-right: 20px;
   }
-  .nav > li.brand {
+  .nav > lislideTogglerand {
     margin-right: 18px;
   }
 }
@@ -4115,6 +4130,10 @@ a:hover {
   padding: 0 0 15px 0;
   background: #071222;
   border-bottom: 2px solid #293240;
+  -webkit-transition-duration: 0;
+     -moz-transition-duration: 0;
+       -o-transition-duration: 0;
+          transition-duration: 0;
 }
 
 .banner .brand {
@@ -5402,6 +5421,10 @@ ul.fullsize li {
 .single-capability .scrollTop {
   position: relative;
   z-index: 999;
+  -webkit-transition-duration: 0;
+     -moz-transition-duration: 0;
+       -o-transition-duration: 0;
+          transition-duration: 0;
 }
 
 .page-template-template-portfolio-php {
@@ -5588,6 +5611,13 @@ ul.fullsize li {
   padding: 0;
   margin: 0;
   list-style-type: none;
+}
+
+.thumb_nav * {
+  -webkit-transition-duration: 0;
+     -moz-transition-duration: 0;
+       -o-transition-duration: 0;
+          transition-duration: 0;
 }
 
 .thumb_nav .slide_thumb {
