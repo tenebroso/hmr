@@ -3849,6 +3849,12 @@ button.close {
   src: url('webfonts/Arvo-Italic-webfont.eot?#iefix') format('embedded-opentype'), url('webfonts/Arvo-Italic-webfont.woff') format('woff'), url('webfonts/Arvo-Italic-webfont.ttf') format('truetype'), url('webfonts/Arvo-Italic-webfont.svg#ArvoItalic') format('svg');
 }
 
+.didot {
+  font-family: 'Didot 24 A', 'Didot 24 B';
+  font-style: normal;
+  font-weight: 300;
+}
+
 .circe {
   font-family: 'Circe-Regular', sans-serif;
 }
@@ -4264,7 +4270,8 @@ a:hover {
 .js body.blog,
 .js body.category,
 .js body.single-post,
-.js body.search {
+.js body.search,
+.js body.archive.author {
   font-weight: 200;
   color: #071222;
   background: #ffffff;
@@ -4273,7 +4280,8 @@ a:hover {
 .js body.blog .entry-content a,
 .js body.category .entry-content a,
 .js body.single-post .entry-content a,
-.js body.search .entry-content a {
+.js body.search .entry-content a,
+.js body.archive.author .entry-content a {
   color: #55616f;
   border-bottom: 1px solid #a4adb5;
 }
@@ -4281,7 +4289,8 @@ a:hover {
 .js body.blog .entry-content a:hover,
 .js body.category .entry-content a:hover,
 .js body.single-post .entry-content a:hover,
-.js body.search .entry-content a:hover {
+.js body.search .entry-content a:hover,
+.js body.archive.author .entry-content a:hover {
   color: #071222;
   border-bottom: 1px solid #293240;
 }
@@ -4289,7 +4298,8 @@ a:hover {
 .js body.blog .banner,
 .js body.category .banner,
 .js body.single-post .banner,
-.js body.search .banner {
+.js body.search .banner,
+.js body.archive.author .banner {
   background: none;
   border-bottom: none;
 }
@@ -4297,7 +4307,8 @@ a:hover {
 .js body.blog .page-header h1,
 .js body.category .page-header h1,
 .js body.single-post .page-header h1,
-.js body.search .page-header h1 {
+.js body.search .page-header h1,
+.js body.archive.author .page-header h1 {
   color: #55616f;
   text-align: left;
   border-bottom: 1px solid #eeeeee;
@@ -4306,18 +4317,21 @@ a:hover {
 .js body.blog .nav > li.brand,
 .js body.category .nav > li.brand,
 .js body.single-post .nav > li.brand,
-.js body.search .nav > li.brand {
+.js body.search .nav > li.brand,
+.js body.archive.author .nav > li.brand {
   background-position: -132px -654px;
 }
 
 .js body.blog .nav > li > a,
 .js body.category .nav > li > a,
 .js body.single-post .nav > li > a,
-.js body.search .nav > li > a {
+.js body.search .nav > li > a,
+.js body.archive.author .nav > li > a {
   color: #071222;
 }
 
-.search-results .main.span9 article:nth-of-type(2) {
+.search-results .main.span9 article:nth-of-type(2),
+.archive.author .main.span9 article:nth-of-type(2) {
   padding-bottom: 2em;
   margin-bottom: 1em;
   border-bottom: none;
@@ -4339,8 +4353,12 @@ a:hover {
 
 .hentry header .entry-title {
   margin: 0;
+  font-family: 'Didot 24 A', 'Didot 24 B';
   font-size: 35px;
+  font-style: normal;
+  font-weight: 300;
   line-height: 1.1;
+  text-transform: uppercase;
 }
 
 .hentry header .entry-title a {
@@ -4374,6 +4392,16 @@ a:hover {
 
 .hentry .byline {
   margin: .5em 0 2em 0;
+  font-family: 'Didot 24 A', 'Didot 24 B';
+  font-style: normal;
+  font-weight: 300;
+}
+
+.hentry .byline a {
+  color: #071222;
+}
+
+.hentry .byline a:hover {
   color: #55616f;
 }
 

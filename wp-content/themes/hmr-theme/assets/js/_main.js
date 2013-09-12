@@ -84,6 +84,11 @@ HMR.Site = {
       $('html').css('background-color','#fff');
     }
   },
+  author: {
+    init: function() {
+      $('html').css('background-color','#fff');
+    }
+  },
   archive: {
     init: function() {
       HMR.conditionals();

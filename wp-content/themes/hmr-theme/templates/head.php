@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <?php wp_head(); ?>
+  <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7033652/633062/css/fonts.css" />
   <link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?> Feed" href="<?php echo home_url(); ?>/feed/">
 </head>
 <div id="wrap">
