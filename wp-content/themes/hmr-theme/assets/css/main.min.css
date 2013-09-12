@@ -4350,7 +4350,8 @@ a:hover {
 }
 
 .search-results .main.span9 article:nth-of-type(2),
-.archive.author .main.span9 article:nth-of-type(2) {
+.archive.author .main.span9 article:nth-of-type(2),
+.archive.category .main.span9 article:nth-of-type(2) {
   padding-bottom: 2em;
   margin-bottom: 1em;
   border-bottom: none;
