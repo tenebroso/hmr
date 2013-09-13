@@ -1,11 +1,8 @@
 .post-type-archive-team {
-	#wrap {
-		min-height:94.5%;
-	}
 	.page-title {
 		font-size:27px;
 		margin:30px 0 0;
-		line-height:1.2;
+		//line-height:1.2;
 		&.team-title {
 			margin:-20px 0 20px 0;
 		}
@@ -215,4 +212,26 @@
 	position:absolute;
 	z-index:21;
 	width:100%;
+}
+
+#team-photo, #team-members {
+	background:@blueDark;
+}
+
+@media (max-width:1000px) and (min-width:768px) { 
+	#team {
+		height:540px;
+	}
+	#wrap {
+		max-height:100%;
+		height:100%;
+	}
+}
+
+@media (max-width:767px) { 
+	.post-type-archive-team {
+		.page-title {
+			line-height:1.2;
+		}
+	}
 }

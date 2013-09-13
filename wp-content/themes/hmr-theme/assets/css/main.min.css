@@ -2487,15 +2487,13 @@ button.close {
 
 .sub-nav .menu li {
   display: inline-block;
-  padding: 0 0 10px 0;
 }
 
 .sub-nav .menu li a {
   position: relative;
   z-index: 3;
   display: inline-block;
-  padding: 10px 15px 40px 15px;
-  margin: 0 0 -40px 0;
+  padding: 10px 15px;
   font-family: 'Circe-Regular', sans-serif;
   font-size: 15px;
   font-weight: 300;
@@ -4120,6 +4118,11 @@ a:hover {
   text-decoration: none;
 }
 
+a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
 /* =============================================================================
    Header
    ========================================================================== */
@@ -4183,7 +4186,7 @@ a:hover {
 }
 
 .wrap.container {
-  padding: 50px 0 34px 0;
+  padding: 50px 0 56px 0;
   margin: 0 auto;
 }
 
@@ -4752,14 +4755,9 @@ a:hover {
    Team Archive - Team Landing Page
    ========================================================================== */
 
-.post-type-archive-team #wrap {
-  min-height: 94.5%;
-}
-
 .post-type-archive-team .page-title {
   margin: 30px 0 0;
   font-size: 27px;
-  line-height: 1.2;
 }
 
 .post-type-archive-team .page-title.team-title {
@@ -5015,6 +5013,27 @@ a:hover {
   position: absolute;
   z-index: 21;
   width: 100%;
+}
+
+#team-photo,
+#team-members {
+  background: #071222;
+}
+
+@media (max-width: 1000px) and (min-width: 768px) {
+  #team {
+    height: 540px;
+  }
+  #wrap {
+    height: 100%;
+    max-height: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .post-type-archive-team .page-title {
+    line-height: 1.2;
+  }
 }
 
 /* =============================================================================
@@ -6001,11 +6020,17 @@ ul.fullsize li {
   .content-info {
     position: relative;
     height: 36px;
-    margin-top: 36px;
+    margin-top: -36px;
     clear: both;
   }
   .page-template-template-connect-php .content-info {
     margin-top: 80px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+  .content-info h4 {
+    font-size: 15px;
   }
 }
 
@@ -6037,6 +6062,8 @@ ul.fullsize li {
   }
   body.history .content {
     padding: 2em;
+    background: #071222;
+    background: rgba(7, 18, 34, 0.8);
     border: 2px solid #55616f;
   }
 }
