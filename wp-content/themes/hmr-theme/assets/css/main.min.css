@@ -4759,6 +4759,7 @@ a:hover {
 .post-type-archive-team .page-title {
   margin: 30px 0 0;
   font-size: 27px;
+  line-height: 1.2;
 }
 
 .post-type-archive-team .page-title.team-title {
@@ -4802,11 +4803,23 @@ a:hover {
 .post-type-archive-team .content a {
   display: block;
   color: #55616f;
+  -webkit-transform: translate3d(0, 0, 0);
+     -moz-transform: translate3d(0, 0, 0);
+       -o-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition-duration: 0;
+     -moz-transition-duration: 0;
+       -o-transition-duration: 0;
+          transition-duration: 0;
 }
 
 .post-type-archive-team .content a:hover {
   color: white;
   text-decoration: none;
+  -webkit-transition-duration: 0;
+     -moz-transition-duration: 0;
+       -o-transition-duration: 0;
+          transition-duration: 0;
 }
 
 .post-type-archive-team .content a:hover img {
