@@ -4206,8 +4206,8 @@ a:hover {
    ========================================================================== */
 
 .home .banner {
-  background: url(../img/gradient.png) repeat-x left -10px;
-  border-bottom: 1px solid #ffffff;
+  background: url(../img/gradient.png) repeat-x left -73px;
+  border-bottom: none;
 }
 
 .home .content-info {
@@ -4230,56 +4230,68 @@ a:hover {
   -webkit-backface-visibility: hidden;
 }
 
-.home .img.forward {
-  top: 400px;
-  left: 10%;
-  width: 246px;
-  height: 36px;
-  background: url(../img/forward.png) no-repeat left top;
+.home .img.slide1 {
+  right: 20%;
+  bottom: 200px;
+  width: 296px;
+  height: 90px;
+  background: url(../img/slideText1.png) no-repeat left top;
 }
 
-.home .img.thinkers {
+.home .img.slide2 {
+  top: 240px;
+  right: 10%;
+  width: 334px;
+  height: 90px;
+  background: url(../img/slideText2.png) no-repeat left top;
+}
+
+.home .img.slide3 {
   top: 440px;
   left: 10%;
-  width: 246px;
-  height: 36px;
-  background: url(../img/thinkers.png) no-repeat left top;
+  width: 479px;
+  height: 90px;
+  background: url(../img/slideText3.png) no-repeat left top;
 }
 
-.home .img.forward2 {
-  float: right;
-  width: 246px;
-  height: 36px;
-  margin-top: 8px;
-  margin-right: calc(50%);
-  background: url(../img/forward.png) no-repeat left top;
+.home .img.slide4 {
+  top: 340px;
+  right: 10%;
+  width: 297px;
+  height: 140px;
+  background: url(../img/slideText4.png) no-repeat left top;
 }
 
-.home .img.thinkers2 {
-  float: right;
-  width: 246px;
-  height: 36px;
-  margin-right: calc(50%);
-  clear: both;
-  background: url(../img/thinkers.png) no-repeat left top;
+.home .img.slide5 {
+  top: 320px;
+  left: 10%;
+  width: 307px;
+  height: 90px;
+  background: url(../img/slideText5.png) no-repeat left top;
 }
 
-.home .img.forward3 {
-  float: left;
-  width: 246px;
-  height: 36px;
-  margin-left: calc(5%);
-  clear: both;
-  background: url(../img/forward.png) no-repeat left top;
+.home .img.slide6 {
+  top: 440px;
+  right: 10%;
+  width: 385px;
+  height: 90px;
+  background: url(../img/slideText6.png) no-repeat left top;
 }
 
-.home .img.thinkers3 {
-  float: left;
-  width: 246px;
-  height: 36px;
-  margin-left: calc(5%);
-  clear: both;
-  background: url(../img/thinkers.png) no-repeat left top;
+.home .img.slide7 {
+  right: 10%;
+  bottom: 240px;
+  width: 463px;
+  height: 186px;
+  background: url(../img/slideText7.png) no-repeat left top;
+}
+
+.home .img.slide8 {
+  right: 10%;
+  bottom: 440px;
+  width: 286px;
+  height: 89px;
+  background: url(../img/slideText8.png) no-repeat left top;
 }
 
 /* ==========================================================================
