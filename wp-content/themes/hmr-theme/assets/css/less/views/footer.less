@@ -12,7 +12,7 @@
 		margin:0;
 		&.copyright {
 			line-height:36px;
-			color:@white;
+			color:@slate;
 		}
 	}
 	h4 {
@@ -25,9 +25,9 @@
 		line-height:35px;
 	}
 	a {
-		color:white;
+		color:@slate;
 		&:hover {
-			color:@blueLighter;
+			color:@white;
 			text-decoration:none;
 		}
 	}
@@ -56,6 +56,10 @@
 			width:26px;
 			height:26px;
 			background-size: 550px 711px;
+			.opacity(30);
+			&:hover {
+				.opacity(100);
+			}
 			&.instagram {
 				background-position: -133px -151px;
 			}

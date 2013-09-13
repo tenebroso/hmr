@@ -5891,7 +5891,7 @@ ul.fullsize li {
 
 .content-info p.copyright {
   line-height: 36px;
-  color: #ffffff;
+  color: #55616f;
 }
 
 .content-info h4 {
@@ -5905,11 +5905,11 @@ ul.fullsize li {
 }
 
 .content-info a {
-  color: white;
+  color: #55616f;
 }
 
 .content-info a:hover {
-  color: #a4adb5;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -5941,6 +5941,13 @@ ul.fullsize li {
   height: 26px;
   vertical-align: middle;
   background-size: 550px 711px;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+
+.content-info .social-icons li:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
 }
 
 .content-info .social-icons li.instagram {
