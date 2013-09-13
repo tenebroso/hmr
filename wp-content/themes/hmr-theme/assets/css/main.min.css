@@ -4219,6 +4219,8 @@ a:focus {
 
 .home .img {
   position: absolute;
+  width: 480px;
+  height: 186px;
   font: 0/0 a;
   color: transparent;
   text-shadow: none;
@@ -4236,65 +4238,41 @@ a:focus {
 .home .img.slide1 {
   right: 20%;
   bottom: 200px;
-  width: 296px;
-  height: 90px;
-  background: url(../img/slideText1.png) no-repeat left top;
 }
 
 .home .img.slide2 {
   top: 240px;
   right: 10%;
-  width: 334px;
-  height: 90px;
-  background: url(../img/slideText2.png) no-repeat left top;
 }
 
 .home .img.slide3 {
   top: 440px;
   left: 10%;
-  width: 479px;
-  height: 90px;
-  background: url(../img/slideText3.png) no-repeat left top;
 }
 
 .home .img.slide4 {
   top: 340px;
   right: 10%;
-  width: 297px;
-  height: 140px;
-  background: url(../img/slideText4.png) no-repeat left top;
 }
 
 .home .img.slide5 {
   top: 320px;
   left: 10%;
-  width: 307px;
-  height: 90px;
-  background: url(../img/slideText5.png) no-repeat left top;
 }
 
 .home .img.slide6 {
   top: 440px;
   right: 10%;
-  width: 385px;
-  height: 90px;
-  background: url(../img/slideText6.png) no-repeat left top;
 }
 
 .home .img.slide7 {
   right: 10%;
   bottom: 240px;
-  width: 463px;
-  height: 186px;
-  background: url(../img/slideText7.png) no-repeat left top;
 }
 
 .home .img.slide8 {
   right: 10%;
   bottom: 440px;
-  width: 286px;
-  height: 89px;
-  background: url(../img/slideText8.png) no-repeat left top;
 }
 
 /* ==========================================================================

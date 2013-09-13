@@ -32,4 +32,19 @@
 </div>
 </footer>
 
+<?php wp_reset_query(); 
+
+if(is_front_page()) { 
+
+	$rows = get_field('homepage_slides');
+	if($rows)
+	{ $count = 1;
+		?>
+
+		<script>
+		var items = [<?php foreach($rows as $row) { ?>{ img: "<?php echo $row['background_image'] ?>", words: ".slide<?php echo $count++;?>"},<?php }?>];
+		</script>
+
+<?php } } ?>
+
 <?php wp_footer(); ?>

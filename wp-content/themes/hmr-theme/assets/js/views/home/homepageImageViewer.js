@@ -6,24 +6,7 @@ var HMR = HMR || {};
 
   HMR.homepageImageViewer = function() {
 
-
-    /*// Image path
-    var images = [
-        "/assets/home/homeSlide1.jpg", 
-        "/assets/home/homeSlide2.jpg",
-        "/assets/home/homeSlide3.jpg",
-        "/assets/home/homeSlide4.jpg",
-        "/assets/home/homeSlide5.jpg",
-        "/assets/home/homeSlide6.jpg",
-        "/assets/home/homeSlide7.jpg",
-        "/assets/home/homeSlide8.jpg"
-    ];
-
-    $(images).each(function() {
-       $('<img/>')[0].src = this; 
-    });*/
-
-    var items = [
+    /* var items = [
       { img: "/assets/home/homeSlide1.jpg", words: ".slide1"},
       { img: "/assets/home/homeSlide2.jpg", words: ".slide2"},
       { img: "/assets/home/homeSlide3.jpg", words: ".slide3"},
@@ -32,7 +15,7 @@ var HMR = HMR || {};
       { img: "/assets/home/homeSlide6.jpg", words: ".slide6"},
       { img: "/assets/home/homeSlide7.jpg", words: ".slide7"},
       { img: "/assets/home/homeSlide8.jpg", words: ".slide8"}
-    ];
+    ]; */
 
     var options = {
         fade: 1550,
@@ -47,6 +30,8 @@ var HMR = HMR || {};
         //var $getCurrent = $.backstretch.index;
         var $newCaption = items[instance.index].words;
         $($newCaption).transition({opacity: 1}, 1550);
+        $('.backstretch').transition({ scale: 1.1 }, 10000);
+        $('.backstretch').transition({delay:500, scale: 1 }, 10000);
     });
 
     $(window).on("backstretch.before", function(e, instance) {
@@ -55,7 +40,7 @@ var HMR = HMR || {};
     });
 
     $(window).on("backstretch.after", function(e, instance) {
-        $('.backstretch img').transition({ scale: 1.1 }, 10000);
+        
         instance.resize();
     });
 

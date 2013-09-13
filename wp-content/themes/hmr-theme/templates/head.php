@@ -9,6 +9,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <?php wp_head(); ?>
+  <?php if(is_front_page()) { 
+
+	$rows = get_field('homepage_slides');
+	if($rows)
+	{ $count = 1;
+		?>
+
+		<style type="text/css">
+		<?php foreach($rows as $row) { ?>
+			.slide<?php echo $count++;?> { background:url(<?php echo $row['text_image'] ?>) no-repeat left top;}
+		<?php }?>
+		</style>
+
+	<?php } } ?>
   <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7033652/633062/css/fonts.css" />
   <link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?> Feed" href="<?php echo home_url(); ?>/feed/">
 </head>
