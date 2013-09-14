@@ -4238,6 +4238,7 @@ a:focus {
 .home .img.slide1 {
   right: 20%;
   bottom: 200px;
+  background-position: right bottom !important;
 }
 
 .home .img.slide2 {
@@ -4273,6 +4274,7 @@ a:focus {
 .home .img.slide8 {
   right: 10%;
   bottom: 440px;
+  background-position: right bottom !important;
 }
 
 /* ==========================================================================
@@ -5889,6 +5891,10 @@ ul.fullsize li {
 .content-info a:hover {
   color: #ffffff;
   text-decoration: none;
+}
+
+.content-info .row-fluid .span3 {
+  margin: 0;
 }
 
 .content-info .span6 {
