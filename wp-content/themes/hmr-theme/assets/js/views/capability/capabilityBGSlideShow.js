@@ -24,13 +24,10 @@
       	prev:   '#prev'
 	});*/
 
-	var $slideshow = $('.slideshow');
+	var $slideshow = $('.slideshow'),
+		$credit = $('.photo-credit');
 
-	$('.photo-credit').cycle({
-		fx: 'fade',
-		delay: 1000,
-		speed:3000
-	});
+	
 
 	/*$(".slideshow").touchwipe({
 		wipeLeft: function() {
@@ -41,14 +38,36 @@
 	    }
 	});*/
 
-var slideIndex = 0;
-var nextIndex = 0;
-var prevIndex = 0;
+var slideIndex = 0,
+	nextIndex = 0,
+	prevIndex = 0,
+	creditIndex = 0,
+	nextCreditIndex = 0,
+	prevCreditIndex = 0;
+
+$credit.cycle({
+	fx: 'fade',
+	delay: 1000,
+	speed: 1000,
+	after: function(currCreditElement, nextCreditElement, options) {
+        creditIndex = options.currSlide;
+        nextCreditIndex = creditIndex + 1;
+        prevCreditIndex = creditIndex -1;
+
+        if (creditIndex == options.slideCount-1) {
+            nextCreditIndex = 0;
+        }
+
+        if (creditIndex == 0) {
+            prevCreditIndex = options.slideCount-1;
+        }
+    }
+});
 
 $slideshow.cycle({
     fx: 'fade',//fx: 'scrollHorz', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
     delay: 1000,
-	speed:1000,
+	speed: 1000,
 	containerResize: false,
 	slideResize: false,
 	fit: 1,
@@ -71,10 +90,16 @@ $slideshow.cycle({
 	    $(window).keyup(function(e){
 	        var key = e.which | e.keyCode;
 	        if(key === 37){ // 37 is left arrow
-	            $slideshow.cycle(nextIndex, "fade");
+	            $slideshow.cycle(prevIndex, "fade");
+	            $credit.cycle(prevCreditIndex, "fade");
+	            $slideshow.cycle('toggle');
+	            $credit.cycle('toggle');
 	        }
 	        else if(key === 39){ // 39 is right arrow
-	            $slideshow.cycle(prevIndex, "fade");
+	            $slideshow.cycle(nextIndex, "fade");
+	            $credit.cycle(nextCreditIndex, "fade");
+	            $slideshow.cycle('toggle');
+	            $credit.cycle('toggle');
 	        }
 	    });
 	})(jQuery);
@@ -83,10 +108,12 @@ $slideshow.cycle({
     (function($){
         $(window).touchwipe({
             wipeLeft: function() {
-                $slideshow.cycle(nextIndex, "fade");
+                $slideshow.cycle(prevIndex, "fade");
+	            $credit.cycle(prevCreditIndex, "fade");
             },
             wipeRight: function() {
-                $slideshow.cycle(prevIndex, "fade");
+                $slideshow.cycle(nextIndex, "fade");
+	            $credit.cycle(nextCreditIndex, "fade");
             }
         });
     })(jQuery);

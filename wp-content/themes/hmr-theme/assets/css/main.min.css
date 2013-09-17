@@ -5410,6 +5410,14 @@ ul.fullsize li {
   overflow: hidden;
 }
 
+.single-capability .photo-credit,
+.single-capability .photo-credit p {
+  -webkit-transition-duration: 0;
+     -moz-transition-duration: 0;
+       -o-transition-duration: 0;
+          transition-duration: 0;
+}
+
 .single-capability #wrap {
   background-color: #010204;
 }
