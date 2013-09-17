@@ -5398,6 +5398,10 @@ ul.fullsize li {
      -moz-background-size: cover;
        -o-background-size: cover;
           background-size: cover;
+  -webkit-transition-duration: 0;
+     -moz-transition-duration: 0;
+       -o-transition-duration: 0;
+          transition-duration: 0;
 }
 
 .single-capability {
@@ -6147,6 +6151,13 @@ ul.fullsize li {
   }
   .single-capability .gallery-title h4 {
     font-size: 14px;
+  }
+  .single-capability .sub-nav .menu li a {
+    padding: 10px 7px;
+    font-size: 13px;
+  }
+  .single-capability .sub-nav .menu {
+    margin-top: 7px;
   }
 }
 
