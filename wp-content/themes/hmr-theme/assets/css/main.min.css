@@ -1996,6 +1996,12 @@ button.close {
   top: 4%;
 }
 
+.page-template-template-video-php .modal.fade.in {
+  top: 25%;
+  bottom: 25%;
+  height: 50%;
+}
+
 .modal-header {
   display: block;
   width: 100%;
@@ -5475,6 +5481,21 @@ ul.fullsize li {
           transition-duration: 0;
 }
 
+.page-template-template-portfolio-php .sub-nav .menu,
+.single-capability .sub-nav .menu {
+  margin-top: 10px;
+}
+
+.page-template-template-portfolio-php .sub-nav.down .menu,
+.single-capability .sub-nav.down .menu {
+  margin-top: 0;
+}
+
+.page-template-template-portfolio-php .slideToggle.slideDown,
+.single-capability .slideToggle.slideDown {
+  background-position: -287px -226px;
+}
+
 .page-template-template-portfolio-php {
   background: none;
 }
@@ -5752,7 +5773,7 @@ ul.fullsize li {
 }
 
 /* =============================================================================
-   Press Release & Testimonials Archive
+   Media - Video, Web, Press
    ========================================================================== */
 
 .page-template-template-press-php p,
