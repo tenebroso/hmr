@@ -12,7 +12,7 @@ var HMR = HMR || {};
       }
 
       // Add lightbox functionality to the Press Release and Testimonials Page
-      if($('.press-releases, .page-template-template-testimonials-php').length) {
+      if($('.page-template-template-press-php, page-template-template-video-php, page-template-template-web-php').length) {
         HMR.lightbox();
       }
 
@@ -23,8 +23,8 @@ var HMR = HMR || {};
       }
       
       // Clear floats on Press Release & Testimonials Pages
-      $('.page-template-template-press-php .content .row-fluid .span3:nth-child(4n+9)').addClass('clear');
-      $('.page-template-template-testimonials-php .content .row-fluid .span3:nth-child(4n+9)').addClass('clear');
+      $('.page-template-template-press-php .content .row-fluid article:nth-of-type(4n+5)').addClass('clear');
+      //$('.page-template-template-testimonials-php .content .row-fluid .span3:nth-child(4n+9)').addClass('clear');
 
       // Call the Team Hero face rollover function and clear floats. Also, remove the active state that WP adds to the blog
       if($('.post-type-archive-team').length) {

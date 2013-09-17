@@ -70,6 +70,21 @@ HMR.Site = {
     init: function() {
       HMR.subNavFixes();
       HMR.conditionals();
+      if($('body.web').length) {
+        $('.nav li.menu-media').addClass('active');
+      }
+      if($('body.video').length) {
+        $('.nav li.menu-media').addClass('active');
+      }
+      if($('body.clients').length) {
+        $('.nav li.menu-hmr').addClass('active');
+      }
+      if($('body.venues').length) {
+        $('.nav li.menu-hmr').addClass('active');
+      }
+      if($('body.history').length) {
+        $('.nav li.menu-hmr').addClass('active');
+      }
     }
   },
   blog: {

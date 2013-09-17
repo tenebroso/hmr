@@ -2393,6 +2393,17 @@ button.close {
   border: 0;
 }
 
+.nav > li.active a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav > li.active a span {
+  -webkit-transform: translateY(-100%);
+     -moz-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
 .nav > li > a {
   display: inline-block;
   height: 1em;
@@ -4710,6 +4721,17 @@ a:focus {
   color: #a6a6a6;
 }
 
+.single-team .hentry .entry-content h2,
+.single-team .hentry .entry-content h3,
+.single-team .hentry .entry-content h4,
+.single-team .hentry .entry-content h5 {
+  color: #a6a6a6;
+}
+
+.single-team .hentry img {
+  border: 1px solid #55616f;
+}
+
 .single-team .hentry .back {
   font-size: 15px;
 }
@@ -4972,6 +4994,7 @@ a:focus {
 
 .tooltipsy p em {
   font-style: normal;
+  font-weight: 200;
 }
 
 #team {
@@ -5720,7 +5743,8 @@ ul.fullsize li {
    ========================================================================== */
 
 .page-template-template-press-php p,
-.page-template-template-testimonials-php p {
+.page-template-template-web-php p,
+.page-template-template-video-php p {
   margin: 0;
   font-size: 14px;
   line-height: 1.4;
@@ -5728,30 +5752,35 @@ ul.fullsize li {
 }
 
 .page-template-template-press-php p em,
-.page-template-template-testimonials-php p em {
+.page-template-template-web-php p em,
+.page-template-template-video-php p em {
   font-family: 'Circe-Regular', sans-serif;
   font-style: italic;
 }
 
 .page-template-template-press-php .content a,
-.page-template-template-testimonials-php .content a {
+.page-template-template-web-php .content a,
+.page-template-template-video-php .content a {
   display: inline;
 }
 
 .page-template-template-press-php .view-article,
-.page-template-template-testimonials-php .view-article {
+.page-template-template-web-php .view-article,
+.page-template-template-video-php .view-article {
   font-size: 14px;
   color: #a6a6a6;
 }
 
 .page-template-template-press-php .view-article a:hover,
-.page-template-template-testimonials-php .view-article a:hover {
+.page-template-template-web-php .view-article a:hover,
+.page-template-template-video-php .view-article a:hover {
   color: white;
   text-decoration: none;
 }
 
 .page-template-template-press-php .date_heading,
-.page-template-template-testimonials-php .date_heading {
+.page-template-template-web-php .date_heading,
+.page-template-template-video-php .date_heading {
   padding: 0 0 5px 0;
   margin: 0 0 20px 0;
   font-family: 'Circe-Regular', sans-serif;
@@ -5763,23 +5792,27 @@ ul.fullsize li {
 }
 
 .page-template-template-press-php .row-fluid .span3,
-.page-template-template-testimonials-php .row-fluid .span3 {
+.page-template-template-web-php .row-fluid .span3,
+.page-template-template-video-php .row-fluid .span3 {
   margin-bottom: 40px;
 }
 
 .page-template-template-press-php .row-fluid .span3 .clear,
-.page-template-template-testimonials-php .row-fluid .span3 .clear {
+.page-template-template-web-php .row-fluid .span3 .clear,
+.page-template-template-video-php .row-fluid .span3 .clear {
   margin-left: 0;
   clear: both;
 }
 
 .page-template-template-press-php .row-fluid .span3 img,
-.page-template-template-testimonials-php .row-fluid .span3 img {
+.page-template-template-web-php .row-fluid .span3 img,
+.page-template-template-video-php .row-fluid .span3 img {
   margin-bottom: 15px;
 }
 
 .page-template-template-press-php .hidden,
-.page-template-template-testimonials-php .hidden {
+.page-template-template-web-php .hidden,
+.page-template-template-video-php .hidden {
   position: absolute;
   top: 50%;
   left: 0;
@@ -5798,22 +5831,26 @@ ul.fullsize li {
 }
 
 .page-template-template-press-php .hidden p,
-.page-template-template-testimonials-php .hidden p {
+.page-template-template-web-php .hidden p,
+.page-template-template-video-php .hidden p {
   margin: 0;
 }
 
 .page-template-template-press-php .hidden p a,
-.page-template-template-testimonials-php .hidden p a {
+.page-template-template-web-php .hidden p a,
+.page-template-template-video-php .hidden p a {
   color: white;
 }
 
 .page-template-template-press-php .hover,
-.page-template-template-testimonials-php .hover {
+.page-template-template-web-php .hover,
+.page-template-template-video-php .hover {
   position: relative;
 }
 
 .page-template-template-press-php .hover img,
-.page-template-template-testimonials-php .hover img {
+.page-template-template-web-php .hover img,
+.page-template-template-video-php .hover img {
   border: 1px solid #071222;
   -webkit-transition: 0.25s;
      -moz-transition: 0.25s;
@@ -5822,16 +5859,23 @@ ul.fullsize li {
 }
 
 .page-template-template-press-php .hover:hover img,
-.page-template-template-testimonials-php .hover:hover img {
+.page-template-template-web-php .hover:hover img,
+.page-template-template-video-php .hover:hover img {
   border: 1px solid white;
   opacity: 0.6;
   filter: alpha(opacity=60);
 }
 
 .page-template-template-press-php .hover:hover .hidden,
-.page-template-template-testimonials-php .hover:hover .hidden {
+.page-template-template-web-php .hover:hover .hidden,
+.page-template-template-video-php .hover:hover .hidden {
   display: block;
   visibility: visible;
+}
+
+.page-template-template-video-php .modal-body iframe {
+  display: block;
+  margin: 0 auto;
 }
 
 .touch .hover .hidden {

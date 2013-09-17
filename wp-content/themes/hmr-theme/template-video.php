@@ -46,7 +46,7 @@ if ( !empty($oldestpost) && !empty($newestpost) ) {
     if( $my_query->have_posts() ) {
       echo '<h4 class="date_heading">' . $counter . '</h4><div class="row-fluid">';
       while ($my_query->have_posts()) : $my_query->the_post(); ?>
-        <?php get_template_part('templates/content', 'press'); ?>
+        <?php get_template_part('templates/content', 'video'); ?>
        <?php
         //the_content('Read the rest of this entry &raquo;');
       endwhile;

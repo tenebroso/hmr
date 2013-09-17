@@ -51,6 +51,18 @@
       margin-right:38px;
     }
     */
+    &.active {
+      a {
+        text-decoration: none;
+        color:@white;
+        //color:#55656f;
+        span {
+          -webkit-transform: translateY(-100%);
+          -moz-transform: translateY(-100%);
+          transform: translateY(-100%);
+        }
+      }
+    }
     > a {
       display:inline-block;
       vertical-align:middle;
