@@ -29,16 +29,34 @@
     <ul class="gallery-footer">
 
           <li class="credit">
+
+            <?php $c=0; ?>
+
+            <?php while(has_sub_field('photos')): ?>
+
+            <?php $venue = get_sub_field('photo_venue'); if ($venue) { ?>
+
+                <p class="venue idVenue-<?php echo $c; ?>"><?php echo $venue;?></p>
+                
+                <?php } else { ?>
+
+                <p class="venue idVenue-<?php echo $c; ?>"></p>
+              
+              <?php } ?>
+
+            <?php $c++; ?>
+
+            <?php endwhile; ?>
           
             <h4><a href="<?php bloginfo('url');?>"><?php bloginfo('title');?></a></h4>
 
-            <?php $i=0; ?>
+            <?php $i=0; $u=0?>
 
             <?php while(has_sub_field('photos')): ?>
             
-              <?php $credit = get_sub_field('photo_credit'); $url = get_sub_field('photo_credit_url'); if ($credit) { ?>
+              <?php $credit = get_sub_field('photo_credit'); $urls = get_sub_field('photo_credits'); if ($credit) { ?>
 
-                <p class="photographer id-<?php echo $i; ?>">Photography by: <?php if($url) { ?><a href="<?php echo $url; ?>"><?php } ?><?php echo $credit;?><?php if($url) { ?></a><?php } ?></p>
+                <p class="photographer id-<?php echo $i; ?>">Photo by: <?php if($urls) { ?><a href="<?php echo $urls; ?>" class="url-<?php echo $i; ?>"><?php } ?><?php echo $credit;?><?php if($urls) { ?></a><?php } ?></p>
                 
                 <?php } else { ?>
 

@@ -85,6 +85,15 @@ HMR.Site = {
       if($('body.history').length) {
         $('.nav li.menu-hmr').addClass('active');
       }
+      if($('body.social-and-gala').length) {
+        $('.nav li.menu-gallery').addClass('active');
+      }
+      if($('body.celebrations').length) {
+        $('.nav li.menu-gallery').addClass('active');
+      }
+      if($('body.corporate').length) {
+        $('.nav li.menu-gallery').addClass('active');
+      }
     }
   },
   blog: {

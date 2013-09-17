@@ -5573,12 +5573,11 @@ ul.fullsize li {
 .gallery-footer p {
   position: absolute;
   top: 4px;
-  right: 18px;
   display: inline;
   margin: 0;
   font-size: 12px;
+  font-weight: 200;
   color: #777a7f;
-  text-align: right;
 }
 
 .gallery-footer p a {
@@ -5588,6 +5587,20 @@ ul.fullsize li {
 .gallery-footer p a:hover {
   color: white;
   text-decoration: none;
+}
+
+.gallery-footer p.photographer {
+  right: 18px;
+  text-align: right;
+}
+
+.gallery-footer p.photographer.show {
+  z-index: 999;
+}
+
+.gallery-footer p.venue {
+  left: 18px;
+  text-align: left;
 }
 
 .page-template-template-portfolio-php .gallery-footer p {
@@ -5705,11 +5718,11 @@ ul.fullsize li {
 
 .big_arrow {
   position: absolute;
-  top: 0;
-  bottom: 0;
+  top: 12.5%;
+  bottom: 12.5%;
   z-index: 300;
   width: 50px;
-  height: 100%;
+  height: 75%;
   cursor: pointer;
   opacity: 0;
   filter: alpha(opacity=0);
@@ -6426,6 +6439,7 @@ ul.fullsize li {
 @media (min-width: 1000px) {
   .page-template-template-capabilities-php .container {
     width: 999px;
+    padding-top: 0;
   }
 }
 

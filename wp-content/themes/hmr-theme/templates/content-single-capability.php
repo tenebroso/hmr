@@ -38,7 +38,7 @@
       <?php while(has_sub_field('photos')): ?>
     
       <?php $credit = get_sub_field('photo_credit'); $url = get_sub_field('photo_credit_url'); if ($credit) { ?>
-        <p>Photography by: <?php if($url) { ?><a href="<?php echo $url; ?>"><?php } ?><?php echo $credit;?><?php if($url) { ?></a><?php } ?></p>
+        <p>Photo by: <?php if($url) { ?><a href="<?php echo $url; ?>"><?php } ?><?php echo $credit;?><?php if($url) { ?></a><?php } ?></p>
       <?php } else { ?>
         <p class="hidden">Photo by: No Photo Credit</p>
       <?php } ?>

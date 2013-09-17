@@ -21,6 +21,8 @@ var HMR = HMR || {};
     var $thumbs = $('.slide_thumb'),
         $bigArrows = $('.big_arrow'),
         $nav = $('.thumb_nav'),
+        $venue = $('.venue'),
+        $url = $('.photographer a'),
         $credit = $('.photographer'),
         current = -1, // This will track our curretly active thumb
         len = $thumbs.length, // This is the # of thubmnails total
@@ -59,13 +61,18 @@ var HMR = HMR || {};
 
     // This will swap out the photo credit
     changeFooterCredit = function (active) {
-        $('.id-' + (active)).transition({opacity:1}, 750, 'ease');
+        $('.id-' + (active)).transition({opacity:1}, 750, 'ease').addClass('show');
+        $('.idVenue-' + (active)).transition({opacity:1}, 750, 'ease');
+        $('.url-' + (active)).transition({opacity:1}, 750, 'ease');
     };
 
     loadFirstImage = function () {
         current = 0;
         changeBackgroundImage( $thumbs.eq(current).data('img'), 500 );
         $thumbs.eq(current).addClass('active');
+        $('.id-0').transition({opacity:1}, 750, 'ease').addClass('show');
+        $('.url-0').transition({opacity:1}, 750, 'ease');
+        $('.idVenue-0').transition({opacity:1}, 750, 'ease');
     };
     
     
@@ -113,8 +120,9 @@ var HMR = HMR || {};
                 window.clearInterval(timer);
                 timer = null;
             }
-
-            $credit.transition({opacity:0}, 250, 'ease');
+            $url.transition({opacity:0}, 250, 'ease');
+            $venue.transition({opacity:0}, 250, 'ease');
+            $credit.transition({opacity:0}, 250, 'ease').removeClass('show');
             changeFooterCredit(_$el.data('id'));
             changeBackgroundImage(_$el.data('img'), 500);            
         }
