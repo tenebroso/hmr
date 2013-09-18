@@ -105,7 +105,7 @@ var HMR = HMR || {};
               $(this).transition({ opacity: 100}, 100, 'ease');
             },
             function () {
-              $(this).transition({ opacity: 0}, 1000, 'ease');
+              $(this).transition({ opacity: 0}, 500, 'ease');
             }
         );
 

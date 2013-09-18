@@ -4846,6 +4846,7 @@ a:focus {
   display: block;
   font-family: "Myriad Pro", 'Circe-Regular', sans-serif;
   font-size: 13px;
+  text-transform: uppercase;
 }
 
 .team-photo-container {
@@ -5094,6 +5095,10 @@ a:focus {
 
 #map_holder .container .overlay p {
   margin: 0;
+}
+
+#map_holder .container .overlay p em {
+  font-weight: 300;
 }
 
 #map_holder .container .overlay a:hover {
@@ -5704,12 +5709,20 @@ ul.fullsize li {
   z-index: 301;
   width: 100%;
   margin-left: -426px !important;
+  -webkit-transition-duration: 0;
+     -moz-transition-duration: 0;
+       -o-transition-duration: 0;
+          transition-duration: 0;
 }
 
 .bx-wrapper .bx-viewport {
   z-index: 302;
   height: 47px !important;
   padding: 4px 0;
+  -webkit-transition-duration: 0;
+     -moz-transition-duration: 0;
+       -o-transition-duration: 0;
+          transition-duration: 0;
 }
 
 .bx-wrapper .bx-controls {
@@ -5757,6 +5770,10 @@ ul.fullsize li {
   padding: 0;
   margin: 0;
   list-style-type: none;
+  -webkit-transition-duration: 0;
+     -moz-transition-duration: 0;
+       -o-transition-duration: 0;
+          transition-duration: 0;
 }
 
 .thumb_nav * {
@@ -5775,6 +5792,10 @@ ul.fullsize li {
      -moz-transform: translate3d(0, 0, 0);
        -o-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
+  -webkit-transition-duration: 0;
+     -moz-transition-duration: 0;
+       -o-transition-duration: 0;
+          transition-duration: 0;
 }
 
 .thumb_nav .slide_thumb img {
@@ -6012,6 +6033,7 @@ ul.fullsize li {
 }
 
 .content-info p.copyright {
+  font-weight: 300;
   line-height: 36px;
   color: #55616f;
 }
