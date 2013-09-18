@@ -22,9 +22,11 @@ var HMR = HMR || {};
         duration: 5000
     };
 
-    var images = $.map(items, function(i) { return i.img; });
-    var slideshow = $.backstretch(images,options);
-    var instance = $("body").data("backstretch");
+    var images = $.map(items, function(i) { return i.img; }),
+        slideshow = $.backstretch(images,options),
+        instance = $("body").data("backstretch"),
+        $bigArrowLeft = $('.big_arrow.left'),
+        $bigArrowRight = $('.big_arrow.right');
 
     $(window).on("backstretch.show", function(e, instance) {
         //var $getCurrent = $.backstretch.index;
@@ -75,6 +77,14 @@ var HMR = HMR || {};
     } else {
         if(Modernizr.touch) $('.img').remove();
     }
+
+    $bigArrowLeft.on('click', function() {
+       slideshow.prev();
+    });
+
+    $bigArrowRight.on('click', function() {
+       slideshow.next();
+    });
  
 
   };

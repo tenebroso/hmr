@@ -10,3 +10,6 @@
 	<div class="slide8 img"></div>
 
 <?php endwhile; ?>
+
+  <div class="big_arrow left" data-dir="prev"></div>
+  <div class="big_arrow right" data-dir="next"></div>

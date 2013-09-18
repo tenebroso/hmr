@@ -5146,6 +5146,14 @@ a:focus {
   content: "";
 }
 
+#map_holder .container .overlay .email a {
+  color: #ffffff;
+}
+
+#map_holder .container .overlay .email a:hover {
+  color: #55616f;
+}
+
 #map_holder .container .overlay .form {
   margin-top: -6px;
   font-family: 'Circe-Regular', sans-serif;
