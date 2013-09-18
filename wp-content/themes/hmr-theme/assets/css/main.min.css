@@ -6622,4 +6622,7 @@ ul.fullsize li {
   #team-members {
     position: relative;
   }
+  body {
+    font-weight: 200;
+  }
 }
