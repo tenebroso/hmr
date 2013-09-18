@@ -4225,6 +4225,11 @@ a:focus {
    Home Specifics
    ========================================================================== */
 
+.home .big_arrow.left,
+.home .big_arrow.right {
+  background: none;
+}
+
 .home .banner {
   background: url(../img/gradient.png) repeat-x left -73px;
   border-bottom: none;
