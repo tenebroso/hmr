@@ -5,7 +5,7 @@ Template Name: Connect
 ?>
 <?php get_template_part('templates/content', 'map'); ?>
 
-<?php the_field('lead_form');?>
+<div id="form"><?php the_field('lead_form');?></div>
 
 <hr />
 <!-- 

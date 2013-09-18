@@ -11,6 +11,7 @@
 					<div class="span8">
 						<p class="phone"><?php the_field('phone');?></p>
 						<p class="email"><a href="mailto:<?php the_field('email');?>"><?php the_field('email');?></a></p>
+						<p class="form"><a class="scroll" href="#form">Event Info Form</a></p>
 					</div>
 					<div class="span4">
 						<ul class="social-icons">

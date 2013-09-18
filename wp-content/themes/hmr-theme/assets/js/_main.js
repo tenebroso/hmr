@@ -33,6 +33,9 @@ HMR.Site = {
       // Uniform is a plugin to style the dropdown select in the form
       HMR.uniform();
 
+      // Scroll to the form
+      HMR.scrollForm();
+
       // Call the Google Map
       HMR.MapTest();
 

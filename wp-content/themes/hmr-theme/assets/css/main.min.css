@@ -5055,6 +5055,10 @@ a:focus {
   margin: 0 0 25px 0;
 }
 
+#map_holder .social-icons {
+  margin-top: 60px;
+}
+
 #map_holder #coverup {
   position: absolute;
   top: 0;
@@ -5075,7 +5079,7 @@ a:focus {
   position: relative;
   z-index: 9999;
   min-width: 500px;
-  padding: 30px;
+  padding: 30px 30px 20px 30px;
   margin-top: 110px;
   background: #71222;
   background: rgba(7, 18, 34, 0.9);
@@ -5134,6 +5138,33 @@ a:focus {
   background: url("../img/sprite.png");
   background: none, url("../img/sprite.svg");
   background-position: -304px -181px;
+  content: "";
+}
+
+#map_holder .container .overlay .form {
+  margin-top: -6px;
+  font-family: 'Circe-Regular', sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.9;
+  color: #ffffff;
+}
+
+#map_holder .container .overlay .form a {
+  color: #ffffff;
+}
+
+#map_holder .container .overlay .form a:hover {
+  color: #55616f;
+}
+
+#map_holder .container .overlay .form:before {
+  display: block;
+  float: left;
+  width: 24px;
+  height: 24px;
+  margin: 8px 5px 0 0;
+  background: url(../img/down.png) no-repeat left top;
   content: "";
 }
 
