@@ -25,7 +25,9 @@
 	});*/
 
 	var $slideshow = $('.slideshow'),
-		$credit = $('.photo-credit');
+		$bigArrowLeft = $('.big_arrow.left'),
+		$bigArrowRight = $('.big_arrow.right'),
+		$credit = $('.gallery-footer');
 
 	
 
@@ -118,6 +120,15 @@ $slideshow.cycle({
         });
     })(jQuery);
 
+    $bigArrowLeft.on('click', function() {
+       $slideshow.cycle(prevIndex, "fade");
+       $credit.cycle(prevCreditIndex, "fade");
+    });
+
+    $bigArrowRight.on('click', function() {
+       $slideshow.cycle(nextIndex, "fade");
+       $credit.cycle(nextCreditIndex, "fade");
+    });
 
   };
 

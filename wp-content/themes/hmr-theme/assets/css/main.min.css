@@ -5410,8 +5410,29 @@ ul.fullsize li {
   overflow: hidden;
 }
 
-.single-capability .photo-credit,
-.single-capability .photo-credit p {
+.single-capability .photographer,
+.single-capability .venue {
+  background: #071222;
+  -webkit-transition-duration: 0;
+     -moz-transition-duration: 0;
+       -o-transition-duration: 0;
+          transition-duration: 0;
+}
+
+.single-capability .photographer.show,
+.single-capability .venue.show {
+  z-index: 999;
+}
+
+.single-capability .photographer p,
+.single-capability .venue p {
+  -webkit-transition-duration: 0;
+     -moz-transition-duration: 0;
+       -o-transition-duration: 0;
+          transition-duration: 0;
+}
+
+.single-capability .gallery-footer li {
   -webkit-transition-duration: 0;
      -moz-transition-duration: 0;
        -o-transition-duration: 0;

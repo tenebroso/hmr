@@ -19,33 +19,49 @@
 
     <ul class="gallery-footer">
 
-          <li>
+      <?php while(has_sub_field('photos')): ?>
+
+          <li class="credit">
+
+            
+
+            <?php $venue = get_sub_field('photo_venue'); if ($venue) { ?>
+
+                <p class="venue"><?php echo $venue;?></p>
+                
+                <?php } else { ?>
+
+                <p class="venue"></p>
+              
+              <?php } ?>
           
-            <h4><?php //bloginfo('title');?></h4>
+            <h4><a href="<?php bloginfo('url');?>"><?php bloginfo('title');?></a></h4>
+            
+              <?php $credit = get_sub_field('photo_credit'); $urls = get_sub_field('photo_credits'); if ($credit) { ?>
+
+                <p class="photographer">Photo by: <?php if($urls) { ?><a href="<?php echo $urls; ?>" class="url-<?php echo $i; ?>"><?php } ?><?php echo $credit;?><?php if($urls) { ?></a><?php } ?></p>
+                
+                <?php } else { ?>
+
+                <p class="photographer"></p>
+              
+              <?php } ?>
+
+
+            
 
           </li>
 
+        <?php endwhile; ?>
+        
+
     </ul>
 
-    <div class="gallery-title">
+   <!--  <div class="gallery-title">
 
       <h4><?php the_title();?></h4>
 
-    </div>
-
-    <div class="photo-credit">
-
-      <?php while(has_sub_field('photos')): ?>
-    
-      <?php $credit = get_sub_field('photo_credit'); $url = get_sub_field('photo_credit_url'); if ($credit) { ?>
-        <p>Photo by: <?php if($url) { ?><a href="<?php echo $url; ?>"><?php } ?><?php echo $credit;?><?php if($url) { ?></a><?php } ?></p>
-      <?php } else { ?>
-        <p class="hidden">Photo by: No Photo Credit</p>
-      <?php } ?>
-
-       <?php endwhile; ?>
-
-    </div>
+    </div> -->
 
   <?php endif; ?>
 
@@ -55,5 +71,8 @@
     <?php the_content();?>
 
   </div>
+
+  <div class="big_arrow left" data-dir="prev"></div>
+  <div class="big_arrow right" data-dir="next"></div>
 
 <?php endwhile; ?>
