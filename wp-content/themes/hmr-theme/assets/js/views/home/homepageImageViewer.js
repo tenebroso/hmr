@@ -71,12 +71,12 @@ var HMR = HMR || {};
     })(jQuery);
 
 
-    if($(window).width() > 767) {
+    /* if($(window).width() > 767) {
         // Do the text anims
         //$('.homeSlide1').transition({delay:1500, opacity: 1}, 2550, 'ease');  
     } else {
         if(Modernizr.touch) $('.img').remove();
-    }
+    }*/
 
     $bigArrowLeft.on('click', function() {
        slideshow.prev();

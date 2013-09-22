@@ -5035,6 +5035,12 @@ a:focus {
   background: #071222;
 }
 
+@media (min-width: 1000px) {
+  .post-type-archive-team {
+    min-height: 1200px;
+  }
+}
+
 @media (max-width: 1000px) and (min-width: 768px) {
   #team {
     height: 540px;
@@ -5868,6 +5874,12 @@ ul.fullsize li {
 .big_arrow:hover {
   opacity: 1;
   filter: alpha(opacity=100);
+}
+
+@media (max-width: 767px) {
+  .big_arrow {
+    display: none;
+  }
 }
 
 /* =============================================================================
