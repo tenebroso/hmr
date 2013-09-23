@@ -60,6 +60,8 @@ HMR.Site = {
       // Add the active class to the nav on a individual bio pages
       if($('.single-team').length) {
         $('.menu li.menu-our-team').addClass('active');
+        $('.menu-hmr').addClass('active');
+        $('.menu-blog').removeClass('active');
       }
 
       // White BG for Blog Pages
