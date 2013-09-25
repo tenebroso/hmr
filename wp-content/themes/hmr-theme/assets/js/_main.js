@@ -62,6 +62,9 @@ HMR.Site = {
         $('.menu li.menu-our-team').addClass('active');
         $('.menu-hmr').addClass('active');
         $('.menu-blog').removeClass('active');
+        $(window).bind('hashchange', function () {
+          // do some magic
+        });
       }
 
       // White BG for Blog Pages
@@ -134,7 +137,7 @@ HMR.Site = {
     init: function() {
       $('html').css('background','none');
       var img = '/assets/history-bg.jpg';
-      $(".bgWrapper").backstretch([img], { centeredX:false});
+      $("body").backstretch([img], { centeredX:false});
       var instance = $("body").data("backstretch");
       instance.resize();
     }

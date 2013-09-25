@@ -4233,20 +4233,6 @@ a:focus {
   text-transform: uppercase;
 }
 
-.bgWrapper {
-  height: 100%;
-  min-height: 100%;
-  overflow: hidden;
-}
-
-.bgWrapper .bgClear {
-  position: fixed;
-  bottom: 0;
-  height: 1px;
-  clear: both;
-  with: 100%;
-}
-
 /* =============================================================================
    Home Specifics
    ========================================================================== */
@@ -4505,7 +4491,7 @@ a:focus {
 .category .hentry header .entry-title,
 .author .hentry header .entry-title {
   font-family: 'Didot 24 A', 'Didot 24 B';
-  font-size: 28px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 300;
 }
