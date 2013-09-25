@@ -2387,6 +2387,10 @@ button.close {
           transition-duration: 0.5s;
 }
 
+.nav > li.brand.active:hover {
+  margin-bottom: 20px;
+}
+
 .nav > li.brand:hover {
   margin-bottom: 20px;
   opacity: 0.5;
@@ -4298,7 +4302,7 @@ a:focus {
 }
 
 .home .img.slide8 {
-  bottom: 440px;
+  top: 240px;
   left: 10%;
   background-position: right bottom !important;
 }
