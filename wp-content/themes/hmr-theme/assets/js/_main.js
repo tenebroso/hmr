@@ -87,7 +87,7 @@ HMR.Site = {
       if($('body.venues').length) {
         $('.nav li.menu-hmr').addClass('active');
       }
-      if($('body.history').length) {
+      if($('body.about').length) {
         $('.nav li.menu-hmr').addClass('active');
       }
       if($('body.social-and-gala').length) {
@@ -130,7 +130,7 @@ HMR.Site = {
       }
     }
   },
-  history: {
+  about: {
     init: function() {
       $('html').css('background','none');
       var img = '/assets/history-bg.jpg';

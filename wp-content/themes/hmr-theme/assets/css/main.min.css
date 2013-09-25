@@ -746,7 +746,7 @@ a:focus {
 .page-template-template-connect-php .gform_wrapper select {
   width: 100%;
   font-size: 15px;
-  font-weight: normal;
+  font-weight: 200;
   line-height: 26px;
   color: #a4adb5;
   background: #293240;
@@ -2359,6 +2359,11 @@ button.close {
   vertical-align: middle;
 }
 
+.nav > li:hover {
+  margin-bottom: -1px;
+  border-bottom: 1px solid #55616f;
+}
+
 .nav > li.brand {
   display: inline-block;
   width: 133px;
@@ -2383,6 +2388,7 @@ button.close {
 }
 
 .nav > li.brand:hover {
+  margin-bottom: 20px;
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
@@ -2408,6 +2414,11 @@ button.close {
   -webkit-transform: translateY(-100%);
      -moz-transform: translateY(-100%);
           transform: translateY(-100%);
+}
+
+.nav > li.active:hover {
+  margin-bottom: 0;
+  border-bottom: none;
 }
 
 .nav > li > a {
@@ -2459,13 +2470,6 @@ button.close {
 .nav > li > a:focus {
   color: #ffffff;
   text-decoration: none;
-}
-
-.nav > li > a:hover span,
-.nav > li > a:focus span {
-  -webkit-transform: translateY(-100%);
-     -moz-transform: translateY(-100%);
-          transform: translateY(-100%);
 }
 
 .sub-nav {
@@ -4757,6 +4761,7 @@ a:focus {
 .single-team .hentry .entry-content h3,
 .single-team .hentry .entry-content h4,
 .single-team .hentry .entry-content h5 {
+  font-weight: 200;
   color: #a6a6a6;
 }
 
@@ -4800,7 +4805,7 @@ a:focus {
 }
 
 .post-type-archive-team .btn {
-  font-weight: 500;
+  font-weight: 200;
 }
 
 .post-type-archive-team .content {
@@ -5147,7 +5152,7 @@ a:focus {
   margin: 15px 0 0;
   font-family: 'Circe-Regular', sans-serif;
   font-size: 22px;
-  font-weight: 300;
+  font-weight: 200;
   line-height: 1.4;
   text-transform: uppercase;
 }
@@ -5167,7 +5172,7 @@ a:focus {
 #map_holder .container .overlay .email {
   font-family: 'Circe-Regular', sans-serif;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 200;
   line-height: 1.7;
 }
 
@@ -5195,7 +5200,7 @@ a:focus {
   margin-top: -6px;
   font-family: 'Circe-Regular', sans-serif;
   font-size: 21px;
-  font-weight: 400;
+  font-weight: 200;
   line-height: 1.9;
   color: #ffffff;
 }
@@ -6266,12 +6271,6 @@ ul.fullsize li {
   .wrap {
     padding-bottom: 129px;
     overflow: auto;
-  }
-  body.history .content {
-    padding: 2em;
-    background: #071222;
-    background: rgba(7, 18, 34, 0.8);
-    border: 2px solid #55616f;
   }
 }
 
