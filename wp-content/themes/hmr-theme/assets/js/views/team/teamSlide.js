@@ -59,6 +59,16 @@ var HMR = HMR || {};
         $team.css('overflow','hidden');
         e.preventDefault();
       });
+
+      if(window.location.hash) {
+        $hero.transition({y:'-540px'});
+        $members.transition({y:'-540px'});
+        //$team.css('height','auto');
+        $team.animateAuto("height", 1000);
+        $team.css('overflow','visible');
+        $('body').css('overflow','hidden');
+      }
+
   }
   else if (windowSize >= 1001) {
 
@@ -76,6 +86,13 @@ var HMR = HMR || {};
         $team.css('overflow','hidden');
         e.preventDefault();
       });
+
+      if(window.location.hash) {
+        $hero.transition({y:'-663px'});
+        $members.transition({y:'-663px'});
+        $team.animateAuto("height", 1000);
+        $team.css('overflow','visible');
+      }
   }
 
 
