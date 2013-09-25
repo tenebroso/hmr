@@ -22,6 +22,7 @@
   <?php if (is_post_type_archive('team')) {  get_template_part('templates/content', 'team-hero'); } ?>
   <?php if(is_post_type_archive('team')) { ?> <div id="team-members"><?php } ?>
 
+<?php if(is_page('27')) { ?><div class="bgWrapper"><?php } ?>
     <div class="wrap container" role="document">
       <div class="content row-fluid">
         <div class="main <?php echo roots_main_class(); ?>" role="main">
@@ -34,7 +35,7 @@
         <?php endif; ?>
       </div><!-- /.content -->
     </div><!-- /.wrap -->
-
+<?php if(is_page('27')) { ?><div class="bgClear"></div></div><?php } ?>
     <?php if (is_post_type_archive('team')) {  ?></div></div><?php } ?>
 
   <?php } ?>

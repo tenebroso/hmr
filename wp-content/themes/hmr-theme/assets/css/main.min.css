@@ -3803,6 +3803,10 @@ button.close {
           transition-duration: 0;
 }
 
+.backstretch img {
+  top: 0 !important;
+}
+
 /* ==========================================================================
    Bootstrap & Stock Bootstrap/Roots Theme Setup
    ========================================================================== */
@@ -4227,6 +4231,20 @@ a:focus {
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
+}
+
+.bgWrapper {
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.bgWrapper .bgClear {
+  position: fixed;
+  bottom: 0;
+  height: 1px;
+  clear: both;
+  with: 100%;
 }
 
 /* =============================================================================
@@ -4799,7 +4817,7 @@ a:focus {
    ========================================================================== */
 
 .post-type-archive-team .rollover {
-  margin: -1.5em 0 1em 0;
+  margin: 0 0 -1em 0;
   font-size: 13px;
   text-transform: uppercase;
 }
@@ -5088,6 +5106,10 @@ a:focus {
   #wrap {
     height: 100%;
     max-height: 100%;
+  }
+  .single-team #wrap {
+    height: auto;
+    max-height: 99999px;
   }
 }
 

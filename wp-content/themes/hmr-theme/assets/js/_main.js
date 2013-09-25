@@ -134,7 +134,7 @@ HMR.Site = {
     init: function() {
       $('html').css('background','none');
       var img = '/assets/history-bg.jpg';
-      $("body").backstretch([img]);
+      $(".bgWrapper").backstretch([img], { centeredX:false});
       var instance = $("body").data("backstretch");
       instance.resize();
     }

@@ -5,6 +5,7 @@
 
 	<h1 class="text-center page-title">EXPLORE OUR DESIGN TEAM</h1>
 
+<p class="text-center rollover">Rollover Picture</p>
 	<div class="container team-photo-container">
 		<div class="team-photo">
 		  <img class="feature" src="/assets/OurTeam.jpg" onload="imgLoaded(this)">
@@ -23,7 +24,7 @@
 		<p class="photo-credit">Photo by <a href="http://www.katrinawittkamp.com/">Katrina Whittkamp</a> as seen in <a href="http://chicago.thescoutguide.com/">The Scout Guide</a></p>
 
 	</div>
-	<p class="text-center rollover">Rollover Picture</p>
+	
 
 	<div class="text-center">
 
