@@ -21,9 +21,12 @@
 		    <div class="mertz hover hastip"><a href="/team/bob-mertzlufft/"></a></div>
 		</div>
 		<p class="photo-credit">Photo by <a href="http://www.katrinawittkamp.com/">Katrina Whittkamp</a> as seen in <a href="http://chicago.thescoutguide.com/">The Scout Guide</a></p>
+
 	</div>
+	<p class="text-center rollover">Rollover Picture</p>
 
 	<div class="text-center">
+
 		<button class="btn">Meet Our Full Team</button>
 	</div>
 

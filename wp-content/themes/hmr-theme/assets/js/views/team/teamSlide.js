@@ -43,8 +43,8 @@ var HMR = HMR || {};
   }
   else if (windowSize <= 1000) {
       $btn.on('click', function () {
-        $hero.transition({y:'-540px'});
-        $members.transition({y:'-540px'});
+        $hero.transition({y:'-570px'});
+        $members.transition({y:'-570px'});
         //$team.css('height','auto');
         $team.animateAuto("height", 1000);
         $team.css('overflow','visible');
@@ -55,14 +55,14 @@ var HMR = HMR || {};
         $hero.transition({y:0});
         $members.transition({y:0});
         //$team.css('height','540px');
-        $team.animate({height: "540px"}, 100)
+        $team.animate({height: "570px"}, 100)
         $team.css('overflow','hidden');
         e.preventDefault();
       });
 
       if(window.location.hash) {
-        $hero.transition({y:'-540px'});
-        $members.transition({y:'-540px'});
+        $hero.transition({y:'-570px'});
+        $members.transition({y:'-570px'});
         //$team.css('height','auto');
         $team.animateAuto("height", 1000);
         $team.css('overflow','visible');
@@ -73,8 +73,8 @@ var HMR = HMR || {};
   else if (windowSize >= 1001) {
 
       $btn.on('click', function () {
-        $hero.transition({y:'-663px'});
-        $members.transition({y:'-663px'});
+        $hero.transition({y:'-693px'});
+        $members.transition({y:'-693px'});
         $team.animateAuto("height", 1000);
         $team.css('overflow','visible');
       });
@@ -82,14 +82,14 @@ var HMR = HMR || {};
       $menu.on('click', function (e) {
         $hero.transition({y:0});
         $members.transition({y:0});
-        $team.animate({height: "663px"}, 100)
+        $team.animate({height: "693px"}, 100)
         $team.css('overflow','hidden');
         e.preventDefault();
       });
 
       if(window.location.hash) {
-        $hero.transition({y:'-663px'});
-        $members.transition({y:'-663px'});
+        $hero.transition({y:'-693px'});
+        $members.transition({y:'-693px'});
         $team.animateAuto("height", 1000);
         $team.css('overflow','visible');
       }

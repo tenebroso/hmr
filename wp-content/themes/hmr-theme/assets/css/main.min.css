@@ -4798,6 +4798,12 @@ a:focus {
    Team Archive - Team Landing Page
    ========================================================================== */
 
+.post-type-archive-team .rollover {
+  margin: -1.5em 0 1em 0;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
 .post-type-archive-team .page-title {
   margin: 30px 0 0;
   font-size: 27px;
@@ -4886,7 +4892,6 @@ a:focus {
   display: block;
   font-family: "Myriad Pro", 'Circe-Regular', sans-serif;
   font-size: 13px;
-  text-transform: uppercase;
 }
 
 .team-photo-container {
@@ -5046,7 +5051,7 @@ a:focus {
 
 #team {
   position: relative;
-  height: 663px;
+  height: 693px;
   overflow: hidden;
 }
 
@@ -5078,7 +5083,7 @@ a:focus {
 
 @media (max-width: 1000px) and (min-width: 768px) {
   #team {
-    height: 540px;
+    height: 570px;
   }
   #wrap {
     height: 100%;
@@ -5942,12 +5947,24 @@ ul.fullsize li {
 .page-template-template-web-php .content a,
 .page-template-template-video-php .content a {
   display: inline;
+  color: #a6a6a6;
+}
+
+.page-template-template-press-php .content a:hover,
+.page-template-template-web-php .content a:hover,
+.page-template-template-video-php .content a:hover {
+  color: #ffffff;
 }
 
 .page-template-template-press-php .view-article,
 .page-template-template-web-php .view-article,
 .page-template-template-video-php .view-article {
   font-size: 14px;
+}
+
+.page-template-template-press-php .view-article a,
+.page-template-template-web-php .view-article a,
+.page-template-template-video-php .view-article a {
   color: #a6a6a6;
 }
 
