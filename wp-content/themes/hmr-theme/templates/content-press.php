@@ -19,7 +19,7 @@
    		<span class="caps"><?php the_title();?></span><br />
    			<em class="arvo"><?php the_field('publication_date');?></em>
    	</p>
-   	<p class="arvo view-article">View Article:<?php if($pdf) { ?> <a href="<?php echo $pdf; ?>">PDF</a><?php if ($url && $pdf) { ?> /<?php } ?><?php } if ($url) { ?> <a href="<?php echo $url; ?>">On the Web</a><?php } ?></p>
+   	<p class="arvo view-article"><?php if ($url || $pdf) { ?>View Article:<?php } if($pdf) { ?> <a href="<?php echo $pdf; ?>">PDF</a><?php if ($url && $pdf) { ?> /<?php } ?><?php } if ($url) { ?> <a href="<?php echo $url; ?>">On the Web</a><?php } ?></p>
 </article>
 
 <div id="modal-<?php echo $id; ?>" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">

@@ -48,7 +48,7 @@ var HMR = HMR || {};
         //$team.css('height','auto');
         $team.animateAuto("height", 1000);
         $team.css('overflow','visible');
-        $('body').css('overflow','hidden');
+        //$('body').css('overflow','hidden');
       });
 
       $menu.on('click', function (e) {
@@ -66,7 +66,7 @@ var HMR = HMR || {};
         //$team.css('height','auto');
         $team.animateAuto("height", 1000);
         $team.css('overflow','visible');
-        $('body').css('overflow','hidden');
+        //$('body').css('overflow','hidden');
       }
 
   }

@@ -18,7 +18,7 @@ module.exports = function(grunt) {
       dist: {
         options: {
           compile: true,
-          compress: true
+          compress: false
         },
         files: {
           'assets/css/main.min.css': [
@@ -31,7 +31,7 @@ module.exports = function(grunt) {
     },
     uglify: {
       options: {
-      compress: true,
+      compress: false,
       beautify: true
       },
       dist: {
