@@ -24,6 +24,7 @@ HMR.Site = {
 
       // Specific homepage based body fade
       HMR.homepageBodyFade();
+      
     }
   },
   // Connect

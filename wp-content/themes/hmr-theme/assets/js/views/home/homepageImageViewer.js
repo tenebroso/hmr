@@ -25,6 +25,7 @@ var HMR = HMR || {};
     var images = $.map(items, function(i) { return i.img; }),
         slideshow = $.backstretch(images,options),
         instance = $("body").data("backstretch"),
+        //$loading = $('.loading'),
         $bigArrowLeft = $('.big_arrow.left'),
         $bigArrowRight = $('.big_arrow.right');
 
@@ -39,6 +40,7 @@ var HMR = HMR || {};
     $(window).on("backstretch.before", function(e, instance) {
         //$('.backstretch img').transition({ scale: 1 }, 10000);
         $('.img').transition({opacity: 0}, 1550);
+        //$loading.transition({opacity:0});
     });
 
     $(window).on("backstretch.after", function(e, instance) {

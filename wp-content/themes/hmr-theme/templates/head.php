@@ -22,8 +22,17 @@
 		<?php }?>
 		</style>
 
+		<script>
+			jQuery(window).on("backstretch.show", function(e, instance) {
+            	jQuery('.loading').fadeOut(100);
+      		});
+		</script>
+
 	<?php } } ?>
   <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7033652/633062/css/fonts.css" />
   <link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?> Feed" href="<?php echo home_url(); ?>/feed/">
 </head>
+<?php if(is_front_page()) { ?>
+<div class="loading"></div>
+<?php } ?>
 <div id="wrap">
