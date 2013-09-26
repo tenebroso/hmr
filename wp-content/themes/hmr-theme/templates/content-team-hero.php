@@ -28,7 +28,7 @@
 
 	<div class="text-center">
 
-		<button class="btn">Meet Our Full Team</button>
+		<button class="btn"><a href="#full">Meet Our Full Team</a></button>
 	</div>
 
 </div>
