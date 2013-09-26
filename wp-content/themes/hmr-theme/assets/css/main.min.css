@@ -2719,7 +2719,7 @@ button.close {
     border-bottom: 1px solid #293240;
   }
   #navbar-mobile ul li a:hover {
-    color: white;
+    color: #293240;
     text-decoration: none;
   }
   #navbar-mobile ul ul {
@@ -4397,6 +4397,24 @@ a:focus {
 /* ==========================================================================
    Posts/Blog
    ========================================================================== */
+
+@media (max-width: 767px) {
+  .js body.blog .banner .brand,
+  .js body.category .banner .brand,
+  .js body.single-post .banner .brand,
+  .js body.search .banner .brand,
+  .js body.archive.author .banner .brand {
+    background-position: -104px -513px;
+    background-size: 429%;
+  }
+  .js body.blog .banner #nav-toggle,
+  .js body.category .banner #nav-toggle,
+  .js body.single-post .banner #nav-toggle,
+  .js body.search .banner #nav-toggle,
+  .js body.archive.author .banner #nav-toggle {
+    background-position: -287px -369px;
+  }
+}
 
 .js body.blog,
 .js body.category,
