@@ -13,10 +13,6 @@
     display:inline-block;
     vertical-align: middle;
     margin-right:40px;
-    &:hover {
-      border-bottom:1px solid @slate;
-      margin-bottom:-1px;
-    }
     &.brand {
       display: inline-block;
       width:133px;
@@ -27,14 +23,8 @@
       .transition(opacity);
       .transition-duration(.5s);
       .opacity(100);
-      &.active {
-        &:hover {
-          margin-bottom:20px;
-        }
-      }
       &:hover {
         .opacity(50);
-        margin-bottom:20px;
       }
       a {
         .hide-text();
@@ -65,16 +55,15 @@
       a {
         text-decoration: none;
         color:@white;
+        &:hover {
+          color:@white;
+        }
         //color:#55656f;
         span {
           -webkit-transform: translateY(-100%);
           -moz-transform: translateY(-100%);
           transform: translateY(-100%);
         }
-      }
-      &:hover {
-        border-bottom:none;
-        margin-bottom:0;
       }
     }
     > a {
@@ -92,7 +81,6 @@
       .translate3d(0,0,0);
       .transition(color);
       .transition-duration(.5s);
-
       /* New HOVER Effects */
       padding:0 5px;
       overflow:hidden;
@@ -115,7 +103,7 @@
       }
       &:hover, &:focus {
         text-decoration: none;
-        color:@white;
+        color:@slate;
         //color:#55656f;
         //text-decoration:underline;
         span {
