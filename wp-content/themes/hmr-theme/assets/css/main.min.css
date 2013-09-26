@@ -3781,6 +3781,19 @@ button.close {
           transition-duration: 500ms;
 }
 
+@media (max-width: 767px) {
+  * {
+    -webkit-transition: none;
+       -moz-transition: none;
+         -o-transition: none;
+            transition: none;
+    -webkit-transition-duration: 0;
+       -moz-transition-duration: 0;
+         -o-transition-duration: 0;
+            transition-duration: 0;
+  }
+}
+
 .backstretch * {
   -webkit-transition: all;
      -moz-transition: all;
@@ -4331,7 +4344,7 @@ a:focus {
 .home .img.slide1 {
   right: 20%;
   bottom: 200px;
-  background-position: right bottom !important;
+  background-position: right bottom;
 }
 
 .home .img.slide2 {
@@ -4367,7 +4380,18 @@ a:focus {
 .home .img.slide8 {
   top: 240px;
   left: 10%;
-  background-position: right bottom !important;
+  background-position: right bottom;
+}
+
+@media (max-width: 767px) {
+  .home .img {
+    top: auto !important;
+    right: auto !important;
+    bottom: 10px !important;
+    left: auto !important;
+    max-width: 100% !important;
+    background-position: left top !important;
+  }
 }
 
 /* ==========================================================================
