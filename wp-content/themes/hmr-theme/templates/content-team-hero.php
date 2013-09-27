@@ -5,7 +5,7 @@
 
 	<h1 class="text-center page-title">EXPLORE OUR DESIGN TEAM</h1>
 
-<p class="text-center rollover">Rollover Picture</p>
+<p class="text-center rollover hidden-phone">Rollover Picture</p>
 	<div class="container team-photo-container">
 		<div class="team-photo">
 		  <img class="feature" src="/assets/OurTeam.jpg" onload="imgLoaded(this)">

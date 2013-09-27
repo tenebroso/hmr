@@ -4906,7 +4906,7 @@ a:focus {
 .post-type-archive-team .rollover {
   margin: 0 0 -1em 0;
   font-size: 13px;
-  text-transform: uppercase;
+  color: #55616f;
 }
 
 .post-type-archive-team .page-title {
