@@ -4416,6 +4416,12 @@ a:focus {
   }
 }
 
+.pibfi_pinterest .xc_pin {
+  width: 125px;
+  height: 125px;
+  background: url(../img/gold.png) no-repeat left top;
+}
+
 .js body.blog,
 .js body.category,
 .js body.single-post,
