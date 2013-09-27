@@ -4920,6 +4920,10 @@ a:focus {
   color: #55616f;
 }
 
+.post-type-archive-team .btn a {
+  color: white;
+}
+
 .post-type-archive-team .page-title {
   margin: 30px 0 0;
   font-size: 27px;
@@ -5286,6 +5290,7 @@ a:focus {
 #map_holder .container .overlay h2 {
   margin: 0;
   font-size: 22px;
+  font-weight: 200;
   line-height: 1.2;
   text-transform: uppercase;
 }
