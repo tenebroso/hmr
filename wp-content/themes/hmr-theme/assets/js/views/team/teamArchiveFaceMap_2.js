@@ -35,7 +35,7 @@
 				{
 					el: '.ahr',
 					name: 'Brittanie Ahrens',
-					title: 'Event Designer',
+					title: 'Corporate Event Designer',
 					url: '/team/brittanie-ahrens/'
 				},
 				{
@@ -71,7 +71,7 @@
 				{
 					el: '.eps',
 					name: 'David Epstein',
-					title: 'Senior Event Designer',
+					title: 'Corporate Event Director',
 					url: '/team/david-epstein/'
 				},
 				{
@@ -79,6 +79,30 @@
 					name: 'Carli Milstein',
 					title: 'Event Designer',
 					url: '/team/carli-milstein/'
+				},
+				{
+					el: '.ley',
+					name: 'Carolyn Leyba',
+					title: 'Event Producer',
+					url: '/team/carolyn-leyba/'
+				},
+				{
+					el: '.mills',
+					name: 'Chris Mills',
+					title: 'Event Producer',
+					url: '/team/chris-mills/'
+				},
+				{
+					el: '.silver',
+					name: 'Rachel Silverberg',
+					title: 'Event Producer',
+					url: '/team/rachel-silverberg/'
+				},
+				{
+					el: '.tucker',
+					name: 'Christianna Tucker',
+					title: 'Event Producer',
+					url: '/team/christianna-tucker/'
 				}
 			],
 			settings: {

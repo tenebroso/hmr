@@ -5116,6 +5116,26 @@ a:focus {
   left: 521px;
 }
 
+.team-photo .mills {
+  top: 145px;
+  left: 515px;
+}
+
+.team-photo .ley {
+  top: 114px;
+  right: 170px;
+}
+
+.team-photo .tucker {
+  top: 65px;
+  left: 194px;
+}
+
+.team-photo .silver {
+  top: 265px;
+  left: 205px;
+}
+
 .tooltipsy {
   padding: 10px 15px;
   color: #ffffff;
@@ -5192,8 +5212,15 @@ a:focus {
 }
 
 @media (min-width: 1000px) {
-  .post-type-archive-team {
+  .post-type-archive-team,
+  .post-type-archive-team #wrap {
     min-height: 1200px;
+  }
+}
+
+@media (min-width: 768px) {
+  .post-type-archive-team .content-info {
+    margin-top: 0;
   }
 }
 

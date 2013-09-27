@@ -20,6 +20,11 @@
 			<div class="crum hover hastip"><a href="/team/amy-crum/"></a></div>
 			<div class="patel hover hastip"><a href="/team/rishi-patel/"></a></div>
 		    <div class="mertz hover hastip"><a href="/team/bob-mertzlufft/"></a></div>
+
+		    <div class="tucker hover hastip"><a href="/team/christianna-tucker/"></a></div>
+		    <div class="silver hover hastip"><a href="/team/rachel-silverberg/"></a></div>
+		    <div class="mills hover hastip"><a href="/team/chris-mills/"></a></div>
+		    <div class="ley hover hastip"><a href="/team/carolyn-leyba/"></a></div>
 		</div>
 		<p class="photo-credit">Photo by <a href="http://www.katrinawittkamp.com/">Katrina Whittkamp</a> as seen in <a href="http://chicago.thescoutguide.com/">The Scout Guide</a></p>
 
