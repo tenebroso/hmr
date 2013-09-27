@@ -3,7 +3,7 @@
 	width:100%;
 	margin:0 0 25px 0;
 	.social-icons {
-		margin-top:60px;
+		margin-top:30px;
 	}
 	#coverup {
 		position:absolute;
@@ -44,40 +44,37 @@
 					text-decoration:none;
 				}
 			}
-			.phone {
-				font-size:22px;
-				text-transform:uppercase;
-				margin:15px 0 0;
-				font-family:@sansFontFamily;
+			.phone, .email, .form {
+				font-size:16px;
 				font-weight:200;
-				line-height:1.4;
+				font-family:@sansFontFamily;
+				line-height:1.9;
+				clear:left;
+				&:before {
+					width:18px;
+					height:18px;
+					content:"";
+					display:inline-block;
+					*zoom:1;
+					*display:inline;
+					vertical-align:middle;
+					margin-right:5px;
+				}
+			}
+			.phone {
+				margin:0 0 -5px 0;
 				&:before {
 					background: url(@fbsprite);
   					background: none, url(@sprite);
-  					background-position: -272px -181px;
-					width:24px;
-					height:24px;
-					content:"";
-					display:block;
-					float:left;
-					margin:3px 5px 0 0;
+  					background-position: -273px -181px;
 				}
 			}
 			.email {
-				font-size:24px;
-				font-family:@sansFontFamily;
-				font-weight:200;
-				line-height:1.7;
+				margin-bottom:2px;
 				&:before {
 					background: url(@fbsprite);
   					background: none, url(@sprite);
-  					background-position: -304px -181px;
-					width:24px;
-					height:24px;
-					content:"";
-					display:block;
-					float:left;
-					margin:8px 5px 0 0;
+  					background-position: -305px -181px;
 				}
 				a {
 					color:@white;
@@ -87,10 +84,6 @@
 				}
 			}
 			.form {
-				font-family:@sansFontFamily;
-				font-size: 21px;
-				font-weight: 200;
-				line-height: 1.9;
 				color: #ffffff;
 				margin-top: -6px;
 				color:@white;
@@ -101,13 +94,7 @@
 					}
 				}
 				&:before {
-					background: url(../img/down.png) no-repeat left top;
-					width:24px;
-					height:24px;
-					content:"";
-					display:block;
-					float:left;
-					margin:8px 5px 0 0;
+					background: url(../img/down-sm.png) no-repeat left top;
 				}
 			}
 		}
@@ -201,5 +188,3 @@
 		margin-bottom:23px;
 	}
 }
-
-@

@@ -678,6 +678,10 @@ a:focus {
   font-size: 16px;
 }
 
+.page-template-template-connect-php .gform_wrapper label {
+  font-weight: 200;
+}
+
 .page-template-template-connect-php .gform_wrapper .gform_fields {
   padding: 0;
   margin: 0;
@@ -727,6 +731,7 @@ a:focus {
   margin: .75em 0 1em 0;
   font-size: 24px;
   font-weight: normal;
+  font-weight: 200;
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
@@ -5222,7 +5227,7 @@ a:focus {
 }
 
 #map_holder .social-icons {
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 #map_holder #coverup {
@@ -5271,44 +5276,47 @@ a:focus {
   text-decoration: none;
 }
 
-#map_holder .container .overlay .phone {
-  margin: 15px 0 0;
+#map_holder .container .overlay .phone,
+#map_holder .container .overlay .email,
+#map_holder .container .overlay .form {
+  clear: left;
   font-family: 'Circe-Regular', sans-serif;
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 200;
-  line-height: 1.4;
-  text-transform: uppercase;
+  line-height: 1.9;
+}
+
+#map_holder .container .overlay .phone:before,
+#map_holder .container .overlay .email:before,
+#map_holder .container .overlay .form:before {
+  display: inline-block;
+  *display: inline;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  vertical-align: middle;
+  content: "";
+  *zoom: 1;
+}
+
+#map_holder .container .overlay .phone {
+  margin: 0 0 -5px 0;
 }
 
 #map_holder .container .overlay .phone:before {
-  display: block;
-  float: left;
-  width: 24px;
-  height: 24px;
-  margin: 3px 5px 0 0;
   background: url("../img/sprite.png");
   background: none, url("../img/sprite.svg");
-  background-position: -272px -181px;
-  content: "";
+  background-position: -273px -181px;
 }
 
 #map_holder .container .overlay .email {
-  font-family: 'Circe-Regular', sans-serif;
-  font-size: 24px;
-  font-weight: 200;
-  line-height: 1.7;
+  margin-bottom: 2px;
 }
 
 #map_holder .container .overlay .email:before {
-  display: block;
-  float: left;
-  width: 24px;
-  height: 24px;
-  margin: 8px 5px 0 0;
   background: url("../img/sprite.png");
   background: none, url("../img/sprite.svg");
-  background-position: -304px -181px;
-  content: "";
+  background-position: -305px -181px;
 }
 
 #map_holder .container .overlay .email a {
@@ -5321,10 +5329,6 @@ a:focus {
 
 #map_holder .container .overlay .form {
   margin-top: -6px;
-  font-family: 'Circe-Regular', sans-serif;
-  font-size: 21px;
-  font-weight: 200;
-  line-height: 1.9;
   color: #ffffff;
 }
 
@@ -5337,13 +5341,7 @@ a:focus {
 }
 
 #map_holder .container .overlay .form:before {
-  display: block;
-  float: left;
-  width: 24px;
-  height: 24px;
-  margin: 8px 5px 0 0;
-  background: url(../img/down.png) no-repeat left top;
-  content: "";
+  background: url(../img/down-sm.png) no-repeat left top;
 }
 
 .social-icons {
@@ -6081,7 +6079,7 @@ ul.fullsize li {
 .page-template-template-press-php .view-article a,
 .page-template-template-web-php .view-article a,
 .page-template-template-video-php .view-article a {
-  color: #a6a6a6;
+  color: #55616f;
 }
 
 .page-template-template-press-php .view-article a:hover,
@@ -6577,6 +6575,12 @@ ul.fullsize li {
     font-size: 18px;
   }
   #map_holder .container .overlay .phone:before {
+    display: none;
+  }
+  #map_holder .container .overlay .form {
+    font-size: 18px;
+  }
+  #map_holder .container .overlay .form:before {
     display: none;
   }
   .team-photo,
