@@ -61,16 +61,19 @@ var HMR = HMR || {};
         });
     })(jQuery);
     
-     /*(function($){
+     (function($){
         $(window).touchwipe({
-            wipeLeft: function() {
+            wipeLeft: function(e) {
+                e.preventDefault();
                 slideshow.prev();
             },
-            wipeRight: function() {
+            wipeRight: function(e) {
+                e.preventDefault();
                 slideshow.next();
-            }
+            },
+            preventDefaultEvents: false
         });
-    })(jQuery);*/
+    })(jQuery);
 
 
     /* if($(window).width() > 767) {

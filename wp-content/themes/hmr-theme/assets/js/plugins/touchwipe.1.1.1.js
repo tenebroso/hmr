@@ -44,19 +44,19 @@
 	    		 if(Math.abs(dx) >= config.min_move_x) {
 	    			cancelTouch();
 	    			if(dx > 0) {
-	    				config.wipeLeft();
+	    				config.wipeLeft(e);
 	    			}
 	    			else {
-	    				config.wipeRight();
+	    				config.wipeRight(e);
 	    			}
 	    		 }
 	    		 else if(Math.abs(dy) >= config.min_move_y) {
 		    			cancelTouch();
 		    			if(dy > 0) {
-		    				config.wipeDown();
+		    				config.wipeDown(e);
 		    			}
 		    			else {
-		    				config.wipeUp();
+		    				config.wipeUp(e);
 		    			}
 		    		 }
     		 }
