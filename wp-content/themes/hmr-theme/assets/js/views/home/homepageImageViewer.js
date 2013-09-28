@@ -61,7 +61,7 @@ var HMR = HMR || {};
         });
     })(jQuery);
     
-     (function($){
+     /*(function($){
         $(window).touchwipe({
             wipeLeft: function() {
                 slideshow.prev();
@@ -70,7 +70,7 @@ var HMR = HMR || {};
                 slideshow.next();
             }
         });
-    })(jQuery);
+    })(jQuery);*/
 
 
     /* if($(window).width() > 767) {
