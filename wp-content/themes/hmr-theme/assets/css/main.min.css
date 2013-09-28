@@ -6485,6 +6485,10 @@ ul.fullsize li {
     /* Blog & Single Post */
   
   }
+  html,
+  body {
+    height: auto;
+  }
   .hover .hidden {
     left: 4%;
     max-width: 235px;
