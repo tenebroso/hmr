@@ -2555,6 +2555,7 @@ button.close {
    ========================================================================== */
 
 #navbar-mobile {
+  z-index: 999;
   width: 100%;
 }
 
@@ -5224,6 +5225,9 @@ a:focus {
 
 @media (min-width: 768px) {
   .post-type-archive-team .content-info {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     margin-top: 0;
   }
 }
