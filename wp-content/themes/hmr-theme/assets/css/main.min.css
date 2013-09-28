@@ -6488,6 +6488,10 @@ ul.fullsize li {
   html,
   body {
     height: auto;
+    min-height: 1500px;
+  }
+  #wrap {
+    min-height: auto;
   }
   .hover .hidden {
     left: 4%;
