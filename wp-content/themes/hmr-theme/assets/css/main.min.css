@@ -6488,13 +6488,6 @@ ul.fullsize li {
   html,
   body {
     height: auto;
-    min-height: 1500px;
-  }
-  .backstretch {
-    overflow: visible !important;
-  }
-  #wrap {
-    min-height: 1500px;
   }
   .hover .hidden {
     left: 4%;
