@@ -6494,7 +6494,7 @@ ul.fullsize li {
     overflow: visible !important;
   }
   #wrap {
-    min-height: auto;
+    min-height: 1500px;
   }
   .hover .hidden {
     left: 4%;
