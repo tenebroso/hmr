@@ -6683,7 +6683,7 @@ ul.fullsize li {
   }
   .single-capability {
     height: auto;
-    overflow: visible;
+    overflow: scroll;
   }
   .single-capability #wrap {
     background: none;
