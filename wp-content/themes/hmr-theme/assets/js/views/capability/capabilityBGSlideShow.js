@@ -109,14 +109,17 @@ $slideshow.cycle({
 	// Handle swipe
     (function($){
         $(window).touchwipe({
-            wipeLeft: function() {
+            wipeLeft: function(e) {
+            	e.preventDefault();
                 $slideshow.cycle(prevIndex, "fade");
 	            $credit.cycle(prevCreditIndex, "fade");
             },
-            wipeRight: function() {
+            wipeRight: function(e) {
+            	e.preventDefault();
                 $slideshow.cycle(nextIndex, "fade");
 	            $credit.cycle(nextCreditIndex, "fade");
-            }
+            },
+            preventDefaultEvents: false
         });
     })(jQuery);
 
