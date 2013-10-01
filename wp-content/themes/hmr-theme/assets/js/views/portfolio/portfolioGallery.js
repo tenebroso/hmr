@@ -159,7 +159,7 @@ var HMR = HMR || {};
         })(jQuery);
 
         // Handle swipe
-        (function($){
+        /*(function($){
             $(window).touchwipe({
                 wipeLeft: function(e) {
                     
@@ -173,7 +173,7 @@ var HMR = HMR || {};
                 },
                 preventDefaultEvents: false
             });
-        })(jQuery);
+        })(jQuery);*/
         
         
         // Handle click of big arrows
