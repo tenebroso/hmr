@@ -75,14 +75,14 @@ var HMR = HMR || {};
       $btn.on('click', function () {
         $hero.transition({y:'-693px'});
         $members.transition({y:'-693px'});
-        $team.animateAuto("height", 1000);
+        $team.animate({height: "2475px"}, 100)
         $team.css('overflow','visible');
       });
 
       $menu.on('click', function (e) {
         $hero.transition({y:0});
         $members.transition({y:0});
-        $team.animate({height: "2475px"}, 100)
+        $team.animate({height: "693px"}, 100)
         $team.css('overflow','hidden');
         e.preventDefault();
       });
@@ -90,7 +90,7 @@ var HMR = HMR || {};
       if(window.location.hash) {
         $hero.transition({y:'-693px'});
         $members.transition({y:'-693px'});
-        $team.animateAuto("height", 1000);
+        $team.animate({height: "2475px"}, 100)
         $team.css('overflow','visible');
       }
   }
