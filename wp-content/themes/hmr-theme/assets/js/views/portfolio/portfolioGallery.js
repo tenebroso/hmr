@@ -9,9 +9,12 @@ var HMR = HMR || {};
 
 ;(function() {
 
+var win = window,
+    $win = $(win);
+
   HMR.portfolioGallery = function() {
 
-    if($(window).width() > 767) {
+    if($win.width() > 767) {
 
         HMR.nav.slideUp();
 
@@ -30,7 +33,7 @@ var HMR = HMR || {};
         changeFooterCredit,
         timer, startTimer, initialize, changeIt;
 
-    var $slider = $($nav).bxSlider({
+    var $slider = $nav.bxSlider({
         pager:false, 
         minSlides:12, 
         maxSlides:12, 
@@ -116,10 +119,10 @@ var HMR = HMR || {};
 
 
         changeIt = function (_$el) {
-            if(timer) {
+            /*if(timer) {
                 window.clearInterval(timer);
                 timer = null;
-            }
+            }*/
             $url.transition({opacity:0}, 250, 'ease');
             $venue.transition({opacity:0}, 250, 'ease');
             $credit.transition({opacity:0}, 250, 'ease').removeClass('show');
@@ -131,10 +134,7 @@ var HMR = HMR || {};
         $('.thumb_nav').on('click', '.slide_thumb', function() {
             var _id = $(this).data('id');
         
-            // if(timer) {
-            //     window.clearInterval(timer);
-            //     timer = null;
-            // }
+            killTimer();
 
             $slider.goToSlide(_id);
 
@@ -144,36 +144,36 @@ var HMR = HMR || {};
         });
 
         // Handle keyboard - left/right arrow keys
-        (function($){
-            $(window).keyup(function(e){
-                var key = e.which | e.keyCode;
-                if(key === 37){ // 37 is left arrow
-                    current--;
-                    $slider.goToPrevSlide();
-                }
-                else if(key === 39){ // 39 is right arrow
-                    current++;
-                    $slider.goToNextSlide();
-                }
-            });
-        })(jQuery);
+        $win.keyup(function(e){
+            var key = e.which | e.keyCode;
+            if(key === 37){ // 37 is left arrow
+                killTimer();
+                current--;
+                $slider.goToPrevSlide();
+            }
+            else if(key === 39){ // 39 is right arrow
+                killTimer();
+                current++;
+                $slider.goToNextSlide();
+            }
+        });
 
         // Handle swipe
-        (function($){
-            $(window).touchwipe({
-                wipeLeft: function(e) {
-                    e.preventDefault();
-                    current++;
-                    $slider.goToNextSlide();
-                },
-                wipeRight: function(e) {
-                    e.preventDefault();
-                    current--;
-                    $slider.goToPrevSlide();
-                },
-                preventDefaultEvents: false
-            });
-        })(jQuery);
+        $win.touchwipe({
+            wipeLeft: function(e) {
+                e.preventDefault();
+                killTimer();
+                current++;
+                $slider.goToNextSlide();
+            },
+            wipeRight: function(e) {
+                e.preventDefault();
+                killTimer();
+                current--;
+                $slider.goToPrevSlide();
+            },
+            preventDefaultEvents: false
+        });
         
         
         // Handle click of big arrows
@@ -182,10 +182,7 @@ var HMR = HMR || {};
            var endLen = len-1,
                 oldCur = current;
 
-            // if(timer) {
-            //     window.clearInterval(timer);
-            //     timer = null;
-            // }           
+            killTimer();           
            
            if($(this).data('dir') === 'next') {
                current++;
@@ -208,6 +205,13 @@ var HMR = HMR || {};
             
         });    
     };
+
+    function killTimer() {
+        if (timer) {
+            window.clearInterval(timer);
+            timer = null;
+        }
+    }
     
     
     // Call the start up!
