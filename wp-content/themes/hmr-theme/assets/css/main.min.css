@@ -2405,18 +2405,13 @@ button.close {
 }
 
 .nav > li.active a {
+  font-weight: 600;
   color: #ffffff;
   text-decoration: none;
 }
 
 .nav > li.active a:hover {
   color: #ffffff;
-}
-
-.nav > li.active a span {
-  -webkit-transform: translateY(-100%);
-     -moz-transform: translateY(-100%);
-          transform: translateY(-100%);
 }
 
 .nav > li > a {
