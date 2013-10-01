@@ -159,21 +159,21 @@ var HMR = HMR || {};
         })(jQuery);
 
         // Handle swipe
-        /*(function($){
+        (function($){
             $(window).touchwipe({
                 wipeLeft: function(e) {
-                    
-                    $slider.goToNextSlide();
                     e.preventDefault();
+                    current++;
+                    $slider.goToNextSlide();
                 },
                 wipeRight: function(e) {
-                    
-                    $slider.goToPrevSlide();
                     e.preventDefault();
+                    current--;
+                    $slider.goToPrevSlide();
                 },
                 preventDefaultEvents: false
             });
-        })(jQuery);*/
+        })(jQuery);
         
         
         // Handle click of big arrows
