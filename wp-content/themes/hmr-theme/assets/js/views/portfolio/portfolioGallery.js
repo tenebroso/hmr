@@ -162,12 +162,10 @@ var HMR = HMR || {};
         (function($){
             $(window).touchwipe({
                 wipeLeft: function(e) {
-                    e.preventDefault();
                     current++;
                     $slider.goToNextSlide();
                 },
                 wipeRight: function(e) {
-                    e.preventDefault();
                     current--;
                     $slider.goToPrevSlide();
                 },

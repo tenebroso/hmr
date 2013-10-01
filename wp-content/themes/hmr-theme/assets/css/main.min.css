@@ -5218,9 +5218,6 @@ a:focus {
   .post-type-archive-team #wrap {
     min-height: 1200px;
   }
-  #team {
-    overflow: hidden !important;
-  }
 }
 
 @media (min-width: 768px) {
