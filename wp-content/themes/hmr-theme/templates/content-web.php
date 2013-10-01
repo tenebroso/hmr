@@ -18,5 +18,5 @@
    	<p class="circe">
    		<span class="caps"><?php the_title();?></span>
    	</p>
-   	<p class="arvo view-article"><a href="<?php echo $url; ?>" target="_blank"><?php echo $url; ?></a></p>
+   	<p class="arvo view-article"><a href="<?php echo $url; ?>" target="_blank">View Website</a></p>
 </article>
