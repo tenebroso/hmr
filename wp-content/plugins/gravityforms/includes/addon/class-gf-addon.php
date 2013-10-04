@@ -32,7 +32,7 @@ abstract class GFAddOn {
      */
     protected $_slug;
     /**
-     * @var string Relative path to the plugin from the plugins folder. Example "gravityformsmailchimp/mailchimp.php"
+     * @var string Relative path to the plugin from the plugins folder. Example "gravityforms/gravityforms.php"
      */
     protected $_path;
     /**
@@ -1321,31 +1321,31 @@ abstract class GFAddOn {
                                     "choices" => array(
                                         array(
                                             "value" => "is",
-                                            "label" => __("is", "gravityformsmailchimp")
+                                            "label" => __("is", "gravityforms")
                                             ),
                                         array(
                                             "value" => "isnot",
-                                            "label" => __("is not", "gravityformsmailchimp")
+                                            "label" => __("is not", "gravityforms")
                                             ),
                                         array(
                                             "value" => ">",
-                                            "label" => __("greater than", "gravityformsmailchimp")
+                                            "label" => __("greater than", "gravityforms")
                                             ),
                                         array(
                                             "value" => "<",
-                                            "label" => __("less than", "gravityformsmailchimp")
+                                            "label" => __("less than", "gravityforms")
                                             ),
                                         array(
                                             "value" => "contains",
-                                            "label" => __("contains", "gravityformsmailchimp")
+                                            "label" => __("contains", "gravityforms")
                                             ),
                                         array(
                                             "value" => "starts_with",
-                                            "label" => __("starts with", "gravityformsmailchimp")
+                                            "label" => __("starts with", "gravityforms")
                                             ),
                                         array(
                                             "value" => "ends_with",
-                                            "label" => __("ends with", "gravityformsmailchimp")
+                                            "label" => __("ends with", "gravityforms")
                                             )
                                         )
                                 ), false);
@@ -1977,7 +1977,7 @@ abstract class GFAddOn {
      * Override this method to display a custom message.
      */
     public function plugin_message() {
-        $message = sprintf(__("Gravity Forms " . $this->_min_gravityforms_version . " is required. Activate it now or %spurchase it today!%s", "gravityformsaddon"), "<a href='http://www.gravityforms.com'>", "</a>");
+        $message = sprintf(__("Gravity Forms " . $this->_min_gravityforms_version . " is required. Activate it now or %spurchase it today!%s", "gravityforms"), "<a href='http://www.gravityforms.com'>", "</a>");
 
         return $message;
     }

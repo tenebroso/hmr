@@ -1,4 +1,27 @@
 -------------------------------------------------------------------------------------------------------------------
+Version 1.7.10
+    - Added Cayman Islands to country list
+    - Added new Javascript hook (gform_post_load_field_settings)
+	- Updated the button text "Cancel" on the Bulk Add / Predefined Choices so it may be translated into other languages
+	- Updated GFFormsModel::get_ip() function to check for $_SERVER['HTTP_CLIENT_IP'] first
+    - Updated {ip} merge tag to use GFFormsModel::get_ip() function for consistency
+	- Updated code to use functions mb_substr and mb_strlen to truncate large text values before inserting them in the DB to accommodate for Chinese characters and other multi-byte characters
+	- Updated domain in add-on include files to use gravityforms for translations
+	- Updated the location where the load_plugin_textdomain function is loaded so translations by third-party apps are loaded
+    - Updated min required WP version to 3.4 (necessitated by use of wp_is_mobile() function)
+	- Fixed notice thrown in multi-site logging for $is_setup_completed variable
+	- Fixed notice thrown in multi-site install
+    - Fixed issue with calculations where formula choked when calculating single-input products when currency number format was 'decimal_comma'
+    - Fixed issue with merge tags entered in form fields being replaced when sending notifications
+    - Fixed issue where inactive notifications were getting sent
+    - Fixed notice message
+    - Fixed issue with merge tag list and column customizer where some credit card inputs were available as an option when they should not since they aren't stored for security reasons (i.e. cardholder name and expiration date).
+    - Fixed issue with auto import forms during an upgrade
+    - Fixed issues with setting up the database on multi-site installs
+	- Fixed issue with form title not being escaped correctly on the Form Settings page
+	- Fixed issue where form admin fields menu doesn't remain on screen when scrolling and in no conflict mode
+
+-------------------------------------------------------------------------------------------------------------------
 Version 1.7.9
 	- Fixed issue with legacy notifications causing emails to be sent using field id instead of email address
 	- Fixed issue where zero amount totals were not being saved to carry over in Total merge tags

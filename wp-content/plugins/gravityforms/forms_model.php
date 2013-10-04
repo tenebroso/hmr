@@ -988,12 +988,20 @@ class GFFormsModel {
     }
 
     public static function get_ip(){
-        $ip = rgget("HTTP_X_FORWARDED_FOR", $_SERVER);
-        if (!$ip)
-            $ip = rgget("REMOTE_ADDR", $_SERVER);
+        
+        $ip = '';
+        $headers = array( 'HTTP_CLIENT_IP', 'HTTP_X_FORWARDED_FOR', 'REMOTE_ADDR' );
+        
+        foreach( $headers as $header ) {
+            $ip = rgar( $_SERVER, $header );
+            if( $ip )
+                break;
+        }
 
-        $ip_array = explode(",", $ip); //HTTP_X_FORWARDED_FOR can return a comma separated list of IPs. Using the first one.
-        return $ip_array[0];
+        // HTTP_X_FORWARDED_FOR can return a comma separated list of IPs; using the first one
+        $ips = explode( ',', $ip );
+        
+        return $ips[0];
     }
 
     public static function save_lead($form, &$lead){
@@ -2394,7 +2402,7 @@ class GFFormsModel {
         if(!rgblank($value)){
 
             $value = apply_filters("gform_save_field_value", $value, $lead, $field, $form);
-            $truncated_value = substr($value, 0, GFORMS_MAX_FIELD_LENGTH);
+            $truncated_value = mb_substr($value, 0, GFORMS_MAX_FIELD_LENGTH);
 
             $lead_detail_id = self::get_lead_detail_id($current_fields, $input_id);
             if($lead_detail_id > 0){
@@ -2406,7 +2414,7 @@ class GFFormsModel {
                 $has_long_field = intval($wpdb->get_var($sql)) > 0;
 
                 //delete long field if value has been shortened
-                if($has_long_field && strlen($value) <= GFORMS_MAX_FIELD_LENGTH){
+                if($has_long_field && mb_strlen($value) <= GFORMS_MAX_FIELD_LENGTH){
                     $sql = $wpdb->prepare("DELETE FROM $lead_detail_long_table WHERE lead_detail_id=%d", $lead_detail_id);
                     $wpdb->query($sql);
                 }
@@ -2415,7 +2423,7 @@ class GFFormsModel {
                     $wpdb->update($lead_detail_long_table, array("value" => $value), array("lead_detail_id" => $lead_detail_id), array("%s"), array("%d"));
                 }
                 //insert long field (value has been increased)
-                else if(strlen($value) > GFORMS_MAX_FIELD_LENGTH){
+                else if(mb_strlen($value) > GFORMS_MAX_FIELD_LENGTH){
                     $wpdb->insert($lead_detail_long_table, array("lead_detail_id" => $lead_detail_id, "value" => $value), array("%d", "%s"));
                 }
 
@@ -2423,7 +2431,7 @@ class GFFormsModel {
             else{
                 $wpdb->insert($lead_detail_table, array("lead_id" => $lead["id"], "form_id" => $form["id"], "field_number" => $input_id, "value" => $truncated_value), array("%d", "%d", "%F", "%s"));
 
-                if(strlen($value) > GFORMS_MAX_FIELD_LENGTH){
+                if(mb_strlen($value) > GFORMS_MAX_FIELD_LENGTH){
 
                     //read newly created lead detal id
                     $lead_detail_id = $wpdb->insert_id;

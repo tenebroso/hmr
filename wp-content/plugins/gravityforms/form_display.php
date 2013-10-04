@@ -1997,14 +1997,64 @@ class GFFormDisplay{
 
         }
 
-        if(empty($formula_fields))
+        if( empty( $formula_fields ) )
             return '';
-
-        $script = 'new GFCalc(' . $form['id'] . ', ' . GFCommon::json_encode($formula_fields) . ');';
-
+        
+        $script = self::get_number_formats_script( $form );
+        $script .= 'new GFCalc(' . $form['id'] . ', ' . GFCommon::json_encode( $formula_fields ) . ');';
+        
         return $script;
     }
-
+    
+    /**
+    * Generates a map of fields IDs and their corresponding number formats used by the GFCalc JS object for correctly
+    * converting field values to clean numbers.
+    * 
+    * - Number fields have a 'numberFormat' setting (w/ UI).
+    * - Single-input product fields (i.e. 'singleproduct', 'calculation', 'price' and 'hiddenproduct') should default to
+    *   the number format of the configured currency.
+    * - All other product fields will default to 'decimal_dot' for the number format.
+    * - All other fields will have no format (false) and inherit the format of the formula field when the formula is
+    *   calculated.
+    * 
+    * @param mixed $form
+    */
+    public static function get_number_formats_script( $form ) {
+        
+        $number_formats = array();
+        $currency = RGCurrency::get_currency( GFCommon::get_currency() );
+        
+        foreach( $form['fields'] as $field ) {
+            
+            // default format is false, fields with no format will inherit the format of the formula field when calculated
+            $format = false;
+            
+            switch( GFFormsModel::get_input_type( $field ) ) {
+            case 'number':
+                $format = rgar( $field, 'numberFormat' ) ? rgar( $field, 'numberFormat' ) : 'decimal_dot';
+                break;
+            case 'singleproduct':
+            case 'singleproduct':
+            case 'calculation':
+            case 'price':
+            case 'hiddenproduct':
+            case 'singleshipping':
+                $format = $currency['decimal_separator'] == ',' ? 'decimal_comma' : 'decimal_dot';
+                break;
+            default:
+            
+                // we check above for all single-input product types, for all other products, assume decimal format
+                if( in_array( $field['type'], array( 'product', 'option', 'shipping' ) ) )
+                    $format = 'decimal_dot';
+                    
+            }
+            
+            $number_formats[$field['id']] = $format;
+            
+        }
+        
+        return 'gf_global["number_formats"][' . $form['id'] . '] = ' . json_encode( $number_formats ) . ';';
+    }
 
     private static function has_datepicker_field($form){
         if(is_array($form["fields"])){
