@@ -22,10 +22,10 @@
 		</div>
 		<div class="span3 text-right">
 			<ul class="social-icons">
-				<li class="facebook"><a href="<?php the_field('facebook');?>">Facebook</a></li>
-				<li class="twitter"><a href="<?php the_field('twitter');?>">Twitter</a></li>
-				<li class="instagram"><a href="<?php the_field('instagram_url');?>">Instagram</a></li>
-				<li class="pinterest"><a href="<?php the_field('pinterest');?>">Pinterest</a></li>
+				<li class="facebook"><a href="https://www.facebook.com/pages/HMR-Designs/111548372234921" target="_blank">Facebook</a></li>
+				<li class="twitter"><a href="https://twitter.com/HMR_Designs" target="_blank">Twitter</a></li>
+				<li class="instagram"><a href="http://instagram.com/hmrdesigns/" target="_blank">Instagram</a></li>
+				<li class="pinterest"><a href="http://pinterest.com/hmrdesigns/" target="_blank">Pinterest</a></li>
 			</ul>
 		</div>
 	</div>
