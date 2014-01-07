@@ -17,7 +17,7 @@
 			<div class="grif hover hastip"><a href="/team/jessica-griffin/"></a></div>
 			<div class="hens hover hastip"><a href="/team/john-hensel/"></a></div>
 			<div class="schr hover hastip"><a href="/team/larissa-schroeder/"></a></div>
-			<div class="crum hover hastip"><a href="/team/amy-crum/"></a></div>
+			<!--<div class="crum hover hastip"><a href="/team/amy-crum/"></a></div>-->
 			<div class="patel hover hastip"><a href="/team/rishi-patel/"></a></div>
 		    <div class="mertz hover hastip"><a href="/team/bob-mertzlufft/"></a></div>
 
