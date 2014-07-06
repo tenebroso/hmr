@@ -7,27 +7,35 @@ jQuery(document).ready(function($) {
 	    $(this).parent().toggleClass('collapsed-repeater');
 	    
 	    // Nice Button Text
-	    if( $(this).attr('value') == 'Collapse Fields' ) {
-	    	$(this).attr('value', 'Expand Fields');
+	    if( $(this).text() == 'Collapse Fields' ) {
+	    	$(this).text('Expand Fields');
 	    } else {
-	    	$(this).attr('value', 'Collapse Fields');
+	    	$(this).text('Collapse Fields');
 	    }
 	}
 
 	// HTML to put above each repeater instance
-	$collapseButton = '<input class="button field-repeater-toggle" type="button" value="Collapse Fields" />';
+	$collapseButton = '<button type="button" role="button" class="button field-repeater-toggle">Collapse Fields</a>';
 
 	// find each repeater instance, add the button if the field uses the row layout
 	$('.field_type-repeater, .field_type-flexible_content').each( function() {
-		if( $( '.acf-input-table', $(this) ).hasClass('row_layout') ) {
-			$(this).prepend( $collapseButton );
+		$repeater = $(this);
+		if( $( '.acf-input-table', $repeater ).hasClass('row_layout') ) {
+			if( $repeater.is( 'tr' ) ) {
+				$repeater.children( 'td:last-child' ).children( '.inner' ).prepend( $collapseButton );
+			} else {
+				$repeater.prepend( $collapseButton );
+			}
 		}
 	});
 
 	// bind the click event to the toggle function
-	$( '.field-repeater-toggle' ).on(
+	// delegated to higher DOM element to handle dynamically added repeaters
+	// "div" makes sure event is only bound once
+	$( 'div.field_type-repeater, div.field_type-flexible_content' ).on(
 		'click',
+		'.field-repeater-toggle',
 		acf_repeater_toggle
-	)
+	);
 
 });

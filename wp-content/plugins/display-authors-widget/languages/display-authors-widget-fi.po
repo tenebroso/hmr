@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Multi Author Widget v0.1\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-18 10:23+0200\n"
-"PO-Revision-Date: 2013-02-18 10:23+0200\n"
+"Project-Id-Version: Display Author Widget\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/display-authors-widget\n"
+"POT-Creation-Date: 2014-04-16 19:35:33+00:00\n"
+"PO-Revision-Date: 2014-04-16 22:37+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Foxnet <sami.keijonen@foxnet.fi>\n"
 "Language: fi\n"
@@ -13,74 +13,90 @@ msgstr ""
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_x;esc_attr__;esc_attr_e;"
 "esc_html__;esc_html_e;_n;_x:1,2c;_n_noop:1,2;_n:1,2\n"
 "X-Poedit-Basepath: ../\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.6.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: display-authors-widget.php:42
+#: display-authors-widget.php:44
 msgid "Displays authors by role."
 msgstr "Näytä kirjoittajat roolin mukaan."
 
-#: display-authors-widget.php:55
+#: display-authors-widget.php:57
+msgctxt "Name of the widget in widget area."
 msgid "Display Authors Widget"
 msgstr "Näytä kirjoittajat"
 
-#: display-authors-widget.php:132
-#, php-format
+#: display-authors-widget.php:134
 msgid "(%d)"
 msgstr "(%d)"
 
-#: display-authors-widget.php:187
+#: display-authors-widget.php:189
 msgid "Authors"
 msgstr "Kirjoittajat"
 
-#: display-authors-widget.php:204
+#: display-authors-widget.php:206
 msgid "Title:"
 msgstr "Otsikko:"
 
-#: display-authors-widget.php:209
+#: display-authors-widget.php:211
 msgid "Role:"
 msgstr "Rooli:"
 
-#: display-authors-widget.php:219
+#: display-authors-widget.php:221
 msgid "Display Post Count?"
 msgstr "Näytä artikkelien lukumäärä?"
 
-#: display-authors-widget.php:224
+#: display-authors-widget.php:226
 msgid "Display Author Bio?"
 msgstr "Näytä bio?"
 
-#: display-authors-widget.php:229
+#: display-authors-widget.php:231
 msgid "Display Author Gravatar?"
 msgstr "Näytä gravatar?"
 
-#: display-authors-widget.php:234
+#: display-authors-widget.php:236
 msgid "Display Author Name?"
 msgstr "Näytä kirjoittajan nimi?"
 
-#: display-authors-widget.php:238
+#: display-authors-widget.php:240
 msgid "Gravatar Size:"
 msgstr "Gravatarin koko:"
 
-#: display-authors-widget.php:243
+#: display-authors-widget.php:245
 msgid "Gravatar Alignment:"
 msgstr "Gravatarin asemointi:"
 
-#: display-authors-widget.php:245
+#: display-authors-widget.php:247
 msgid "None"
 msgstr "Ei mitään"
 
-#: display-authors-widget.php:245
+#: display-authors-widget.php:247
 msgid "Left"
 msgstr "Vasen"
 
-#: display-authors-widget.php:245
+#: display-authors-widget.php:247
 msgid "Right"
 msgstr "Oikea"
 
-#: display-authors-widget.php:253
+#: display-authors-widget.php:255
 msgid "Limit the number of authors displayed:"
 msgstr "Kuinka monta kirjoittajaa näytetään."
 
-#~ msgid "Multi Author Widget"
-#~ msgstr "Multi Author Widget"
+#. Plugin Name of the plugin/theme
+msgid "Display Authors Widget"
+msgstr "Näytä kirjoittajat"
+
+#. Plugin URI of the plugin/theme
+msgid "https://foxnet-themes.fi/downloads/display-authors-widget/"
+msgstr "https://foxnet-themes.fi/downloads/display-authors-widget/"
+
+#. Description of the plugin/theme
+msgid "Register widget to display authors by role in a sidebar."
+msgstr "Näyttää kirjoittajat sivupalkissa roolien mukaan."
+
+#. Author of the plugin/theme
+msgid "Sami Keijonen"
+msgstr "Sami Keijonen"
+
+#. Author URI of the plugin/theme
+msgid "http://foxnet.fi/en"
+msgstr "http://foxnet.fi/en"
