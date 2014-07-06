@@ -47,6 +47,12 @@ HMR.Site = {
   single: {
     init: function() {
 
+      var $postSlideshow = $('.post-slider');
+
+      if($postSlideshow.length) {
+        $postSlideshow.bxSlider({adaptiveHeight:true});
+      }
+
       HMR.sidebarPadding();
       $(".type-post").fitVids();
 

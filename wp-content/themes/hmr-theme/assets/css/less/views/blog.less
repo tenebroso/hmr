@@ -243,6 +243,84 @@
 	}
 }
 
+.post-slider {
+	list-style-type:none;
+	padding: 0;
+	margin:0;
+	//overflow: hidden;
+	//width:100%;
+	//max-width: 725px;
+}
+
+.single-post {
+	.bx-wrapper {
+		position: relative;
+		bottom: 0;
+		left: 0;
+		margin-left:0 !important;
+		margin-bottom:-1em;
+		.bx-viewport {
+			//height:auto !important;
+			padding:0;
+			.post-slider li img {
+				padding-bottom:2em;
+			}
+		}
+		.bx-controls {
+			position: relative;
+			top: 0;
+			left: 0;
+			height: 40px;
+			width: 100%;
+			z-index:199;
+			.bx-controls-direction {
+				position:absolute;
+				left:0;
+				top:-7px;
+				width:100%;
+				a.bx-prev,
+				a.bx-next {
+					border: none;
+					height:16px;
+					&:hover {
+						background: none;
+						opacity:.7;
+					}
+				}
+				a.bx-prev, a.bx-prev:hover {
+					left:50%;
+					margin-left:-10%;
+					background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAPCAYAAAAoAdW+AAAATklEQVQoz2NgF1JiwIHlcUoA8T2cEkC8D6cEEHPhlACJ4ZQA4hScEkD8jwEq+BmIRaASakD8F4j/I+vci00nTgVEuZagPwmGEMGwhSsAADlaM3upj7MAAAAAAElFTkSuQmCC) no-repeat center center;
+				}
+				a.bx-next, a.bx-next:hover {
+					right:50%;
+					margin-right:-10%;
+					background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAPCAYAAAAoAdW+AAAAW0lEQVQoz2NgF1KSA2IGbBhE3MOlAETsx6UARHDhUgBjYFUAIpJxKQAJ/sOlACTwH4j/ArEqVIEIEH8B4r0wnSlIOvdBdcoz4JJAdy2KBLI/MSSICiG8YYszVgDzVDN22mEqZQAAAABJRU5ErkJggg==) no-repeat center center;
+				}
+			}
+		}
+	}
+	.bx-pager {
+		display: block;
+		text-align:center;
+		margin:1em 0 0;
+		.bx-pager-item {
+			display: inline-block;
+			margin:0 5px;
+		}
+		.bx-pager-link {
+			text-indent:-2999px;
+			height:8px;
+			width:8px;
+			background: @blueLight;
+			display: block;
+			border-radius:50%;
+			&:hover, &.active {
+				background: @blueDark;
+			}
+		}
+	}
+}
 /* ==========================================================================
    WordPress Generated Classes
    See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes

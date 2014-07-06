@@ -496,3 +496,26 @@ function my_remove_post_meta_boxes() {
     remove_meta_box( 'slugdiv', 'post', 'normal' );
     //remove_meta_box( 'postimagediv', 'post', 'side' );
 }
+
+/* =============================================================================
+   Add Slider Gallery Shortcode
+   ========================================================================== */
+
+function slider_shortcode($atts, $content = null){
+    global $post;
+    $thePost = $post->ID;
+
+    if( have_rows('gallery_builder', $thePost) ): 
+        echo '<ul class="post-slider">';
+    while ( have_rows('gallery_builder') ) : the_row(); ?>
+        <li>
+            <img src="<?php the_sub_field('image'); ?>">
+            <div class="caption"><?php the_sub_field('caption'); ?></div>
+        </li>
+    <?php endwhile; 
+        echo '</ul>';
+    else : endif;
+
+}
+
+add_shortcode('slider', 'slider_shortcode');

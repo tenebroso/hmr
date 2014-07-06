@@ -4702,6 +4702,95 @@ a:focus {
   opacity: 1;
 }
 
+.post-slider {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.single-post .bx-wrapper {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  margin-bottom: -1em;
+  margin-left: 0 !important;
+}
+
+.single-post .bx-wrapper .bx-viewport {
+  padding: 0;
+}
+
+.single-post .bx-wrapper .bx-viewport .post-slider li img {
+  padding-bottom: 2em;
+}
+
+.single-post .bx-wrapper .bx-controls {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 199;
+  width: 100%;
+  height: 40px;
+}
+
+.single-post .bx-wrapper .bx-controls .bx-controls-direction {
+  position: absolute;
+  top: -7px;
+  left: 0;
+  width: 100%;
+}
+
+.single-post .bx-wrapper .bx-controls .bx-controls-direction a.bx-prev,
+.single-post .bx-wrapper .bx-controls .bx-controls-direction a.bx-next {
+  height: 16px;
+  border: none;
+}
+
+.single-post .bx-wrapper .bx-controls .bx-controls-direction a.bx-prev:hover,
+.single-post .bx-wrapper .bx-controls .bx-controls-direction a.bx-next:hover {
+  background: none;
+  opacity: .7;
+}
+
+.single-post .bx-wrapper .bx-controls .bx-controls-direction a.bx-prev,
+.single-post .bx-wrapper .bx-controls .bx-controls-direction a.bx-prev:hover {
+  left: 50%;
+  margin-left: -10%;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAPCAYAAAAoAdW+AAAATklEQVQoz2NgF1JiwIHlcUoA8T2cEkC8D6cEEHPhlACJ4ZQA4hScEkD8jwEq+BmIRaASakD8F4j/I+vci00nTgVEuZagPwmGEMGwhSsAADlaM3upj7MAAAAAAElFTkSuQmCC) no-repeat center center;
+}
+
+.single-post .bx-wrapper .bx-controls .bx-controls-direction a.bx-next,
+.single-post .bx-wrapper .bx-controls .bx-controls-direction a.bx-next:hover {
+  right: 50%;
+  margin-right: -10%;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAPCAYAAAAoAdW+AAAAW0lEQVQoz2NgF1KSA2IGbBhE3MOlAETsx6UARHDhUgBjYFUAIpJxKQAJ/sOlACTwH4j/ArEqVIEIEH8B4r0wnSlIOvdBdcoz4JJAdy2KBLI/MSSICiG8YYszVgDzVDN22mEqZQAAAABJRU5ErkJggg==) no-repeat center center;
+}
+
+.single-post .bx-pager {
+  display: block;
+  margin: 1em 0 0;
+  text-align: center;
+}
+
+.single-post .bx-pager .bx-pager-item {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.single-post .bx-pager .bx-pager-link {
+  display: block;
+  width: 8px;
+  height: 8px;
+  text-indent: -2999px;
+  background: #55616f;
+  border-radius: 50%;
+}
+
+.single-post .bx-pager .bx-pager-link:hover,
+.single-post .bx-pager .bx-pager-link.active {
+  background: #071222;
+}
+
 /* ==========================================================================
    WordPress Generated Classes
    See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
@@ -5981,7 +6070,6 @@ ul.fullsize li {
 
 .bx-wrapper .bx-viewport {
   z-index: 302;
-  height: 47px !important;
   padding: 4px 0;
   -webkit-transition-duration: 0;
      -moz-transition-duration: 0;
@@ -6027,6 +6115,20 @@ ul.fullsize li {
 
 .bx-wrapper .bx-controls .bx-controls-direction a.bx-next:hover {
   background: #071222 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAPCAYAAAAoAdW+AAAAUUlEQVQoz2P4//+/HAMuAJS8h1MBUGI/TgVAQS7yFAA5yTgVABn/cCr4DwF/gVgVqkAEiL8A8V6YzhQknfugOuUZcEqguZYECWJCCG/Y4owVAPkdwpsnP6ssAAAAAElFTkSuQmCC) no-repeat center center;
+}
+
+.bx-wrapper .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 13px;
+  font-weight: bold;
+  color: #cfcfcf;
+  text-align: left;
+}
+
+.page-template-template-portfolio-php .bx-wrapper .bx-viewport {
+  height: 47px !important;
 }
 
 .thumb_nav {
