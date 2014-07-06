@@ -110,5 +110,44 @@
 			position:relative;
 		}
 	}
-	
+
+		.social-icons {
+			margin:-20px 0 0;
+			//padding:0;
+			//list-style-type:none;
+			float:none;
+			li {
+				//padding:0;
+				//margin:0;
+				//display:inline-block;
+				//background: url(@fbsprite);
+				//	background: none, url(@sprite);
+				//width:30px;
+				//height:30px;
+				.hide-text();
+				a {
+					//display:block;
+					//position:relative;
+					//width:100%;
+					//height:100%;
+				}
+				&.twitter {
+					background-position:-415px -600px;
+				}
+				&.facebook {
+					background-position:-460px -600px;
+				}
+				&.pinterest {
+					background-position:-500px -600px;
+					top: -2px;
+					position: relative;
+				}
+				&.instagram {
+					background-position:-415px -600px;
+				}
+				&:hover {
+					.opacity(70);
+				}
+			}
+		}	
 }
