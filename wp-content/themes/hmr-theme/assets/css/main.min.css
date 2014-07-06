@@ -4693,7 +4693,13 @@ a:focus {
   font-weight: 300;
   color: #ffffff;
   text-transform: none;
+  background: #55616f;
+}
+
+.btn-read-more:hover,
+.js body.blog .entry-content a.btn-read-more:hover {
   background: #071222;
+  opacity: 1;
 }
 
 /* ==========================================================================
