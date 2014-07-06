@@ -492,7 +492,7 @@ function my_remove_post_meta_boxes() {
     remove_meta_box( 'trackbacksdiv', 'post', 'normal' );
     remove_meta_box( 'postcustom', 'post', 'normal' );
     remove_meta_box( 'commentstatusdiv', 'post', 'normal' );
-    remove_meta_box( 'postexcerpt', 'post', 'normal' );
+    //remove_meta_box( 'postexcerpt', 'post', 'normal' );
     remove_meta_box( 'slugdiv', 'post', 'normal' );
-    remove_meta_box( 'postimagediv', 'post', 'side' );
+    //remove_meta_box( 'postimagediv', 'post', 'side' );
 }

@@ -4686,6 +4686,16 @@ a:focus {
   margin-left: 0;
 }
 
+.btn-read-more,
+.js body.blog .entry-content a.btn-read-more {
+  font-family: 'Didot 24 A', 'Didot 24 B';
+  font-style: normal;
+  font-weight: 300;
+  color: #ffffff;
+  text-transform: none;
+  background: #071222;
+}
+
 /* ==========================================================================
    WordPress Generated Classes
    See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
