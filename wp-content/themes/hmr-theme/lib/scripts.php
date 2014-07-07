@@ -12,7 +12,7 @@
  * 3. /theme/assets/js/main.min.js (in footer)
  */
 function roots_scripts() {
-  wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.min.css', false, '6cfdcf1cd3905b643517f44384d430ff');
+  wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.min.css', false, '97466d794cbbb172b39fc57850d1dd67');
 
   // Load style.css from child theme
   if (is_child_theme()) {
@@ -34,13 +34,13 @@ function roots_scripts() {
     wp_enqueue_script('comment-reply');
   }
 
-  if (!is_admin() && is_page('connect')) {
+  if (!is_admin() && is_page_template('template-connect.php')) {
     wp_register_script('google_maps', '//maps.google.com/maps/api/js?sensor=false', false, null, false);
     wp_enqueue_script('google_maps');
   }
 
   wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr-2.6.2.min.js', false, null, false);
-  wp_register_script('roots_scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', false, 'fd4feec2ef400b01bcce96ee07a5e94c', true);
+  wp_register_script('roots_scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', false, 'a1ec62153b3ca48e3e2127948435fb9e', true);
 
   wp_enqueue_script('modernizr');
   wp_enqueue_script('jquery');

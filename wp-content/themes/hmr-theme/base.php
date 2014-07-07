@@ -13,7 +13,7 @@
     }
   ?>
 
-  <?php if(is_page('connect') || is_page_template('template-order.php')) { ?>
+  <?php if(is_page_template('template-connect.php') || is_page_template('template-order.php')) { ?>
 
     <?php include roots_template_path(); ?>
 

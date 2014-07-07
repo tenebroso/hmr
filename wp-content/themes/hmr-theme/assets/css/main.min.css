@@ -2474,6 +2474,10 @@ button.close {
   .nav .dropdown {
     position: relative;
   }
+  .nav .dropdown.menu-connect {
+    padding-bottom: 1em;
+    margin-top: 1em;
+  }
   .nav li.dropdown .dropdown-menu {
     position: absolute;
     top: 2.5em;

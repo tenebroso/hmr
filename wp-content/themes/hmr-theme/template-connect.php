@@ -7,7 +7,6 @@ Template Name: Connect
 
 <div id="form"><?php the_field('lead_form');?></div>
 
-<hr />
 <!-- 
 <?php //if(get_field('contact')): ?>
 
@@ -31,8 +30,12 @@ Template Name: Connect
 
 <hr /> -->
 
-<?php $secondary = get_field('secondary_form'); if ($secondary) { echo $secondary; } ?>
+<?php $secondary = get_field('secondary_form'); if ($secondary) { 
+	echo '<hr />';
+	echo $secondary; 
+	echo '<hr />';
+	} ?>
 
-<hr />
+
 
 <p class="credit caps text-center circe">Site by: <a href="http://wcst.com/">We Cant Stop Thinking</a></p>

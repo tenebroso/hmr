@@ -21,11 +21,13 @@ HMR.Site = {
 
       function dropdownHover() {
         $dropdownMenu.css('display','block').transition({opacity:1, y:0});
+        $('#map_holder').css('z-index','0');
       }
 
       function dropdownOut() {
         $dropdownMenu.transition({y:'-10%',opacity:0}, function() {
           $(this).css('display','');
+          $('#map_holder').css('z-index','');
         });
       }
 
@@ -129,6 +131,14 @@ HMR.Site = {
       }
       if($('.gform_fields').length) {
         HMR.uniform();
+        // Scroll to the form
+        HMR.scrollForm();
+
+        // Call the Google Map
+        HMR.MapTest();
+
+        //Clear floats on the Connect page, the points of contact section
+        $('.pointsOfContact .points:nth-child(4n+5)').addClass('clear');
       }
     }
   },
