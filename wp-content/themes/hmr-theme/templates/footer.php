@@ -24,8 +24,9 @@
 			<ul class="social-icons">
 				<li class="facebook"><a href="https://www.facebook.com/pages/HMR-Designs/111548372234921" target="_blank">Facebook</a></li>
 				<li class="twitter"><a href="https://twitter.com/HMR_Designs" target="_blank">Twitter</a></li>
-				<li class="instagram"><a href="http://instagram.com/hmrdesigns/" target="_blank">Instagram</a></li>
 				<li class="pinterest"><a href="http://pinterest.com/hmrdesigns/" target="_blank">Pinterest</a></li>
+				<li class="instagram"><a href="http://instagram.com/hmrdesigns/" target="_blank">Instagram</a></li>
+				
 			</ul>
 		</div>
 	</div>
