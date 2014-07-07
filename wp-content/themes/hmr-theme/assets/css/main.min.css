@@ -4386,6 +4386,7 @@ a:focus {
 
 .home .big_arrow.left,
 .home .big_arrow.right {
+  display: none;
   background: none;
 }
 
