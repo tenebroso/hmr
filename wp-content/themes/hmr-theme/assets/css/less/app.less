@@ -213,6 +213,63 @@
 
 @import "views/footer.less";
 
+/* ==========================================================================
+   Order Flowers Page
+   ========================================================================== */
+
+.page-template-template-order-php {
+	.banner {
+		border-bottom:none;
+	}
+	.content {
+		padding-bottom:2em;
+		h1,h2,h3,h4,p {
+			margin:0;
+		}
+
+		h1,h2,h3,h4 {
+			.didot;
+			font-weight:normal;
+			line-height:1.4;
+		}
+
+		h1,h2,h3 {
+			font-style:italic;
+		}
+
+		h1,h2 {
+			//.didot;
+			font-size:50px;
+			color:#8ea3bd;
+		}
+
+		h3 {
+			font-size:32px;
+		}
+
+		h4 {
+			font-size:24px;
+			+ p {
+				margin-top:1em;
+			}
+		}
+
+		p {
+			font-size:22px;
+			line-height:1.2;
+			a {
+				color:#8ea3bd;
+				&:hover {
+					color:@white;
+				}
+			}
+			strong {
+				font-size:24px;
+				text-transform:uppercase;
+			}
+		}
+	}
+}
 
 /* ==========================================================================
    Media Queries
