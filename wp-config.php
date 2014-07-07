@@ -81,8 +81,8 @@ define('WPLANG', '');
 define('WP_DEBUG', false);
 define('FS_METHOD', 'direct');
 
-define('WP_HOME','http://hmrdesigns.com.s175905.gridserver.com');
-define('WP_SITEURL','http://hmrdesigns.com.s175905.gridserver.com');
+//define('WP_HOME','http://hmrdesigns.com.s175905.gridserver.com');
+//define('WP_SITEURL','http://hmrdesigns.com.s175905.gridserver.com');
 
 /* That's all, stop editing! Happy blogging. */
 
