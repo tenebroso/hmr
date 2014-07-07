@@ -2470,6 +2470,10 @@ button.close {
   text-decoration: none;
 }
 
+.nav .dropdown-menu {
+  display: none;
+}
+
 .sub-nav {
   position: relative;
   z-index: 100;
@@ -4989,7 +4993,7 @@ a:focus {
 }
 
 .sidebar .social-icons li.instagram {
-  background-position: -415px -600px;
+  background-position: -415px -640px;
 }
 
 .sidebar .social-icons li:hover {
