@@ -109,6 +109,9 @@ HMR.Site = {
       if($('body.corporate').length) {
         $('.nav li.menu-gallery').addClass('active');
       }
+      if($('.gform_fields').length) {
+        HMR.uniform();
+      }
     }
   },
   blog: {

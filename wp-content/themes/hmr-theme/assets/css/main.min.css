@@ -652,169 +652,6 @@ a:focus {
 /* Connect Page Forms */
 
 /* ==========================================================================
-   Gravity Forms on Connect Page
-   ========================================================================== */
-
-.page-template-template-connect-php #gforms_confirmation_message {
-  padding: 2em 0;
-  text-align: center;
-}
-
-.page-template-template-connect-php .gform_wrapper {
-  padding: 0 0 25px 0;
-  overflow: hidden;
-}
-
-.page-template-template-connect-php .gform_wrapper .validation_error {
-  font-family: 'Circe-Regular', sans-serif;
-  font-weight: 400;
-  color: #55616f;
-  text-align: center;
-}
-
-.page-template-template-connect-php .gform_wrapper .validation_message {
-  margin: -5px 0 15px 0;
-  font-size: 12px;
-  color: #a6a6a6;
-}
-
-.page-template-template-connect-php .gform_wrapper .top_label .gfield_label {
-  margin: 0;
-  font-size: 16px;
-}
-
-.page-template-template-connect-php .gform_wrapper label {
-  font-weight: 200;
-}
-
-.page-template-template-connect-php .gform_wrapper .gform_fields {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-.page-template-template-connect-php .gform_wrapper .gform_fields li {
-  padding: 0;
-  margin: 0 0 15px 0;
-}
-
-.page-template-template-connect-php .gform_wrapper .gform_fields li .ginput_complex .ginput_left,
-.page-template-template-connect-php .gform_wrapper .gform_fields li .ginput_complex .ginput_right {
-  display: inline-block;
-  width: 48%;
-  vertical-align: top;
-}
-
-.page-template-template-connect-php .gform_wrapper .gform_fields li .ginput_complex .ginput_right {
-  float: right;
-}
-
-.page-template-template-connect-php .gform_wrapper .gform_fields li .ginput_complex .ginput_left {
-  width: 48%;
-  margin-right: 2%;
-}
-
-.page-template-template-connect-php .gform_wrapper .gform_fields li .ginput_container {
-  position: relative;
-}
-
-.page-template-template-connect-php .gform_wrapper .gform_fields li span label {
-  font-size: 12px;
-}
-
-.page-template-template-connect-php .gform_wrapper .gfield_required {
-  color: #a6a6a6;
-}
-
-.page-template-template-connect-php .gform_wrapper .gform_body,
-.page-template-template-connect-php .gform_wrapper .gform_footer {
-  width: 480px;
-  margin: 0 auto;
-}
-
-.page-template-template-connect-php .gform_wrapper .gform_title {
-  margin: .75em 0 1em 0;
-  font-size: 24px;
-  font-weight: normal;
-  font-weight: 200;
-  color: #ffffff;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.page-template-template-connect-php .gform_wrapper .gform_description {
-  display: block;
-  margin: 0 0 25px 0;
-  font-family: 'Circe-Regular', sans-serif;
-  font-size: 15px;
-  font-style: italic;
-  text-align: center;
-}
-
-.page-template-template-connect-php .gform_wrapper input,
-.page-template-template-connect-php .gform_wrapper textarea,
-.page-template-template-connect-php .gform_wrapper select {
-  width: 100%;
-  font-size: 15px;
-  font-weight: 200;
-  line-height: 26px;
-  color: #a4adb5;
-  background: #293240;
-  border: 1px solid #071222;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-  -webkit-transition-duration: 0.1s;
-     -moz-transition-duration: 0.1s;
-       -o-transition-duration: 0.1s;
-          transition-duration: 0.1s;
-}
-
-.page-template-template-connect-php .gform_wrapper input:focus,
-.page-template-template-connect-php .gform_wrapper textarea:focus,
-.page-template-template-connect-php .gform_wrapper select:focus {
-  background: #071222;
-  border: 1px solid #293240;
-}
-
-.page-template-template-connect-php .gform_wrapper input.gform_button {
-  float: right;
-  width: auto;
-  padding: 5px 40px;
-  margin: 10px 0 0;
-  letter-spacing: .1em;
-  color: white;
-  text-transform: uppercase;
-}
-
-.page-template-template-connect-php .gform_wrapper input.gform_button:hover {
-  background: #55616f;
-}
-
-.page-template-template-connect-php .gform_wrapper input[type=file] {
-  height: 25px;
-  padding: 3px 0;
-  line-height: 1;
-  background: none;
-}
-
-.page-template-template-connect-php .gform_wrapper textarea {
-  resize: none;
-}
-
-.page-template-template-connect-php .gform_wrapper .gfield.half {
-  display: inline-block;
-  width: 48%;
-  margin-right: 2%;
-  vertical-align: top;
-}
-
-.page-template-template-connect-php .gform_wrapper .gfield.half.half_last {
-  float: right;
-  margin-right: 0;
-}
-
-/* ==========================================================================
    General Bootstrap Form Styling
    ========================================================================== */
 
@@ -1903,6 +1740,169 @@ div.selector select {
 div.selector.disabled span,
 div.selector.disabled.active span {
   color: #a6a6a6;
+}
+
+/* ==========================================================================
+   Gravity Forms on Connect Page
+   ========================================================================== */
+
+#gforms_confirmation_message {
+  padding: 2em 0;
+  text-align: center;
+}
+
+.gform_wrapper {
+  padding: 0 0 25px 0;
+  overflow: hidden;
+}
+
+.gform_wrapper .validation_error {
+  font-family: 'Circe-Regular', sans-serif;
+  font-weight: 400;
+  color: #55616f;
+  text-align: center;
+}
+
+.gform_wrapper .validation_message {
+  margin: -5px 0 15px 0;
+  font-size: 12px;
+  color: #a6a6a6;
+}
+
+.gform_wrapper .top_label .gfield_label {
+  margin: 0;
+  font-size: 16px;
+}
+
+.gform_wrapper label {
+  font-weight: 200;
+}
+
+.gform_wrapper .gform_fields {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.gform_wrapper .gform_fields li {
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+.gform_wrapper .gform_fields li .ginput_complex .ginput_left,
+.gform_wrapper .gform_fields li .ginput_complex .ginput_right {
+  display: inline-block;
+  width: 48%;
+  vertical-align: top;
+}
+
+.gform_wrapper .gform_fields li .ginput_complex .ginput_right {
+  float: right;
+}
+
+.gform_wrapper .gform_fields li .ginput_complex .ginput_left {
+  width: 48%;
+  margin-right: 2%;
+}
+
+.gform_wrapper .gform_fields li .ginput_container {
+  position: relative;
+}
+
+.gform_wrapper .gform_fields li span label {
+  font-size: 12px;
+}
+
+.gform_wrapper .gfield_required {
+  color: #a6a6a6;
+}
+
+.gform_wrapper .gform_body,
+.gform_wrapper .gform_footer {
+  width: 480px;
+  margin: 0 auto;
+}
+
+.gform_wrapper .gform_title {
+  margin: .75em 0 1em 0;
+  font-size: 24px;
+  font-weight: normal;
+  font-weight: 200;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.gform_wrapper .gform_description {
+  display: block;
+  margin: 0 0 25px 0;
+  font-family: 'Circe-Regular', sans-serif;
+  font-size: 15px;
+  font-style: italic;
+  text-align: center;
+}
+
+.gform_wrapper input,
+.gform_wrapper textarea,
+.gform_wrapper select {
+  width: 100%;
+  font-size: 15px;
+  font-weight: 200;
+  line-height: 26px;
+  color: #a4adb5;
+  background: #293240;
+  border: 1px solid #071222;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-transition-duration: 0.1s;
+     -moz-transition-duration: 0.1s;
+       -o-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+}
+
+.gform_wrapper input:focus,
+.gform_wrapper textarea:focus,
+.gform_wrapper select:focus {
+  background: #071222;
+  border: 1px solid #293240;
+}
+
+.gform_wrapper input.gform_button {
+  float: right;
+  width: auto;
+  padding: 5px 40px;
+  margin: 10px 0 0;
+  letter-spacing: .1em;
+  color: white;
+  text-transform: uppercase;
+}
+
+.gform_wrapper input.gform_button:hover {
+  background: #55616f;
+}
+
+.gform_wrapper input[type=file] {
+  height: 25px;
+  padding: 3px 0;
+  line-height: 1;
+  background: none;
+}
+
+.gform_wrapper textarea {
+  resize: none;
+}
+
+.gform_wrapper .gfield.half {
+  display: inline-block;
+  width: 48%;
+  margin-right: 2%;
+  vertical-align: top;
+}
+
+.gform_wrapper .gfield.half.half_last {
+  float: right;
+  margin-right: 0;
 }
 
 /* Used for modal windows */

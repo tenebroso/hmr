@@ -1,143 +1,4 @@
-/* ==========================================================================
-   Gravity Forms on Connect Page
-   ========================================================================== */
 
-.page-template-template-connect-php {
-  #gforms_confirmation_message {
-  text-align: center;
-  padding: 2em 0;
-  }
-  .gform_wrapper {
-    padding:0 0 25px 0;
-    overflow:hidden;
-    .validation_error {
-      font-family:@sansFontFamily;
-      font-weight:400;
-      color:@blueLight;
-      text-align:center;
-    }
-    .validation_message {
-      font-size: 12px;
-      margin: -5px 0 15px 0;
-      color:@gray;
-    }
-    .top_label {
-      .gfield_label {
-        font-size:16px;
-        margin:0;
-      }
-    }
-    label {
-      font-weight:200;
-    }
-    .gform_fields {
-      list-style-type:none;
-      margin:0;
-      padding:0;
-      li {
-        margin:0 0 15px 0;
-        padding:0;
-        .ginput_complex {
-          .ginput_left, .ginput_right {
-            width:48%;
-            display:inline-block;
-            vertical-align:top;
-          }
-          .ginput_right {
-            float:right;
-          }
-          .ginput_left {
-            margin-right:2%;
-            width:48%;
-          }
-        }
-        .ginput_container {
-            position:relative;
-          }
-        span {
-          label {
-            font-size:12px;
-          }
-        }
-      }
-    }
-    .gfield_required {
-      color:@gray;
-    }
-    .gform_body, .gform_footer {
-      width:480px;
-      margin:0 auto;
-    }
-    .gform_title {
-      font-size:24px;
-      //color:@gray;
-      color:@white;
-      text-align:center;
-      font-weight:normal;
-      text-transform:uppercase;
-      margin:.75em 0 1em 0;
-      font-weight:200;
-    }
-    .gform_description {
-      font-size:15px;
-      font-family: @sansFontFamily;
-      font-style:italic;
-      display:block;
-      text-align:center;
-      margin:0 0 25px 0;
-    }
-    input, textarea, select {
-      background:@blue;
-      border:1px solid @blueDark;
-      color:@blueLighter;
-      .border-radius(3px);
-      font-size:15px;
-      font-weight:200;
-      width:100%;
-      line-height:26px;
-      .transition-duration(.1s);
-      &:focus {
-        border:1px solid @blue;
-        background:@blueDark;
-      }
-    }
-    input {
-      &.gform_button {
-        width: auto;
-        float: right;
-        text-transform: uppercase;
-        color: white;
-        letter-spacing: .1em;
-        padding: 5px 40px;
-        margin:10px 0 0;
-        &:hover {
-          background:@blueLight;
-        }
-      }
-      &[type=file] {
-        background:none;
-        padding:3px 0;
-        height:25px;
-        line-height:1;
-      }
-    }
-    textarea {
-      resize:none;
-    }
-    .gfield {
-      &.half {
-        display:inline-block;
-        vertical-align:top;
-        width:48%;
-        margin-right:2%;
-        &.half_last {
-          margin-right:0;
-          float:right;
-        }
-      }
-    }
-  }
-}
 
 /* ==========================================================================
    General Bootstrap Form Styling
@@ -905,3 +766,145 @@ div.selector {
     font-size: 15px; }
   div.selector.disabled span, div.selector.disabled.active span {
     color: @gray; }
+
+
+/* ==========================================================================
+   Gravity Forms on Connect Page
+   ========================================================================== */
+
+//.page-template-template-connect-php, .page {
+  #gforms_confirmation_message {
+  text-align: center;
+  padding: 2em 0;
+  }
+  .gform_wrapper {
+    padding:0 0 25px 0;
+    overflow:hidden;
+    .validation_error {
+      font-family:@sansFontFamily;
+      font-weight:400;
+      color:@blueLight;
+      text-align:center;
+    }
+    .validation_message {
+      font-size: 12px;
+      margin: -5px 0 15px 0;
+      color:@gray;
+    }
+    .top_label {
+      .gfield_label {
+        font-size:16px;
+        margin:0;
+      }
+    }
+    label {
+      font-weight:200;
+    }
+    .gform_fields {
+      list-style-type:none;
+      margin:0;
+      padding:0;
+      li {
+        margin:0 0 15px 0;
+        padding:0;
+        .ginput_complex {
+          .ginput_left, .ginput_right {
+            width:48%;
+            display:inline-block;
+            vertical-align:top;
+          }
+          .ginput_right {
+            float:right;
+          }
+          .ginput_left {
+            margin-right:2%;
+            width:48%;
+          }
+        }
+        .ginput_container {
+            position:relative;
+          }
+        span {
+          label {
+            font-size:12px;
+          }
+        }
+      }
+    }
+    .gfield_required {
+      color:@gray;
+    }
+    .gform_body, .gform_footer {
+      width:480px;
+      margin:0 auto;
+    }
+    .gform_title {
+      font-size:24px;
+      //color:@gray;
+      color:@white;
+      text-align:center;
+      font-weight:normal;
+      text-transform:uppercase;
+      margin:.75em 0 1em 0;
+      font-weight:200;
+    }
+    .gform_description {
+      font-size:15px;
+      font-family: @sansFontFamily;
+      font-style:italic;
+      display:block;
+      text-align:center;
+      margin:0 0 25px 0;
+    }
+    input, textarea, select {
+      background:@blue;
+      border:1px solid @blueDark;
+      color:@blueLighter;
+      .border-radius(3px);
+      font-size:15px;
+      font-weight:200;
+      width:100%;
+      line-height:26px;
+      .transition-duration(.1s);
+      &:focus {
+        border:1px solid @blue;
+        background:@blueDark;
+      }
+    }
+    input {
+      &.gform_button {
+        width: auto;
+        float: right;
+        text-transform: uppercase;
+        color: white;
+        letter-spacing: .1em;
+        padding: 5px 40px;
+        margin:10px 0 0;
+        &:hover {
+          background:@blueLight;
+        }
+      }
+      &[type=file] {
+        background:none;
+        padding:3px 0;
+        height:25px;
+        line-height:1;
+      }
+    }
+    textarea {
+      resize:none;
+    }
+    .gfield {
+      &.half {
+        display:inline-block;
+        vertical-align:top;
+        width:48%;
+        margin-right:2%;
+        &.half_last {
+          margin-right:0;
+          float:right;
+        }
+      }
+    }
+  }
+//}
