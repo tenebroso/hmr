@@ -15,7 +15,7 @@
 	</div>-->
 	<div class="row-fluid">
 		<div class="span3 text-left">
-			<p class="copyright">&copy; 2013 HMR Designs</p>
+			<p class="copyright">&copy; <?php the_time('Y');?> HMR Designs</p>
 		</div>
 		<div class="span6 text-center">
 			<h4><a href="<?php bloginfo('url');?>"><?php bloginfo('title');?></a></h4>
