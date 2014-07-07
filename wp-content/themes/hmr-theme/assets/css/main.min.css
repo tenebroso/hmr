@@ -6742,9 +6742,6 @@ ul.fullsize li {
     padding-bottom: 129px;
     overflow: auto;
   }
-  body.about .backstretch img {
-    top: 220px !important;
-  }
 }
 
 @media (max-width: 940px) and (min-width: 768px) {
