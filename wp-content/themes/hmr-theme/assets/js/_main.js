@@ -13,6 +13,24 @@ HMR.Site = {
       HMR.navMobileVersion();
       HMR.pageFading();
       $('#s').clearField();
+
+      /* Dropdown Menu */
+
+      var $dropdownMenu = $('.dropdown-menu');
+      var $dropdownTrigger = $('.dropdown');
+
+      function dropdownHover() {
+        $dropdownMenu.css('display','block').transition({opacity:1, y:0});
+      }
+
+      function dropdownOut() {
+        $dropdownMenu.transition({y:'-10%',opacity:0}, function() {
+          $(this).css('display','');
+        });
+      }
+
+      $dropdownTrigger.hoverIntent( dropdownHover, dropdownOut );
+
     }
   },
   // Home page
