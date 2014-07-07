@@ -6716,6 +6716,11 @@ ul.fullsize li {
   text-transform: uppercase;
 }
 
+.page-template-template-order-php .header-image {
+  display: block;
+  margin: 0 auto;
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
