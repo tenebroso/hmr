@@ -2535,7 +2535,7 @@ button.close {
 
 .sub-nav {
   position: relative;
-  z-index: 100;
+  z-index: 10;
   background: #071222;
   border-bottom: 2px solid #202a39;
 }
