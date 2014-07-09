@@ -4,7 +4,7 @@ Template Name: Order
 */
 ?>
 
-	<img src="<?php the_field('header_image',1333);?>" class="header-image">
+	<img src="<?php the_field('header_image');?>" class="header-image">
 	<div class="wrap container" role="document">
 		<div class="content row-fluid">
 			<div class="main <?php echo roots_main_class(); ?>" role="main">
