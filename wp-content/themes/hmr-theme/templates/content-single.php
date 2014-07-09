@@ -1,3 +1,5 @@
+<img class="blog-header" src="<?php bloginfo('stylesheet_directory');?>/assets/img/blog-header.png">
+
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
     <header>

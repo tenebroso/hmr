@@ -182,6 +182,23 @@
   
 }
 
+.single-post, .blog, .category {
+  li.dropdown .dropdown-menu {
+    background:@blueDark;
+    &:before, &:after {
+      border-color:transparent transparent @blueDark transparent;
+    }
+    li {
+      a {
+        color:@white;
+        &:hover {
+          color:@blueLight;
+        }
+      }
+    }
+  }
+}
+
 
 .sub-nav {
   border-bottom:2px solid #202a39;

@@ -2533,6 +2533,33 @@ button.close {
   }
 }
 
+.single-post li.dropdown .dropdown-menu,
+.blog li.dropdown .dropdown-menu,
+.category li.dropdown .dropdown-menu {
+  background: #071222;
+}
+
+.single-post li.dropdown .dropdown-menu:before,
+.blog li.dropdown .dropdown-menu:before,
+.category li.dropdown .dropdown-menu:before,
+.single-post li.dropdown .dropdown-menu:after,
+.blog li.dropdown .dropdown-menu:after,
+.category li.dropdown .dropdown-menu:after {
+  border-color: transparent transparent #071222 transparent;
+}
+
+.single-post li.dropdown .dropdown-menu li a,
+.blog li.dropdown .dropdown-menu li a,
+.category li.dropdown .dropdown-menu li a {
+  color: #ffffff;
+}
+
+.single-post li.dropdown .dropdown-menu li a:hover,
+.blog li.dropdown .dropdown-menu li a:hover,
+.category li.dropdown .dropdown-menu li a:hover {
+  color: #55616f;
+}
+
 .sub-nav {
   position: relative;
   z-index: 10;
@@ -4495,7 +4522,7 @@ a:focus {
 }
 
 .blog-header {
-  margin: 0 0 1em 0;
+  margin: 0 0 1em -9px;
 }
 
 .pibfi_pinterest .xc_pin {
