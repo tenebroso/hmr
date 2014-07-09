@@ -7,7 +7,7 @@ var HMR = HMR || {};
     var $firstTitleHeight = $('.post:first-of-type header'),
     	$sidebar = $('.sidebar');
 
-    $sidebar.css({paddingTop: $firstTitleHeight.height()});
+    $sidebar.css({marginTop: '-24px'});
 
 
     //http://andrewhenderson.me/tutorial/jquery-sticky-sidebar/

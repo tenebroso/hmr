@@ -1,3 +1,5 @@
+<img class="blog-header" src="<?php bloginfo('stylesheet_directory');?>/assets/img/blog-header.png">
+
 <?php if (!have_posts()) : ?>
   <div class="alert">
     <?php _e('Sorry, no results were found.', 'roots'); ?>

@@ -4494,6 +4494,10 @@ a:focus {
   }
 }
 
+.blog-header {
+  margin: 0 0 1em 0;
+}
+
 .pibfi_pinterest .xc_pin {
   width: 125px;
   height: 125px;
