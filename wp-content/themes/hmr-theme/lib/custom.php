@@ -504,16 +504,20 @@ function my_remove_post_meta_boxes() {
 function slider_shortcode($atts, $content = null){
     global $post;
     $thePost = $post->ID;
+    ob_start();
 
-    if( have_rows('gallery_builder', $thePost) ): 
-        echo '<ul class="post-slider">';
-    while ( have_rows('gallery_builder') ) : the_row(); ?>
-        <li>
-            <img src="<?php the_sub_field('image'); ?>">
-            <div class="caption"><?php the_sub_field('caption'); ?></div>
-        </li>
-    <?php endwhile; 
-        echo '</ul>';
+        if( have_rows('gallery_builder', $thePost) ):
+        echo "<ul class='post-slider'>";
+            while ( have_rows('gallery_builder') ) : the_row();
+        echo "<li>";
+        echo "<img src='".get_sub_field('image')."'>";
+        echo "<div class='caption'>'".get_sub_field('caption')."'</div>";
+        echo "</li>";
+            endwhile;
+        echo "</ul>";
+
+    $acfData = ob_get_clean();
+    return $acfData;
     else : endif;
 
 }
