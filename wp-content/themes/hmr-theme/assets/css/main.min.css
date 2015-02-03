@@ -5220,6 +5220,7 @@ a:focus {
 .post-type-archive-team .content a {
   display: block;
   color: #55616f;
+  color: #8B939D;
   -webkit-transform: translate3d(0, 0, 0);
      -moz-transform: translate3d(0, 0, 0);
        -o-transform: translate3d(0, 0, 0);
