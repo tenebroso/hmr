@@ -19,7 +19,9 @@
 
   <?php } else { ?>
 
-  <?php if (is_post_type_archive('team')) {  get_template_part('templates/content', 'team-hero'); } ?>
+  <?php if (is_post_type_archive('team')) {  
+    //get_template_part('templates/content', 'team-hero'); 
+  } ?>
   <?php if(is_post_type_archive('team')) { ?> <div id="team-members"><?php } ?>
 
     <div class="wrap container" role="document">
