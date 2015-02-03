@@ -173,14 +173,14 @@ HMR.Site = {
   },
   about: {
     init: function() {
-      var windowSize = $(window).width();
+      /*var windowSize = $(window).width();
       if (windowSize >= 768) {
         $('html').css('background','none');
         var img = '/assets/history-bg.jpg';
         $("body").backstretch([img], { centeredX:false});
         var instance = $("body").data("backstretch");
         instance.resize();
-      }
+      }*/
     }
   }
 };
