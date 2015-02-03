@@ -2,7 +2,7 @@
 Contributors: metaphorcreations
 Tags: posts, post, duplicate, duplication
 Requires at least: 3.0
-Tested up to: 3.5.1
+Tested up to: 4.0
 Stable tag: /trunk/
 License: GPL2
 
@@ -21,7 +21,7 @@ I created this plugin mainly for myself when I'm develping WordPress sites. I al
 == Installation ==
 
 1. Upload `m4c-postduplicator` directory to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
+2. Activate the plugin through the 'Plugins' menu in WordPress 
 
 == Frequently Asked Questions ==
 
@@ -40,6 +40,10 @@ Check out the 'Installation' tab.
 2. View of the settings page
 
 == Changelog ==
+
+= 2.4 =
+* Cleaned up some code.
+* Updated localization code and files.
 
 = 2.2 =
 * Updated metaboxer code.
@@ -60,3 +64,7 @@ Upgrade Post Duplicator to add 'post status' and 'date' options to your duplicat
 
 = 1.1 =
 Must upgrade in order for the plugin to work. The file paths where initially wrong as the plugin upload created a different directory name.
+
+== Upgrade Notice ==
+
+Code cleanup and localization updates.
