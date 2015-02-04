@@ -4646,6 +4646,7 @@ a:focus {
 
 .hentry header .entry-title a:hover {
   color: #55616f;
+  background: none;
 }
 
 .hentry header .entry-title a:hover:after {
