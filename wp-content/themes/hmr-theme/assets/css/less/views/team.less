@@ -18,6 +18,10 @@
 			margin:-20px 0 20px 0;
 		}
 	}
+	h2.page-title {
+		font-size: 18px;
+		margin-top: 0 !important;
+	}
 	.btn {
 		font-weight:200;
 	}
@@ -251,6 +255,17 @@
 	background:@blueDark;
 }
 
+.team-grid {
+	text-align: center;
+}
+
+.team-grid .span6:nth-child(2n+3) {
+	margin-left: 0;
+	clear: left;
+}
+
+
+
 @media (min-width:1000px) {
 	.post-type-archive-team, .post-type-archive-team #wrap { 
 		min-height:1200px;
@@ -265,6 +280,13 @@
 			bottom:0;
 			width:100%;
 		}
+	}
+	.border-left .team-title {
+		padding-left: 26px;
+	}
+	.border-left .team-grid {
+		border-left:1px solid #202a39;
+		padding-left: 26px;
 	}
 }
 
@@ -294,5 +316,19 @@
 		.page-title {
 			line-height:1.2;
 		}
+	}
+	.team-grid {
+		margin-bottom: 2em;
+	}
+	.post-type-archive-team h1.page-title.team-title {
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width:767px) and (min-width:480px) {
+	.team-grid .span6 {
+		width: 50%;
+		float: left;
+		text-align: center;
 	}
 }

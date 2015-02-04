@@ -1,7 +1,7 @@
 
 <?php $image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail'); $custom = get_field('custom_thumbnail');?>
 
-<article class="span2">
+<article class="span6">
 	<a href="<?php the_permalink();?>">
 		<span class="hidden-phone">
 			
