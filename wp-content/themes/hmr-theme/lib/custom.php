@@ -38,7 +38,7 @@ function register_cpt_hmr() {
     $args = array( 
         'labels' => $labels,
         'hierarchical' => false,
-        'supports' => array( 'title', 'editor', 'thumbnail' ),
+        'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
         'taxonomies' => array(),
         'public' => true,
         'show_ui' => true,

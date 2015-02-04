@@ -8,7 +8,7 @@
   <div class="span4 border-left no-border">
     <h2 class="text-center page-title team-title caps">Sales &amp; Design</h2>
     <div class="row-fluid team-grid">
-    <?php $args = array('post_type' => 'team','posts_per_page' => -1, 'type' => 'sales-design'); 
+    <?php $args = array('post_type' => 'team','posts_per_page' => -1, 'type' => 'sales-design', 'orderby' => 'menu_order', 'order' => ASC); 
       $the_query = new WP_Query( $args ); 
       if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : 
         $the_query->the_post(); 
@@ -22,7 +22,7 @@
   <div class="span4 border-left">
     <h2 class="text-center page-title team-title caps">Creative Production</h2>
     <div class="row-fluid team-grid">
-    <?php $args = array('post_type' => 'team','posts_per_page' => -1, 'type' => 'creative-production'); 
+    <?php $args = array('post_type' => 'team','posts_per_page' => -1, 'type' => 'creative-production', 'orderby' => 'menu_order', 'order' => ASC); 
       $the_query = new WP_Query( $args ); 
       if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : 
         $the_query->the_post(); 
@@ -36,7 +36,7 @@
   <div class="span4 border-left">
     <h2 class="text-center page-title team-title caps">Operations &amp; Administrative</h2>
     <div class="row-fluid team-grid">
-    <?php $args = array('post_type' => 'team','posts_per_page' => -1, 'type' => 'operations-administrative'); 
+    <?php $args = array('post_type' => 'team','posts_per_page' => -1, 'type' => 'operations-administrative', 'orderby' => 'menu_order', 'order' => ASC); 
       $the_query = new WP_Query( $args ); 
       if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : 
         $the_query->the_post(); 
