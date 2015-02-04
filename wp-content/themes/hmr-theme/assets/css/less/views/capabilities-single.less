@@ -74,6 +74,10 @@ ul.fullsize {
 			position:relative;
 		}
 	}
+}
+
+.page-template-template-portfolio-php,
+.single-capability {
 	.meta-box {
 		background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeoAAACyAQMAAAC3CR5XAAAAA1BMVEUHEiIPoRpoAAAAAXRSTlPM0jRW/QAAACFJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAwEkrzgAB49wm5gAAAABJRU5ErkJggg==) repeat;
 		width:35%;
@@ -99,4 +103,19 @@ ul.fullsize {
 			font-weight:200;
 		}
 	}
-} 
+}
+
+.page-template-template-portfolio-php {
+	.meta-box {
+		bottom: 20%;
+		&.visible-phone {
+			@media (min-width: 768px) { 
+				display: block !important;
+			}
+		}
+	}
+	#wrap {
+		position: relative;
+	}
+	.hidden-phone {}
+}

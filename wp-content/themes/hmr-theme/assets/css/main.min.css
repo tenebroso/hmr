@@ -6013,6 +6013,7 @@ ul.fullsize li {
   margin: 0;
 }
 
+.page-template-template-portfolio-php .meta-box,
 .single-capability .meta-box {
   position: absolute;
   bottom: 6%;
@@ -6029,6 +6030,7 @@ ul.fullsize li {
           transform: translate3d(0, 0, 0);
 }
 
+.page-template-template-portfolio-php .meta-box h2,
 .single-capability .meta-box h2 {
   margin: 0 0 10px 0;
   font-size: 24px;
@@ -6037,11 +6039,26 @@ ul.fullsize li {
   text-transform: uppercase;
 }
 
+.page-template-template-portfolio-php .meta-box p,
 .single-capability .meta-box p {
   margin: 0;
   font-size: 14px;
   font-weight: 200;
   line-height: 24px;
+}
+
+.page-template-template-portfolio-php .meta-box {
+  bottom: 20%;
+}
+
+@media (min-width: 768px) {
+  .page-template-template-portfolio-php .meta-box.visible-phone {
+    display: block !important;
+  }
+}
+
+.page-template-template-portfolio-php #wrap {
+  position: relative;
 }
 
 /* ==========================================================================

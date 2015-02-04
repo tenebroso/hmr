@@ -2,6 +2,13 @@
 
   <div class="watermark"></div>
 
+  <div class="meta-box relative visible-phone">
+    
+    <h2><?php the_title();?></h2>
+    <p><?php the_field('description');?></p>
+
+  </div>
+
 <?php if(get_field('photos')): ?>
 
   <?php $i=0; ?>
@@ -74,11 +81,11 @@
 
     </ul>
 
-    <div class="gallery-title">
+   <!--  <div class="gallery-title">
 
       <h4><?php the_title();?></h4>
 
-    </div>
+    </div> -->
 
   <?php endif; ?>
 

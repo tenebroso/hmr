@@ -9,6 +9,7 @@ var HMR = HMR || {};
       // Call the portfolio gallery on the Portfolio Pages
       if($('.page-template-template-portfolio-php').length) {
         HMR.portfolioGallery();
+        HMR.capabilityDescriptionFades();
       }
 
       // Add lightbox functionality to the Press Release and Testimonials Page
