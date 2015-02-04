@@ -5,10 +5,13 @@ var HMR = HMR || {};
   HMR.sidebarPadding = function() {
 
     var $firstTitleHeight = $('.post:first-of-type header'),
-    	$sidebarWidth = $('.sidebar').width();
+    	$sidebarWidth = $('.sidebar').width(),
+    	$subscribeButton = $('#subscribe-submit input[type="submit"]'),
     	$sidebar = $('.sidebar');
 
     $sidebar.css({marginTop: '-24px'});
+
+    $subscribeButton.addClass('btn btn-read-more');
 
 
     //http://andrewhenderson.me/tutorial/jquery-sticky-sidebar/
