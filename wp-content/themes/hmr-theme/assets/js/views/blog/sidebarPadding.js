@@ -5,6 +5,7 @@ var HMR = HMR || {};
   HMR.sidebarPadding = function() {
 
     var $firstTitleHeight = $('.post:first-of-type header'),
+    	$sidebarWidth = $('.sidebar').width();
     	$sidebar = $('.sidebar');
 
     $sidebar.css({marginTop: '-24px'});
@@ -21,10 +22,10 @@ var HMR = HMR || {};
 	      var windowTop = $(window).scrollTop(); // returns number 
 	 
 	      if (stickyTop < windowTop){
-	        $('.sticky').css({ position: 'fixed', top: 0, paddingTop:'2em' });
+	        $('.sticky').css({ position: 'fixed', top: 0, paddingTop:'2em', width: $sidebarWidth });
 	      }
 	      else {
-	        $('.sticky').css({position:'static',paddingTop:'0'});
+	        $('.sticky').css({position:'static',paddingTop:'0', width: ''});
 	      }
 	 
 	    });

@@ -5470,6 +5470,10 @@ a:focus {
   text-align: center;
 }
 
+.team-grid img {
+  border: 1px solid transparent;
+}
+
 .team-grid .span6:nth-child(2n+3) {
   margin-left: 0;
   clear: left;
