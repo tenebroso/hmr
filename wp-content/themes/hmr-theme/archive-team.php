@@ -5,7 +5,7 @@
 <h1 class="text-center page-title team-title caps">The HMR Designs Team</h1>
 <div class="row-fluid">
 
-  <div class="span4">
+  <div class="span4 border-left no-border">
     <h2 class="text-center page-title team-title caps">Sales &amp; Design</h2>
     <div class="row-fluid team-grid">
     <?php $args = array('post_type' => 'team','posts_per_page' => -1, 'type' => 'sales-design'); 

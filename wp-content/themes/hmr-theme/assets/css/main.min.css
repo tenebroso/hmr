@@ -5098,6 +5098,14 @@ a:focus {
   filter: alpha(opacity=70);
 }
 
+#subscribe-submit .btn {
+  background: #071222;
+}
+
+#subscribe-submit .btn:hover {
+  color: #55616f;
+}
+
 /* ==========================================================================
    Single Team Posts - Individual Team Member Pages
    ========================================================================== */
@@ -5493,11 +5501,17 @@ a:focus {
     width: 100%;
     margin-top: 0;
   }
+  .border-left.no-border {
+    padding-left: 21px;
+  }
+  .border-left.no-border .team-grid {
+    border-left: 1px solid transparent;
+  }
   .border-left .team-title {
-    padding-left: 26px;
+    padding-left: 21px;
   }
   .border-left .team-grid {
-    padding-left: 26px;
+    padding-left: 21px;
     border-left: 1px solid #202a39;
   }
 }
