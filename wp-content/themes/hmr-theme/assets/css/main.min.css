@@ -7093,30 +7093,36 @@ ul.fullsize li {
   .photo-credit {
     display: none;
   }
-  .single-capability {
+  .single-capability,
+  .page-template-template-portfolio-php {
     height: auto;
     overflow: scroll;
   }
-  .single-capability #wrap {
+  .single-capability #wrap,
+  .page-template-template-portfolio-php #wrap {
     background: none;
   }
-  .single-capability .wrap.container {
+  .single-capability .wrap.container,
+  .page-template-template-portfolio-php .wrap.container {
     padding-top: 0;
     padding-right: 0;
     padding-left: 0;
   }
-  .single-capability .fullsize.slideshow {
+  .single-capability .fullsize.slideshow,
+  .page-template-template-portfolio-php .fullsize.slideshow {
     position: relative;
     width: 100%;
     height: 475px;
     background: #000;
   }
-  .single-capability .gallery-footer {
+  .single-capability .gallery-footer,
+  .page-template-template-portfolio-php .gallery-footer {
     position: relative;
     bottom: auto;
     left: auto;
   }
-  .single-capability .gallery-footer p {
+  .single-capability .gallery-footer p,
+  .page-template-template-portfolio-php .gallery-footer p {
     position: relative;
     top: auto;
     right: auto;
@@ -7125,10 +7131,12 @@ ul.fullsize li {
     text-align: center;
     border-bottom: 1px solid #293240;
   }
-  .single-capability .gallery-footer h4 {
+  .single-capability .gallery-footer h4,
+  .page-template-template-portfolio-php .gallery-footer h4 {
     display: none;
   }
-  .single-capability .meta-box.relative {
+  .single-capability .meta-box.relative,
+  .page-template-template-portfolio-php .meta-box.relative {
     position: relative;
     top: auto;
     bottom: auto;
@@ -7136,6 +7144,9 @@ ul.fullsize li {
     width: auto;
     clear: both;
     background: none;
+  }
+  .page-template-template-portfolio-php .meta-box {
+    display: none !important;
   }
   .page-template-template-portfolio-php .gallery-footer h4 {
     display: none;

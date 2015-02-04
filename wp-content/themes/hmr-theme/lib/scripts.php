@@ -12,7 +12,7 @@
  * 3. /theme/assets/js/main.min.js (in footer)
  */
 function roots_scripts() {
-  wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.min.css', false, 'b3cb0c14465a6c96e2dcff1212395f2a');
+  wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.min.css', false, 'f9af0f56ee012e852ab1ea6d6cb93b09');
 
   // Load style.css from child theme
   if (is_child_theme()) {
