@@ -5507,7 +5507,7 @@ a:focus {
     margin-top: 0;
   }
   .border-left.no-border {
-    padding-left: 21px;
+    padding-left: 0;
   }
   .border-left.no-border .team-grid {
     border-left: 1px solid transparent;
