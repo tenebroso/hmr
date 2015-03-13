@@ -7296,11 +7296,14 @@ ul.fullsize li {
   }
 }
 
-@media (min-height: 1200px) and (min-width: 768px) {
+@media (min-width: 768px) {
   body.about {
     background: url(../img/future-bg.jpg) no-repeat center 220px;
     background-size: cover;
   }
+}
+
+@media (min-height: 944px) {
   body.about .content {
     height: 100vh;
   }
