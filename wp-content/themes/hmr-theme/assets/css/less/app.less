@@ -306,17 +306,6 @@
 		overflow:auto;
 		padding-bottom:129px;
 	}
-	body.about {
-		.content {
-			//border:2px solid @slate;
-			//padding:2em;
-			//background:@blueDark;
-			//background:rgba(7, 18, 34, .8);
-		}
-		.backstretch img {
-			//top: 220px !important;
-		}
-	}
 
 }
 
@@ -839,5 +828,22 @@
 	}
 	body {
 		font-weight:200;
+	}
+}
+
+@media (min-height:1200px) and (min-width: 768px) { 
+	body.about {
+		background: url(../img/future-bg.jpg) no-repeat center 220px;
+		background-size: cover;
+		.content {
+			height: 100vh;
+			.main {
+				position: relative;
+				top:37%;
+				transform:translate(0,-50%);
+				-webkit-transform:translate(0,-50%);
+				-moz-transform:translate(0,-50%);
+			}
+		}
 	}
 }
