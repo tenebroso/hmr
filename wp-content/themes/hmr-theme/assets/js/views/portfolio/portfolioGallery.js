@@ -114,11 +114,17 @@ var win = window,
 
         loadFirstImage();
 
-        $('.js-start-slideshow').click(function(){
+        if($(window).width() > 767) {
+
+            $('.js-start-slideshow').click(function(){
+                startTimer();
+                $slider.goToNextSlide();
+                $('.meta-box').transition({ opacity: 0}, 2000, 'ease');
+            })
+
+        } else {
             startTimer();
-            $slider.goToNextSlide();
-            $('.meta-box').transition({ opacity: 0}, 2000, 'ease');
-        })
+        }
 
         // Start timer
         
