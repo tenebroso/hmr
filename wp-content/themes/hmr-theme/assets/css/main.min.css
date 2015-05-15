@@ -3911,6 +3911,11 @@ button.close {
   top: 0 !important;
 }
 
+.page-template-template-portfolio .backstretch img {
+  min-width: 100%;
+  min-height: 100%;
+}
+
 /* ==========================================================================
    Bootstrap & Stock Bootstrap/Roots Theme Setup
    ========================================================================== */
