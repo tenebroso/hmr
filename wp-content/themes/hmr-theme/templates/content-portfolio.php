@@ -7,6 +7,8 @@
     <h2><?php the_title();?></h2>
     <p><?php the_field('description');?></p>
 
+    <a class="btn js-start-slideshow">Enter Gallery</a>
+
   </div>
 
 <?php if(get_field('photos')): ?>

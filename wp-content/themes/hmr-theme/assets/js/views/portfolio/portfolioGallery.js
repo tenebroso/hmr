@@ -114,8 +114,14 @@ var win = window,
 
         loadFirstImage();
 
+        $('.js-start-slideshow').click(function(){
+            startTimer();
+            $slider.goToNextSlide();
+            $('.meta-box').transition({ opacity: 0}, 2000, 'ease');
+        })
+
         // Start timer
-        startTimer();
+        
 
 
         changeIt = function (_$el) {

@@ -6051,6 +6051,21 @@ ul.fullsize li {
           transform: translate3d(0, 0, 0);
 }
 
+.page-template-template-portfolio-php .meta-box .btn,
+.single-capability .meta-box .btn {
+  display: block;
+  width: 50%;
+  margin: 1em auto 0 auto;
+  cursor: pointer;
+}
+
+.page-template-template-portfolio-php .meta-box .btn:hover,
+.single-capability .meta-box .btn:hover {
+  color: #55616f;
+  background: white;
+  opacity: 1;
+}
+
 .page-template-template-portfolio-php .meta-box h2,
 .single-capability .meta-box h2 {
   margin: 0 0 10px 0;
