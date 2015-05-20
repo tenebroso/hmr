@@ -6056,6 +6056,22 @@ ul.fullsize li {
           transform: translate3d(0, 0, 0);
 }
 
+@media (max-width: 1200px) {
+  .page-template-template-portfolio-php .meta-box,
+  .single-capability .meta-box {
+    left: 20%;
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-template-template-portfolio-php .meta-box,
+  .single-capability .meta-box {
+    left: 10%;
+    width: 80%;
+  }
+}
+
 .page-template-template-portfolio-php .meta-box .btn,
 .single-capability .meta-box .btn {
   display: block;
