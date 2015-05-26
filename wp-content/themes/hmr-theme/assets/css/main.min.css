@@ -4258,6 +4258,7 @@ a:hover {
 
 a:focus {
   text-decoration: none;
+  background: none;
   outline: none;
 }
 
@@ -4290,6 +4291,10 @@ a:focus {
   background-color: transparent;
   background-position: left top;
   border: 0;
+}
+
+.single-capability .banner {
+  overflow: visible !important;
 }
 
 /* ==========================================================================
