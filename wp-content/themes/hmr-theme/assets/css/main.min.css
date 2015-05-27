@@ -4807,7 +4807,7 @@ a:focus {
   font-family: 'Didot 24 A', 'Didot 24 B';
   font-style: normal;
   font-weight: 300;
-  color: #ffffff;
+  color: #ffffff !important;
   text-transform: none;
   background: #55616f;
 }
