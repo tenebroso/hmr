@@ -3912,6 +3912,7 @@ button.close {
 }
 
 .page-template-template-portfolio .backstretch img {
+  height: auto !important;
   min-width: 100%;
   min-height: 100%;
 }
