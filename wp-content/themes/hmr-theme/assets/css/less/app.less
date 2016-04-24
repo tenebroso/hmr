@@ -19,11 +19,18 @@
 	.transition-duration(0);
 }
 
-.backstretch {
+body:not(.page-template-template-portfolio) .backstretch {
 	img {
 		top:0 !important;
 	}
 }
+
+@media (max-width:767px) {
+	body.home .backstretch img {
+		max-width:9999px !important;
+	}
+}
+
 
 .page-template-template-portfolio {
 	.backstretch img {
