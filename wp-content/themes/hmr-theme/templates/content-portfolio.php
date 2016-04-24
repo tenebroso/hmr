@@ -4,7 +4,7 @@
 
   <div class="meta-box relative visible-phone">
     
-    <h2><?php the_title();?></h2>
+    <h1 style="margin: 0 0 10px 0;font-size: 24px;line-height: 1.2;color: #a6a6a6;text-transform: uppercase;"><?php the_title();?></h1>
     <p><?php the_field('description');?></p>
 
     <a class="btn js-start-slideshow">Enter Gallery</a>

@@ -38,4 +38,4 @@ Template Name: Connect
 
 
 
-<p class="credit caps text-center circe">Site by: <a href="http://wcst.com/">We Cant Stop Thinking</a></p>
+<p class="credit caps text-center circe">Site by: <a rel="nofollow" href="http://wcst.com/">We Cant Stop Thinking</a></p>

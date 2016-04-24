@@ -2,3 +2,4 @@
   <input type="text" value="Search" name="s" id="s" class="search-query">
   <input type="submit" id="searchsubmit" value="<?php _e('Search', 'roots'); ?>" >
 </form>
+
