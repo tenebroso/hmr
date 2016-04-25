@@ -21,34 +21,35 @@ class Jetpack_Twitter_Timeline_Widget extends WP_Widget {
 	public function __construct() {
 		parent::__construct(
 			'twitter_timeline',
+			/** This filter is documented in modules/widgets/facebook-likebox.php */
 			apply_filters( 'jetpack_widget_name', esc_html__( 'Twitter Timeline', 'jetpack' ) ),
 			array(
 				'classname' => 'widget_twitter_timeline',
-				'description' => __( 'Display an official Twitter Embedded Timeline widget.', 'jetpack' )
+				'description' => __( 'Display an official Twitter Embedded Timeline widget.', 'jetpack' ),
+				'customize_selective_refresh' => true,
 			)
 		);
 
-		if ( is_active_widget( false, false, $this->id_base ) || is_active_widget( false, false, 'monster' ) ) {
-			add_action( 'wp_footer', array( $this, 'library' ) );
+		if ( is_active_widget( false, false, $this->id_base ) || is_active_widget( false, false, 'monster' ) || is_customize_preview() ) {
+			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 		}
 	}
 
 	/**
-	 * Enqueue Twitter's widget library
+	 * Enqueue scripts.
+	 */
+	public function enqueue_scripts() {
+		wp_enqueue_script( 'jetpack-twitter-timeline' );
+	}
+
+	/**
+	 * Enqueue Twitter's widget library.
+	 *
+	 * @deprecated
 	 */
 	public function library() {
-		?>
-		<script type="text/javascript">
-			!function(d,s,id){
-				var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
-				if(!d.getElementById(id)){
-					js=d.createElement(s);
-					js.id=id;js.src=p+"://platform.twitter.com/widgets.js";
-					fjs.parentNode.insertBefore(js,fjs);
-				}
-			}(document,"script","twitter-wjs");
-		</script>
-		<?php
+		_deprecated_function( __METHOD__, '4.0.0' );
+		wp_print_scripts( array( 'jetpack-twitter-timeline' ) );
 	}
 
 	/**
@@ -64,8 +65,10 @@ class Jetpack_Twitter_Timeline_Widget extends WP_Widget {
 
 		echo $args['before_widget'];
 
-		if ( $instance['title'] )
+		if ( $instance['title'] ) {
+			/** This filter is documented in core/src/wp-includes/default-widgets.php */
 			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
+		}
 
 		$data_attribs = array( 'widget-id', 'theme', 'link-color', 'border-color', 'chrome', 'tweet-limit' );
 		$attribs      = array( 'width', 'height', 'lang' );
@@ -90,11 +93,28 @@ class Jetpack_Twitter_Timeline_Widget extends WP_Widget {
 				echo ' ' . esc_attr( $att ) . '="' . esc_attr( $instance[$att] ) . '"';
 		}
 
-		echo '>' . esc_html__( 'My Tweets', 'jetpack' ) . '</a>';
+		echo '>';
+
+		$timeline_placeholder = __( 'My Tweets', 'jetpack' );
+
+		/**
+		 * Filter the Timeline placeholder text.
+		 *
+		 * @module widgets
+		 *
+		 * @since 3.4.0
+		 *
+		 * @param string $timeline_placeholder Timeline placeholder text.
+		 */
+		$timeline_placeholder = apply_filters( 'jetpack_twitter_timeline_placeholder', $timeline_placeholder );
+
+		echo esc_html( $timeline_placeholder ) . '</a>';
+
 		// End tag output
 
 		echo $args['after_widget'];
 
+		/** This action is documented in modules/widgets/social-media-icons.php */
 		do_action( 'jetpack_bump_stats_extras', 'widget', 'twitter_timeline' );
 	}
 
@@ -115,8 +135,8 @@ class Jetpack_Twitter_Timeline_Widget extends WP_Widget {
 		$instance['title']         = sanitize_text_field( $new_instance['title'] );
 		$instance['width']         = (int) $new_instance['width'];
 		$instance['height']        = (int) $new_instance['height'];
-		$instance['width']         = ( 0 !== (int) $new_instance['width'] )  ? (int) $new_instance['width']  : 225;
-		$instance['height']        = ( 0 !== (int) $new_instance['height'] ) ? (int) $new_instance['height'] : 400;
+		$instance['width']         = ( 0 !== (int) $new_instance['width'] )  ? (int) $new_instance['width']  : '';
+		$instance['height']        = ( 0 !== (int) $new_instance['height'] ) ? (int) $new_instance['height'] : '';
 		$instance['tweet-limit']   = ( 0 !== (int) $new_instance['tweet-limit'] ) ? (int) $new_instance['tweet-limit'] : null;
 
 		// If they entered something that might be a full URL, try to parse it out
@@ -183,7 +203,7 @@ class Jetpack_Twitter_Timeline_Widget extends WP_Widget {
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'width' ); ?>"><?php esc_html_e( 'Width (px):', 'jetpack' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'width' ); ?>"><?php esc_html_e( 'Maximum Width (px):', 'jetpack' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'width' ); ?>" name="<?php echo $this->get_field_name( 'width' ); ?>" type="text" value="<?php echo esc_attr( $instance['width'] ); ?>" />
 		</p>
 

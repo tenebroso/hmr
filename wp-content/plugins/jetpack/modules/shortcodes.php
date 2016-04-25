@@ -9,6 +9,7 @@
  * Requires Connection: No
  * Auto Activate: Yes
  * Module Tags: Photos and Videos, Social, Writing, Appearance
+ * Additional Search Queries: shortcodes, shortcode, embeds, media, bandcamp, blip.tv, dailymotion, digg, facebook, flickr, google calendars, google maps, google+, polldaddy, recipe, recipes, scribd, slideshare, slideshow, slideshows, soundcloud, ted, twitter, vimeo, vine, youtube
  */
 
 /**
@@ -46,6 +47,15 @@ function jetpack_load_shortcodes() {
 		$shortcode_includes[] = $file;
 	}
 
+/**
+ * This filter allows other plugins to override which shortcodes Jetpack loads.
+ *
+ * @module shortcodes
+ *
+ * @since 2.2.1
+ *
+ * @param array $shortcode_includes An array of which shortcodes to include.
+ */
 	$shortcode_includes = apply_filters( 'jetpack_shortcodes_to_include', $shortcode_includes );
 
 	foreach ( $shortcode_includes as $include ) {
