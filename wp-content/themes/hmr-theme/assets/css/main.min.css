@@ -3907,7 +3907,7 @@ button.close {
           transition-duration: 0;
 }
 
-body:not(.page-template-template-portfolio) .backstretch img {
+body:not(.page-template-template-portfolio):not(.home) .backstretch img {
   top: 0 !important;
 }
 
